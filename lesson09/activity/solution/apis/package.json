@@ -2,7 +2,7 @@
   "name": "apis",
   "version": "1.0.0",
   "description": "Nuxt.js project",
-  "author": "Bryce Benson <bryce@graphiti.com>",
+  "author": "UW Front End Cert Program",
   "private": true,
   "scripts": {
     "dev": "nuxt",

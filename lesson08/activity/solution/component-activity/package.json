@@ -2,7 +2,7 @@
   "name": "component-activity",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "Bryce Benson <bryce@graphiti.com>",
+  "author": "UW Front End Cert Program",
   "license": "MIT",
   "private": true,
   "scripts": {
