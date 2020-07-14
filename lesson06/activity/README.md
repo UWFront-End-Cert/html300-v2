@@ -9,7 +9,6 @@ We will be working with Bootstrap 4 to create a submittable form.
 - [Bootstrap Tooltips](https://getbootstrap.com/docs/4.3/components/tooltips/)
 
 ### Codealongs
-- [Videos](https://canvas.uw.edu/courses/1304085/pages/lesson-06a-codealong?module_item_id=9642140)
 - [Intro to Bootstrap](https://codepen.io/akatz6/pen/pmgZPY?editors=1000#0)
 - [Bootstrap 4 CSS Components](https://codepen.io/akatz6/pen/vwLaPR?editors=1000#0)
 - [Bootstrap 4 Grid System](https://codepen.io/akatz6/pen/xNdXBE?editors=1000#0)

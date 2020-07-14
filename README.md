@@ -1,5 +1,5 @@
 # UW Front End Certificate - HTML300
-This repository contains the activities and assignments required to complete the final course of the Front End Certificate program. All assignment submissions and quizzes/discussions will be done through [Canvas](https://canvas.uw.edu/).
+This repository contains the activities and assignments required to complete the final course of the Front End Certificate program. All assignment submissions and quizzes/discussions will be done through either Canvas or Open EdX.
 
 ## Course Setup
 Follow these steps to get your initial setup started
@@ -27,7 +27,7 @@ Follow these steps to get your initial setup started
 - For assignment 01 you will create a `documents` folder in the root with a `.txt` or `.md` file within, containing the course proposal
 - As the course progresses, work for the course final project will be done in the new repo
 
-*The rest of these instructions are for working with this html300 repo* 
+*The rest of these instructions are for working with this html300 repo*
 
 ### html300 Course Repo Setup
 - Within *this* html300 repo, click the `fork` button the the top right to fork a copy to your personal GitHub account
@@ -36,7 +36,7 @@ Follow these steps to get your initial setup started
 - Clone the fork to your local machine
 
 ### Adding the Upstream to your Fork
-- Navigate to your fork's root folder in terminal (e.g. `cd ~/Sites/uw/html300`) 
+- Navigate to your fork's root folder in terminal (e.g. `cd ~/Sites/uw/html300`)
 - Make sure you are on your master branch, `git checkout master`
 - Add the upstream repository as a remote connection `git remote add upstream git@github.com:UWFront-End-Cert/html300.git`
 - Verify with `git remote -v`, should have both `origin` and `upstream`
@@ -52,7 +52,7 @@ Follow these steps to get your initial setup started
 
 ## Per Lesson Workflow
 - Start by checking out your local master branch and fetching/merging upstream at the beginning of each module so you know you're up to date
-- From the master branch, create a branch for the lesson's assignment. Keep these branches all named consistently, like "lesson1", "lesson2", etc. 
+- From the master branch, create a branch for the lesson's assignment. Keep these branches all named consistently, like "lesson1", "lesson2", etc.
 ```
 # Fetch and merge upstream master to your local master branch
 $ git checkout master
@@ -65,9 +65,8 @@ $ git checkout -b lesson3
 - The `activity` will often have `starter` and `solution` folders, this is to help illustrate the starting/ending point for each
 - The `assignment` folder will have the starter files and instructions required to complete
 - Once completed, open a new Pull Request. Within the PR, set the base to be YOUR forked master branch, and the compare branch is  that lesson's assignment branch
-- In the Reviewer's section, click into the box and add `cherimarie` and `madeste` as reviewers - note you will have needed to invite us as collaborators to your fork first
-- Now, do NOT merge or close the Pull Request -- just add us as reviewers 
-- Copy the direct link to the pull request page, and paste that into the submission box in Canvas
+- Copy the direct link to the pull request page, and paste that into the submission box for the assignment
+- Once the assignment has been graded, you can merge the pull request
 
 ### Assignments
 - Check the `README.md` files found in the root of each `assignment` folder for instructions, links for tools, and any required information. Consult the rubric within Canvas for the grading scale breakdown
