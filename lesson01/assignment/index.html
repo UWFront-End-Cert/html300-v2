@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Assignment 1 - Part 2 Example</title>
     <!-- jQuery CDN -->
-    <script 
-        src="https://code.jquery.com/jquery-3.3.1.js" 
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
     </script>
     <!-- Local Files -->
     <script src="scripts.js"></script>
@@ -17,19 +15,175 @@
 </head>
 
 <body>
-    <main class="main">
-        <h1>Using ES6+ Methods</h1>
-        <section class="input-set">
-            <!-- Input -->
-            <input type="text" class="input">
-            <!-- Submit for Input -->
-            <input class="submit" type="submit"></input>
-            <!-- Result markup with hook for answer -->
-            <p class="markup">My total with reduce is now: <span class="sum"></span></p>
-        </section>
-       
-        
-    </main>
+
+    <!-- HEADER -->
+    <header>
+        <img src="https://startlearning.uw.edu/static/edx-theme-codebase/images/branding/brand-logo-negative.0b62025e3370.svg"
+            alt="UW logo">
+        <p>HTML300 Advanced JavaScript & CSS</p>
+    </header>
+
+    <!-- SECTION -->
+    <section>
+        <h2>Assignment 1 - Part 2</h2>
+        <h3>Using ES6+ Methods</h3>
+        <hr>
+
+        <!-- ACCORDIAN / METHODS -->
+        <!-- INSTRUCTIONS -->
+        <button class="accordion"><strong>ASSIGNMENT INSTRUCTIONS</strong></button>
+        <div class="panel">
+            <div class="input-set">
+                <p>The goal of this assignment is to use the latest ES6+ Javascript functionality.</p>
+                <ul class="indent">
+                    <li>Create at least four pairs of input boxes and submit buttons.</li>
+                    <li>Use ES6+ array and object methods to manipulate the data input, and ouput the result with an
+                        explanation.
+                    </li>
+                    <li>Use at least 4 ES6+ methods.
+                    </li>
+                    <li>Remember it's best practice to add comments to your code.</li>
+                </ul>
+                <p>Don't worry about validating data. Assume only numbers will be entered in the input box. </p>
+                <p class="bonus-bg"><strong>Optional Bonus:</strong> If you have completed the requirements above and
+                    are up for
+                    an extra
+                    challenge, you can take your project to the next level with following bonus activities.</p>
+                <ul class="indent">
+                    <li>Use string template literals for the output and use arrow functions.
+                    </li>
+                    <li>Integrate two more ES6+ functions.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- reduce() -->
+        <button class="accordion">reduce() method</button>
+        <div class="panel">
+            <div class="input-set reduce-method">
+                <p>The<strong> reduce()</strong> method reduces the array to a single value.
+                    The return value of the function is stored in an accumulator (result/total).</p>
+                <p class="array">Array = [1, 2, 3, 4, 11, 14, 18, 20, 25, 30]</p>
+                <label for="#">Enter a number to reduce all elements in the array to a single
+                    value/sum/total.</label><br><br>
+                <!-- Input -->
+                <input type="text" class="input">
+                <!-- Submit for Input -->
+                <input class="submit" type="submit"></input><br>
+                <!-- Result markup with hook for answer -->
+                <p class="markup sum"></p>
+                <br>
+            </div>
+        </div>
+
+        <!-- every() -->
+        <button class="accordion">every() method</button>
+        <div class="panel">
+            <div class="input-set every-method">
+                <p>The <strong> every()</strong> method tests whether all elements in the array pass the test
+                    implemented by the provided function. It returns a Boolean value: True or False.
+                </p>
+                <p class="array">Array = [1, 2, 3, 4, 11, 14, 18, 20, 25, 30]</p>
+                <label for="#">Enter a number to check if it is greater > than or equal = to the highest element in the
+                    array?</label><br><br>
+                <!-- Input -->
+                <input type="text" class="input">
+                <!-- Submit for Input -->
+                <input class="submit" type="submit"></input>
+                <!-- Result markup with hook for answer -->
+                <p class="markup sum"></p>
+                <br>
+            </div>
+        </div>
+
+        <!-- filter() -->
+        <button class="accordion">filter() method</button>
+        <div class="panel">
+            <div class="input-set filter-method">
+                <p>The <strong> filter()</strong> method returns an array containing elements of the parent array that
+                    match the set test.</p>
+                <p class="array">Array = [1, 2, 3, 4, 11, 14, 18, 20, 25, 30]</p>
+                <!-- Input -->
+                <label for="#">Enter a number to filter the array and display the numbers greater > than or equal to
+                    your
+                    input.</label><br><br>
+                <input type="text" class="input">
+                <!-- Submit for Input -->
+                <input class="submit" type="submit"></input>
+                <!-- Result markup with hook for answer -->
+                <p class="markup sum"></p>
+                <br>
+            </div>
+        </div>
+
+        <!-- map() -->
+        <button class="accordion">map() method</button>
+        <div class="panel">
+            <div class="input-set map-method">
+                <p>The <strong> map()</strong> method creates a new array with the results of calling a function for
+                    every array element. The map() method calls the provided function once for each element in an array,
+                    in order.</p>
+                <p class="array">Array = [1, 2, 3, 4, 11, 14, 18, 20, 25, 30]</p>
+                <!-- Label -->
+                <label for="#">Enter a number to multiply * each elements of a given array.</label><br><br>
+                <!-- Input -->
+                <input type="text" class="input">
+                <!-- Submit for Input -->
+                <input class="submit" type="submit"></input>
+                <!-- Result markup with hook for answer -->
+                <p class="markup sum"></p>
+                <br>
+            </div>
+        </div>
+
+        <!-- find()  -->
+        <button class="accordion">find() method</button>
+        <div class="panel">
+            <div class="input-set find-method">
+                <p>The <strong> find()</strong> method creates a new array with the results of calling a function for
+                    every array element. The map() method calls the provided function once for each element in an array,
+                    in order.</p>
+                <p class="array">Array = [1, 2, 3, 4, 11, 14, 18, 20, 25, 30]</p>
+                <!-- Label -->
+                <label for="#">Enter a number to get the value of the first element in the array that has a value of n
+                    or more.</label><br><br>
+                <!-- Input -->
+                <input type="text" class="input">
+                <!-- Submit for Input -->
+                <input class="submit" type="submit"></input>
+                <!-- Result markup with hook for answer -->
+                <p class="markup sum"></p>
+                <br>
+            </div>
+        </div>
+
+        <!-- some()  -->
+        <button class="accordion">some() method</button>
+        <div class="panel">
+            <div class="input-set some-method">
+                <p>The <strong> some()</strong> method checks if any of the elements in an array pass a test (provided
+                    as a function). If it finds an array element where the function returns a true value, some() returns
+                    true (and does not check the remaining values).
+                    Otherwise it returns false</p>
+                <p class="array">Array = [1, 2, 3, 4, 11, 14, 18, 20, 25, 30]</p>
+                <!-- Label -->
+                <label for="#">Enter a number to check whether your input is True or False and if it's Less than the
+                    elements in the array.</label><br><br>
+                <!-- Input -->
+                <input type="text" class="input">
+                <!-- Submit for Input -->
+                <input class="submit" type="submit"></input>
+                <!-- Result markup with hook for answer -->
+                <p class="markup sum"></p>
+                <br>
+            </div>
+        </div>
+
+        <hr>
+        <h2>SUBMISSION</h2>
+        <p>by: Jak Ashuraliev | <a href="https://github.com/jak-ashuraliev" target="_blank">GitHub</a>
+    </section>
 </body>
 
 </html>

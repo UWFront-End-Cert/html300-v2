@@ -1,3 +1,141 @@
-.main {
-    padding: 2rem
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    color: #777;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    height: 10%;
+    width: 100vw;
+    background-color: #4b2e83;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    max-width: 25%;
+    padding: 1rem;
+}
+
+header p {
+    color: #eee;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+section {
+    margin: 3rem;
+}
+
+h2,
+h3 {
+    color: #4b2e83;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+p {
+    color: #313131;
+    line-height: 1.5rem;
+    margin: 1rem 0;
+}
+
+.bonus-bg {
+    background-color: pink;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.indent {
+    margin-left: 2rem;
+}
+
+hr {
+    margin: 2rem 0;
+}
+
+.markup {
+    font-weight: bold;
+    color: #4b2e83;
+}
+
+/* ACCORDING */
+.accordion {
+    background-color: #eee;
+    color: #222;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #9a8ab8;
+    color: #fff;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 1px 18px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.input-set {
+    padding: 16px 0;
+}
+
+input[type=text] {
+    padding: .3rem;
+}
+
+input[type=submit] {
+    background-color: #777;
+    outline: none;
+    border: none;
+    padding: .3rem 1.5rem;
+    border-radius: 0.125rem;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #777;
+}
+
+label {
+    color: #4b2e83;
 }
