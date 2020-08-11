@@ -1,0 +1,9 @@
+@mixin gray-box {
+  background-color: $bg-lightgray;
+  padding: 2rem;
+}
+
+@mixin white-box {
+  background-color: $white;
+  padding: 2rem;
+}

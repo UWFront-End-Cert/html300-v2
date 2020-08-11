@@ -6,12 +6,29 @@ html {
 *:after,
 *:before {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    color: $primary-gray;
+    letter-spacing: .4px;
+    font-family: 'Roboto', sans-serif;
 }
 
-.main {
-    padding: 2rem;
+header {
+    height: 80px;
+    width: 100vw;
+    background-color: #4b2e83;
+    display: flex;
+    align-items: center;
 }
 
-h1 {
-    color: $red;  
+header img {
+    max-width: 25%;
+    padding: 1rem;
+}
+
+header p {
+    color: $white;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    font-weight: lighter;
 }

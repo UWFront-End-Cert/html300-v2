@@ -3,4 +3,162 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+@import 'body.components';
+@import 'mixins';
 
+// Card outer box
+.card-outer-box {
+  // Mixin
+  @include gray-box;
+  padding: 2.5rem;
+}
+
+// Card inner box
+.card-inner-box {
+  display: flex;
+  justify-content: space-between;
+  // Mixin
+  @include white-box;
+}
+
+// Card profile / Left Side
+.card-profile {
+  text-align: center;
+  width: 40%;
+
+  // Employee image
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  // Employee title "Steve Smith"
+  h3 {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+
+  // Employee sub title "Program Manager"
+  p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: $secondary-gray;
+  }
+}
+
+// Card content / Right Side
+.card-content {
+  min-width: 65%;
+  // Mixin
+  @include gray-box;
+  margin-left: 2rem;
+
+  // Hide bullet points
+  ul {
+    list-style-type: none;
+
+    // Employee list of info
+    li {
+      padding: .4rem;
+      font-size: 1.2rem;
+      color: $secondary-gray;
+    }
+  }
+
+  // Style email address
+  p {
+    color: $secondary-gray;
+    font-size: 1.2rem;
+  }
+
+  // Align linkedin icon in the middle with a text
+  .icon {
+    padding-top: .3rem;
+    height: 36px;
+    position: relative;
+    top: 8px;
+    left: 5px;
+    margin-right: 1rem;
+  }
+}
+
+// MEDIA QUERIES //
+
+/* // Small devices (768px and under) */
+@include media-query("mobile") {
+
+  // Hide header title
+  header p {
+    display: none;
+  }
+
+  // Set header img/logo to 100% width
+  header img {
+    max-width: 100%;
+  }
+
+  // Main div
+  .main {
+    width: 95%;
+  }
+
+  // Card outer box
+  .card-outer-box {
+    padding: 0.75rem;
+  }
+
+  // Card inner box
+  .card-inner-box {
+    display: block;
+    padding: 0.75rem;
+  }
+
+  // Card profile
+  .card-profile {
+    width: 100%;
+    margin: 0 auto;
+
+    // Employee image
+    img {
+      width: 50%;
+      margin-top: 1rem;
+    }
+
+    // Employee title "Steve Smith"
+    h3 {
+      font-size: 1.4rem;
+    }
+
+    // Employee sub title "Program Manager"
+    p {
+      font-size: 1rem;
+    }
+
+  }
+
+  // Profile Righ Side
+  .card-content {
+    padding: 0.75rem;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+
+    // Employee information
+    ul {
+      li {
+        font-size: 1rem;
+      }
+    }
+
+    // Employee email
+    p {
+      font-size: 1rem;
+    }
+
+    // LinkedIn icon
+    .icon {
+      margin-right: 0.75rem;
+    }
+  }
+
+}
