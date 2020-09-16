@@ -38,8 +38,7 @@ const data = [5, 4, 8, 9, 3],
     // define a variable which holds the functionality of map() method
 
      const som = data.map(function(n) {
-     //here num is the user input number
-     // n is each element of the array
+
      //here the map method takes the input value, multiplies it to each elements of an array and returns a new array
                   return num * n;
 
@@ -64,7 +63,7 @@ $(".submit1").on("click", function() {
   const inputVal1 = parseInt(inputVal);
 // use filter function to differentiate numbers which has zero remainder aftervdevided by 2(even numbers in array)
   let arr2 = array.filter(function(num) {
-  return num % 2 == 0;
+  return num % inputVal == 0;
   })
 //show array of even numbers on browser
   $(".result1").text(arr2);
@@ -110,17 +109,19 @@ $(".showOutput2").text(num2 * arr2);
 $(function () {
 //setting an array
 const myArr = [24, 32, 44];
-//const myArr = [];
+
 $(".submit3").on("click", function() {
 //set variables for input and converting input value to valid numbers using parseInt
  const inputUser = $(".input3").val();
  const inputFinal = parseInt(inputUser);
- //using some() method to check if the input value is greater than 10
- //show true if its more than 10 and show false if its less than 10
- let arr2 = myArr.some(function() {
-    return inputFinal > 10;
+ //using some() method to check if the input value is greater than
+
+ let arr2 = myArr.some(function(num) {
+  console.log(num);
+    return  num > inputFinal ;
+
  });
- console.log(arr2);
+
 
 //console.log(arr2);
 
