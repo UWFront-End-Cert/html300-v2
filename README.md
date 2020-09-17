@@ -36,9 +36,9 @@ Follow these steps to get your initial setup started
 - Clone the fork to your local machine
 
 ### Adding the Upstream to your Fork
-- Navigate to your fork's root folder in terminal (e.g. `cd ~/Sites/uw/html300`)
+- Navigate to your fork's root folder in terminal (e.g. `cd ~/Sites/uw/html300-v2`)
 - Make sure you are on your master branch, `git checkout master`
-- Add the upstream repository as a remote connection `git remote add upstream git@github.com:UWFront-End-Cert/html300.git`
+- Add the upstream repository as a remote connection `git remote add upstream git@github.com:UWFront-End-Cert/html300-v2.git`
 - Verify with `git remote -v`, should have both `origin` and `upstream`
 - REMINDER: you will only ever push to `origin`, as that's your fork. Only fetching and pulling will work with `upstream`.
 
