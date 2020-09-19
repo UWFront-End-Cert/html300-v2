@@ -42,7 +42,7 @@ const employee = [
   },
 ];
 
-/* Writing function and assigning to the variable cardHtml */
+/* Writing function and assigning to the variable "cardHtml" */
 let cardHtml = employee.map(function(info) {
   let card = `
     <div id="container">
@@ -65,5 +65,5 @@ let cardHtml = employee.map(function(info) {
     return card;
 });
 
-/* Accessing template-hook class on html page and populating it with cardHtml info */
+/* Accessing "template-hook" class on html page and populating it with "cardHtml" info */
 $(".template-hook").append(cardHtml);
