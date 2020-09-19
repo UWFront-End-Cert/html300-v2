@@ -1,6 +1,70 @@
-// Import partials here
-@import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
-@import 'components.content';
+// Importing partials
+@import '_set.variables';
+@import '_set.flexbox';
 
+body {
+  // Combining margin values
+  margin {
+    left, top: 1em;
+  }
+  font-family: sans-serif;
+  font-size: 0.8em;
+}
+
+#container {
+  flex-direction: row;
+  width: 38em;
+  background-color: #fff;
+  padding: 2em;
+}
+
+.emp-image {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 35%;
+  margin-left: -1.5em;
+  padding-right: 1em;
+}
+
+.headshot {
+  width: 85%;
+  border-radius: 50%;
+}
+
+.name {
+  // Combining font values
+  font {
+    size: 1.3em;
+    weight: bold;
+  }
+  margin-bottom: -0.5em;
+}
+
+.title {
+  font-style: italic;
+}
+
+.details {
+  flex: 2 65%;
+  padding: 0.7em 0 1.2em 1.5em;
+}
+
+.linkedin-icon {
+  width: 1.7em;
+  vertical-align: middle;
+}
+
+.linkedin-link {
+  text-decoration: none;
+  padding-left: 0.5em;
+}
+
+/* Adding media query to resize and stack divs for mobile */
+@media screen and (max-width: 576px) {
+  #container {
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+}

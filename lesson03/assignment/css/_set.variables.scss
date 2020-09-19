@@ -1,0 +1,13 @@
+// Establishing colors
+$dkgray: #808080;
+$ltgray: #f2f2f2;
+
+
+// Applying to CSS properties
+body, .details {
+  background-color: $ltgray;
+}
+
+body, .linkedin-link {
+  color: $dkgray;
+}
