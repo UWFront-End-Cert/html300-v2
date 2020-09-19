@@ -16,6 +16,7 @@ body {
   width: 38em;
   background-color: #fff;
   padding: 2em;
+  margin-bottom: 2em;
 }
 
 .emp-image {
@@ -65,6 +66,6 @@ body {
   #container {
     flex-direction: column;
     width: 80%;
-    margin: auto;
+    margin: 0 auto 3em auto;
   }
 }
