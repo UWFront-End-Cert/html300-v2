@@ -59,7 +59,8 @@ function browserSync() {
             baseDir: './'
         },
         notify: false,
-        browser: "google chrome"
+        browser: "chrome.exe"
+
     });
 }
 
