@@ -1,0 +1,34 @@
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin grid_header{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 5em;
+  grid-template-areas: 'header';
+}
+
+@mixin grid_nav{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 10em;
+  grid-template-areas: 'nav';
+}
+
+@mixin grid{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 50em;
+  grid-template-areas: 'main';
+}
+
+@mixin grid_footer{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 5em;
+  grid-template-areas: 'header';
+}

@@ -3,4 +3,109 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+@import 'size.variables';
+@import 'display.responsive';
+@import 'font.variables';
 
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $black;
+  width: $hundredper;
+  height: $hundredper;
+  margin: 0;
+  top: 0;
+  left: 0;
+  font-family: $redhat, $sans;
+  @include media-query("mobile") {
+    width: auto;
+    height: $hundredper;
+  }
+}
+
+.main {
+  header {
+    width: $hundredper;
+    text-align: center;
+    color: $white;
+    @include grid_header;
+  }
+
+  .nav {
+    color: $white;
+    border-bottom: $two $white solid;
+    @include grid_nav;
+    /*add planet background from NASA*/
+    &__ul {
+      @include flex;
+      align-items: center;
+      padding: $one;
+      margin: $half;
+    }
+
+    &__li {
+      display: block;
+      color: $silver;
+      @include media-query("mobile") {
+        line-height: $three;
+      }
+    }
+
+    &__spacelandtitle {
+      font-size: $four;
+      color: $white;
+      @include media-query("mobile") {
+        display: none;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $silver;
+      padding: $one;
+    }
+
+    &__link--hover {
+      animation: hoverfill 2s forwards;
+      border-radius: $hundredper;
+    }
+  }
+
+  &__grid {
+    @include grid;
+    margin-bottom: $five;
+
+    &__sidebar {
+      color: $white;
+      padding: $one;
+      font-size: $one;
+
+      &__img {
+        width: $eightyper;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    &__content {
+      color: $white;
+      padding: $one;
+      font-size: $one;
+
+      &__img{
+        width: $fiftyper;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+  &__footer {
+    border-top: $two $white solid;
+    color: $white;
+    text-align: center;
+    padding: $half;
+    @include grid_footer;
+  }
+}
