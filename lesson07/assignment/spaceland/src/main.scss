@@ -1,0 +1,260 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+@import 'font.variables';
+@import 'display.responsive';
+
+*{
+  box-sizing: border-box;
+}
+
+#app, .main {
+  background-color: $black;
+  color: $white;
+  width: 100%;
+  height: 100%;
+  font-family: $redhat, $sans;
+  @include media-query("mobile") {
+    width: auto;
+    height: 100%;
+  }
+  /*twinkling stars style*/
+  &__stars {
+    height: 0.4375rem;
+    width: 0.4375rem;
+    border-radius: 100%;
+    animation-iteration-count: infinite;
+  }
+  /*shooting stars style*/
+  &__shootingstar {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    animation-iteration-count: infinite;
+  }
+  /*shooting stars animation*/
+  &__starshooter1 {
+    margin-top: 0%;
+    margin-left: 0%;
+    animation-name: shootingstar;
+    animation-duration: 3s;
+  }
+
+  &__starshooter2 {
+    margin-top: 0%;
+    margin-left: 0%;
+    animation-name: shootingstar;
+    animation-duration: 1s;
+  }
+
+  &__starshooter3 {
+    margin-top: 0%;
+    margin-left: 0%;
+    animation-name: shootingstar;
+    animation-duration: 4s;
+  }
+  /*twinkling stars animation*/
+  &__star-0 {
+    margin-top: 3%;
+    margin-left: 50%;
+    animation-name: twinkle3;
+    animation-duration: 1.75s;
+  }
+
+  &__star-1 {
+    margin-top: 1%;
+    margin-left: 10%;
+    animation-name: twinkle2;
+    animation-duration: 2s;
+  }
+
+  &__star-2 {
+    margin-top: 1%;
+    margin-left: 80%;
+    animation-name: twinkle1;
+    animation-duration: 1.5s;
+  }
+
+  &__star-3 {
+    margin-top: 1%;
+    margin-left: 25%;
+    animation-name: twinkle3;
+    animation-duration: 1.8s;
+  }
+
+  &__star-4 {
+    margin-top: 1%;
+    margin-left: 2%;
+    animation-name: twinkle1;
+    animation-duration: 3s;
+  }
+
+  &__star-5 {
+    margin-top: 1%;
+    margin-left: 55%;
+    animation-name: twinkle1;
+    animation-duration: 1.5s;
+  }
+
+  &__star-6 {
+    margin-top: 1%;
+    margin-left: 90%;
+    animation-name: twinkle1;
+    animation-duration: 3s;
+  }
+
+  &__star-7 {
+    margin-top: 1%;
+    margin-left: 70%;
+    animation-name: twinkle3;
+    animation-duration: 1.75s;
+  }
+
+  &__star-8 {
+    margin-top: 1%;
+    margin-left: 20%;
+    animation-name: twinkle3;
+    animation-duration: 1.5s;
+  }
+
+  &__star-9 {
+    margin-top: 1%;
+    margin-left: 40%;
+    animation-name: twinkle1;
+    animation-duration: 4s;
+  }
+  @keyframes shootingstar {
+    0% {
+      transform: translate(62.5rem, 62.5rem);
+      background-color: $white;
+    }
+  }
+  @keyframes twinkle1 {
+    0% {
+      transform: scale(0.5);
+      opacity: 0.5;
+    }
+
+    50% {
+      opacity: 0.5;
+      background-color: $darkorange;
+    }
+  }
+  @keyframes twinkle2 {
+    0% {
+      transform: scale(0.5);
+      opacity: 0.75;
+    }
+
+    50% {
+      opacity: 0.5;
+      background-color: $darkred;
+    }
+  }
+  @keyframes twinkle3 {
+    0% {
+      transform: scale(0.5);
+      opacity: 0.25;
+    }
+
+    50% {
+      opacity: 0.5;
+      background-color: $lightorange;
+    }
+  }
+  .nav {
+    background-color: $black;
+    color: $white;
+    border-bottom: 0.125rem $white solid;
+    @include flex;
+    &__ul {
+      @include flex;
+    }
+
+    &__li {
+      display: block;
+      color: $silver;
+      @include media-query("mobile") {
+        line-height: 3rem;
+      }
+    }
+
+    &__spacelandtitle {
+      color: $white;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $silver;
+      padding: 1rem
+    }
+
+    &__link--hover {
+      animation: hoverfill 2s forwards;
+      border-radius: 100%;
+      @include media-query("mobile"){
+        animation: underline 1s;
+      }
+    }
+  }
+  @keyframes hoverfill {
+    0% {
+      color: $black;
+    }
+
+    100% {
+      background-color: $lemonyellow;
+      color: $black;
+      opacity: 1;
+    }
+  }
+  @keyframes underline {
+    0% {
+      text-decoration: underline;
+      color: $lemonyellow;
+    }
+
+    100% {
+      text-decoration: underline;
+      color: $lemonyellow;
+    }
+  }
+  &__h1{
+    text-align: center;
+    font-size: 1rem;
+  }
+  &__moon{
+    text-align: center;
+    font-size: 2.5rem;
+    background-image: url(https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-position: center;
+    @include media-query("mobile"){
+      font-size: 1.5rem;
+    }
+
+    &__p{
+      color: $lemonyellow;
+    }
+  }
+
+  &__end{
+    margin: auto;
+    text-align: center;
+  }
+
+  &__footer{
+    border-top: 0.125rem $white solid;
+    text-align: center;
+  }
+}
+
+.active{
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
