@@ -26,7 +26,7 @@
         <div class="main__star-6 main__stars"></div>
         <div class="main__star-7 main__stars"></div>
         <div class="main__star-8 main__stars"></div>
-        <div class="main__star-9 main__stars"></div>
+        <div class="main__star-9 main__stars"></div> 
       </div>
       <div class="text-center d-sm-none">
         <h1 class="display-5">SPACELAND</h1>
@@ -48,9 +48,16 @@
     </nav>
     <!--desktop nav bar sub-title-->
     <router-view/>
+    <footer class="main__footer p-3 d-flex flex-wrap justify-content-center align-items-center">
+      <p>SPACELAND &copy; 2020</p>
+    </footer>
   </div>
 
 </template>
+
+<script>
+
+</script>
 
 <style>
 

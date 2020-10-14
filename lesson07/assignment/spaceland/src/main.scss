@@ -1,7 +1,5 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
-
-// Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
@@ -32,8 +30,8 @@
   }
   /*shooting stars style*/
   &__shootingstar {
-    height: 10rem;
-    width: 10rem;
+    height: 0rem;
+    width: 0rem;
     border-radius: 100%;
     animation-iteration-count: infinite;
   }
@@ -194,7 +192,7 @@
       padding: 1rem
     }
 
-    &__link--hover {
+    &__link__hover {
       animation: hoverfill 2s forwards;
       border-radius: 100%;
       @include media-query("mobile"){
