@@ -18,7 +18,9 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 
 ###	Create your project using Vue CLI:
 
--	Follow the instructions in the Vue CLI documentation: https://cli.vuejs.org/guide/creating-a-project.html. Choose "default" preset, rather than choosing features manually. If you're not sure whether to use npm or yarn, choose npm. Pass the "--no-git" flag to the create command, to prevent it from initializing the new project as a git repository (necessary because the html300 directory is a repository already, and having nested repositories leads to major problems with git).
+-	Follow the instructions in the Vue CLI documentation: https://cli.vuejs.org/guide/creating-a-project.html. Pass the "--no-git" flag to the create command, to prevent it from initializing the new project as a git repository (necessary because the html300 directory is a repository already, and having nested repositories leads to major problems with git).
+	- Choose "default" preset, rather than choosing features manually.
+	- If you're not sure whether to use npm or yarn, choose npm.
 
 ![Screenshot of creating using Vue CLI v4.4.6](vue-create.png)
 
