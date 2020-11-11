@@ -9,7 +9,7 @@
 -   Run `npx gulp`
 - 	A local node server will launch at `localhost:3000`
 
-### In `index.js`, do the following:
+### In `dogs.js`, do the following:
 * Create a constructor function for `Dog` using the ES6 `class` syntax
 * This function should have properties for the `dog`’s `name`, `age`, `breed`, `color`, `barkLevel`, `energyLevel`, and a `pat` method.​
 * The `name`, `breed`, and `color` should be strings the levels are numbers​
