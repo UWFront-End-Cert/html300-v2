@@ -16,3 +16,6 @@
 - Create a Pull Request for your assignment branch to your forked master
 - Submit the link to your pull request in your assignment submission box
 - Once assignment is graded, merge the Pull Request
+
+### Image credit:
+"handsome" by foreverdigital is licensed with CC BY-NC-ND 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-nd/2.0/
