@@ -12,12 +12,38 @@
 <body>
   <main>
     <h1>Using ES6+ Methods in DOM Interactions</h1>
+    <h2>We're going to be testing some ES6 on our array: [0, 1, 2, 3, 5, 8] </h2>
+    <hr></hr>
     <form id="example-form">
       <label>Enter your favorite number:
         <input type="text" class="input">
       </label>
-      <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+      <input type="submit" value="See Result!">
+      <p>We add this number to our array, and multiply by 2, using map: <span class="output"></span></p>
+    </form>
+    <hr></hr>
+    <form id="example-form2">
+      <label>Enter a number to see a new trick:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="See Result!">
+      <p>Using reduce, we add the number to the array and get the sum of the elements: <span class="output"></span></p>
+    </form>
+    <hr></hr>
+    <form id="example-form3">
+      <label>Enter a number to see if any array values are larger than that number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="See Result!">
+      <p>Use filter to check if any numbers are larger: <span class="output"></span></p>
+    </form>
+    <hr></hr>
+    <form id="example-form4">
+      <label>Enter a number to see if it's true all array numbers are below that number, using every:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="See Result!">
+      <p>True means all numbers are below that number; false means some array values are above that number:<span class="output"></span></p>
     </form>
   </main>
 </body>
