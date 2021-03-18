@@ -13,41 +13,47 @@ We'll spend our final couple weeks working on the final project, so this will ac
 - [Bootstrap Vue](https://bootstrap-vue.js.org/docs/)
 - [Netlify](https://www.netlify.com/)
 
-### To get migrated:
+### Build the Nuxt app:
 -	Watch the video on Nuxt to learn more about the framework
--	Verify `yarn` is installed by running `yarn -v` in your terminal to see if a version comes back
 -	**Create a new repository for this assignment.** Do not build it here.
-	-	In that repo, run `yarn create nuxt-app my-project-title`
-	-	You may adjust the name, description, and package manager
-	-	You can add Bootstrap Vue here or any other CSS framework you'd want to use when prompted
-	-	Choose `none` for server framework
-	-	Use spacebar to select Axios, you can add PWA support if desired as well
-	-	You may add the linters if you'd like, but they are more advanced and can give you 'errors' if you break the rules
-	-	Choose `none` for testing
-	-	Choose Universal
+	-	In that repo, run `npx create-nuxt-app my-project-title` (replace "my-project-title" with your project's title), and choose the following settings:
+		-	Name: anything you like
+		- Package manager: npm or yarn, your preference
+		- Programming language: JavaScript
+		- UI Framework: Bootstrap Vue (optional)
+		-	Nuxt.js modules: Axios (use spacebar to select)
+		- Linting tools: none
+		- Testing framework: none
+		- Rending mode: Universal
+		- Deployment target: Static
+		- Deployment tools: none
+		- GitHub username: your username, which should be the default here
+		- Version control system: Git
 	-	The install will begin
 	-	`cd` into your newly created project directory
-	- 	Run `yarn add node-sass sass-loader` to add sass
-		-	Use scss by adding `lang="scss"` to your template `<style>` tags as well as globally with the `main.scss` process we used for bootstrap in the CLI
-	-	Run `yarn dev` to start the local server
--	With your newly created Nuxt app, start migrating over your Vue template files and assets from the Vue CLI project to their respective spots. Basically any content in the 'App.vue' file now goes in the `layouts/default.vue`, The `<nuxt />` tag acts like the `<router-view />`.
--	For internal links, now use `<nuxt-link>` components.
--	Migrate any views/page components to the `pages` directory. You can create folder structures, or have an `index.vue` file within a folder that will generate the route to the folder's name (i.e. `about/index.vue` shows up in the browser at `/about`).
--	Routes are generated based on the pages file structure, don't worry about a router file.
--	Migrate any components or additional assets from previous assignments
--	Add any additional packages you are using
+	-	Follow instructions in the generated project's README to start the local server
+- Add Sass support:
+  -	Use the appropriate package manager (yarn or npm) to install `node-sass` and  `sass-loader`
+	-	Add `lang="scss"` to all `<style>` tags in templates
+-	Migrate over your Vue template files and assets from the Vue CLI project to their respective spots in the Nuxt app.
+	- Migrate content related to layout from the 'App.vue' file to `layouts/default.vue`.	Migrate page templates to the `pages` directory and component templates to the `components` directory. More information about views: https://nuxtjs.org/docs/2.x/concepts/views
+	-	For internal links, now use `<nuxt-link>` components. More information on Nuxt routing: https://nuxtjs.org/docs/2.x/get-started/routing/
+-	Add any additional packages you are using.
+
+### Bootstrap-Vue package:
+
+There aren't many good resources on using bootstrap-vue package with Nuxt. Luckily, it's very easy! If you choose "Bootstrap Vue" for UI Framework in the app setup, everything should be connected automatically, and you can immediately start using Bootstrap components in view files.
 
 ### Additional items:
+-	The site should have at least 4 pages (including the home) with `<nuxt-link>` used to navigate between them in the nav
+-	Feel free to reuse as much content as you'd like from what you created in previous assignments
 -	Incorporate data from an API. (See below for API suggestions)
 	-	1 instance of retrieving data from an API
-	-	With that returned data, build a corresponding component and use v-for to loop over the data
-	-	That component should have props validation as well as use at least 4 data points in the template itself (heading, description, image, statistics, etc)
-	-	The component should have some sort of method that causes a UI interaction on that instance of the component (show/hide, change the CSS, animation, etc)
--	Your site should have at least 4 pages (including the home) with `<nuxt-link>` used to navigate between them in your nav
--	Feel free to reuse as much content as you'd like from what you created in previous assignments.
-- 	Deploy to Netlify. Remember that this will not work if the final assignment code is in this directory. It must be in a new repository.
-- 	**Bonus:**  Create UI interactions to interact with your API data   
-- 	**Extra Bonus:**  Create dynamic routing with your data through components with single pages 
+	-	Build a custom component to display the data returned from the API
+	-	That component should have props validation and use at least 4 pieces of data from the API (if possible). For example, if the returned data is of the format `{image: 'http://path.com/123', name: 'stingray', created: '10-12-2019', author: 'Claude'}`, the component should display the image, name, created date, and author information
+- Deploy to Netlify https://app.netlify.com/start
+- **Bonus:**  Create UI interactions to interact with your API data   
+- **Extra Bonus:**  Create dynamic routing with your data through components with single pages
 -	**Super Extra Bonus:** Point a custom domain to your site
 
 ### API Notes
