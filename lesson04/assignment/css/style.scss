@@ -11,6 +11,7 @@ body {
   background-color: white;
 }
 
+// This is the overall navigation container
 @mixin navigation-unordered {
   display:flex;
   flex-direction: row;
@@ -37,7 +38,7 @@ nav ul {
     transition: 0.5s;
     margin: 1em;
     &:hover {
-      color:black;
+      color:black; // change text color on a hover
     }
     &:hover span {
       transform: translateY(0) scale(2);
@@ -45,12 +46,12 @@ nav ul {
   }
   span {
     position: absolute;
-    width: 25%;
+    width: 25%; // each span takes .25 of the container
     height: 100%;
     background-color: $movie-red;
-    transform: translateY(-100%);
+    transform: translateY(-100%); //move the span to cover the li
     border-radius: 15%;
-    left: calc((var(--n) - 1) * 25%);
+    left: calc((var(--n) - 1) * 25%); 
     transition: 0.5s;
     transition-delay: calc((var(--n) - 1) * 0.1s);
     z-index: -1;
