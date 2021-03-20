@@ -83,7 +83,8 @@ a {
     font-weight: 300;
     letter-spacing: 2px;
     text-decoration: none;
-    background: rgb(238, 13, 13);
+    /* background: rgb(236, 179, 179); */
+    opacity: 1.0;
     padding: 20px 5px;
     display: inline-block;
     width: 100%;
@@ -91,7 +92,7 @@ a {
  }
 
  .navigation ul {
-    border: 1px solid rgb(212, 20, 20);
+    /* border: 1px solid rgb(212, 20, 20); */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -104,6 +105,10 @@ a {
  
  .navigation .user {
     flex: 1;
+ }
+
+ .navigation {
+     align-self: flex-start;
  }
 
 
