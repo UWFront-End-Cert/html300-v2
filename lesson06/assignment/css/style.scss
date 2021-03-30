@@ -1,6 +1,138 @@
 // Import partials here
-@import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
-@import 'components.content';
+@import "base.normalize";
+@import "settings.variables";
+@import "settings.responsive";
+@import "components.content";
 
+
+// INDEX.HTML AND SHARED
+.jumbotron {
+    background-image: url("../img/blossoms.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-container {
+    margin: 1em;
+   
+}
+.body-container {
+    margin: 1em;
+    margin-right: 10em;
+    margin-left: 10em;
+    text-align: center;
+}
+.top-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+// ABOUT.HTML and instructor cards
+
+.card-instructor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    margin: 0em;
+    margin-bottom: .5em;
+}
+
+.main {
+    padding: 0;
+}
+
+.personimg {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.c1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0.5em;
+    width: 33%;
+
+    p {
+        color: dimgray;
+        text-align: center;
+        font-size: 14px;
+        padding: 0em;
+        margin: 0em;
+    }
+
+    .titlename {
+        color: $text-grey;
+        text-align: center;
+        font-size: 14px;
+        padding: 0em;
+        margin: 0em;
+        font-style: italic;
+    }
+}
+
+.c2 {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    background-color: $background-grey;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1em;
+    opacity: 0.9;
+    width: 67%;
+}
+
+.linkedin {
+    display: flex;
+    width: 25%;
+    flex-direction: row;
+    vertical-align: baseline;
+    padding-top: 1em;
+}
+
+.linkedin-text {
+    font-size: 14px;
+    padding: 0.2em;
+    padding-top: 6px;
+    padding-left: 4px;
+    font-family: "Work Sans", sans-serif;
+    color: black;
+    font-weight: bolder;
+    text-align: left;
+    margin: 0em;
+}
+
+.card-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
+    opacity: 0.6;
+}
+
+.cardp {
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    color: black;
+    text-align: left;
+    margin: 0em;
+    padding: 0.2em;
+}
+
+
+// accordion page

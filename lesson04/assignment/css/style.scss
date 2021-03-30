@@ -1,6 +1,6 @@
 
 
-$movie-red: #6e3637;
+$fun-color1: #96263b;
 
 body {
   margin: 0;
@@ -20,10 +20,10 @@ body {
 nav ul {
   @include navigation-unordered;
   li {
-    color: $movie-red;
+    color: $fun-color1;
     font-size: 16px;
     border: 0.3em solid black;
-    border-radius: 0.5em;
+    border-radius: 0.2em;
     width: 12em;
     height: 3em;
     text-transform: uppercase;
@@ -48,7 +48,7 @@ nav ul {
     position: absolute;
     width: 25%; // each span takes .25 of the container
     height: 100%;
-    background-color: $movie-red;
+    background-color: $fun-color1;
     transform: translateY(-100%); //move the span to cover the li
     border-radius: 15%;
     left: calc((var(--n) - 1) * 25%); 
