@@ -4,12 +4,6 @@ This repository contains the activities and assignments required to complete the
 ## Course Setup
 Follow these steps to get your initial setup started
 
-### Recommended Tools
-- [Visual Studio Code](https://code.visualstudio.com/) - Editor/IDE
-- [Hyper Terminal](https://hyper.is/) - Modern Terminal
-- [Oh My Zsh](https://ohmyz.sh/) - Zsh framework
-- [Adobe XD](https://www.adobe.com/products/xd.html) - Design Tool
-
 ### Required Tools (by end of course)
 - [NodeJS/npm](https://nodejs.org/en/)
 - [Gulp](https://gulpjs.com/)
