@@ -6,55 +6,75 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script type="text/javascript">
-    myArray = [13,25,10,43,435];
+    // myArray = [13,25,10,43,435];
     // console.log(myArray);
 
-    // myArray2 = myArray.map(x => x+5)
-    // console.log(myArray2);
-    for(let index = 0; index < myArray.length; index++){ // error in the variable, switched to index, and remove '-1'
-      console.log(myArray[index]); // shows all the numbers in console
-    }
+    // for(let index = 0; index < myArray.length; index++){ // error in the variable, switched to index, and remove '-1'
+    //   console.log(myArray[index]); // shows all the numbers in console
+    // }
 
-    for(let index = 0; index < myArray.length; index++){
-      myArray[index] = myArray[index] + 15;
-      // let myArray[index];
-      // console.log(myArray[index]);
-      // console.log missing
-    }
-    console.log(myArray + ' ' + 'Each number should 15 greater than before the loop'); // string
+    // FOR EACH METHOD
+    myArray = [ 13 , 25 , 10 , 43 , 435 ].forEach( function (item) {
+      console.log( item );
+    });
+
+    // MAP METHOD
+    myArray3 = [ 13, 25, 10, 43, 435 ];
+
+    const x = myArray3.map( function ( item ) {
+      return item + 15;
+    });
+    
+    console.log( x + ' ' + 'Each number should 15 greater than before the loop' );
+
+    // for(let index = 0; index < myArray.length; index++){
+    //   myArray[index] = myArray[index] + 15;
+    // }
+    // console.log(myArray + ' ' + 'Each number should 15 greater than before the loop'); 
   
+    // EVERY METHOD
+    var isAbove30 = myArray3.every( function ( item , index ) {
+      return item[ index ] < 30;
+    });
+    console.log( "Every number is above 30 is " + isAbove30 ); 
 
-    var isAbove30 = true;
-    // console.log(isAbove30);
-     for(let index = 0; index < myArray.length; index++){
-      //  console.log(index); }
-    if(myArray[index] < 30){
-      // console.log(isAbove30);} }
-       isAbove30 = false;
-      //  console.log(isAbove30);
-     }
-    }
-    console.log("Every number is above 30 is " + isAbove30);
+    // var isAbove30 = true;
+    //  for(let index = 0; index < myArray3.length; index++){
+    // if(myArray3[index] < 30){
+    //    isAbove30 = false;
+    //  }
+    // }
+    // console.log("Every number is above 30 is " + isAbove30);
 
-    console.log("Creating an array for every number above 50");
-    above50 = [];
-    for(let index = 0; index < myArray.length; index++){
-      if(myArray[index] > 50){
-        above50.push(myArray[index]); // misspelling the variable 'above50'
-      }
-    }
-    console.log("Here is the array for every number above 50: " + above50);
+    console.log( "Creating an array for every number above 50" );
+    // FILTER METHOD
+    const above50 = myArray3.filter( function ( item ) {
+      return item > 50;
+    });
+    console.log( "Here is the array for every number above 50: " + above50 );
 
-    myArray2 = [13,25,10,43,435];
-    // console.log(myArray2);
-    let sum = 0;
-    // console.log(sum);
-    for(let index = 0; index < myArray2.length; index++){ // remove the '+1' after 'myArray2.length'
-      sum  += myArray2[index];  // implemented this operation
-      // sum = sum + myArray2[index];
-    }
+    // above50 = [];
+    // for(let index = 0; index < myArray3.length; index++){
+    //   if(myArray3[index] > 50){
+    //     above50.push(myArray3[index]); // misspelling the variable 'above50'
+    //   }
+    // }
+    // console.log("Here is the array for every number above 50: " + above50);
+   
+    // REDUCE METHOD
+    myArray2 = [ 13 , 25 , 10 , 43 , 435 ];
+    let sum = myArray2.reduce( function ( result , index ) {
+      return result + index;
+    });
+    console.log( "The total value of the array is " + sum );
 
-    console.log("The total value of the array is " + sum);
+    // myArray2 = [13,25,10,43,435];
+    // let sum = 0;
+    // for(let index = 0; index < myArray2.length; index++){ 
+    //   sum  += myArray2[index];  
+    // }
+    // console.log("The total value of the array is " + sum);
+    // Output: The total value of the array is 526
 
   </script>
 </head>
