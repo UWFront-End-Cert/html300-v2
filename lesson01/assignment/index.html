@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Assignment 1 - Part 2 Example</title>
   <script src="scripts.js"></script>
+  <script src="scripts_includes.js"></script>
+  <script src="scripts_every.js"></script>
+  <script src="scripts_map.js"></script>
+  <script src="scripts_find.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,6 +22,38 @@
       </label>
       <input type="submit" value="See Demo!">
       <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+    </form>
+    <form id="includes-form">
+      <h2>Find animals included in the array</h2>
+      <label>Enter an animal to see if it exists in the array:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Submit">
+      <p>It occurs in the array: <span class="output"></span></p>
+    </form>
+    <form id="every-form">
+      <h2>See if every number in the array is less than your favorite number</h2>
+      <label>Enter your favorite number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Submit">
+      <p>Every value in the array is less than your number: <span class="output"></span></p>
+    </form>
+    <form id="map-form">
+      <h2>Create a new array by multiplying the elements by your favorite number</h2>
+      <label>Enter your favorite number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Submit">
+      <p>Values in the new array: <span class="output"></span></p>
+    </form>
+    <form id="find-form">
+      <h2>Find the first element that exceeds your favorite number</h2>
+      <label>Enter your favorite number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Submit">
+      <p>First number that exceeds your input: <span class="output"></span></p>
     </form>
   </main>
 </body>
