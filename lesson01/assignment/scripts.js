@@ -12,7 +12,9 @@ document. addEventListener("DOMContentLoaded", function(){
     let data = [0, 1, 2, 3, 5, 8]
     //An array of names of family to compare
     let nameData = ['Dan ', 'Carol', 'Doug', 'Ben','Anna','Ross','Madison','Jennifer','Emily','Tom','Lisa']
-
+    //An array of ages to compares
+    let ageData = [27, 25, 61]
+    let rawAgeDifferences = ['']
     const inputField = document.querySelector('#example-form .input')
     const userInput = inputField.value
     const userNumber = parseInt(userInput)
@@ -39,8 +41,7 @@ document. addEventListener("DOMContentLoaded", function(){
     //Outputs true or false depending on if the user's name is a match
     document.querySelector('#example-form .output2').innerHTML = matchingNameBoolean    
 
-    // Clear the form field so the user can try again
-    inputField.value = ''
+   
     //Selects the 3rd input field
     const inputField3 = document.querySelector('#example-form .fathersName')
     const nameOfFather = inputField3.value
@@ -50,10 +51,22 @@ document. addEventListener("DOMContentLoaded", function(){
     console.log(fathersNameLength)
     //Compares the length of the user's father's name to the array names
     const namesLongerThanFathersName = nameData.filter(element => element.length > fathersNameLength)
-    
-    //Outputs the names that are longer than the user's father's name
-    document.querySelector('#example-form .ouput3').innerHTML = namesLongerThanFathersName
-    console.log(namesLongerThanFathersName)
+    //Counts the number of names that are shorter than or equal to the user's father's name
+    const numberOfLongerNames = namesLongerThanFathersName.length
+    //Outputs the number of names that are longer than the user's father's name
+    document.querySelector('#example-form .ouput3').innerHTML = numberOfLongerNames
+    //Selects the 4th input field
+    const inputField4 = document.querySelector('#example-form .userAgeInput')
+    const userAge = inputField4.value
+    //Evalutes the difference between the user age and each member of my immediate family, and finds the absolute value
+    ageDifferences = (ageData.map(x=> Math.abs(x - userAge)))
+    console.log(ageDifferences)
+    document.querySelector('#example-form .output4').innerHTML = ageDifferences[0]
+    document.querySelector('#example-form .output5').innerHTML = ageDifferences[1]
+    document.querySelector('#example-form .output6').innerHTML = ageDifferences[2]
+     // Clear the form field so the user can try again
+     inputField.value = ''
+     
 
   })
 
