@@ -1,5 +1,5 @@
 // Code that requires the DOM be loaded should not be run until the DOM is loaded
-document. addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function(){
 
   // Find the example form, and handle its submit event
   const exampleForm = document.querySelector('#example-form')
@@ -29,5 +29,4 @@ document. addEventListener("DOMContentLoaded", function(){
     // Clear the form field so the user can try again
     inputField.value = ''
   })
-
 })

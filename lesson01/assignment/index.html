@@ -6,19 +6,76 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Assignment 1 - Part 2 Example</title>
   <script src="scripts.js"></script>
+  <script src="includes.js"></script>
+  <script src="every.js"></script>
+  <script src="find.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <main>
     <h1>Using ES6+ Methods in DOM Interactions</h1>
+
     <form id="example-form">
+      <p>The <mark>reduce() method</mark> executes a reducer function (that you provide) on each element of the array, resulting in single output value.
+      <div class="">
       <label>Enter your favorite number:
         <input type="text" class="input">
       </label>
       <input type="submit" value="See Demo!">
       <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+      </div>
     </form>
+
+<hr>
+    <form id="includes-form">
+      <p>The <mark>includes() method</mark> determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+
+      <div class="">
+      <label>What is the missing color in the primary color wheel that is not listed below:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Run">
+      <p>Yellow, blue and: <span class="output"></span></p>
+      </div>
+    </form>
+
+<hr>
+<form id="every-form">
+  <p>The <mark>every() method</mark> tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+  <div class="">
+  <label>Array [1, 30, 39, 29, 10, 13]
+    <input type="text" class="input">
+  </label>
+  <input type="submit" value="Run">
+  <p>Enter a number that is larger than in the array: <span class="output"></span></p>
+  </div>
+</form>
+
+<hr>
+<form id="find-form">
+  <p>The <mark>find()</mark> method returns the value of the first element in the provided array that satisfies the provided testing function.
+  <div class="">
+  <label>Array [1, 30, 39, 29, 10, 13]
+    <input type="text" class="input">
+  </label>
+  <input type="submit" value="Run">
+  <p>Find a number larger than 9 in the array: <span class="output"></span></p>
+  </div>
+</form>
+
+<hr>
+<form id="filter-form">
+  <p>The <mark>filter()</mark> method creates a new array with all elements that pass the test implemented by the provided function.
+  <div class="">
+  <label>Element [wind, fire, rain, storm, tornado]
+    <input type="text" class="input">
+  </label>
+  <input type="submit" value="Run">
+  <p>What element above have more than 4 letters? <span class="output"></span></p>
+  </div>
+</form>
+
   </main>
 </body>
 
