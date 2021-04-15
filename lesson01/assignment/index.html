@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
 <body>
   <main>
     <h1>Using ES6+ Methods in DOM Interactions</h1>
+    <h2>Example</h2>
     <form id="example-form">
       <label>Enter your favorite number:
         <input type="text" class="input">
@@ -19,6 +21,47 @@
       <input type="submit" value="See Demo!">
       <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
     </form>
+
+    <h2>1. Create a New Array Using Map by multiplying each element by the input value</h2>
+    <p>Array: [1, 2, 3, 4, 5, 6]</p>
+    <form id="map-form">
+      <label>Enter a number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="See Result">
+      <p>The new array created by multiplying the original array by your number is: <span class="output2"></span></p>
+    </form>
+
+    <h2>2. Use Filter to return values in an Array that are greater than the input</h2>
+    <p>Array: [1, 2, 10, 15, 25, 60]</p>
+    <form id="filter-form">
+      <label>Enter a number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Find Values">
+      <p>Values that are greater than your input include: <span class="output3"></span></p>
+    </form>
+
+    <h2>3. Use Find to return the first array value that is greater than the input</h2>
+    <p>Array: [1, 2, 10, 15, 25, 60]</p>
+    <form id="Find-form">
+      <label>Enter a state:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="See Results">
+      <p>The first number in the array that is greater than your number: <span class="output6"></span></p>
+    </form>
+
+    <h2>4. Use Includes to determine if the input value is included in the array</h2>
+    <p>Array: [Alaska, Washington, Oregon, Idaho, Montana]</p>
+    <form id="Includes-form">
+      <label>Enter a state:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Check your state">
+      <p>Your state is included in the array: <span class="output5"></span></p>
+    </form>
+
   </main>
 </body>
 
