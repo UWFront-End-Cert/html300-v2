@@ -4,12 +4,6 @@ This repository contains the activities and assignments required to complete the
 ## Course Setup
 Follow these steps to get your initial setup started
 
-### Recommended Tools
-- [Visual Studio Code](https://code.visualstudio.com/) - Editor/IDE
-- [Hyper Terminal](https://hyper.is/) - Modern Terminal
-- [Oh My Zsh](https://ohmyz.sh/) - Zsh framework
-- [Adobe XD](https://www.adobe.com/products/xd.html) - Design Tool
-
 ### Required Tools (by end of course)
 - [NodeJS/npm](https://nodejs.org/en/)
 - [Gulp](https://gulpjs.com/)
@@ -21,23 +15,13 @@ Follow these steps to get your initial setup started
 - [Nuxt](https://nuxtjs.org/)
 
 
-### Course Final Project Setup
-- Create a new repository that will hold your final course project, name it something appropriate for what it will do (e.g. "WeatherTracker", "MovieGuide", etc)
-- Viewing that new repo on Github, click on the `Settings` tab at the top right, then the `Collaborators` tab on the left. Add `cherimarie` (https://github.com/cherimarie) and `madeste` (https://github.com/madeste) as collaborators.
-- For assignment 01 you will create a `documents` folder in the root with a `.txt` or `.md` file within, containing the course proposal
-- As the course progresses, work for the course final project will be done in the new repo
-
-*The rest of these instructions are for working with this html300 repo*
-
 ### html300 Course Repo Setup
 - Within *this* html300 repo, click the `fork` button the the top right to fork a copy to your personal GitHub account
-- You will be taken to your forked repo, it should say 'forked fromn UWFront-End-Cert/html300' under the title
-- In your newly created fork, click on the `Settings` tab at the top right, then the `Collaborators` tab on the left. Add `cherimarie` (https://github.com/cherimarie) and `madeste` (https://github.com/madeste) as collaborators.
+- You will be taken to your forked repo, it should say 'forked from UWFront-End-Cert/html300' under the title
 - Clone the fork to your local machine
 
 ### Adding the Upstream to your Fork
 - Navigate to your fork's root folder in terminal (e.g. `cd ~/Sites/uw/html300-v2`)
-- Make sure you are on your master branch, `git checkout master`
 - Add the upstream repository as a remote connection `git remote add upstream git@github.com:UWFront-End-Cert/html300-v2.git`
 - Verify with `git remote -v`, should have both `origin` and `upstream`
 - REMINDER: you will only ever push to `origin`, as that's your fork. Only fetching and pulling will work with `upstream`.
@@ -46,8 +30,8 @@ Follow these steps to get your initial setup started
 - To keep your fork in sync with any changes to the original, we can use upstream to fetch and merge with our forks
 - THIS ONLY NEEDS TO BE DONE ONCE A WEEK OR WHEN YOUR INSTRUCTOR SUGGESTS TO
 - Run `git fetch upstream` to get the latest code from all branches
-- Now make sure you're on master with `git checkout master`
-- Now merge the upstream version of master with your fork's by running `git merge upstream/master`
+- Verify you're on master branch with `git checkout master`
+- Merge the upstream version of master with your fork's by running `git merge upstream/master`
 - You shouldn't run into conflicts, but if you get errors or conflicts, you can work this guide to resolve or talk to your instructor for help https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line
 
 ## Per Lesson Workflow
@@ -66,15 +50,12 @@ $ git checkout -b lesson3
 - The `assignment` folder will have the starter files and instructions required to complete
 - Once completed, open a new Pull Request. Within the PR, set the base to be YOUR forked master branch, and the compare branch is  that lesson's assignment branch
 - Copy the direct link to the pull request page, and paste that into the submission box for the assignment
-- Once the assignment has been graded, you can merge the pull request
+- Once the assignment has been graded, merge the pull request
 
 ### Assignments
 - Check the `README.md` files found in the root of each `assignment` folder for instructions, links for tools, and any required information. Consult the rubric within Canvas for the grading scale breakdown
 - When you open a pull request, you may keep pushing commits to that assignment's branch as they will automatically update the PR -- no need to close and re-open a new one
 - Please use the Canvas discussion boards if coming across issues or problems with assignments so all folks have visibility
-
-### Quizzes
-- Each week there will be a quiz available to take, please flag up any issues if questions aren't being assessed correctly
 
 ### Resources
 - [Git Resources](https://try.github.io/)
