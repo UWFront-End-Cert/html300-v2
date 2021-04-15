@@ -1,0 +1,18 @@
+Course project proposal
+
+I want to build a site that includes present climate information and future conditions to the users.
+
+Not sure how in depth I’ll get into yet, still getting ideas for the site. In short, I want this site to be informational and eductional with a pratical purpose too. As far as I’m concerned that weather/environment/activities go hand in hand.
+
+As one who like to garden and work out, I check out the weather forcast to plan for ideal activities for the coming days or to get mentally ready if nothing else.
+
+For example, what’s the fire season or forecast is in California? Is it going to affect the air quality in Seattle that I might not want to jog outdoor for a while.
+
+There is a wealth of free APIs to tap into @ https://apilist.fun/collection/help-fix-the-climate.
+
+Examples of API:
+•	Visual crossing weather api - The API provides instant access to both historical weather reports and forecast data in a convenient, comma separated, tabular format
+
+•	Noaa climate data API - Weather and climate data, Climate Data Online (CDO) provides free access to NCDC's archive of global historical weather and climate data in addition to station history information
+
+•	Open charge API - The global public registry of electric vehicle charging locations
