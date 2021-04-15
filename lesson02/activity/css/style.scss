@@ -6,6 +6,9 @@
 
 // TODO: Refactor these styles to use Sass features
 
+.static-block {
+  border-top: 3px solid #6e27c5;
+}
 .static-block__title {
   margin: 4rem 0 0;
   font-size: 1.5rem;
@@ -13,6 +16,7 @@
   font-weight: 400;
   color: #6e27c5;
 }
+
 .static-block__copy {
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -23,15 +27,11 @@
   display: block;
   max-width: 100%;
   margin: auto;
-  border-bottom: 1px solid #000000;
+  border-bottom: 5px solid #150f96;
 }
 .static-block__content {
-  border-bottom: 1px solid #f6f5f6;
+  border-bottom: 5px solid #f6f5f6;
   margin: 2rem auto;
-}
-
-.static-block:only-of-type .static-block__content {
-  border: none;
 }
 .static-block:last-of-type .static-block__content {
   border: none;
