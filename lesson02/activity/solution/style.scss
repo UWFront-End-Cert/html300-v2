@@ -1,4 +1,17 @@
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+$purple: #6e27c5;
+$blue: #150f96;
+$gray: #f6f5f6;
+
+$font-fam: "arial, helvetica, sans-serif";
+
 .static-block {
+	border-top: 3px solid $purple;
 	&__title {
 	  margin: 4rem 0 0;
 	  font-size: 1.5rem;
@@ -16,16 +29,11 @@
 	  display: block;
 	  max-width: 100%;
 	  margin: auto;
-	  border: 1px solid $black;
+	  border-bottom: 5px solid $blue;
 	}
 	&__content {
-	  border-bottom: 1px solid $gray;
+	  border-bottom: 5px solid $gray;
 	  margin: 2rem auto;
-	}
-	&:only-of-type {
-	  .static-block__content {
-			border: none;
-	  }
 	}
 	&:last-of-type {
 	  .static-block__content {
