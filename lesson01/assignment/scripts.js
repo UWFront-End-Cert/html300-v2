@@ -127,16 +127,15 @@ document. addEventListener("DOMContentLoaded", function(){
     event.preventDefault()
 
     // An array that we can transform based on user input
-    const phoneNumber = [4252758825, 2062421637, 4253799586];
+    phoneNumber = ["4252758825", "2062421637", "4253799586"];
 
     const inputField = document.querySelector('#form4 .input');
     const userInput = inputField.value;
-    const userNumber = parseInt(userInput)
+    const userNumber = userInput
 
-    if(!isNaN(userNumber)){
       phoneNumber.push(userNumber)
 
-    const shortPhoneNumbers = phoneNumber.every(n => n.length < 99999999999);
+    shortPhoneNumbers = phoneNumber.every(n => n.length >= 10);
     
  
     // output the array item quantity based on user input
@@ -144,7 +143,6 @@ document. addEventListener("DOMContentLoaded", function(){
     document.querySelector('#form4 .output2').innerHTML = shortPhoneNumbers;
     // Clear the form field so the user can try again
     inputField.value = ''
-  }
   })
 })
 
