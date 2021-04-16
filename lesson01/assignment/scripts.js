@@ -40,7 +40,7 @@ document. addEventListener("DOMContentLoaded", function(){
     // Prevent the form from trying to submit to a server
     event.preventDefault()
 
-    // An array that we can transform based on user input
+    // An array that we check based on user input
     const people = [
     {name: 'Victor', age: 30},
     {name: 'Gail', age: 28},
@@ -50,13 +50,13 @@ document. addEventListener("DOMContentLoaded", function(){
     {name: 'Du', age: 70}
     ];
 
-    const inputField = document.querySelector('#form1 .input');
-    const userInput = inputField.value;
-    const person = people.find(({name}) => name === userInput);
+    const inputField = document.querySelector('#form1 .input'); //take the users information entered
+    const userInput = inputField.value; //converting user input into a constant called userInput
+    const person = people.find(({name}) => name === userInput); //look in the array and see if there is a name object that corresponds with the users input
  
     // output the array item quantity based on user input
-    document.querySelector('#form1 .output').innerHTML = person.age;
-    document.querySelector('#form1 .name').innerHTML = userInput;
+    document.querySelector('#form1 .output').innerHTML = person.age; //return the age of the person found
+    document.querySelector('#form1 .name').innerHTML = userInput; //reeturn the name of the person found
  
     // Clear the form field so the user can try again
     inputField.value = ''
@@ -72,14 +72,14 @@ document. addEventListener("DOMContentLoaded", function(){
     // Prevent the form from trying to submit to a server
     event.preventDefault()
 
-    // An array that we can transform based on user input
+    // An array that we check based on user input
     const cpuParts = ['CPU', 'RAM', 'GPU', 'PSU', 'motherboard', 'case', 'SSD', 'wireless card', 'fans', 'OS', 'operating system', 'hard drive']
 
-    const inputField = document.querySelector('#form2 .input');
-    const userInput = inputField.value;
+    const inputField = document.querySelector('#form2 .input'); //save the users data input as a constant called inputField
+    const userInput = inputField.value; //saving inputField to userInput
  
     // output the array item quantity based on user input
-    document.querySelector('#form2 .output').innerHTML = cpuParts.includes(userInput);
+    document.querySelector('#form2 .output').innerHTML = cpuParts.includes(userInput); //return true if something typed is included from the array.
     // Clear the form field so the user can try again
     inputField.value = ''
   })
@@ -103,14 +103,14 @@ document. addEventListener("DOMContentLoaded", function(){
     {name: 'Daniel', age: 25},
     {name: 'Du', age: 70}
     ];
-    const ages = [30, 28, 31, 60, 25, 70]
+    const ages = [30, 28, 31, 60, 25, 70] //values of the ages of people
 
-    const inputField = document.querySelector('#form3 .input');
-    const userInput = inputField.value;
-    const ageMultiplied = ages.map(x => x * userInput);
+    const inputField = document.querySelector('#form3 .input'); //saving users input as a constant called inputField
+    const userInput = inputField.value; //saving inputField as userInput
+    const ageMultiplied = ages.map(x => x * userInput); //multiplying each age in the age array by the value of the userInput value
  
     // output the array item quantity based on user input
-    document.querySelector('#form3 .output').innerHTML = ageMultiplied;
+    document.querySelector('#form3 .output').innerHTML = ageMultiplied; //return the multiplied array values into the .output class span element
  
     // Clear the form field so the user can try again
     inputField.value = ''
@@ -129,18 +129,18 @@ document. addEventListener("DOMContentLoaded", function(){
     // An array that we can transform based on user input
     phoneNumber = ["4252758825", "2062421637", "4253799586"];
 
-    const inputField = document.querySelector('#form4 .input');
-    const userInput = inputField.value;
-    const userNumber = userInput
+    const inputField = document.querySelector('#form4 .input'); //saving user input into inputField constant
+    const userInput = inputField.value; //saving inputField as userInput
+    const userNumber = userInput //saving userInput as userNumber
 
-      phoneNumber.push(userNumber)
+      phoneNumber.push(userNumber) //pushing the user value into the array
 
-    shortPhoneNumbers = phoneNumber.every(n => n.length >= 10);
+    shortPhoneNumbers = phoneNumber.every(n => n.length >= 10); //check every array item to make sure it is equal to or greater than 10 characters/digits
     
  
     // output the array item quantity based on user input
-    document.querySelector('#form4 .output').innerHTML = phoneNumber;
-    document.querySelector('#form4 .output2').innerHTML = shortPhoneNumbers;
+    document.querySelector('#form4 .output').innerHTML = phoneNumber; //return the values of all the array items.
+    document.querySelector('#form4 .output2').innerHTML = shortPhoneNumbers; //return false if less than 10 length
     // Clear the form field so the user can try again
     inputField.value = ''
   })
