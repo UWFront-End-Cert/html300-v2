@@ -7,14 +7,25 @@
   <title>Document</title>
   <script type="text/javascript">
     myArray = [13,25,10,43,435];
-    for(let index = 0; index < myArray.length -1; index++){
+    for(let index = 0; index < myArray.length-1; index++){
       console.log(myArray[index]);
     }
+  //using new FOREACH method to recreate for loop above - Don't need to create new array
+  //but did it so the ones below aren't one element short
+    let myArrayNEW = myArray;
+    myArrayNEW.pop();
+    myArrayNEW.forEach(e => console.log('NEW '+ e));
+  //END
+
 
     for(let index = 0; index < myArray.length -1; index++){
       myArray[index] = myArray[index] + 15;
     }
-    console.log(myArray + 'Each number should 15 greater than before the loop');
+    console.log(myArray + ' Each number should 15 greater than before the loop');
+  //using new MAP method to recreate for loop above
+    myArrayPlus15 = myArray.map(x => x+15);
+    console.log('NEW ' + myArrayPlus15 + ' Each number should 15 greater than before the loop');
+  //END
 
     var isAbove30 = true;
     for(let index = 0; index < myArray.length; index++){
@@ -23,6 +34,10 @@
       }
     }
     console.log("Every number is above 30 is " + isAbove30);
+  //using new EVERY method to recreate for loop above
+    anyOver30 = myArray.every(n => n > 30);
+    console.log("NEW Every number is above 30 is " + anyOver30);
+ //END
 
     console.log("Creating an array for every number above 50");
     above50 = [];
@@ -32,14 +47,23 @@
       }
     }
     console.log("Here is the array for every number above 50 " + above50);
+  //using FILTER method to recreate for loop above
+    over50Filter = myArray.filter(x => x >50);
+    console.log("NEW Here is the array for every number above 50 " + over50Filter);
+  //END
+
 
     myArray2 = [13,25,10,43,435];
     let sum = 0;
-    for(let index = 0; index < myArray.length + 1; index++){
-      sum = sum + myArray[index];
+    for(let index = 0; index < myArray2.length + 1; index++){
+      sum = sum + myArray2[index];
     }
 
     console.log("The total value of the array is " + sum);
+  //using REDUCER method to recreate for loop above
+    let addingmachine = (accumulator, currentValue) => accumulator + currentValue;
+    console.log('NEW the total value of the array2 is ' + myArray2.reduce(addingmachine));
+  //END
   </script>
 </head>
 <body>
