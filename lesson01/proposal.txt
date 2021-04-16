@@ -1,0 +1,26 @@
+For this course project I will be building a site about Seattle. I will include places to eat, sights to see and actives that can be done. The reason I want to focus my project on Seattle is because Seattle is a popular tourist destination. Since I was born and raised in Seattle I want to point out some of the places I believe are worth visiting. 
+
+I plan to build this website similar to what a blog site would look like. I’ll have four pages that will include: 
+
+* About Seattle
+* Restaurants (include popular brunch and dinner options)
+* Drinks/Desserts (Tea spots, donut shop, cake shop - deep sea sugar)
+* Sights & Activities (pike place, space needle, gas work parks, underground seattle - hiking locations)
+
+Seattle has many popular destinations. These pages will have a quick overview of some of the places I think is worth visiting. 
+
+Seattle is known to be the rainy city but when the sun is out, the weather is perfect. For this reason I am planning to incorporate some type of weather API. I would also like to include directions/map location using an API. 
+
+
+-----------------------------------------------------------------------------------------------------
+Things to do in Seattle
+- restaurants to visit 
+-        (brunch & dinner)
+-         (Geraldine, blue water - leshi, meet the moon, beechers at pike place, first Starbucks)
+-         (Bongos, Fogo De Chao, Shiro’s Sushi)
+
+- Popular drink/desserts spots (flower box donuts, sharetea, tea republic, etc)
+- Sights (space needle, pike place, gas works)
+- Activities (hiking, Pokémon go, underground Seattle tour, bike i90 bridge)
+
+- API (weather, google maps, Pokémon)
