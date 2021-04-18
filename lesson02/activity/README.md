@@ -8,5 +8,4 @@
 -   Navigate to the root folder of this assignment within terminal `lesson02/activity/`
 -   Run `npm install`
 -   Run `npx gulp`
--   Start working with the files, browsersync will watch your scss/HTML files and reload on changes
--   Now, take the CSS from the `starter` folder, add it to the `_components.content.scss` partial, and convert it to SCSS
+-   Start working with the style.scss file, browsersync/gulp will watch your scss files and compile it into CSS on change
