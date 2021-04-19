@@ -1,0 +1,6 @@
+For the course project, I'll build a website that utilizes the TMDB APIs for movies. This site will provide a fairly flexible learning tool for me, and also can itself have uses that aren't easy to do or aren't supported in other sites (e.g. IMDB), such as filtering search results and viewing movie times.
+
+This website will have at least three different pages, including a home page that shows movie theater times, and pages for searching/filtering and viewing films by a given actor or actress. There pages will need APIs that give information about showtimes, search/query functionality, and details about a specific actor or actress.
+
+
+APIs: https://www.themoviedb.org/documentation/api
