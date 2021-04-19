@@ -4,17 +4,33 @@
 @import 'settings.responsive';
 @import 'components.content';
 
-* {
-    color: $mediumgray;
-}
-
-main {
-    border: 50px solid $gray;
+%flex-row{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+}
+
+* {
+    color: $mediumgray;
+}
+
+.main {
+    border: 50px solid $gray;
+    @extend %flex-row;
+    padding: 0rem;
+
+    span {
+        font-size: 1.5rem;
+        color: $mediumgray;
+        font-weight: $weight;
+    }
+}
+
+.section1 {
+    width: 33%;
+    text-align: center;
 
     h1 {
         color: $mediumgray;
@@ -28,36 +44,33 @@ main {
         font-style: italic;
     }
 
-    h1,
-    h2 {
-        margin-left: 2rem;
-    }
-    span {
-        font-size: 1.5rem;
-        color: $mediumgray;
-        font-weight: $weight;
+    img {
+        // margin-left: 2rem;
+        padding-top: 2rem;
+        border-radius: 50%;
+        width: 75%;
+        margin: 0 auto;
+        display: block;
+
     }
 }
 
 .link {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+    @extend %flex-row;
 
      img {
         padding-right: 10px;
     }
 }
 
-.section1 {
-    padding-left: 2rem;
-    width: 30%;
+@media screen and (max-width: 767px) {
+    .section1 {
+        width: 100%;
+    }
 
-    img {
-        border-radius: 50%;
-        width: 75%;
-
+    .section2 {
+        padding-left: 2rem;
     }
 }
+
+
