@@ -4,7 +4,12 @@
 @import 'settings.responsive';
 @import 'components.content';
 
-%flex-row{
+
+// Variables
+
+$breakpoint: "mobile";
+
+%flex-row {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -16,10 +21,12 @@
     color: $mediumgray;
 }
 
-.main {
+main {
     border: 50px solid $gray;
     @extend %flex-row;
-    padding: 0rem;
+    margin: 10% 10%;
+    width: 80%;
+    max-width: 81.25rem;
 
     span {
         font-size: 1.5rem;
@@ -45,7 +52,6 @@
     }
 
     img {
-        // margin-left: 2rem;
         padding-top: 2rem;
         border-radius: 50%;
         width: 75%;
@@ -58,19 +64,19 @@
 .link {
     @extend %flex-row;
 
-     img {
+    img {
         padding-right: 10px;
     }
 }
 
-@media screen and (max-width: 767px) {
-    .section1 {
-        width: 100%;
-    }
+body {
+    @include media-query ($breakpoint) {
+        .section1 {
+            width: 100%;
+        }
 
-    .section2 {
-        padding-left: 2rem;
+        .section2 {
+            padding-left: 2rem;
+        }
     }
 }
-
-
