@@ -4,3 +4,118 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Galaxy S5 for Business Card 360 x 640
+$border_thickness: 1px;
+$thicker : $border_thickness * 5;
+$font-stack: Verdana, Geneva, Tahoma, sans-serif;
+$font-small: .6rem;
+$font-medium: 1rem;
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 28px solid $lightgray;
+  padding: 0 10px 0 10px;
+}
+.container {
+  width: 100%;
+  margin: 1rem;
+}
+.card-who {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+  font-size: 5rem;
+}
+.pup {
+  border-radius: 50%;
+  width: 25%;
+  align-items: center;
+}
+.card-name {
+  font-size: $font-medium;
+}
+.job {
+  font-size: $font-medium;
+  font-style: italic;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style-type: none;
+  align-items: left;
+  font-size: $font-medium;
+  color: $black;
+  line-height: 1.5rem;
+}
+.info {
+  font-family: $font-stack;
+  font-size: $font-medium;
+  line-height: 1.5rem;
+  width: 100%;
+  background-color: $gray;
+  padding: .5rem;
+  margin: 0 2rem 1rem 0 ;
+}
+span {
+  font-weight: bold;
+}
+.linked {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  font-size: $font-small;
+  margin-bottom: 10px;
+  a {
+    font-size: .8rem;
+    padding-left: .5rem;
+  }
+}
+.icon {
+  width: 25%;
+}
+// Desktop version of Business Card
+@media only screen and (min-width: 1761px) {
+  body {
+    width: 600px;
+    height: 300px;
+    padding: 0 5px 0 10px;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .job {
+    font-size: .7rem;
+  }
+  .card-who {
+    width: 35%;
+    font-size: 1rem;
+    margin: 0;
+    padding-top: 1rem;
+  }
+  .info {
+    width: 60%;
+    margin: 0;
+    font-size: $font-medium;
+  }
+  .card-name {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+  .pup {
+    width: 60%;
+  }
+  li {
+    font-size: .8rem;
+    padding-left: 1rem;
+  }
+}
+
+
