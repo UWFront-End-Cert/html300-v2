@@ -22,7 +22,7 @@ var paths = {
 function css() {
     return src('css/*.scss')
         .pipe(plumber({
-            handleError: function(err) {
+            handleError: function (err) {
                 console.log(err);
                 this.emit('end');
             }
@@ -30,7 +30,7 @@ function css() {
         .pipe(sass({
             includePaths: [paths.scss],
             outputStyle: 'compressed'
-        }).on('error', function(err) {
+        }).on('error', function (err) {
             console.log(err.message);
             // sass.logError
             this.emit('end');
