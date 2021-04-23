@@ -19,6 +19,47 @@
       <input type="submit" value="See Demo!">
       <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
     </form>
+    <h1>Mad libs!</h1>
+    <p>Create comedy gold by adding new elements to an array.</p>
+    <form id="splice-form">
+      <label>Enter an adjective:
+        <input type="text" class="adjective">
+      </label>
+      <label>Enter a plural noun:
+        <input type="text" class="plNoun">
+      </label>
+      <input type="submit" value="Get that silly phrase">
+      <p id="silly-phrase"></p>
+    </form>
+    <h1>Which woodchuck chucked the wood?</h1>
+    <p>Select one element from an array for woodchuck justice.</p>
+    <ul id="woodchuck-list"></ul>
+    <form id="chuck-form">
+      <label>Who do you think did it?
+        <input type="text" id="that-guy">
+      </label>
+      <input type="submit" value="J'accuse!">
+      <p><span id='bad-chuck'></span> is the bad chuck. The other woodchucks are goodchucks!</p>
+    </form>
+    <h1>Pig Latin generator</h1>
+    <form id="pig-latin">
+      <label>Enter a word or name and get back the Pig Latin translation!
+        <input type="text" id="word-to-mangle">
+      </label>
+      <input type="submit" value="Translate me">
+      <p>Your new word or name is: <span id="plt"></span>.</p>
+    </form>
+    <h1>Juice Bizarre</h1>
+    <p>The hot new juice bar in town has you pick smoothie ingredients by the length
+      of the ingredient names. It's a surprise! </p>
+    <p>(Doesn't work, please help)</p>
+    <form id="recipe">
+      <label>Pick the name length, a number from 5 to 10.
+        <input type="text" id="name-length">
+      </label>
+      <input type="submit" value="Make my smoothie">
+      <p>Congratulations. Your smoothie contains <span id="ingredient-list"></span>.</p>
+    </form>
   </main>
 </body>
 
