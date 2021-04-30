@@ -8,7 +8,7 @@ const {
 const sass = require('gulp-sass')
 const autoprefix = require('gulp-autoprefixer')
 const plumber = require('gulp-plumber')
-const minifycss = require('gulp-minify-css')
+const cleanCSS = require('gulp-clean-css')
 const browsersync = require('browser-sync')
 
 // Directories
@@ -38,7 +38,7 @@ function css() {
         .pipe(
             autoprefix(['> .5%'])
         )
-        .pipe(minifycss({
+        .pipe(cleanCSS({
             compatibility: 'ie8'
         }))
         .pipe(dest('css/'))
