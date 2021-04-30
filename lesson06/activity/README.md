@@ -8,11 +8,6 @@ We will be working with Bootstrap 4 to create a submittable form.
 - [Bootstrap with Sass](https://getbootstrap.com/docs/4.3/getting-started/theming/#sass)
 - [Bootstrap Tooltips](https://getbootstrap.com/docs/4.3/components/tooltips/)
 
-### Codealongs
-- [Intro to Bootstrap](https://codepen.io/akatz6/pen/pmgZPY?editors=1000#0)
-- [Bootstrap 4 CSS Components](https://codepen.io/akatz6/pen/vwLaPR?editors=1000#0)
-- [Bootstrap 4 Grid System](https://codepen.io/akatz6/pen/xNdXBE?editors=1000#0)
-- [Bootstrap 4 Widgets](https://codepen.io/akatz6/pen/ZNQMMy?editors=1000)
 
 ### To get started:
 - Create an HTML page
