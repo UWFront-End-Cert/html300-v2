@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 [
   {
     "name": "Paolo Maldini",
@@ -53,7 +52,6 @@
     ]
   }
  ]
-=======
 const cardJSON = `[
     {
       "name": "Paolo Maldini",
@@ -142,4 +140,3 @@ let output = card.map(function(c){
 });
 document.querySelector("main").innerHTML = output
   
->>>>>>> Stashed changes

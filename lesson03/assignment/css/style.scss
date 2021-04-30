@@ -4,3 +4,91 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+$primary-color: grey;
+$secondary-color: #F1F1F1;
+
+%testing {
+  border: 5px solid blue;
+}
+
+@mixin bold {
+  font-weight: bold;
+  display: inline;
+}
+
+
+.card {
+  margin: 1rem;
+  border: 3rem solid lightgrey;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+/* setting the image, name, and job title */
+  .title {
+    .titleimg {
+      height: 70%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    h1 {
+      color: $primary-color;
+    }
+
+    h2 {
+      color: $primary-color;
+      font-style: italic;
+    }
+    padding-right: 2rem;
+    text-align: center;
+  }
+
+  /* setting  job description and background */
+
+  .content {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      .bold {
+        @include bold;
+      }
+    }
+
+    li {
+      padding: 0.75rem;
+    }
+
+    .link {
+      padding-left: 1rem;
+      display: flex;
+      align-items: center;
+
+      p {
+        padding-left: 0.5rem;
+      }
+    }
+    padding-left: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    background: $secondary-color;
+    color: $primary-color;
+    flex-grow: 2;
+  }
+}
+/* responsive layout for mobile */
+@media only screen and (max-width:576px) {
+  .card {
+    flex-direction: column !important;
+
+    .content {
+      flex-grow: 0;
+    }
+  }
+}
