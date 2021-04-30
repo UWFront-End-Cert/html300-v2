@@ -4,3 +4,78 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+* {
+    box-sizing: border-box;
+  }
+  //everything below is for responsiveness. I couldn't get the media queries working when moving it to the _settings.responsive.scss for some reason. but it works here.
+
+  @mixin mobile(){
+    .employee-card{
+        flex-direction: column;
+    }
+    .employee-identity{
+        width: 100%;
+        h1{
+            margin: 0 0 0 0;
+        }
+        h2{
+            margin: 0 0 0 0;
+        }
+    }
+    .employee-resume{
+        width: 100%;
+        text-align: left;
+    }
+}
+
+  $fontweight: bold;
+  .bold{
+      font-weight: $fontweight;
+  }
+  
+
+  @media screen and (max-width: 1800px){
+    .employee-resume{
+        li{
+            line-height: 4.5;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px){
+    .employee-resume{
+        li{
+            line-height: 4;
+        }
+    }
+}
+
+@media screen and (max-width: 1350px){
+    .employee-resume{
+        li{
+            line-height: 3.5;
+        }
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .employee-resume{
+        li{
+            line-height: 3;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .employee-resume{
+        li{
+            line-height: 2.5;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+    @include mobile;
+}

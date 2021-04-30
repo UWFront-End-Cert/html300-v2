@@ -1,4 +1,4 @@
-//creating array object called employeeInfo
+// object array for employee cards
 const employeeInfo = [
     {
       "name": "Paolo Maldini",
@@ -51,12 +51,34 @@ const employeeInfo = [
       "codeLanguages": [
          "HTML", "CSS", "JavaScript", "React", "Vue", "Redux"
       ]
+    },
+    {
+      "name": "Gail Letrondo",
+      "jobTitle": "Front End Engineer",
+      "company": "Bits and Bytes",
+      "experience": "6 years",
+      "school": "University of Washington",
+      "major": "Mechanical Engineering",
+      "email": "maribel@example.com",
+      "linkedInUrl": "maribel.linkedinprofile.com",
+      "codeLanguages": [
+         "HTML", "CSS", "JavaScript", "React", "Vue", "Redux"
+      ]
     }
    ];
-//using map to create a new array for each element
-let employeeInfoHTML = employeeInfo.map(function(el){
-return `
-<article class='employee-card'>
+
+//
+const container = document.querySelector('main')
+
+employeeInfo.forEach(function(el) {
+
+let list = document.createElement('article')
+
+// set class attribute for article elements
+list.setAttribute('class', 'employee-card')
+
+// create elements for each object inside article elements
+list.innerHTML = `
   <section class='employee-identity'>
     <img class='employee-img' src='./img/headshot.jpg' alt='a dog wearing a black bow tie'>
     <h1>${el.name}</h1>
@@ -73,8 +95,7 @@ return `
       <li><b>Code Languages: </b>${el.codeLanguages}</li>
     </ul>
   </section>
-</article>
-`
-});
-//stick it all in the div with the container class.
-document.querySelector(".employee-card-container").innerHTML = employeeInfoHTML;
+  `
+  //
+  container.append(list)
+})
