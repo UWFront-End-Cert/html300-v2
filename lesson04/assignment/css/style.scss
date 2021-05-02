@@ -1,0 +1,53 @@
+header {
+    background-color: black;
+
+    .banner {
+        height: 250px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+
+    }
+}
+
+nav {
+    background-color: lightgray;
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    li {
+        list-style-type: none;
+        padding: 1rem;
+    }
+
+    li:hover {
+        transform: scale(1.5, 1.5);
+        // transition-timing-function: ease-in-out 2s;
+        // transition: transform 2s;
+        transition: ease-in-out transform 2s;
+    }
+}
+
+body {
+    background-color: lightgoldenrodyellow;
+    
+}
+
+main {
+    min-height: 400px;
+}
+
+
+h1 {
+    color: red;
+}
