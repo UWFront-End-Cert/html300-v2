@@ -28,13 +28,12 @@ nav {
     li {
         list-style-type: none;
         padding: 1rem;
+        transition: transform 2s;
     }
 
     li:hover {
         transform: scale(1.5, 1.5);
-        // transition-timing-function: ease-in-out 2s;
-        // transition: transform 2s;
-        transition: ease-in-out transform 2s;
+        
     }
 }
 
