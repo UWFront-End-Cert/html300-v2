@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     background-color: black;
 
@@ -12,7 +17,7 @@ header {
 }
 
 nav {
-    background-color: lightgray;
+    background-color: rgb(121, 80, 27);
 
     a {
         text-decoration: none;
@@ -26,27 +31,100 @@ nav {
     }
 
     li {
+        color: gold;
         list-style-type: none;
         padding: 1rem;
+        padding-right: 1.5rem;
         transition: transform 2s;
+
+        a {
+            color: gold;
+        }
     }
 
     li:hover {
-        transform: scale(1.5, 1.5);
-        
+        transform: scale(1.25, 1.25);
     }
 }
 
 body {
     background-color: lightgoldenrodyellow;
-    
+
 }
 
 main {
     min-height: 400px;
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        padding-top: 3rem;
+    }
+
+    h1 {
+        color: brown;
+        padding-top: 3rem;
+        text-align: center;
+
+    }
+
+    .intro {
+        text-align: center;
+        padding: 3rem 5rem;
+    }
+
+    h2 {
+        color: brown;
+        text-align: center;
+
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // width: 60%;
+
+        .books {
+            width: 20%;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .book-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 2rem;
+            
+
+        }
+
+        .book-info {
+            
+            text-align: center;
+
+        }
+
+        .book-info p {
+            padding-top: 1rem;
+            // padding: 0;
+        }
+    }
 }
 
+footer {
+    min-height: 7rem;
+    background-color: black;
+    color: gold;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align:center;
 
-h1 {
-    color: red;
+    p {
+    padding-top: .5rem;
+    }
 }
