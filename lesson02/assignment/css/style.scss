@@ -3,4 +3,90 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+@import 'mixin';
 
+//box design//
+.main {
+  border: 30px solid $lightgray;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+//left content//
+.left {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  font-size: $font-medium;
+  float: left;
+  width: 35%;
+}
+
+.pic {
+  border-radius: 40%;
+  width: 40%;
+  align-self: center;
+}
+
+.name {
+  align-self: center;
+  font-size: $font-medium;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.job {
+  align-self: center;
+  margin-top: 0;
+  font-style: italic;
+  font-size: $font-medium;
+  margin-right: 1rem;
+}
+
+//right content//
+.right {
+  float: inherit;
+  margin-left: 0;
+  align-self: flex-start;
+  margin-left: 0;
+  padding-left: 0;
+  align-items: flex-start;
+  padding-top: .5rem;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+
+  li {
+    list-style-type: none;
+    align-items: left;
+    @include main-text;
+    line-height: 1.6rem;
+  }
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  font-size: $font-small;
+
+  a {
+    font-size: 1rem;
+  }
+}
+
+span {
+  font-weight: bold;
+}
+
+.icon {
+  width: 1.5rem;
+  padding-left: 0;
+  padding-right: 0.4rem;
+}
