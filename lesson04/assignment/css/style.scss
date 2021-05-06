@@ -1,0 +1,121 @@
+// Colors and basic styling
+
+$dkolive: #3e442b;
+$nickel: #6a7062;
+$silver: #928a9c;
+$lavender: #c7bed9;
+$ltblue: #dcf2ff;
+
+body {
+  background-color: $dkolive;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 3rem;
+}
+
+// Menu container
+
+.menu {
+  display: block;
+  margin: 0;
+  border: 0;
+  padding: .5rem;
+  width: 12rem;
+  height: auto;
+
+  // Menu items
+
+  &__cover {
+    margin: .5rem;
+    border: .5rem ridge $nickel;
+    border-radius: .25rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: $silver;
+    color: $ltblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 6;
+    position: relative;
+    will-change: transform;
+  }
+
+  &__opt1 {
+    @extend .menu__cover;
+    font-size: 1.2rem;
+    z-index: 5;
+    top: -4rem;
+  }
+  &__opt2 {
+    @extend .menu__cover;
+    font-size: 1.2rem;
+    z-index: 4;
+    top: -7.9rem;
+  }
+  &__opt3 {
+    @extend .menu__cover;
+    font-size: 1.2rem;
+    z-index: 3;
+    top: -11.8rem;
+  }
+  &__opt4 {
+    @extend .menu__cover;
+    font-size: 1.2rem;
+    z-index: 2;
+    top: -15.7rem;
+  }
+  &__opt5 {
+    @extend .menu__cover;
+    font-size: 1.2rem;
+    z-index: 1;
+    top: -19.6rem;
+  }
+
+  // Transition effects on hover
+
+  &:hover > div {
+    transition: transform 1s ease;
+
+    &.menu__opt1 {
+      transform: translateY(3.9rem);
+      &:hover {
+        transition: all .5s ease;
+        transform: scale(1.2, 1.2) translateY(3.3rem);
+        background-color: $lavender;
+        color: $dkolive;
+      }
+    }
+    &.menu__opt2 {
+      transform: translateY(7.8rem);
+      &:hover {
+        @extend .menu__opt1:hover;
+        transform: scale(1.2, 1.2) translateY(6.5rem);
+      }
+    }
+    &.menu__opt3 {
+      transform: translateY(11.7rem);
+      &:hover {
+        @extend .menu__opt1:hover;
+        transform: scale(1.2, 1.2) translateY(9.7rem);
+      }
+    }
+    &.menu__opt4 {
+      transform: translateY(15.6rem);
+      &:hover {
+        @extend .menu__opt1:hover;
+        transform: scale(1.2, 1.2) translateY(13rem);
+      }
+    }
+    &.menu__opt5 {
+      transform: translateY(19.5rem);
+      &:hover {
+        @extend .menu__opt1:hover;
+        transform: scale(1.2, 1.2) translateY(16.3rem);
+      }
+    }
+  }
+}
