@@ -1,26 +1,20 @@
 # Assignment 05 - CSS Grid & Flexbox
 
-This layout will/can be used as a page layout for one of your final course project pages (to be copied over later). If you'd like to expand upon or modify this layout for your project, feel free. Create using the content (text, images) that you want in the final site.
+Build a web page that you'd like to include in your final project that has a layout based off the provided mockup. Use CSS grid for the page layout, and flexbox where appropriate within the content areas. This page may be edited later before being added in to the final site, if this isn't a layout you'd like to keep, but for now create it using content (text, images) that you want in the final site.
 
-### Required setup if not already installed (it should be)
-- Install [node](https://nodejs.org/en/)
-- [Adobe XD](https://www.adobe.com/products/xd.html)
-- [Design Spec Link](https://xd.adobe.com/spec/8117a5c5-ebde-471d-7eb0-c67b3578aeba-f726/) (Doesn't require download/install of XD)
+[Design Spec Link](https://xd.adobe.com/spec/8117a5c5-ebde-471d-7eb0-c67b3578aeba-f726/) (doesn't require download/install of XD). Inside the lesson05/assignment/ref directory is a mockup of the layout in several different file types for quick reference.
 
 ### To get started:
--	In your forked repo, create a new branch off of master called `lesson-05` or similar
 -   Navigate to the root folder of this assignment within terminal in your fork, `lesson05/assignment`
 -   Run `npm install`
 -   Run `npx gulp`
--   Start working with the files, browsersync will watch your scss/HTML files and reload on changes
-- 	Find the XD/PNG of the mockup component in the `ref` folder.
-- 	Please keep using SCSS and BEM when building components/layouts
-- 	Build the component using CSS Grid for the layout and flexbox for aligning content
-- 	The provided design will give you the general layout, please use Grid areas for the content sections (header, nav, sidebar, content, footer)
-- 	Fill in each area's content with something so that the layout resembles the mockup. This can be the actual planned content for your project's page, or some dummy text and images. Remember, when building out fluid/responsive layouts, giving components and content areas fixed heights is something to generally avoid -- let the content fill the space, and use padding/margin for whitespace
-- 	Add dummy nav items and use flexbox to align them, at least five as shown in the design
-- 	**Bonus:**  Add media queries or advanced grid techniques to make the nav responsive.
-- 	**Extra Bonus:**  Use grid templating and try out the repeat and autofill techniques
+-   Write new code in index.html and the appropriate .scss files to create a page that matches the provided layout.
+-   Use CSS Grid for the overall page layout and flexbox for aligning the content within.
+- Use media queries to make the layout responsive, with a design of your choosing.
+- 	Fill in each area's content to build a page that you plan to include in your final project. If the page will rely on API data, you can use dummy data (lorem ipsum, placeholder images) for those parts.
+-   Include at least five nav items and align them as shown in mockup. If your final project won't have five pages, it's okay to use dummy data for some of the nav items.
+-   Remember, when building out fluid/responsive layouts, giving components and content areas fixed heights is something to generally avoid. Let the content fill the space, and use padding/margin for whitespace.
+- 	**Bonus:**  Use grid templating and try out the repeat and autofill techniques
 
 ### To Submit:
 - Create a Pull Request for your assignment branch to your forked master
