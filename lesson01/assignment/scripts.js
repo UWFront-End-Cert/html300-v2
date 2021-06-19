@@ -3,13 +3,14 @@ document. addEventListener("DOMContentLoaded", function(){
 
   // Find the example form, and handle its submit event
   const exampleForm = document.querySelector('#example-form')
+  let data = [0, 1, 2, 3, ]
 
   exampleForm.addEventListener('submit', function(event){
     // Prevent the form from trying to submit to a server
     event.preventDefault()
 
     // An array that we can transform based on user input
-    let data = [0, 1, 2, 3, 5, 8]
+    
 
     const inputField = document.querySelector('#example-form .input')
     const userInput = inputField.value
@@ -28,6 +29,8 @@ document. addEventListener("DOMContentLoaded", function(){
 
     // Clear the form field so the user can try again
     inputField.value = ''
-  })
+  }
+  )
 
-})
+}
+)

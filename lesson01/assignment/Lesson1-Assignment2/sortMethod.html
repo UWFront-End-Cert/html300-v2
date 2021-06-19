@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1 Assignment 2 sort Method</title>
+</head>
+
+<body>
+
+    <main>
+        <h1>Using JavaScript sort Method</h1>
+        <p>Click the button to sort the array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+//declares a variables that you can sort the name of the colors
+var colors = ["Cyan", "Magenta", "Yellow", "Black"];
+
+//code that is required for the function to sort
+document.getElementById("demo").innerHTML = colors;
+
+//compute the array using sort function
+function myFunction() {
+  colors.sort();
+  document.getElementById("demo").innerHTML = colors;
+}
+</script>
+
+    </main>
+    
+</body>
+
+</html>

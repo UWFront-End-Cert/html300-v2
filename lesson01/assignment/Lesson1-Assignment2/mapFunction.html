@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Lesson 1 Assignment 2 mapFunction Method</title>
+
+</head>
+<body>
+    <main>
+        <h1>Using JavaScript mapFunction() Method</h1>
+        <p>To return an array with the square root of all the values in the original array</p>
+        <p>Click the button to get the square root of each element in the array.</p>
+        <p>The arrays are 16, 25, 49, 64</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+
+<script>
+    //These are the original arrays that will give the square root of al the values when the user clicks the button
+var numbers = [16, 25, 36, 49, 64];
+
+    //This function computes the square root of the original arrays using the map Function
+function myFunction() {
+  x = document.getElementById("demo")
+  x.innerHTML = numbers.map(Math.sqrt);
+}
+</script>
+
+    </main>
+    
+</body>
+</html>

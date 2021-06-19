@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 1 Assignment 2 filter Method</title>
+
+</head>
+
+<body>
+    <main>
+        <h1>Using JavaScript filter Method to implement a call back function</h1>
+            <p>The user will click the button to get every element in the array that 
+                has a value of 21 or more.</p>
+        
+            <button onclick="myFunction()">Try it</button>
+
+            <p id="demo"></p>
+                
+            <script>
+                //Filter method returns an array of all the values in the ages  of arrays that are 21 or over. 
+            var ages = [25, 37, 17, 15, 16, 45, 55, 65];
+                
+                //This function checks the ages of everyone over 21.
+            function checkAdult(age) {
+                return age >= 21;
+                }
+
+                //Output the ages that are 21 and over.
+            function myFunction() {
+                document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+                }
+            </script>
+                
+    </main>
+    
+</body>
+</html>

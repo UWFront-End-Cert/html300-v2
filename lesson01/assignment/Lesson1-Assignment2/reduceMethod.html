@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 1 Assignment 2 reduce Method</title>
+
+</head>
+
+<body>
+   <main>
+    <h1>Using JavaScript reduce Method</h1>
+    <p>Subtract the numbers starting from the left in the array.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        //declaring variables called numbers which are equal to array data
+        var numbers = [275, 75, 50];
+
+        //reduce method is used to apply a function to each element and reduce it to a single value
+        document.getElementById("demo").innerHTML = numbers.reduce(myFunc);
+        
+        
+        function myFunc(total, num) {
+          return total - num;
+        }
+        </script>
+        
+
+   </main> 
+</body>
+</html>

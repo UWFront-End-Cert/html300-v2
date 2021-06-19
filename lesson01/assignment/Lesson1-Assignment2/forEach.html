@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Lesson 1 Assignment 2 forEach Method</title>
+        
+      </head>
+
+      <body>
+         <main>
+            <h1>Using JavaScript array forEach() Method</h1>
+            <p>Get the sum of all values in an array</p>
+
+            <form id="example-form">
+                <label>Enter numbers to see the sum of all values:
+                  <input type="number" class="input">
+                </label>
+                <input type="submit" value="See Demo!">
+            </form>
+            <p>The sum of elements is <span id="demo"></span></p>
+
+
+            <script>
+                const numbers = [];
+                //wait for the page to be loaded, then call the setup function
+                document.addEventListener("DOMContentLoaded", setup);
+
+                //hook up the button to the update function
+                function setup(){
+                    document.getElementById("example-form").addEventListener("submit", update);
+                }
+
+                //compute the array sum using forEach
+                function update(event) {
+                    event.preventDefault();
+                    const inputField = document.querySelector('#example-form .input');
+                    const userInput = inputField.value;
+                    const userNumber = parseInt(userInput);
+                    numbers.push(userNumber);
+                    let sum = 0;
+                    
+                    numbers.forEach(myFunction);
+                    document.getElementById("demo").innerHTML = sum;
+                
+                    function myFunction(item) {
+                        sum += item;
+                       
+                    }
+
+                }
+            </script>
+
+         </main> 
+      
+    </body>
+</html>
