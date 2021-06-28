@@ -12,22 +12,53 @@
 <body>
    <main>
     <h1>Using JavaScript reduce Method</h1>
-    <p>Subtract the numbers starting from the left in the array.</p>
+    <p>Subtract the numbers starting from the left in the array [275, 75, 50].</p>
 
-    <p id="demo"></p>
+    <form id="example-form">
+      <label>Enter numbers to see the reduced single values:
+        <input type="number" class="input">
+      </label>
+        <input type="submit" value="Click Here to see the reduced value">
+    </form>
+
+    <p>Subtract numbers from the left <span id="demo"></span></p>
 
     <script>
         //declaring variables called numbers which are equal to array data
-        var numbers = [275, 75, 50];
+        
 
-        //reduce method is used to apply a function to each element and reduce it to a single value
-        document.getElementById("demo").innerHTML = numbers.reduce(myFunc);
-        
-        
-        function myFunc(total, num) {
-          return total - num;
-        }
-        </script>
+            //wait for the page to be loaded, then call the setup function
+    document.addEventListener("DOMContentLoaded", setup);
+
+//hook up the button to the update function
+function setup(){
+    document.getElementById("example-form").addEventListener("submit", update);
+}
+
+//all ages over 21 will show up when you click the button
+function update(event) {
+    let numbers = [275, 75, 50];
+    //prevents the form from being submitted
+    event.preventDefault();
+    //select the element with class name of age that is inside of an element of id example-form
+    const inputField = document.querySelector('#example-form .input');
+    //the value of the input field
+    const userInput = inputField.value;
+    const userNumber = parseInt(userInput);
+    //ages.push(userNumber);
+    //const newArray = ages.filter(a)
+    for(let i = 0; i < numbers.length; i++){
+      numbers[i] = numbers[i] - userNumber;
+    }
+
+    document.getElementById("demo").innerHTML = numbers;
+}
+
+function myFunc(total, num) {
+    return total - num;
+}
+
+</script>
         
 
    </main> 

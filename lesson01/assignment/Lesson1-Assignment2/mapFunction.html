@@ -11,25 +11,46 @@
 <body>
     <main>
         <h1>Using JavaScript mapFunction() Method</h1>
-        <p>To return an array with the square root of all the values in the original array</p>
-        <p>Click the button to get the square root of each element in the array.</p>
-        <p>The arrays are 16, 25, 49, 64</p>
-
-<button onclick="myFunction()">Try it</button>
+        
+<form id="example-form">
+    <label>Enter numbers to see the square roots:
+      <input type="number" class="input">
+    </label>
+    <input type="submit" value="Click Demo!">
+</form>
 
 <p id="demo"></p>
 
-
 <script>
     //These are the original arrays that will give the square root of al the values when the user clicks the button
-var numbers = [16, 25, 36, 49, 64];
+    const numbers = [];
+    //wait for the page to be loaded, then call the setup function
+    document.addEventListener("DOMContentLoaded", setup);
 
-    //This function computes the square root of the original arrays using the map Function
-function myFunction() {
-  x = document.getElementById("demo")
-  x.innerHTML = numbers.map(Math.sqrt);
-}
+    //hook up the button to the update function
+    function setup(){
+        document.getElementById("example-form").addEventListener("submit", update);
+    }
+
+    //compute the array sum using forEach
+    function update(event) {
+        event.preventDefault();
+        const inputField = document.querySelector('#example-form .input');
+        const userInput = inputField.value;
+        const userNumber = parseInt(userInput);
+        numbers.push(userNumber);
+        const newArray = numbers.map(mapping);
+        
+        document.getElementById("demo").innerHTML = newArray;
+    
+    }
+
+    function mapping(x) {
+        return Math.sqrt(x);
+    }
+
 </script>
+
 
     </main>
     

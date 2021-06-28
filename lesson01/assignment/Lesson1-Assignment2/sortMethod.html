@@ -11,24 +11,48 @@
 
     <main>
         <h1>Using JavaScript sort Method</h1>
-        <p>Click the button to sort the array.</p>
 
-<button onclick="myFunction()">Try it</button>
+        <form id="example-form">
+            <label>Type in words:
+              <input class="input">
+            </label>
+            <input type="submit" value="Sort">
+        </form>
+        <p>See the sorts method array alphabetically <span id="demo"></span></p>
 
-<p id="demo"></p>
 
 <script>
-//declares a variables that you can sort the name of the colors
-var colors = ["Cyan", "Magenta", "Yellow", "Black"];
+    //arrays will contain any word
+    let words = [];
+    //wait for the page to be loaded, then call the setup function
+    document.addEventListener("DOMContentLoaded", setup);
 
-//code that is required for the function to sort
-document.getElementById("demo").innerHTML = colors;
+    //hook up the button to the update function
+    function setup(){
+    document.getElementById("example-form").addEventListener("submit", update);
+    }
+    //all words will show up alphabetically when you click the button
+    function update(event) {
+        event.preventDefault();
+        const inputField = document.querySelector('#example-form .input');
+        
+        const userInput = inputField.value;
 
-//compute the array using sort function
-function myFunction() {
-  colors.sort();
-  document.getElementById("demo").innerHTML = colors;
-}
+        //split userInput into words array
+        words = userInput.split(" ");
+        //sorts words array
+        words = words.sort(function(a,b){return a.localeCompare(b);});
+
+        let sorted = words.toString();
+        sorted = sorted.replace(/,/g, " ");
+
+
+        //const newArray = words.sort(a)
+        document.getElementById("demo").innerHTML = sorted;
+    }
+
+    
+
 </script>
 
     </main>

@@ -12,27 +12,51 @@
 <body>
     <main>
         <h1>Using JavaScript filter Method to implement a call back function</h1>
-            <p>The user will click the button to get every element in the array that 
-                has a value of 21 or more.</p>
+        <p>Click the button to get a value above a specific number.</p>
+
+<form id="example-form">
+
+    <label>minimum age over 21:
+        <input type="number" class="age">
+    </label>
+    <input type="submit" value="filter">
+       
+</form>
+
+<p>All ages above minimum: <span id="demo"></span></p>
+
+<script>
+    //array will contain all ages
+    const ages = [];
+    //wait for the page to be loaded, then call the setup function
+    document.addEventListener("DOMContentLoaded", setup);
+
+    //hook up the button to the update function
+    function setup(){
+        document.getElementById("example-form").addEventListener("submit", update);
+    }
+
+    //all ages over 21 will show up when you click the button
+    function update(event) {
+        //prevents the form from being submitted
+        event.preventDefault();
+        //select the element with class name of age that is inside of an element of id example-form
+        const inputField = document.querySelector('#example-form .age');
+        //the value of the input field
+        const userInput = inputField.value;
+        const userNumber = parseInt(userInput);
+        ages.push(userNumber);
+        const newArray = ages.filter(a)
+        document.getElementById("demo").innerHTML = newArray;
+    }
+
+    function a(x) {
+        return x > 21;
+    }
+
+</script>
         
-            <button onclick="myFunction()">Try it</button>
-
-            <p id="demo"></p>
                 
-            <script>
-                //Filter method returns an array of all the values in the ages  of arrays that are 21 or over. 
-            var ages = [25, 37, 17, 15, 16, 45, 55, 65];
-                
-                //This function checks the ages of everyone over 21.
-            function checkAdult(age) {
-                return age >= 21;
-                }
-
-                //Output the ages that are 21 and over.
-            function myFunction() {
-                document.getElementById("demo").innerHTML = ages.filter(checkAdult);
-                }
-            </script>
                 
     </main>
     
