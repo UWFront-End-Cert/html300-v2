@@ -4,3 +4,25 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+$backgroundColor: gray;
+$color: #434343;
+
+
+.image {
+
+    border-color: $backgroundColor;
+    border-width: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $color;
+
+}
+
+
+.labels {
+    
+    border-width: 10px;
+    padding: auto;
+    border-color: $backgroundColor;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $color;
+}

@@ -1,0 +1,39 @@
+.card {
+    margin: 0 auto;
+    max-width: 1000px;
+    max-height: 559px;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    color:rgb(109, 104, 104);
+    padding: 40px;
+    border: 40px solid #d3d3d3; 
+}
+
+.avatar-container {
+    text-align: center;
+    margin-right: 40px;
+}
+
+.contact-container {
+    background-color: #f8f8f8;
+    flex-grow: 2;
+    padding: 30px;
+}
+ 
+.contact-text {
+    font-weight: lighter;
+
+}
+
+/* Responsive columns - two column layout (verticle) on small screens */
+@media screen and (max-width: 600px) {
+
+}
+
+
+
+
+
+
+
