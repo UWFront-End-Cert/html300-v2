@@ -29,7 +29,7 @@ function css() {
         }))
         .pipe(sass({
             includePaths: [paths.scss],
-            outputStyle: 'compressed'
+            outputStyle: 'expanded'
         }).on('error', function(err) {
             console.log(err.message);
             // sass.logError
@@ -66,3 +66,4 @@ function browserSync() {
 const watching = parallel(watchFiles, browserSync);
 
 exports.default = watching;
+exports.css=css;

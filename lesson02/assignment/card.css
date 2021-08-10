@@ -1,19 +1,40 @@
 .card {
-    margin: 0 auto;
     max-width: 1000px;
-    max-height: 559px;
+    margin: auto;
     display: flex;
     flex-direction: row;
     font-family: sans-serif;
     color:rgb(109, 104, 104);
     padding: 40px;
     border: 40px solid #d3d3d3; 
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.linkedin-detail {
+    display: flex;
+    align-items: center;
+}
+
+.linkedin-image {
+    margin-right: 5px;
 }
 
 .avatar-container {
     text-align: center;
     margin-right: 40px;
+    line-height: 10px;
 }
+
+.dog-avatar {
+    width: 60%;
+
+}
+
+.emphasis {
+    font-style: italic !important;
+}
+
 
 .contact-container {
     background-color: #f8f8f8;
@@ -27,9 +48,14 @@
 }
 
 /* Responsive columns - two column layout (verticle) on small screens */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
+.card { 
+    flex-direction: column;
+}
 
 }
+
+
 
 
 
