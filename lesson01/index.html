@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 1 - Part 2</title>
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <h1>Using ES6+ Methods in DOM Interactions</h1>
+    <h2>Sum Example</h2>
+    <form id="example-form">
+      <label>Enter your favorite number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Presto">
+      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+    </form>
+
+    <h2>1. Create a new array using Map by multiplying each element by the input value</h2>
+    <p>Array: [2, 3, 5, 7, 11]</p>
+    <form id="map-form">
+      <label>Enter a number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Create">
+      <p>The new array created by multiplying the original element by your number is: <span class="output1"></span></p>
+    </form>
+
+    <h2>2. Use Filter to return values in an array that are greater than the input</h2>
+    <p>Array: [13, 17, 19, 23, 29]</p>
+    <form id="filter-form">
+      <label>Enter a number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Filter">
+      <p>Values in the array that are greater than your input include: <span class="output2"></span></p>
+    </form>
+
+    <h2>3. Use Find to return the first array value that is greater than the input</h2>
+    <p>Array: [31, 37, 41, 43, 47]</p>
+    <form id="Find-form">
+      <label>Enter a number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Find">
+      <p>The first number in the array that is greater than your number: <span class="output3"></span></p>
+    </form>
+
+    <h2>4. Use Includes to determine if the input value is included in the array</h2>
+    <p>Array: [Bulbasaur, Squirtle, Charmander, Pikachu, Eevee]</p>
+    <form id="Includes-form">
+      <label>Enter a Kanto region Pokémon:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Include">
+      <p>Your Pokémon is included in the array: <span class="output4"></span></p>
+    </form>
+
+  </main>
+</body>
+
+</html>
