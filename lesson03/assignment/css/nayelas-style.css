@@ -1,0 +1,54 @@
+.card {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    color: #434343;
+    padding: 40px;
+    border: 40px solid #d3d3d3;
+    width: 90%;
+    box-sizing: border-box
+}
+
+.card .avatar-container {
+    text-align: center;
+    margin-right: 40px
+}
+
+.card .avatar-container .dog-avatar {
+    width: 60%
+}
+
+.card .avatar-container .contact-name {
+    color: #434343
+}
+
+.card .avatar-container .emphasis {
+    font-style: italic!important
+}
+
+.card .contact-container {
+    background-color: #f8f8f8;
+    flex-grow: 2;
+    padding: 30px
+}
+
+.card .contact-container .contact-text {
+    font-weight: lighter
+}
+
+.card .contact-container .linkedin-detail {
+    display: flex;
+    align-items: center
+}
+
+.card .contact-container .linkedin-image {
+    margin-right: 5px
+}
+
+@media screen and (max-width:750px) {
+    .card {
+        flex-direction: column
+    }
+}

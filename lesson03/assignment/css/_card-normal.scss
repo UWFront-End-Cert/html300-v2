@@ -1,0 +1,50 @@
+.card {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    color: $color;
+    padding: $card-padding;
+    border: $card-border; 
+    width: 90%;
+    box-sizing: border-box;
+
+    .avatar-container {
+        text-align: center;
+        margin-right: 40px;
+      
+
+        .dog-avatar {
+            width: 60%;
+        }
+
+        .contact-name {
+            color: $color;
+        }
+        
+        .emphasis {
+            font-style: italic !important;
+        }
+    }
+    
+    .contact-container {
+        background-color: $contact-container-background-color;
+        flex-grow: 2;
+        padding: 30px;
+    
+    
+        .contact-text {
+            font-weight: lighter;
+        }
+    
+        .linkedin-detail {
+            display: flex;
+            align-items: center;
+        }
+    
+        .linkedin-image {
+            margin-right: 5px;
+        }
+    }
+}
