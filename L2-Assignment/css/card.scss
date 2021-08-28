@@ -33,12 +33,15 @@ p span.special {
         font-style: italic;
         margin-top: -1.25rem;
     } 
+    h1 {
+        color: $h1Elements;
+    }
 }
 
 .details {
     background-color: $cardBackground;
     padding-left: 3%;
     margin: 4%;
-    width: 70%;
+    width: 100%;
     flex-wrap: wrap;
 }
