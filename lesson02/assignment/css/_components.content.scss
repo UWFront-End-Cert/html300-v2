@@ -1,88 +1,17 @@
-/* media queries to make responsive for different screens */
-@media screen and (max-width: 576px) {
-        .main {
-            grid-template-columns: 1fr;
-            margin: .5rem;
-            padding: .5rem;
-            border: solid $gray 1rem;
-        }
-        .box2 {
-          display: grid;
-          grid-column-start: 1;
-          grid-column-end: 2;
-        }
+html {
+    box-sizing: border-box;
 }
 
-@media screen and (min-width: 576px) {
-        .main {
-            grid-template-columns: 1fr 2fr;
-            margin: 40px;
-            padding: 30px;
-            border: solid $gray 50px;
-        }
-        .box2 {
-            display: grid;
-            grid-column-start: 2;
-            grid-column-end: 3;
-        }
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
 }
 
-/* CSS styling total page */
 .main {
-  font: $font-fam;
-  display: grid;
-  grid-gap: 0px 5px;
-  font-size: 100%;
+    padding: 2rem;
 }
 
-/* CSS styling for main content */
-.box1 {
-  display: grid;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  padding-bottom: 15px;
-
-  @mixin title-text {
-    color: $darkgray;
-    text-align: center;
-  }
-  h1 {
-    @include title-text;
-    margin-bottom: 1rem;
-  }
-  h2 {
-    @include title-text;
-    font-weight: normal;
-    font-style: italic;
-    margin: auto;
-  }
-  .image {
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-  }
-}
-
-/* CSS styling for secondary content*/
-.box2 {
-  background-color: $lightgray;
-  padding: 1rem;
-
-  p {
-    color: $darkgray;
-    font-weight: bold;
-    display: inline-block;
-
-    .normal {
-      font-weight: normal;
-    }
-  }
-}
-.inlineblockitems {
-  display: inline-block;
-  .logoimg {
-      vertical-align: middle;
-      margin-right: .5rem;
-  }
+h1 {
+    color: $red;  
 }
