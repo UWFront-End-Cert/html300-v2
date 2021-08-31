@@ -4,3 +4,79 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+
+// Variables
+
+$breakpoint: "mobile";
+
+%flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+* {
+    color: $mediumgray;
+}
+
+main {
+    border: 50px solid $gray;
+    @extend %flex-row;
+    margin: 10% 10%;
+    width: 80%;
+    max-width: 81.25rem;
+
+    span {
+        font-size: 1.5rem;
+        color: $mediumgray;
+        font-weight: $weight;
+    }
+}
+
+.section1 {
+    width: 33%;
+    text-align: center;
+
+    h1 {
+        color: $mediumgray;
+        font-weight: $weight;
+    }
+
+    h2 {
+
+        font-size: 1.4rem;
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    img {
+        padding-top: 2rem;
+        border-radius: 50%;
+        width: 75%;
+        margin: 0 auto;
+        display: block;
+
+    }
+}
+
+.link {
+    @extend %flex-row;
+
+    img {
+        padding-right: 10px;
+    }
+}
+
+body {
+    @include media-query ($breakpoint) {
+        .section1 {
+            width: 100%;
+        }
+
+        .section2 {
+            padding-left: 2rem;
+        }
+    }
+}
