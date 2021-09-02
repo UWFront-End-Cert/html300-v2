@@ -1,0 +1,48 @@
+@import  'profile';
+@import 'variables';
+@import 'responsiveness';
+
+//mixin function
+@mixin flexContainer ($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+.main {
+    @include flexContainer(row);
+    border: 3rem solid #d9d9d9;
+    margin: auto;
+    color: $textColor;
+}
+
+p span.special {
+    font-weight: bold;
+    font-size: large;
+}
+#image {
+    border-radius: 50%;
+    max-width: 60%;
+    min-width: 20%
+
+}
+
+//nested selectors
+.title {
+    margin: 3%;
+    text-align: center;
+
+    h3 {
+        font-style: italic;
+        margin-top: -1.25rem;
+    } 
+    h1 {
+        color: $h1Elements;
+    }
+}
+
+.details {
+    background-color: $cardBackground;
+    padding-left: 3%;
+    margin: 4%;
+    width: 100%;
+    flex-wrap: wrap;
+}

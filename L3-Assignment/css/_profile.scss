@@ -1,0 +1,11 @@
+//nested selectors
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    .p-address {
+    padding-left: .5rem;
+    }
+    &:hover {
+        color: #ff2fa8;
+    }
+}
