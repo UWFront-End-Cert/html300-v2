@@ -8,6 +8,8 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+//everything is under main 
+.main-block {
+  display: flex;
+  flex-wrap: wrap;
 }
