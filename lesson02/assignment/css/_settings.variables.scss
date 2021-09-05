@@ -1,5 +1,6 @@
 // Colors
 $gray: #f6f5f6;
+$darkgray: #d3d3d3;
 $white: #ffffff;
 $black: #000000;
 $green: #7acb00;
@@ -10,3 +11,11 @@ $yellow: #ffb617;
 $robins: #01c1d6;
 $purple: #6e27c5;
 $blue: #150f96;
+$lightgray: #717171;
+//Fonts to use for the name
+$fontname: 125%;
+
+//Image for headshot
+@mixin borderRadius {
+  border-radius: 50%;
+}
