@@ -8,10 +8,8 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
-}
-
-h1 {
-    color: $red;  
+//everything is under main
+.main-block {
+  display: flex;
+  flex-wrap: wrap;
 }
