@@ -1,0 +1,53 @@
+
+
+.container {
+    // margin: 100px;
+    display: flex;
+    // flex-direction: column;
+    // background-color: darkkhaki;
+    background: steelblue;
+    justify-content: space-evenly;
+    color: yellow;
+    font-size: 2rem;
+
+}
+
+.box {
+    // background: steelblue;
+    // border-radius: 5px;
+    // display: inline-block;
+    display: inline-flex;
+    // justify-content: space-evenly;
+    // text-justify: center;
+    // border: 3px solid red;
+    
+    height: 2.0rem;
+    margin: 1.5rem;
+    width: 8rem;
+    justify-content: center;
+    
+    .container:hover & {
+      transform: rotate(1.0turn);
+      font-size: 3rem;
+      color: greenyellow;
+      height: 3.0rem;
+      width: 6rem;
+
+    }
+  }
+  
+  .word1 {
+    transition: ease-in 0.5s 1.5s;
+  }
+  
+  .word2 {
+    transition: ease-in 0.75s 1.5s;
+  }
+  
+  .word3 {
+    transition: ease-in 1.0s 1.5s;
+  }
+
+  .word4 {
+    transition: ease-in 1.25s 1.5s;
+  }
