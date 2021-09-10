@@ -1,47 +1,56 @@
+//defined variables
 @import 'variables';
 
 
-
-@mixin animated-text {
-  color: greenyellow;
-  font-size: 3rem;
+//animation will start in 1 second and last for 3 seconds; the name is 'slide-in'
+@mixin animationSettings {
+  animation-duration: 3s;
+  animation-name: slide-in;
+  animation-delay: 1s;
 }
+
+//flex container with circle shape
 .container {
-    display: flex;
-    background-color: $backgroundColor;     /* using backgroundcolor variable */
-    justify-content: space-evenly;
-    color: $color;
-    font-size: 2rem;
-    border-radius: 1%;
-
+  height: 8rem;
+  width: 8rem;
+  background-color: $backgroundColor;   /* use $backgroundColor variable */
+  color: $color;                         /* use $color variable */
+  border-radius: 50%;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
 }
 
-.box {
-    height: 2.0rem;
-    margin: 1.5rem;
-    width: 8rem;
-    justify-content: center;
-    
-    .container:hover & {
-      transform: rotate(1.0turn);
-      @include animated-text;   /* using animated-text mixin */
-      height: 3.0rem;
-      width: 6rem;
-    }
-  }
+.container:hover {
+  transform: translate(10rem, 20rem);     /* on hover, move element 10rem to the right, 20rem down from current position*/
+}
   
-  .word1 {
-    transition: ease-in 0.5s 1.5s;
-  }
-  
-  .word2 {
-    transition: ease-in 0.75s 1.5s;
-  }
-  
-  .word3 {
-    transition: ease-in 1.0s 1.5s;
+  .circle {   
+     @include animationSettings;       /* use animation mixin */
   }
 
-  .word4 {
-    transition: ease-in 1.25s 1.5s;
+  @keyframes slide-in {
+    0% {
+      margin-right: 100%;           /* will slide-in from the left side of browser */
+      transform: scale(1.5);          /* font will start @ 3x size set */
+     }
+
+    25% {
+      color: $fontMagenta;          /* change font color */    
+    }
+
+    50% {
+      color: $fontChiffon;          /* change font color */
+    }
+
+    75% {
+      color: $fontGrey;             /* change font color */
+    }
+
+    100% {
+      color: $fontLime;             /* change font color */
+
+    }
   }
