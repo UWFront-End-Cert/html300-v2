@@ -21,12 +21,20 @@ html {
     ;
 }
 
-header {
+.header {
     grid-area: header;
-    background-color: red;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    // background: linear-gradient(45deg, #DB7093, #191970 30%);
+    // background-color: red;
+    background-image: url('../images/running-feet.jpeg'); 
+    background-size: cover;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     text-align: center;
+    &__title {
+        text-align:center;
+    }
 }
 .navigation {
     grid-area: nav;
@@ -60,4 +68,15 @@ footer {
     padding-bottom: 3rem;
     background-color: darkblue;
     text-align: center;
+}
+
+@media only screen and (min-width: 1020px) , screen and (max-height: 1089px)
+{
+    .header {
+        background-size: contain;
+        background-repeat: repeat-x;
+    }
+    h1 {
+        float: left;
+    }
 }
