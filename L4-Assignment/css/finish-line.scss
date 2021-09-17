@@ -1,0 +1,56 @@
+//defined variables
+@import 'variables';
+
+
+//animation will start in 1 second and last for 3 seconds; the name is 'slide-in'
+@mixin animationSettings {
+  animation-duration: 3s;
+  animation-name: slide-in;
+  animation-delay: 1s;
+}
+
+//flex container with circle shape
+.container {
+  height: 8rem;
+  width: 8rem;
+  background-color: $backgroundColor;   /* use $backgroundColor variable */
+  color: $color;                         /* use $color variable */
+  border-radius: 50%;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container:hover {
+  transform: translate(10rem, 20rem);     /* on hover, move element 10rem to the right, 20rem down from current position*/
+}
+  
+  .circle {   
+     @include animationSettings;       /* use animation mixin */
+  }
+
+  @keyframes slide-in {
+    0% {
+      margin-right: 100%;           /* will slide-in from the left side of browser */
+      transform: scale(1.5);          /* font will start @ 3x size set */
+     }
+
+    25% {
+      color: $fontMagenta;          /* change font color */    
+    }
+
+    50% {
+      color: $fontChiffon;          /* change font color */
+    }
+
+    75% {
+      color: $fontGrey;             /* change font color */
+    }
+
+    100% {
+      color: $fontLime;             /* change font color */
+
+    }
+  }
