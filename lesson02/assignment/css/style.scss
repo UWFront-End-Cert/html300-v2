@@ -51,6 +51,20 @@ $text-grey: rgb(112,112,112);
             @include media-query("lg") {
                 width: $card-width*.75;
             }
+            .center {
+                display: flex;
+                align-items: center;
+            }
+            .logo {
+                display: inline-block;
+                align-items: center;
+                justify-content: center;
+            }
+            .profile-text {
+                margin: 0px;
+                display: inline-block;
+                text-align: center;
+            }
         }
     }
 }
