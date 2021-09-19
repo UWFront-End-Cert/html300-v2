@@ -3,7 +3,6 @@
 @mixin media-query($mq) {
 
     $breakpoint-found: false;
-
     // Loop through the list of breakpoints we’ve provided in our settings file.
     @each $breakpoint in $breakpoints {
 

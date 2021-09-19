@@ -4,3 +4,27 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+$card-height: 200px;
+
+.main {
+    .employee-card {
+        border: 10px solid $gray;
+        height: $card-height;
+        @include media-query("sm") {
+            height: $card-height * 2;
+        }
+        .profile {
+            display: inline-block;
+            .headshot {
+                border-radius: 50%;
+                height: 60px;
+            }
+        }
+        .experience {
+            display: inline-block;
+            background: $gray;
+            padding: 10px;
+        }
+    }
+}
+
