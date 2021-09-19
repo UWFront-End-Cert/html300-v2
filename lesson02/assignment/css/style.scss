@@ -13,6 +13,11 @@ $text-grey: rgb(112,112,112);
     p {
         color: $text-grey;
     }
+
+    @include media-query("mobile-smaller") {
+        padding: 0px;
+    }
+
     .employee-card {
         border: 25px solid $background-grey;
         height: $card-height + 20px;
