@@ -5,25 +5,43 @@
 @import 'components.content';
 
 $card-height: 200px;
+$card-width: 400px;
+
+img {
+    margin: auto;
+    margin: auto;
+    display: block;
+}
 
 .main {
     .employee-card {
-        border: 10px solid $gray;
+        border: 20px solid $gray;
         height: $card-height;
-        @include media-query("sm") {
-            height: $card-height * 2;
+        padding: 10px;
+
+        @include media-query("lg") {
+            width: $card-width*1.35;
         }
         .profile {
             display: inline-block;
+            padding-right: 10px;
             .headshot {
                 border-radius: 50%;
-                height: 60px;
+                max-width: 100%;
+                height: auto;
+            }
+            @include media-query("lg") {
+                width: $card-width*1/4;
             }
         }
         .experience {
+            margin-top: 10px;            
+            padding-left: 10px;
             display: inline-block;
             background: $gray;
-            padding: 10px;
+            @include media-query("lg") {
+                width: $card-width;
+            }
         }
     }
 }
