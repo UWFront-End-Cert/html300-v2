@@ -17,18 +17,13 @@ $text-grey: rgb(112,112,112);
         border: 25px solid $background-grey;
         height: $card-height + 20px;
         display: flex;
+        padding: 30px;
+
         @include media-query("tab") {
             width: $card-width*1.05;
-            padding: 30px;
-        }
-        @include media-query("mobile") {
-            width: 100%;
-            padding: 30px;
         }
 
-        @include media-query("lg") {
-            width: $card-width*1.05;
-        }
+
         .profile {
             .title {
                 font-size: large;
@@ -41,6 +36,9 @@ $text-grey: rgb(112,112,112);
                 margin: 0px;
             }
             .headshot {
+                @include media-query("infograph") {
+                    text-align: center;
+                }
                 border-radius: 50%;
                 width: auto;
                 height: 150px;
@@ -60,7 +58,7 @@ $text-grey: rgb(112,112,112);
             background: $gray;
             padding-top: 20px;
             width: 70%;
-            
+
             .center {
                 display: flex;
                 align-items: center;
