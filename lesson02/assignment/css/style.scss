@@ -16,7 +16,7 @@ $text-grey: rgb(112,112,112);
     .employee-card {
         border: 25px solid $background-grey;
         height: $card-height;
-        padding: 20px;
+        padding: 30px;
 
         @include media-query("lg") {
             width: $card-width*1.05;
@@ -31,13 +31,13 @@ $text-grey: rgb(112,112,112);
             .headshot {
                 border-radius: 50%;
                 max-width: 100%;
-                width: 120px;
-                height: 120px;
+                width: 150px;
+                height: 150px;
                 margin: auto;
                 margin: auto;
                 display: block;
                 margin-top: 10px;
-                padding-bottom: 10px;
+                margin-bottom: 15px;
             }
             @include media-query("lg") {
                 width: $card-width/4;
