@@ -16,13 +16,14 @@ $text-grey: rgb(112,112,112);
     .employee-card {
         border: 25px solid $background-grey;
         height: $card-height + 20px;
+        display: flex;
         @include media-query("tab") {
             width: $card-width*1.05;
             padding: 30px;
         }
         @include media-query("mobile") {
-            width: $card-width*1.05;
-            padding: 15px;
+            width: 100%;
+            padding: 30px;
         }
 
         @include media-query("lg") {
@@ -41,8 +42,7 @@ $text-grey: rgb(112,112,112);
             }
             .headshot {
                 border-radius: 50%;
-                max-width: 100%;
-                width: 150px;
+                width: auto;
                 height: 150px;
                 margin: auto;
                 margin: auto;
@@ -54,26 +54,20 @@ $text-grey: rgb(112,112,112);
                 width: $card-width/4;
             }
         }
-        .experience {
-            // margin-top: 10px;            
+        .experience {       
             padding-left: 15px;
             display: inline-block;
             background: $gray;
             padding-top: 20px;
             width: 70%;
+            
             .center {
                 display: flex;
                 align-items: center;
                 height: 50px;
             }
-            .logo {
-                display: inline-block;
-                align-items: center;
-                justify-content: center;
-            }
             .profile-text {
                 margin: 0px;
-                display: inline-block;
                 text-align: center;
                 padding-left: 5px;
             }
