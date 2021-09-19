@@ -15,7 +15,7 @@ $text-grey: rgb(112,112,112);
     }
     .employee-card {
         border: 25px solid $background-grey;
-        height: $card-height;
+        height: $card-height + 20px;
         padding: 30px;
 
         @include media-query("lg") {
