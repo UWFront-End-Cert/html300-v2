@@ -23,6 +23,10 @@ $text-grey: rgb(112,112,112);
             width: $card-width*1.05;
         }
 
+        @include media-query("mobile-smaller") {
+            display: block;
+            height: 420px;
+        }
 
         .profile {
             .title {
@@ -35,10 +39,12 @@ $text-grey: rgb(112,112,112);
             p {
                 margin: 0px;
             }
+            @include media-query("mobile-smaller") {
+                display: block;
+                text-align: center;
+                padding: 0px;
+            }
             .headshot {
-                @include media-query("infograph") {
-                    text-align: center;
-                }
                 border-radius: 50%;
                 width: auto;
                 height: 150px;
@@ -55,6 +61,14 @@ $text-grey: rgb(112,112,112);
         .experience {       
             padding-left: 15px;
             display: inline-block;
+            
+            @include media-query("mobile-smaller") {
+                padding: 0px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+
             background: $gray;
             padding-top: 20px;
             width: 70%;
