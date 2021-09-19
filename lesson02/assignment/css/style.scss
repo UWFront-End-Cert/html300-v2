@@ -5,42 +5,51 @@
 @import 'components.content';
 
 $card-height: 200px;
-$card-width: 400px;
-
-img {
-    margin: auto;
-    margin: auto;
-    display: block;
-}
+$card-width: 600px;
+$background-grey: rgb(211,211,211);
+$text-grey: rgb(112,112,112);
 
 .main {
+    p {
+        color: $text-grey;
+    }
     .employee-card {
-        border: 20px solid $gray;
+        border: 25px solid $background-grey;
         height: $card-height;
-        padding: 10px;
+        padding: 20px;
 
         @include media-query("lg") {
-            width: $card-width*1.35;
+            width: $card-width*1.05;
         }
         .profile {
             display: inline-block;
             padding-right: 10px;
+            text-align: center;
+            p {
+                margin: 0px;
+            }
             .headshot {
                 border-radius: 50%;
                 max-width: 100%;
-                height: auto;
+                width: 120px;
+                height: 120px;
+                margin: auto;
+                margin: auto;
+                display: block;
+                margin-top: 10px;
+                padding-bottom: 10px;
             }
             @include media-query("lg") {
-                width: $card-width*1/4;
+                width: $card-width/4;
             }
         }
         .experience {
-            margin-top: 10px;            
-            padding-left: 10px;
+            // margin-top: 10px;            
+            padding-left: 15px;
             display: inline-block;
             background: $gray;
             @include media-query("lg") {
-                width: $card-width;
+                width: $card-width*.75;
             }
         }
     }
