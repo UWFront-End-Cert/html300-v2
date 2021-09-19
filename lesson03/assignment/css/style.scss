@@ -4,3 +4,81 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+
+//colors
+$purple: #6e27c5;
+$blue: #150f96;
+$gray: #f6f5f6;
+$white: #ffffff;
+$darkgray: #d3d3d3;
+$lightgray: #717171;
+
+//fontfamily
+$font-fam: "arial, helvetica, sans-serif";
+$fontname: 125%;
+
+//image border radius
+@mixin borderRadius {
+  border-radius: 50%;
+}
+
+//entire card
+.main-block {
+  background-color: $white;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em;
+  padding: 1em;
+
+
+
+  &__1 {
+    background-color: $white;
+    flex: 10%;
+  }
+
+  &__2 {
+    background-color: $gray;
+    flex: 45%;
+    margin: 2em;
+    padding: 1em 0;
+  }
+
+  &__img1 {
+    display: block;
+    max-width: 75%;
+    margin: 2em 0 0 3em;
+    @include borderRadius;
+  }
+
+  &__name {
+    margin: 2em 0 0 2em;
+    text-align: center;
+    font-size: $fontname;
+  }
+
+  &__jobtitle {
+    margin: 1em 0 0 2em;
+    text-align: center;
+    font-style: italic;
+  }
+
+  &__img2 {
+    float: left;
+    margin: 0 0.5em 0 0;
+  }
+
+  &__description {
+    margin: 1em;
+  }
+}
+
+body {
+  background-color: $darkgray;
+  padding: 1em;
+  color: $lightgray;
+}
+
+ul {
+  margin: 1em;
+}
