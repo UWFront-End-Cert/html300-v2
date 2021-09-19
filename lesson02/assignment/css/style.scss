@@ -16,7 +16,14 @@ $text-grey: rgb(112,112,112);
     .employee-card {
         border: 25px solid $background-grey;
         height: $card-height + 20px;
-        padding: 30px;
+        @include media-query("tab") {
+            width: $card-width*1.05;
+            padding: 30px;
+        }
+        @include media-query("mobile") {
+            width: $card-width*1.05;
+            padding: 15px;
+        }
 
         @include media-query("lg") {
             width: $card-width*1.05;
@@ -53,9 +60,7 @@ $text-grey: rgb(112,112,112);
             display: inline-block;
             background: $gray;
             padding-top: 20px;
-            @include media-query("lg") {
-                width: $card-width*.75;
-            }
+            width: 70%;
             .center {
                 display: flex;
                 align-items: center;
