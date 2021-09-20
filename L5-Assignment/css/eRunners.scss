@@ -1,0 +1,38 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(5 1fr);
+    grid-template-areas:
+    "title title title title title",
+    "col col col col col",
+    "race race race race race"
+    ;
+}
+
+.raceHeader {
+    grid-area: title;
+    align-items: center;
+
+}
+.colTitles {
+    display: flex;
+    grid-area: col;
+    justify-content: space-evenly;
+    border: 1px solid green;
+}
+
+.race-container {
+    grid-area: race;
+}
+
+.race-template {
+    display: flex;
+    // justify-content: space-evenly;
+}
+.image {
+    width: 25%;
+}
+.details {
+    display: flex;
+    align-self: center;
+    text-indent: 7rem;
+}

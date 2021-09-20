@@ -23,10 +23,10 @@ html {
 
 .header {
     grid-area: header;
-    // background: linear-gradient(45deg, #DB7093, #191970 30%);
-    // background-color: red;
-    background-image: url('../images/running-feet.jpeg'); 
+    background: linear-gradient(45deg, #DB7093, #191970 30%);
+    background-image: url('../images/runners.jpg'); 
     background-size: cover;
+    background-position: center;
     // background-size: contain;
     // background-repeat: no-repeat;
     padding-top: 5rem;
@@ -72,11 +72,16 @@ footer {
 
 @media only screen and (min-width: 1020px) , screen and (max-height: 1089px)
 {
-    .header {
-        background-size: contain;
-        background-repeat: repeat-x;
-    }
+   
     h1 {
         float: left;
+        padding-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 825px)
+{
+    .header {
+        margin: 0%;
     }
 }
