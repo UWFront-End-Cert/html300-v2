@@ -1,0 +1,66 @@
+// Source code from Transform Rotate Example by Rachel Cope: https://codepen.io/rachelcope/pen/mhkgr
+// Source code from Transform Scale, Example by Rachel Cope: https://codepen.io/rachelcope/pen/gbxxXe
+
+// animation mixin for rotating icons
+@mixin animations {
+  transition: all 3s;
+  transition-timing-function: ease;
+}
+
+// Settings for icon size and position
+@mixin iconsize {
+  height: auto;
+  width: 15rem;
+  margin: 8%;
+}
+
+// Green cabbage icon rotate animation
+.greencabbageicon {
+  @include iconsize;
+
+  &:hover {
+    transform: $rotate-greencabbage;
+    @include animations;
+  }
+}
+
+// Napa cabbage icon tip over animation
+.napacabbageicon {
+  @include iconsize;
+
+  &:hover {
+    transform: $rotate-napacabbage;
+    transition: all 2s;
+    transition-timing-function: ease-out;
+  }
+}
+
+// Half Green cabage icon double in size animation
+.halfcabbageicon {
+  @include iconsize;
+
+  &:hover {
+    transform: scale(2);
+    @include animations;
+  }
+}
+
+// Red Cabbage icon slant animation
+.redcabbageicon {
+  @include iconsize;
+
+  &:hover {
+    transform: $skew-redcabbage;
+    @include animations;
+  }
+}
+
+// Cabbage Leaf icon rotate animation
+.cabbageleaficon {
+  @include iconsize;
+
+  &:hover {
+    transform: $rotate-cabbageleaf;
+    @include animations;
+  }
+}
