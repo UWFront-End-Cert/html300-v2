@@ -1,0 +1,104 @@
+@import './mixins';
+@import './variables';
+@import './mediaqueries';
+@import './mediamixin';
+@import './generate-media-quries';
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Brygada 1918', serif;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+.main {
+    position: relative;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+#outside-border {
+    display: flex;
+    justify-content: space-evenly;
+    border: 10rem solid $base-color;
+    border-radius: 20px;
+    padding: 3rem;
+    @include mediaQ("860px") {
+        border: 7rem solid $base-color;
+    }
+    @include mediaQ("780px") {
+        flex-direction: column;
+        border: 5rem solid $base-color;
+    }
+}
+
+#title {
+    position: relative;
+    @include orientation1();
+    flex: 2;
+    margin: 4rem 1rem;
+    border-radius: 20px;
+    @include mediaQ("860px") {
+        img {
+            transform: scale(.9);
+        }
+    }
+    img {
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        @include mediaQ("480px") {
+            transform: scale(.9);
+        }
+    }
+}
+
+#inner-content {
+    position: relative;
+    @include orientation2();
+    padding: 3rem;
+    margin: 3rem;
+    line-height: 2;
+    background-color: $lighter;
+    ul {
+        list-style: none;
+        font-size: 2.75rem;
+        li {
+            white-space: nowrap;
+        }
+        @include mediaQ("1180px") {
+            li {
+                font-size: 2.35rem;
+            }
+        }
+        @include mediaQ("860px") {
+            li {
+                font-size: 2rem;
+            }
+        }
+        @include mediaQ("480px") {
+            li {
+                font-size: 1.75rem;
+            }
+        }
+    }
+    .fab {
+        color: $blue;
+    }
+}

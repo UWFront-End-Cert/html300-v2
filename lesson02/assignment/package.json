@@ -16,5 +16,10 @@
         "gulp-plumber": "1.2.0",
         "gulp-sass": "^4.1.0",
         "gulp-util": "3.0.8"
+    },
+    "dependencies": {
+        "include": "^1.1.0",
+        "include-media": "^1.4.10",
+        "media": "^0.2.1"
     }
 }
