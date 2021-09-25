@@ -1,3 +1,5 @@
+@import '_settings.variables';
+
 html {
     box-sizing: border-box;
 }
@@ -12,7 +14,9 @@ html {
     // padding: 2rem;
     color: whitesmoke;
     display: grid;
-    grid-template-columns: 30% 70%;
+    color: navy;
+    ;
+    grid-template-columns: 25% 75%;
     grid-template-areas: 
         "header header"
         "nav nav"
@@ -24,23 +28,20 @@ html {
 .header {
     grid-area: header;
     background: linear-gradient(45deg, #DB7093, #191970 30%);
-    background-image: url('../images/runners.jpg'); 
-    background-size: cover;
-    background-position: center;
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    text-align: center;
-    &__title {
-        text-align:center;
-    }
+  //   background-image: url('../images/finishline.jfif'); 
+  //   background-size: cover;
+  //  background-position: center;
+}
+.header-image {
+  width: 25%;
+  float: left;
+  padding: 1.5rem;
 }
 .navigation {
     grid-area: nav;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: greenyellow;
+    background-color: steelblue;
     // justify-self: center;
     
 }
@@ -54,19 +55,99 @@ html {
 }
 .sidebar {
     grid-area: sidebar;
-    background-color: purple;
-    height: 70rem;
-    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #ffe6ea;
+    padding-top: 2.5rem;
+    // height: 70rem;
+    img {
+      width: 15%;
+    }
+    div {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      margin-left: 1rem;
+    }
+    h2 {
+      text-align: center;
+    }
+    color: steelblue;
 }
+
+
+
 .main-content {
     grid-area: main-content;
-    background-color: orange;
+    background-color: grey;
+    padding: 2rem;
+    // display: flex;
+    // background-color: orange;
+    background-image: url('../images/main-content.jpeg'); 
+    background-size: cover;
+     background-position: center;
+    // padding: 2.5rem;
+
+    // display: flow-root;
+    font-family: 'Open Sans', sans-serif;
+    color: yellow;
 }
+
+article {
+  // padding-bottom: 15rem;
+  // border: 1px solid purple;
+  // padding-top: 7rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.solo-image {
+  // outline: 4px double red;
+  // outline-offset: 15px;
+  float: right;
+  margin-left: 3%;
+
+//  shape-outside: url("./images/run-solo.png");
+}
+
+.friend-image {
+  float: left;
+  margin-right: 3%;
+}
+
+.smile-image {
+  // outline: 4px double red;
+  // outline-offset: 15px;
+  float: right;
+  margin-left: 3%;
+
+//  shape-outside: url("./images/run-smile.jpeg");
+
+}
+
+figure {
+  max-width: 30%;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  padding: 1.5rem;
+  background-color: #004280;
+  outline: .25rem solid #cccccc;
+}
+figcaption {
+  //add some styling
+  color: steelblue;
+  font-style: italic;
+  font-weight: bolder;
+  padding: .25rem;
+  background-color: #ffe6ea;
+  vertical-align: middle;
+  text-align: center;
+}
+
 footer {
     grid-area: footer;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    background-color: darkblue;
+    background-color:  steelblue;
     text-align: center;
 }
 
@@ -85,3 +166,56 @@ footer {
         margin: 0%;
     }
 }
+
+//animation will start in 1 second and last for 3 seconds; the name is 'slide-in'
+@mixin animationSettings {
+    animation-duration: 3s;
+    animation-name: slide-in;
+    animation-delay: 1s;
+  }
+
+.header-title {
+// height: 1rem;
+//   width: 12rem;
+//   background-color: $backgroundColor; 
+  color: greenyellow;                      
+//   border-radius: 50%;
+  font-size: 3rem;
+  font-family: 'Gluten', cursive;
+//   display: flex;
+  // justify-content: space-evenly;
+//   flex-direction: column;
+  text-align: right;
+  margin-right: 3rem;
+
+  //float: left;
+
+}
+ 
+  .header-title {   
+     @include animationSettings;       /* use animation mixin */
+  }
+
+  @keyframes slide-in {
+    0% {
+      // margin-right: 100%;           /* will slide-in from the left side of browser */
+      transform: scale(1.5);          /* font will start @ 3x size set */
+     }
+
+    25% {
+      color: $fontMagenta;          /* change font color */    
+    }
+
+    50% {
+      color: $fontChiffon;          /* change font color */
+    }
+
+    75% {
+      color: $fontGrey;             /* change font color */
+    }
+
+    100% {
+      color: $fontLime;             /* change font color */
+
+    }
+  }
