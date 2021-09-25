@@ -10,12 +10,17 @@ html {
     box-sizing: inherit;
 }
 
+//animation will start in 1 second and last for 3 seconds; the name is 'slide-in'
+@mixin animationSettings {
+  animation-duration: 3s;
+  animation-name: slide-in;
+  animation-delay: 1s;
+}
+
 .main {
-    // padding: 2rem;
     color: whitesmoke;
     display: grid;
-    color: navy;
-    ;
+    color: #000080;
     grid-template-columns: 25% 75%;
     grid-template-areas: 
         "header header"
@@ -28,37 +33,40 @@ html {
 .header {
     grid-area: header;
     background: linear-gradient(45deg, #DB7093, #191970 30%);
-  //   background-image: url('../images/finishline.jfif'); 
-  //   background-size: cover;
-  //  background-position: center;
+    &__image {
+      width: 25%;
+      float: left;
+      padding: 1.5rem;
+    }
+    &__title {
+      color: greenyellow;                      
+      font-size: 3rem;
+      font-family: 'Gluten', cursive;
+      text-align: right;
+      margin-right: 3rem;
+      @include animationSettings;   /* use animation mixin */
+    }
 }
-.header-image {
-  width: 25%;
-  float: left;
-  padding: 1.5rem;
-}
+
 .navigation {
     grid-area: nav;
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: steelblue;
-    // justify-self: center;
+    &__menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 3%;
+      margin-right: 3%;
+  }
     
-}
-.nav-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 3%;
-    margin-right: 3%;
-
 }
 .sidebar {
     grid-area: sidebar;
     grid-template-columns: repeat(2, 1fr);
     background-color: #ffe6ea;
     padding-top: 2.5rem;
-    // height: 70rem;
     img {
       width: 15%;
     }
@@ -73,74 +81,58 @@ html {
     color: steelblue;
 }
 
-
-
 .main-content {
     grid-area: main-content;
     background-color: grey;
     padding: 2rem;
-    // display: flex;
-    // background-color: orange;
     background-image: url('../images/main-content.jpeg'); 
     background-size: cover;
-     background-position: center;
-    // padding: 2.5rem;
-
-    // display: flow-root;
-    font-family: 'Open Sans', sans-serif;
+    background-position: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.25rem;
     color: yellow;
-}
+    &__solo-image {
+      float: right;
+      margin-left: 3%;
+    }
+    &__friend-image {
+      float: left;
+      margin-right: 3%;
+    }
+    &__smile-image {
+      float: right;
+      margin-left: 3%;
+    }
+    &__snippet::first-letter {
+      font-size: 200%;
+      color: #4682b4;
+    }
+   
+    article {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+    }
+    figure {
+      max-width: 30%;
+      display: flex;
+      flex-flow: column;
+      margin: auto;
+      padding: 1.5rem;
+      background-color: #004280;
+      outline: .25rem solid #cccccc;
+    }
 
-article {
-  // padding-bottom: 15rem;
-  // border: 1px solid purple;
-  // padding-top: 7rem;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
+    figcaption {
+    color: #004280;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: .75rem;
+    padding: .25rem;
+    background-color: #ffe6ea;
+    vertical-align: middle;
+    text-align: center;
+    }
 
-.solo-image {
-  // outline: 4px double red;
-  // outline-offset: 15px;
-  float: right;
-  margin-left: 3%;
-
-//  shape-outside: url("./images/run-solo.png");
-}
-
-.friend-image {
-  float: left;
-  margin-right: 3%;
-}
-
-.smile-image {
-  // outline: 4px double red;
-  // outline-offset: 15px;
-  float: right;
-  margin-left: 3%;
-
-//  shape-outside: url("./images/run-smile.jpeg");
-
-}
-
-figure {
-  max-width: 30%;
-  display: flex;
-  flex-flow: column;
-  margin: auto;
-  padding: 1.5rem;
-  background-color: #004280;
-  outline: .25rem solid #cccccc;
-}
-figcaption {
-  //add some styling
-  color: steelblue;
-  font-style: italic;
-  font-weight: bolder;
-  padding: .25rem;
-  background-color: #ffe6ea;
-  vertical-align: middle;
-  text-align: center;
 }
 
 footer {
@@ -149,73 +141,28 @@ footer {
     padding-bottom: 3rem;
     background-color:  steelblue;
     text-align: center;
+    color: whitesmoke;
 }
 
 @media only screen and (min-width: 1020px) , screen and (max-height: 1089px)
 {
    
-    h1 {
-        float: left;
-        padding-left: 2rem;
-    }
+    // h1 {
+    //     float: left;
+    //     padding-left: 2rem;
+    // }
 }
 
 @media only screen and (max-width: 825px)
 {
-    .header {
-        margin: 0%;
-    }
+    .header {margin: 0%;}
 }
-
-//animation will start in 1 second and last for 3 seconds; the name is 'slide-in'
-@mixin animationSettings {
-    animation-duration: 3s;
-    animation-name: slide-in;
-    animation-delay: 1s;
-  }
-
-.header-title {
-// height: 1rem;
-//   width: 12rem;
-//   background-color: $backgroundColor; 
-  color: greenyellow;                      
-//   border-radius: 50%;
-  font-size: 3rem;
-  font-family: 'Gluten', cursive;
-//   display: flex;
-  // justify-content: space-evenly;
-//   flex-direction: column;
-  text-align: right;
-  margin-right: 3rem;
-
-  //float: left;
-
-}
- 
-  .header-title {   
-     @include animationSettings;       /* use animation mixin */
-  }
 
   @keyframes slide-in {
-    0% {
-      // margin-right: 100%;           /* will slide-in from the left side of browser */
-      transform: scale(1.5);          /* font will start @ 3x size set */
-     }
-
-    25% {
-      color: $fontMagenta;          /* change font color */    
-    }
-
-    50% {
-      color: $fontChiffon;          /* change font color */
-    }
-
-    75% {
-      color: $fontGrey;             /* change font color */
-    }
-
-    100% {
-      color: $fontLime;             /* change font color */
-
-    }
+    0% {margin-right: 50%;           /* will slide-in from the left side of browser */
+      transform: scale(1.5);}         /* font will start @ 3x size set */
+    25% {color: $fontMagenta;}        /* change font color */    
+    50% {color: $fontChiffon;}         /* change font color */
+    75% {color: $fontGrey;}           /* change font color */
+    100% {color: $fontLime;}            /* change font color */
   }

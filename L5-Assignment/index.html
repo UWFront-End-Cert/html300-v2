@@ -11,23 +11,19 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
         <title>Assignment 05 - CSS Grid</title>
     </head>
     <body>
         <main class="main">
-           <header class="header">
-   
-                
-                    <img class="header-image" src="./images/the-finish-line.jpeg" alt="">
-               
- 
-               <p class="header-title">
+           <header class="header">               
+                <img class="header__image" src="./images/the-finish-line.jpeg" alt="">
+               <p class="header__title">
                 Crossing the Finish Line!
                </p>
            </header>
            <div class="navigation">
-               <div class="nav-menu">
+               <div class="navigation__menu">
                 <a href="index.html">Home</a>
                 <a href="elite-runners.html">Elite Runners</a>
                 <a href="training.html">Training</a>
@@ -37,10 +33,10 @@
             </div>
 
            <div class="sidebar">
-               <section class="running-clubs">
+               <section class="sidebar__running-clubs">
                     <h2>Pacific Northwest Running Clubs</h3>
                     <div>
-                        <img class="run-nw"src="./images/Club+Northwest+logo_transparent.png" alt="">
+                        <img src="./images/Club+Northwest+logo_transparent.png" alt="">
                         <a href="https://www.clubnorthwest.org/">Club Northwest</a>
                     </div>
                     <div>
@@ -63,46 +59,54 @@
             </div>
 
             <div class="main-content">
-                <article class="solo">
-                    <figure class="solo-image">
+                <article class="main-content__solo">
+                    <figure class="main-content__solo-image">
                         <img src="./images/run-solo.png" alt="">
                         <figcaption>Let your mind wonder...</figcaption>
                     </figure>
                     <div>
-                        <p>
+                        <p class="main-content__snippet">
                             Running Solo...Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae quidem deserunt nihil iusto, necessitatibus ducimus saepe debitis deleniti similique sed, magnam placeat molestiae animi. Cum est similique quibusdam nobis nam!
                         </p>
                     </div>
                 </article>
 
-                <article class="friend"> 
-                    <figure class="friend-image">
+                <article class="main-content__friend"> 
+                    <figure class="main-content__friend-image">
                         <img src="./images/run-friend.jpeg" alt="">
                         <figcaption>Bond with a friend...</figcaption>
                     </figure>
                     <div>
-                        <p class="friend__snippet">
+                        <p class="main-content__snippet">
                             Running with a Friend...Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae quidem deserunt nihil iusto, necessitatibus ducimus saepe debitis deleniti similique sed, magnam placeat molestiae animi. Cum est similique quibusdam nobis nam!
                         </p>
                     </div>
                 </article>
 
-                <article class="smile"> 
-                    <figure class="smile-image">
+                <article class="main-content__smile"> 
+                    <figure class="main-content__smile-image">
                         <img src="./images/run-smile.jpeg" alt="">
                         <figcaption>What a Feeling...</figcaption>
                     </figure>
                     <div>
-                        <p>
+                        <p class="main-content__snippet">
                             Running with a Smile...Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae quidem deserunt nihil iusto, necessitatibus ducimus saepe debitis deleniti similique sed, magnam placeat molestiae animi. Cum est similique quibusdam nobis nam!
                         </p>
                     </div>
                 </article>
             </div>
-
-
              
-           <footer class="footer">footer</footer>
+           <footer class="footer">
+               <p>
+                   &#169; 2021 Maria Company Inc.
+               </p>
+               <p>
+                1001 First Ave
+               </p>
+               <p>
+                City, WA 12345
+               </p>
+           </footer>
         </main>
     </body>
 </html>
