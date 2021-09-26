@@ -114,7 +114,7 @@ races.forEach(function (e){
     <p><strong>Gender:</strong> ${e.gender}</p>
       <p><strong>Race Year:</strong> ${e.year}</p>
       <p><strong>Country:</strong> ${e.country}</p>
-      <p><strong>Time:</strong> ${e.time} minutes</p>
+      <p><strong>Time:</strong> ${e.time} min</p>
     </div>
  
     `

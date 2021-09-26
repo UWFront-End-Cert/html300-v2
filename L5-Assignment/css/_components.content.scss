@@ -1,4 +1,4 @@
-@import '_settings.variables';
+@import 'variables';
 
 html {
     box-sizing: border-box;
@@ -10,7 +10,7 @@ html {
     box-sizing: inherit;
 }
 
-//animation will start in 1 second and last for 3 seconds; the name is 'slide-in'
+//animation will start in 1 second and last for 3 seconds
 @mixin animationSettings {
   animation-duration: 3s;
   animation-name: slide-in;
@@ -21,8 +21,8 @@ html {
     color: whitesmoke;
     display: grid;
     color: #000080;
-    grid-template-columns: 25% 75%;
-    grid-template-areas: 
+    grid-template-columns: 25% 75%;     /* side bar set to 25% of screen, main content 75% of screen */
+    grid-template-areas:      /* setting grid areas */
         "header header"
         "nav nav"
         "sidebar main-content"
@@ -39,7 +39,7 @@ html {
       padding: 1.5rem;
     }
     &__title {
-      color: greenyellow;                      
+      color: #adff2f;                      
       font-size: 3rem;
       font-family: 'Gluten', cursive;
       text-align: right;
@@ -52,7 +52,7 @@ html {
     grid-area: nav;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: steelblue;
+    background-color: #4682b4;
     &__menu {
       display: flex;
       flex-wrap: wrap;
@@ -64,7 +64,7 @@ html {
 }
 .sidebar {
     grid-area: sidebar;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);  /* create 2 columns of equal width */
     background-color: #ffe6ea;
     padding-top: 2.5rem;
     img {
@@ -78,19 +78,19 @@ html {
     h2 {
       text-align: center;
     }
-    color: steelblue;
+    color: #4682b4;
 }
 
 .main-content {
     grid-area: main-content;
-    background-color: grey;
+    background-color: #808080;
     padding: 2rem;
     background-image: url('../images/main-content.jpeg'); 
     background-size: cover;
     background-position: center;
     font-family: 'Comfortaa', cursive;
     font-size: 1.25rem;
-    color: yellow;
+    color: #ffff00;
     &__solo-image {
       float: right;
       margin-left: 3%;
@@ -107,32 +107,30 @@ html {
       font-size: 200%;
       color: #4682b4;
     }
-   
+
     article {
       padding-top: 10rem;
       padding-bottom: 10rem;
     }
-    figure {
-      max-width: 30%;
-      display: flex;
-      flex-flow: column;
-      margin: auto;
-      padding: 1.5rem;
-      background-color: #004280;
-      outline: .25rem solid #cccccc;
-    }
+}
+figure {
+  max-width: 30%;
+  display: flex;
+  flex-flow: column;
+  padding: 1.5rem;
+  background-color: #004280;
+  outline: .25rem solid #cccccc;
+}
 
-    figcaption {
-    color: #004280;
-    font-style: italic;
-    font-weight: bolder;
-    font-size: .75rem;
-    padding: .25rem;
-    background-color: #ffe6ea;
-    vertical-align: middle;
-    text-align: center;
-    }
-
+figcaption {
+color: #004280;
+font-style: italic;
+font-weight: bolder;
+font-size: .75rem;
+padding: .25rem;
+background-color: #ffe6ea;
+vertical-align: middle;
+text-align: center;
 }
 
 footer {
@@ -141,28 +139,29 @@ footer {
     padding-bottom: 3rem;
     background-color:  steelblue;
     text-align: center;
-    color: whitesmoke;
+    color: #f5f5f5;
 }
 
-@media only screen and (min-width: 1020px) , screen and (max-height: 1089px)
-{
-   
-    // h1 {
-    //     float: left;
-    //     padding-left: 2rem;
-    // }
-}
+@keyframes slide-in {
+  0% {
+    margin-right: 100%;           /* will slide-in from the left side of browser */
+    transform: scale(1.5);          /* font will start @ 3x size set */
+   }
 
-@media only screen and (max-width: 825px)
-{
-    .header {margin: 0%;}
-}
-
-  @keyframes slide-in {
-    0% {margin-right: 50%;           /* will slide-in from the left side of browser */
-      transform: scale(1.5);}         /* font will start @ 3x size set */
-    25% {color: $fontMagenta;}        /* change font color */    
-    50% {color: $fontChiffon;}         /* change font color */
-    75% {color: $fontGrey;}           /* change font color */
-    100% {color: $fontLime;}            /* change font color */
+  25% {
+    color: $fontMagenta;          /* change font color */    
   }
+
+  50% {
+    color: $fontChiffon;          /* change font color */
+  }
+
+  75% {
+    color: $fontGrey;             /* change font color */
+  }
+
+  100% {
+    color: $fontLime;             /* change font color */
+
+  }
+}
