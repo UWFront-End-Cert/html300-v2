@@ -66,7 +66,6 @@ let profile = document.createElement('div');
 profile.className = 'profile';
 let  experience = document.createElement('div');
 
-
 experience.className = 'experience';
 
 container.appendChild(employee_card);
@@ -79,16 +78,29 @@ face.className='headshot';
 face.alt='Paulo face';
 profile.appendChild(face);
 
+
 let p1 = document.createElement('p');
 p1.className ='title';
 
 let title = document.createElement('strong');
-title.textContent='Front End Developer';
+title.innerText='Paolo Dogo';
 p1.appendChild(title);
+
+profile.appendChild(p1);
+
+let name = document.createElement('i');
+name.innerText = 'Front End Developer';
+
+let p0 = document.createElement('p');
+
+profile.appendChild(p0);
+p0.appendChild(name);
+
+
 
 let p2 = document.createElement('p');
 
-profile.appendChild(p1);
+
 profile.appendChild(p2);
 
 let p3 = document.createElement('p');
