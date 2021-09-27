@@ -94,19 +94,23 @@ profile.appendChild(p2);
 let p3 = document.createElement('p');
 let p4 = document.createElement('p');
 let p5 = document.createElement('p');
+let p6 = document.createElement('p');
 
 p3.innerText ='Company:';
 p4.innerText = 'Experience:';
 p5.innerText = 'School:';
+p6.innerText = 'Major:';
 
 let t1 = document.createElement('strong');
 let t2 = document.createElement('strong');
 let t3 = document.createElement('strong');
+let t4 = document.createElement('strong');
 
 
 p3.appendChild(t1);
 p4.appendChild(t2);
 p5.appendChild(t3);
+p6.appendChild(t4);
 
 t1.innerText = 'Web Weavers';
 
@@ -114,10 +118,12 @@ t2.innerText = '3 Years';
 
 t3.innerText = 'University of Washington';
 
+t4.innerText = 'Marketing';
+
 experience.appendChild(p3);
 experience.appendChild(p4);
 experience.appendChild(p5);
-
+experience.appendChild(p6);
 
 // userData.map(function(el){
 
