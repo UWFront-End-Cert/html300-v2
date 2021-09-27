@@ -125,6 +125,23 @@ experience.appendChild(p4);
 experience.appendChild(p5);
 experience.appendChild(p6);
 
+let logo = document.createElement('div');
+let logo_image = document.createElement('img');
+let p7 = document.createElement('div');
+
+logo.appendChild(logo_image);
+logo.appendChild(p7);
+
+logo.className = 'center';
+logo_image.src='./img/linkedin.svg';
+logo_image.className='logo';
+logo_image.alt='linkedin logo';
+p7.className='profile-text';
+p7.innerText='paolo.linkedinprofile.com';
+
+experience.appendChild(logo);
+
+
 // userData.map(function(el){
 
 // let list = document.createElement('ul');
