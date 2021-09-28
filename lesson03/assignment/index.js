@@ -155,6 +155,10 @@ p7.className='profile-text';
 p7.innerText='paolo.linkedinprofile.com';
 
 experience.appendChild(logo);
+
+let seperate = document.createElement('br');
+container.appendChild(seperate);
+
 })
 
 
