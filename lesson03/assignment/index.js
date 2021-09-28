@@ -1,8 +1,7 @@
-// Json data 
-   
 // Code that requires the DOM be loaded should not be run until the DOM is loaded
 document. addEventListener("DOMContentLoaded", function(){
 
+// JSON data
 const userData = `[
   {
     "name": "Paolo Maldini",
@@ -75,7 +74,7 @@ content.map(function(item) {
   <div class="employee-card">
   <div class="profile">
       <!-- dog -->
-      <img class="headshot" src="./img/headshot.jpg" alt="Paulo's face"/>
+      <img class="headshot" src="./img/headshot.jpg" alt=${item.name}/>
       <p class="title">
           <strong>${item.name}</strong>
       </p>
