@@ -62,12 +62,14 @@ const userData = `[
 // parse json data
 const content = JSON.parse(userData);
 
-// 
+// query for template hook section
 const container  = document.querySelector('.template-hook')
+
+// add main class
 container.className='main';
 
+// loop through json and build cards
 content.map(function(item) {
-
   let inside = document.createElement('div');
   inside.innerHTML = `
   <div class="employee-card">
@@ -109,6 +111,5 @@ content.map(function(item) {
 container.appendChild(inside);
 
 })
-
 
 })
