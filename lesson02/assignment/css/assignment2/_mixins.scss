@@ -13,14 +13,9 @@
     flex: 3;
 }
 
+//media query function
 @mixin mediaQ($size) {
     @media only screen and (max-width: $size) {
         @content;
     }
 }
-
-// @mixin tablet($size) {
-//     @media only screen and (max-width: $size) {
-//         @content;
-//     }
-// }
