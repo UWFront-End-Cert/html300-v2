@@ -1,5 +1,5 @@
 // Code that requires the DOM be loaded should not be run until the DOM is loaded
-document. addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function(){
 
   // Find the function-1 form, and handle its submit event
   const exampleForm = document.getElementById('function-1')
@@ -9,13 +9,13 @@ document. addEventListener("DOMContentLoaded", function(){
     event.preventDefault()
 
     // An array that we can transform based on user input
-    let data = [ 1, 2, 3, 5, 24]
+    let data = [ 1, 24, 6, 44, 9]
 
     const inputField = document.querySelector('#function-1 .input')
     const userInput = inputField.value
     const userNumber = parseInt(userInput)
 
-    // Perform a mod of each number in data array with user input and return result
+    // Get the module of each number in data array with user input and return result
     const result = data.map( x =>  x % userNumber);
 
     // Set inner html text to manipulated array
@@ -31,7 +31,7 @@ document. addEventListener("DOMContentLoaded", function(){
 })
 
 // Code that requires the DOM be loaded should not be run until the DOM is loaded
-document. addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function(){
 
   // Find the function-2 form, and handle its submit event
   const exampleForm = document.getElementById('function-2')
@@ -41,14 +41,14 @@ document. addEventListener("DOMContentLoaded", function(){
     event.preventDefault()
 
     // An array that we can transform based on user input
-    let data = [ 1, 2, 3, 5, 24]
+    let data = [ 1, 24, 6, 44, 9]
 
     const inputField = document.querySelector('#function-2 .input')
     const userInput = inputField.value
     const userNumber = parseInt(userInput)
 
-    // Perform a mod of each number in data array with user input and return result
-    const result = data.map( x =>  x > userNumber);
+    // Remove numbers from the array that are less than the user input
+    const result = data.filter( x =>  x > userNumber);
 
     // If array is empty set inner HTML to message, else set to array
     if (result.length == 0)
@@ -67,7 +67,7 @@ document. addEventListener("DOMContentLoaded", function(){
 })
 
 // Code that requires the DOM be loaded should not be run until the DOM is loaded
-document. addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function(){
 
   // Find the function-3 form, and handle its submit event
   const exampleForm = document.getElementById('function-3')
@@ -77,7 +77,7 @@ document. addEventListener("DOMContentLoaded", function(){
     event.preventDefault()
 
     // An array that we can transform based on user input
-    let data = [ 1, 2, 3, 5, 24]
+    let data = [ 1, 24, 6, 44, 9]
 
     const inputField = document.querySelector('#function-3 .input')
     const userInput = inputField.value
@@ -96,7 +96,7 @@ document. addEventListener("DOMContentLoaded", function(){
 })
 
 // Code that requires the DOM be loaded should not be run until the DOM is loaded
-document. addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function(){
 
   // Find the function-4 form, and handle its submit event
   const exampleForm = document.getElementById('function-4')
@@ -106,7 +106,7 @@ document. addEventListener("DOMContentLoaded", function(){
     event.preventDefault()
 
     // An array that we can transform based on user input
-    let data = [1, 2, 3, 5, 24]
+    let data = [1, 24, 6, 44, 9]
 
     const inputField = document.querySelector('#function-4 .input')
     const userInput = inputField.value
