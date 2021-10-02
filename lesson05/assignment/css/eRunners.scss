@@ -1,0 +1,82 @@
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "title"
+        "main"
+        "footer"
+    ;
+}
+
+.header {
+    grid-area: header;
+    background: linear-gradient(45deg, #DB7093, #191970 30%);
+    background-image: url('../images/runners.jpg'); 
+    background-size: cover;
+    background-position: center;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    &__title {
+        text-align:center;
+    }
+}
+.navigation {
+    grid-area: nav;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: greenyellow;
+    // justify-self: center;
+    
+}
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 3%;
+    margin-right: 3%;
+
+}
+
+header {
+    grid-area: header;
+    background-color: burlywood;
+}
+.header__title {
+    color: white;
+}
+.nav {
+    grid-area: nav;
+    background-color: chartreuse;
+}
+.title {
+    text-align: right;
+}
+.main {
+    grid-area: main;
+    // display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: fuchsia;
+    gap: 2rem;
+}
+
+.runner {
+    display: flex;
+    flex: 1;
+    background-color: darkorange;
+    gap: 1.5rem;
+    padding: 1.0rem;
+}
+.details {
+    background: white;
+    padding: 1.5rem
+}
+
+footer {
+    grid-area: footer;
+    background-color: darkkhaki;
+}
