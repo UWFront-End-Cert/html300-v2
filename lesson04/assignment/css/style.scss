@@ -1,205 +1,76 @@
-// Import partials here
-// @import 'base.normalize';
-// @import 'settings.variables';
-// @import 'settings.responsive';
-// @import 'components.content';
-
 //Declare variables
-$farm-height: 600px;
-$farm-width: 600px;
+$farm-height: 800px;
+$farm-width: 800px;
 $background-grey: rgb(211,211,211);
+
+
+// Creates 
+@mixin divide($count) {
+  font-size: $count;
+}
 
 .container {
   position: relative;
   width: 100%;
   width: $farm-width;
   height: $farm-height;
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  div {
+    position: absolute;
+    height:25%;
+    width: 25%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: gainsboro;
+  }
+  
+  div:hover {
+    opacity: .5;
+  }
+
+  .overlay {
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .overlay-2 {
+    top: 0px;
+    bottom: 0px;
+    left: 200px;
+    right: 0px;
+  }
+  
+  .overlay-3 {
+    top: 200px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  
+  .overlay-4 {
+    top: 200px;
+    bottom: 0px;
+    left: 200px;
+    right: 0px;
+  }
+  
+  .icon {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+    transform: translate(-50%, -70%);
+    -ms-transform: translate(-50%, -70%);
+    text-align: center;
+  }
+  
 }
-
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  top: 0px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height:25%;
-  width: 25%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: gainsboro;
-}
-
-
-.overlay-2 {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 200px;
-  right: 0px;
-  height:25%;
-  width: 25%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: gainsboro;
-}
-
-.overlay-3 {
-  position: absolute;
-  top: 200px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  height:25%;
-  width: 25%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: gainsboro;
-}
-
-.overlay-4 {
-  position: absolute;
-  top: 200px;
-  bottom: 0px;
-  left: 200px;
-  right: 0px;
-  height:25%;
-  width: 25%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: gainsboro;
-}
-
-.overlay:hover {
-  opacity: .5;
-}
-
-.overlay-2:hover {
-  opacity: .5;
-}
-
-.overlay-3:hover {
-  opacity: .5;
-}
-
-.overlay-4:hover {
-  opacity: .5;
-}
-
-.icon {
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: black;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.fa-user:hover {
-  color: #eee;
-}
-
-// .main {
-//     p {
-//         // Use variable
-//         color: $text-grey;
-//     }
-
-//     // Remove padding for small screens
-//     @include media-query("mobile-smaller") {
-//         padding: 0px;
-//     }
-
-//     .employee-card {
-//         // Use variable
-//         border: 25px solid $background-grey;
-//         // Use variable
-//         height: $card-height + 20px;
-//         display: flex;
-//         padding: 30px;
-
-//         // Reduce width for tablets or smaller
-//         @include media-query("tab") {
-//             width: $card-width*1.05;
-//         }
-
-//         // Changes layout to profile picture over text
-//         @include media-query("mobile-smaller") {
-//             display: block;
-//             height: 420px;
-//         }
-
-//         .profile {
-//             // Format profile text larger
-//             .title {
-//                 font-size: large;
-//                 margin-bottom: 5px;
-//             }
-//             display: inline-block;
-//             padding-right: 10px;
-//             text-align: center;
-//             p {
-//                 margin: 0px;
-//             }
-//             // Center profile picture for small devices
-//             @include media-query("mobile-smaller") {
-//                 display: block;
-//                 text-align: center;
-//                 padding: 0px;
-//             }
-//             // Formatting for profile image
-//             .headshot {
-//                 border-radius: 50%;
-//                 width: auto;
-//                 height: 150px;
-//                 margin: auto;
-//                 margin: auto;
-//                 display: block;
-//                 margin-top: 10px;
-//                 margin-bottom: 15px;
-//             }
-//             @include media-query("lg") {
-//                 width: $card-width/4;
-//             }
-//         }
-
-//         .experience {       
-//             padding-left: 15px;
-//             display: inline-block;
-            
-//             // Center profile text for smaller devices
-//             @include media-query("mobile-smaller") {
-//                 padding: 0px;
-//                 align-items: center;
-//                 justify-content: center;
-//                 width: 100%;
-//             }
-
-//             // Partial import
-//             background: $gray;
-//             padding-top: 20px;
-//             width: 70%;
-            
-//             // Center text for linkedin contact info
-//             .center {
-//                 display: flex;
-//                 align-items: center;
-//                 height: 50px;
-//             }
-
-//             .profile-text {
-//                 margin: 0px;
-//                 text-align: center;
-//                 padding-left: 5px;
-//             }
-//         }
-//     }
-// }
-
