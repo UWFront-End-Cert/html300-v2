@@ -4,12 +4,22 @@ $farm-width: 800px;
 $background-grey: rgb(211,211,211);
 
 
-// Creates 
-@mixin divide($count) {
-  font-size: $count;
+// Modifies transform of div child p
+@mixin change-transform($count) {
+  @for $i from 2 through $count {
+    div:nth-child(#{$i}) {
+       p {
+        transform: translate($i * -20%, $i * -10%);
+       }
+    }
+  }
 }
 
+// Modify div child 5
+@include change-transform(5);
+
 .container {
+
   position: relative;
   width: 100%;
   width: $farm-width;
@@ -22,11 +32,11 @@ $background-grey: rgb(211,211,211);
   }
   
   div {
+    opacity: 0;
     position: absolute;
     height:25%;
     width: 25%;
-    opacity: 0;
-    transition: .5s ease;
+    transition: 1s ease;
     background-color: gainsboro;
   }
   
@@ -62,15 +72,13 @@ $background-grey: rgb(211,211,211);
     right: 0px;
   }
   
-  .icon {
-    color: white;
+  p {
+    opacity: 1;
+    font-size: 20px;
+    font-weight: bolder;
     position: absolute;
     top: 50%;
     left: 50%;
-    color: black;
-    transform: translate(-50%, -70%);
-    -ms-transform: translate(-50%, -70%);
     text-align: center;
   }
-  
 }
