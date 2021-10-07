@@ -4,7 +4,8 @@ $farm-width: 800px;
 $background-grey: rgb(211,211,211);
 
 
-// Modifies transform of div child p
+// Iterates through (count + 1) child of div and sets
+// its respective p translate
 @mixin change-transform($count) {
   @for $i from 2 through $count {
     div:nth-child(#{$i}) {
@@ -31,6 +32,8 @@ $background-grey: rgb(211,211,211);
     height: auto;
   }
   
+  // Default div to translucent
+  // Transition over 1 second when hovering
   div {
     opacity: 0;
     position: absolute;
@@ -40,6 +43,7 @@ $background-grey: rgb(211,211,211);
     background-color: gainsboro;
   }
   
+  // Set div to half opacity when hovering
   div:hover {
     opacity: .5;
   }
