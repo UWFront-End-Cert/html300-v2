@@ -16,7 +16,7 @@ $background-grey: rgb(211,211,211);
   }
 }
 
-// Modify div child 5
+// Modify 2 - 5 child of div p
 @include change-transform(5);
 
 .container {
