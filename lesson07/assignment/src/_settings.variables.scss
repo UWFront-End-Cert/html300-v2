@@ -1,0 +1,13 @@
+// Establishing colors
+$dkgray: #4d4d4d;
+$ltgray: #f2f2f2;
+$yellow: #ffcc00;
+$ltyellow: #fff5cc;
+$green: #b0de4c;
+$ltgreen: #cef573;
+
+
+// Applying to CSS properties
+body, nav a, footer {
+  color: $dkgray;
+}
