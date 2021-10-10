@@ -58,21 +58,32 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  p {
+    padding: 0px;
+    margin: 0 0 0 0;
+  }
+
 }
 
 .nav-footer {
   background-color: rgb(139, 191, 235);
+  margin: 0px;
 
+  ul {
+    margin: 0px;
+  }
   li {
     display: inline-block;
     padding: 0 15px;
-    margin: 0 auto;
+    margin: 0px;
     font-size: 25px;
   }
 
   a {
     color: white;
   }
+
 }
 
 .flex-container {
