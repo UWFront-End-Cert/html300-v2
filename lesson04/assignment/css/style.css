@@ -1,1 +1,177 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@-webkit-keyframes rotateMenu {
+  0% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+  70% {
+    -webkit-transform: rotateX(20deg);
+            transform: rotateX(20deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+@keyframes rotateMenu {
+  0% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+  70% {
+    -webkit-transform: rotateX(20deg);
+            transform: rotateX(20deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Brygada 1918', serif;
+  line-height: 1.6;
+  height: 100vh;
+}
+
+nav {
+  padding: 2rem;
+  background-color: #270d27;
+  text-decoration: none;
+  color: #ad38ad;
+  font-size: 2rem;
+  width: 100%;
+}
+
+nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+nav .menu a {
+  text-decoration: none;
+  -webkit-transition: color ease .5s;
+  transition: color ease .5s;
+}
+
+nav .menu a:hover {
+  color: #cd65cd;
+  display: block;
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+nav .label {
+  padding-bottom: 3rem;
+  margin-bottom: -3rem;
+  z-index: 101;
+}
+
+nav li {
+  list-style: none;
+}
+
+.dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding-bottom: 2rem;
+  margin-bottom: -2rem;
+  z-index: 100;
+}
+
+.dropdown_menu {
+  position: absolute;
+  top: .5rem;
+  left: 0;
+  width: 100%;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  display: none;
+  padding-top: 5rem;
+}
+
+.dropdown:hover .dropdown_menu--hovered {
+  display: block;
+  -webkit-animation: rotateMenu 700ms ease-in-out forwards;
+          animation: rotateMenu 700ms ease-in-out forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 760px) {
+  section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  button:first-of-type {
+    margin-top: 6rem;
+  }
+}
+
+button {
+  background: #270d27;
+  color: #ad38ad;
+  border: 2px solid;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  -webkit-transition: color 0.25s, border-color 0.25s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  transition: color 0.25s, border-color 0.25s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+}
+
+button:hover {
+  border-color: #c752c7;
+  color: #cd65cd;
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #c752c7;
+          box-shadow: 0 0.5em 0.5em -0.4em #c752c7;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

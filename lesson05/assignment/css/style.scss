@@ -1,6 +1,229 @@
-// Import partials here
-@import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
-@import 'components.content';
-
+        // Import partials here
+        @import 'base.normalize';
+        @import 'settings.variables';
+        @import 'settings.responsive';
+        @import 'components.content';
+        @import './variables';
+        @keyframes rotateMenu {
+            0% {
+                transform: rotateX(-90deg)
+            }
+            70% {
+                transform: rotateX(20deg)
+            }
+            100% {
+                transform: rotateX(0deg)
+            }
+        }
+        
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Helvetica, serif;
+            color: #000000;
+            line-height: 1.6;
+            height: 100vh;
+        }
+        
+        .container {
+            min-height: 100vh;
+            display: grid;
+            grid-gap: 1px;
+            grid-template-areas: "header header header" "header header header" "nav nav nav" "sidebar main-content main-content" "sidebar main-content main-content" "sidebar main-content main-content" "sidebar main-content main-content" "sidebar main-content main-content" "sidebar main-content main-content" "sidebar main-content main-content" "footer footer footer" "footer footer footer";
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: repeat(12, 1fr);
+            @include media-query("mobile") {
+                //remove a row for header and footer on mobile
+                grid-template-areas: "header header header" "nav nav nav" "sidebar main-content main-content" "sidebar main-content main-content" "sidebar main-content main-content" "sidebar main-content main-content" "sidebar main-content main-content" "sidebar main-content main-content" "sidebar main-content main-content" "footer footer footer";
+                grid-template-rows: repeat(10, 1fr);
+            }
+        }
+        
+        header {
+            //not a string, no quotes
+            grid-area: header;
+        }
+        
+        nav {
+            grid-area: nav;
+        }
+        
+        .sidebar {
+            grid-area: sidebar;
+        }
+        
+        .main-content {
+            grid-area: main-content;
+        }
+        
+        footer {
+            grid-area: footer;
+        }
+        
+        header {
+            background-color: lighten(red, 15%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //20% of parent
+            min-height: 20%;
+        }
+        
+        nav {
+            border: solid 1px #707070;
+            padding: 1rem;
+            color: #ffffff;
+            font-weight: bolder;
+            font-size: 32px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: $nav-background;
+            //for flex row aligns on y axis
+            align-items: center;
+            font-size: 2rem;
+            width: 100%;
+            div {
+                font-size: 32px;
+            }
+            .menu {
+                display: flex;
+                justify-content: space-evenly;
+                //grow takes up space when it is available
+                flex-grow: .25;
+                a {
+                    text-decoration: underline;
+                    color: #ffffff;
+                    font-weight: bold;
+                    font-size: 24px;
+                    transition: color ease .5s;
+                    &:hover {
+                        color: $nav-text;
+                        display: block;
+                        //UI consideration to help know when hovered...
+                        transform: translateY(-.5rem);
+                    }
+                    @include media-query('mobile') {
+                        padding: 0 .5rem;
+                    }
+                    @include media-query('tiny') {
+                        padding: 0 .3rem;
+                    }
+                }
+            }
+            //this padding and margin expands the "hoverable" are of label, so it stays actived better
+            .label {
+                padding-bottom: 3rem;
+                margin-bottom: -3rem;
+                //this z-index helps with the hover as well, bringing element to front so it stays activated better
+                z-index: 101;
+            }
+            li {
+                list-style: none;
+            }
+            @include media-query("mobile") {
+                flex-direction: column;
+            }
+        }
+        
+        .dropdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //this position relative makes you drop down menu go under the label,
+            //kind of "overrides" the absolute positioning of the dropdown menu itself
+            position: relative;
+            //The padding increases the area that can be clicked
+            // The negative margin keeps the flow of surrounding text as it should be (beware of over lapping links)
+            padding-bottom: 2rem;
+            margin-bottom: -2rem;
+            z-index: 100;
+            &_menu {
+                position: absolute;
+                top: .5rem;
+                left: 0;
+                width: 100%;
+                perspective: 1000px;
+                //display no = cant see element
+                display: none;
+                //this padding "expands" the area of the element, so hover is more accurate
+                padding-top: 5rem;
+            }
+            //drop down menu animation
+            &:hover .dropdown_menu--hovered {
+                //now you can see the element
+                display: block;
+                animation: rotateMenu 700ms ease-in-out forwards;
+                animation-fill-mode: forwards;
+                cursor: pointer;
+            }
+        }
+        
+        .sidebar {
+            background-color: lighten(purple, 5%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //70% of parent
+            min-height: 70%;
+        }
+        
+        .main-content {
+            background-color: lighten(orange, 5%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //70% of parent
+            min-height: 70%;
+            max-height: 100%;
+        }
+        
+        footer {
+            background-color: lighten(indigo, 5%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //70% of parent
+            min-height: 20%;
+        }
+        
+        // section {
+        //     display: flex;
+        //     justify-content: space-around;
+        //     align-items: center;
+        //     height: 100vh;
+        //     @include mediaQ("760px") {
+        //         flex-direction: column;
+        //     }
+        // }
+        // button:first-of-type {
+        //     @include mediaQ("760px") {
+        //         margin-top: 6rem;
+        //     }
+        // }
+        // button {
+        //     background: $nav-background;
+        //     color: $nav-text;
+        //     border: 2px solid;
+        //     padding: 1rem 2rem;
+        //     font-size: 2rem;
+        //     //transition changes text color, border color, box shadow
+        //     transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+        //     &:hover {
+        //         border-color: lighten($nav-text, 10%);
+        //         color: lighten($nav-text, 15%);
+        //         box-shadow: 0 0.5em 0.5em -0.4em lighten($nav-text, 10%);
+        //         //negative translateY value will send the element towards the top of the page
+        //         transform: translateY(-0.25em);
+        //         //mickey mouse hand
+        //         cursor: pointer;
+        //     }
+        // }

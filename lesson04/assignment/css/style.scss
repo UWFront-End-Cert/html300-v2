@@ -1,0 +1,125 @@
+    //For my project I will be designing a website for a fictional local restaurant/catering company. For UX design considerations, I want to add drop down menu somewhere and a nice and smooth hover effect to all the buttons and links on my site, so its really easy on the eyes and very apparent what you are currently hovering over...
+    //1. html for the header or similar type of elements, nav bar ect...lets design for mobile first for this..
+    //2. scss...color scheme picker...color functions, use BEM syntax an best practices for scss
+    //for flair points change colors and speed
+    @import './variables';
+    html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Brygada 1918', serif;
+        line-height: 1.6;
+        height: 100vh;
+    }
+    
+    nav {
+        padding: 2rem;
+        background-color: $nav-background;
+        text-decoration: none;
+        color: $nav-text;
+        font-size: 2rem;
+        width: 100%;
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            a {
+                text-decoration: none;
+                transition: color ease .5s;
+                &:hover {
+                    color: lighten($nav-text, 15%);
+                    display: block;
+                    //UI consideration to help know when hovered...
+                    transform: translateY(-.5rem);
+                }
+            }
+        }
+        //this padding and margin expands the "hoverable" are of label, so it stays actived better
+        .label {
+            padding-bottom: 3rem;
+            margin-bottom: -3rem;
+            //this z-index helps with the hover as well, bringing element to front so it stays activated better
+            z-index: 101;
+        }
+        li {
+            list-style: none;
+        }
+    }
+    
+    .dropdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //this position relative makes you drop down menu go under the label,
+        //kind of "overrides" the absolute positioning of the dropdown menu itself
+        position: relative;
+        //The padding increases the area that can be clicked
+        // The negative margin keeps the flow of surrounding text as it should be (beware of over lapping links)
+        padding-bottom: 2rem;
+        margin-bottom: -2rem;
+        z-index: 100;
+        &_menu {
+            position: absolute;
+            top: .5rem;
+            left: 0;
+            width: 100%;
+            perspective: 1000px;
+            //display no = cant see element
+            display: none;
+            //this padding "expands" the area of the element, so hover is more accurate
+            padding-top: 5rem;
+        }
+        //drop down menu animation
+        &:hover .dropdown_menu--hovered {
+            //now you can see the element
+            display: block;
+            animation: rotateMenu 700ms ease-in-out forwards;
+            animation-fill-mode: forwards;
+            cursor: pointer;
+        }
+    }
+    
+    //buttons go to a column on phone
+    section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        @include mediaQ("760px") {
+            flex-direction: column;
+        }
+    }
+    
+    //buttons go to a column on phone
+    button:first-of-type {
+        @include mediaQ("760px") {
+            margin-top: 6rem;
+        }
+    }
+    
+    button {
+        background: $nav-background;
+        color: $nav-text;
+        border: 2px solid;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        //transition changes text color, border color, box shadow
+        transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+        &:hover {
+            border-color: lighten($nav-text, 10%);
+            color: lighten($nav-text, 15%);
+            box-shadow: 0 0.5em 0.5em -0.4em lighten($nav-text, 10%);
+            //negative translateY value will send the element towards the top of the page
+            transform: translateY(-0.25em);
+            //mickey mouse hand
+            cursor: pointer;
+        }
+    }

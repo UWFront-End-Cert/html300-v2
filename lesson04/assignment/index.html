@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
-</head>
-<body>
-  <main class="main">
 
-  </main>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Assignment 4</title>
+</head>
+
+<body>
+
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <!-- class of dropdown set to relative keeps contained absolute positioned elements where I want them-->
+            <li class="dropdown"><a class="label" href="#">Menu</a>
+                <ul class="dropdown_menu dropdown_menu--hovered">
+                    <li><a href="#">Lunch</a></li>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Drinks</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Catering</a></li>
+        </ul>
+    </nav>
+    <section>
+
+        <button>Add to Order</button>
+        <button>Order by Phone</button>
+        <button>Connect!</button>
+        <button>Checkout</button>
+
+    </section>
 </body>
+
+
 </html>

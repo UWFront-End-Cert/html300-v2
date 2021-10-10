@@ -1,0 +1,8 @@
+$main-color: #00A3AD;
+$nav-background: darken($main-color, 10%);
+$nav-text: lighten($main-color, 25%);
+@mixin mediaQ($size) {
+    @media only screen and (max-width: $size) {
+        @content;
+    }
+}

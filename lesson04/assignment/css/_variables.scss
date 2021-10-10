@@ -1,0 +1,21 @@
+$main-color: #4d194d;
+$nav-background: darken($main-color, 10%);
+$nav-text: lighten($main-color, 25%);
+@mixin mediaQ($size) {
+    @media only screen and (max-width: $size) {
+        @content;
+    }
+}
+
+//function for the drop down menu
+@keyframes rotateMenu {
+    0% {
+        transform: rotateX(-90deg)
+    }
+    70% {
+        transform: rotateX(20deg)
+    }
+    100% {
+        transform: rotateX(0deg)
+    }
+}
