@@ -3,6 +3,8 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+@import 'scss/fontawesome.scss';
+@import 'scss/solid.scss';
 
 .main {
   padding: 0px;
@@ -31,9 +33,35 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  // padding: 1rem 1rem;
   background-color: rgb(139, 191, 235);
 
+
+  li {
+    display: inline-block;
+    padding: 0 15px;
+    margin: 0 auto;
+    font-size: 25px;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+.fa-tractor {
+  padding: 10px 0 10px 0;
+  font-size: 40px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-footer {
+  background-color: rgb(139, 191, 235);
 
   li {
     display: inline-block;
