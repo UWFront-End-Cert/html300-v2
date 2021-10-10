@@ -4,3 +4,39 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+
+.grid-container {
+  max-height: 1500px;
+  max-width: 2000px;
+  display: grid;
+  grid-template-rows: 150px 100px 600px 150px;
+  background-color: #2196F3;
+}
+
+.header {
+  background-color: red;
+}
+
+
+.nav-bar {
+  background-color: green;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.sidebar {
+  min-width: 400px;
+  background-color: purple;
+}
+
+.main-content {
+  min-width: 400px;
+  background-color: orange;
+}
+
+.footer {
+  background-color: blue;
+}
