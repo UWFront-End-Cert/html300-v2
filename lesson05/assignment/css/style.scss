@@ -33,7 +33,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(139, 191, 235);
+  background-image: linear-gradient(to right, blue , rgb(0, 255, 157));
 
 
   li {
@@ -48,26 +48,34 @@
   }
 }
 
+
+.farm {
+  height: 400px;
+}
+
+
 .fa-tractor {
+  display: inline-block;
   padding: 10px 0 10px 0;
   font-size: 40px;
 }
 
-.footer {
+
+.sidebar {
+  padding: 25px;
+  background-color: whitesmoke;
+  flex-grow: 1;
+}
+
+.main-content {
+  flex-grow: 2;
   display: flex;
-  flex-direction: column;
+  background-color: orange;
   justify-content: center;
   align-items: center;
-
-  p {
-    padding: 0px;
-    margin: 0 0 0 0;
-  }
-
 }
 
 .nav-footer {
-  background-color: rgb(139, 191, 235);
   margin: 0px;
 
   ul {
@@ -91,16 +99,23 @@
   flex-flow: row wrap;
 }
 
-.sidebar {
-  background-color: whitesmoke;
-  flex-grow: 1;
-}
-
-.main-content {
-  flex-grow: 3;
-  background-color: orange;
-}
-
 .footer {
-  background-color: rgb(139, 191, 235);
+  display: flex;
+  background-image: linear-gradient(to right, rgb(26, 26, 243) , rgb(0, 255, 157));
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-weight: bold;
+    padding: 0px;
+    margin: 0 0 0 0;
+  }
+
+}
+
+.footer-text {
+  font-size: 40px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
