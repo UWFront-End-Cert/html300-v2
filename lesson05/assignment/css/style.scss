@@ -28,12 +28,12 @@
 }
 
 .sidebar {
-  min-width: 400px;
   background-color: purple;
+  flex-grow: 1;
 }
 
 .main-content {
-  min-width: 400px;
+  flex-grow: 3;
   background-color: orange;
 }
 
