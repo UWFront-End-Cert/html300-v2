@@ -4,8 +4,12 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.main {
+  padding: 0px;
+}
 
 .grid-container {
+  margin: 0 auto;
   max-height: 1500px;
   max-width: 2000px;
   display: grid;
