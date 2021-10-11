@@ -70,8 +70,27 @@
   height: 400px;
 }
 
+
+.select-farm {
+  text-align: center;
+}
+
 .select-farm:hover {
-  opacity: 1;
+  opacity: .5;
+  transition: 1s ease;
+  background-color: gainsboro;
+  .text {
+    color: black;
+    opacity: 1;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    bottom: 50%;
+  }
+}
+
+.text {
+  color: whitesmoke;
 }
 
 .fa-tractor {
