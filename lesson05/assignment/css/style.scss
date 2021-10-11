@@ -70,12 +70,13 @@
   height: 400px;
 }
 
-
-.select-farm {
-  text-align: center;
+.farm2 {
+  height: 400px;
 }
 
-.select-farm:hover {
+
+
+.select-farm-1:hover {
   opacity: .5;
   transition: 1s ease;
   background-color: gainsboro;
@@ -89,6 +90,14 @@
   }
 }
 
+.flex-container2 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
 .text {
   color: whitesmoke;
 }
@@ -100,12 +109,9 @@
 
 .main-content {
   display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
+  justify-content: center;
   flex: 3;
   background-color: whitesmoke;
-  justify-content: center;
-  align-items: center;
 }
 
 
