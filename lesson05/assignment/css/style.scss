@@ -33,7 +33,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(to right, blue , rgb(0, 255, 157));
+  background-image: linear-gradient(to right, rgb(26, 26, 243) , rgb(0, 255, 157));
 
 
   li {
@@ -56,21 +56,25 @@
 
 .fa-tractor {
   display: inline-block;
-  padding: 10px 0 10px 0;
   font-size: 40px;
 }
 
 
 .sidebar {
   padding: 25px;
-  background-color: whitesmoke;
-  flex-grow: 1;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
 
 .main-content {
-  flex-grow: 2;
   display: flex;
-  background-color: orange;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 3;
+  background-color: whitesmoke;
   justify-content: center;
   align-items: center;
 }
@@ -94,9 +98,15 @@
 
 }
 
+.farm {
+  height: 500px;
+}
+
 .flex-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .footer {
