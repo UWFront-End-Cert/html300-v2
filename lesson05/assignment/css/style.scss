@@ -12,10 +12,14 @@
 
 .grid-container {
   margin: 0 auto;
-  max-height: 1500px;
   max-width: 2000px;
   display: grid;
-  grid-template-rows: 150px 100px 600px 150px;
+  @include media-query("desk") {
+    grid-template-rows: 150px 100px 600px 150px;
+  }
+  @include media-query("desk") {
+    grid-template-rows: 150px 100px 800px 150px;
+  }
 }
 
 .header {
@@ -26,7 +30,6 @@
   align-items: center;
   background-color: whitesmoke;
 }
-
 
 .nav {
   display: flex;
@@ -48,11 +51,30 @@
   }
 }
 
-
-.farm {
-  height: 400px;
+.sidebar {
+  padding: 25px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  h4 {
+    position:inherit;
+  }
 }
 
+.farm-text {
+  margin: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.farm {
+  :hover {
+    border-style: solid;
+    border-color: gold;
+  }
+  height: 400px;
+}
 
 .fa-tractor {
   display: inline-block;
@@ -60,14 +82,6 @@
 }
 
 
-.sidebar {
-  padding: 25px;
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
 
 .main-content {
   display: flex;
@@ -77,6 +91,31 @@
   background-color: whitesmoke;
   justify-content: center;
   align-items: center;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+.footer {
+  display: flex;
+  background-image: linear-gradient(to right, rgb(26, 26, 243) , rgb(0, 255, 157));
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-weight: bold;
+    padding: 0px;
+    margin: 0 0 0 0;
+  }
+
 }
 
 .nav-footer {
@@ -98,32 +137,6 @@
 
 }
 
-.farm {
-  height: 500px;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.footer {
-  display: flex;
-  background-image: linear-gradient(to right, rgb(26, 26, 243) , rgb(0, 255, 157));
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-
-  p {
-    font-weight: bold;
-    padding: 0px;
-    margin: 0 0 0 0;
-  }
-
-}
 
 .footer-text {
   font-size: 40px;
