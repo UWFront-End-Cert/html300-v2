@@ -10,6 +10,7 @@
   padding: 0px;
 }
 
+// Create grid
 .grid-container {
   margin: 0 auto;
   max-width: 2000px;
@@ -20,6 +21,7 @@
   'footer';
 }
 
+// Format header
 .header {
   display: flex;
   font-family: 'Roboto Condensed', sans-serif;
@@ -29,6 +31,7 @@
   background-color: whitesmoke;
 }
 
+// Format nav bar
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -49,6 +52,7 @@
   }
 }
 
+// Format sidebar
 .sidebar {
   padding: 25px;
   background-color: rgb(255, 255, 255);
@@ -59,27 +63,15 @@
   }
 }
 
+// Format image text
 .farm-text {
   margin: 10px;
   font-size: large;
   font-weight: bold;
 }
 
-
+// Format images
 .farm {
-  height: 250px;
-  @include media-query("xl") {
-    height: 400px;
-  }
-  @include media-query("desk") {
-    height: 300px;
-  }
-  @include media-query("lg") {
-    height: 250px;
-  }
-}
-
-.farm2 {
   height: 250px;
   @include media-query("xl") {
     height: 400px;
@@ -98,6 +90,7 @@
   align-items: center;
 }
 
+// Modify image to opaque and popup text link
 .select-farm-1:hover {
   opacity: .5;
   transition: 1s ease;
@@ -117,6 +110,7 @@
   align-items: center;
 }
 
+// Modify image to opaque and popup text link
 .select-farm-2:hover {
   opacity: .5;
   transition: 1s ease;
@@ -130,11 +124,13 @@
   }
 }
 
+// Booking link format
 .book-link {
   color: black;
   position: relative;
   color: whitesmoke;
 }
+
 
 .flex-container2 {
   display: flex;
@@ -147,7 +143,7 @@
   justify-content: center;
 }
 
-
+// Format tractor icon
 .fa-tractor {
   display: inline-block;
   font-size: 40px;
@@ -156,7 +152,6 @@
 .main-content {
   display: flex;
   flex-direction: column;
-  // flex-basis: 100%;
   justify-content: center;
   flex: 2;
   background-color: whitesmoke;
@@ -175,6 +170,7 @@
 }
 
 
+// Format footer
 .footer {
   display: flex;
   background-image: linear-gradient(to right, rgb(26, 26, 243) , rgb(0, 255, 157));
@@ -191,6 +187,7 @@
 
 }
 
+// Format footer content
 .nav-footer {
   margin: 0px;
 
@@ -209,7 +206,6 @@
   }
 
 }
-
 
 .footer-text {
   font-size: 40px;
