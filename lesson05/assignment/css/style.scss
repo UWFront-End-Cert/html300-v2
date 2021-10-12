@@ -14,12 +14,10 @@
   margin: 0 auto;
   max-width: 2000px;
   display: grid;
-  @include media-query("desk") {
-    grid-template-rows: 150px 100px 600px 150px;
-  }
-  @include media-query("desk") {
-    grid-template-rows: 150px 100px 800px 150px;
-  }
+  grid-template: 'header' 
+  'nav sidebar' 
+  'main-content' 
+  'footer';
 }
 
 .header {
@@ -56,7 +54,9 @@
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  flex: 1;
+  @include media-query("tab") {
+    flex: 1;
+  }
 }
 
 .farm-text {
@@ -67,11 +67,29 @@
 
 
 .farm {
-  height: 400px;
+  height: 250px;
+  @include media-query("xl") {
+    height: 400px;
+  }
+  @include media-query("desk") {
+    height: 300px;
+  }
+  @include media-query("lg") {
+    height: 250px;
+  }
 }
 
 .farm2 {
-  height: 400px;
+  height: 250px;
+  @include media-query("xl") {
+    height: 400px;
+  }
+  @include media-query("desk") {
+    height: 300px;
+  }
+  @include media-query("lg") {
+    height: 250px;
+  }
 }
 
 .select-farm-1 {
@@ -120,7 +138,11 @@
 
 .flex-container2 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  @include media-query("xl") {
+    flex-direction: row;
+  }
+  margin: 0px 40px 0px 40px;
   gap: 20px;
   justify-content: center;
 }
@@ -134,9 +156,9 @@
 .main-content {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
+  // flex-basis: 100%;
   justify-content: center;
-  flex: 3;
+  flex: 2;
   background-color: whitesmoke;
 }
 
