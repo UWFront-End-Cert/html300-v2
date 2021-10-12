@@ -74,20 +74,29 @@
   height: 400px;
 }
 
-
+.select-farm-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .select-farm-1:hover {
   opacity: .5;
   transition: 1s ease;
   background-color: gainsboro;
-  .text {
+  .book-link {
     color: black;
     opacity: 1;
     font-weight: bold;
     font-size: 20px;
-    position: relative;
     bottom: 50%;
   }
+}
+
+.book-link {
+  color: black;
+  position: relative;
+  color: whitesmoke;
 }
 
 .flex-container2 {
@@ -95,12 +104,8 @@
   flex-direction: row;
   gap: 20px;
   justify-content: center;
-  align-items: center;
 }
 
-.text {
-  color: whitesmoke;
-}
 
 .fa-tractor {
   display: inline-block;
@@ -109,11 +114,12 @@
 
 .main-content {
   display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
   justify-content: center;
   flex: 3;
   background-color: whitesmoke;
 }
-
 
 .flex-container {
   display: flex;
