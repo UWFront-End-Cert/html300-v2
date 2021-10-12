@@ -88,8 +88,27 @@
     color: black;
     opacity: 1;
     font-weight: bold;
-    font-size: 20px;
-    bottom: 50%;
+    font-size: 40px;
+    bottom: 60%;
+  }
+}
+
+.select-farm-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select-farm-2:hover {
+  opacity: .5;
+  transition: 1s ease;
+  background-color: gainsboro;
+  .book-link {
+    color: black;
+    opacity: 1;
+    font-weight: bolder;
+    font-size: 40px;
+    bottom: 60%;
   }
 }
 
