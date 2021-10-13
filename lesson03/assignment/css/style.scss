@@ -4,3 +4,106 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Declare variables
+$card-height: 400px;
+$card-width: 600px;
+$background-gold: #efe62c;
+$text-purple: #6e27c5;
+
+
+.main {
+    p {
+        // Use variable
+        color: $text-purple;
+    }
+
+    // Remove padding for small screens
+    @include media-query("mobile-smaller") {
+        padding: 0px;
+    }
+
+    .employee-card {
+        // Use variable
+        border: 25px solid $background-gold;
+        // Use variable
+        height: $card-height + 20px;
+        display: flex;
+        padding: 30px;
+
+        // Reduce width for tablets or smaller
+        @include media-query("tab") {
+            width: $card-width*1.05;
+        }
+
+        // Changes layout to profile picture over text
+        @include media-query("mobile-smaller") {
+            display: block;
+            height: 420px;
+        }
+
+        .profile {
+            // Format profile text larger
+            .title {
+                font-size: large;
+                margin-bottom: 5px;
+            }
+            display: inline-block;
+            padding-right: 10px;
+            text-align: center;
+            p {
+                margin: 0px;
+            }
+            // Center profile picture for small devices
+            @include media-query("mobile-smaller") {
+                display: block;
+                text-align: center;
+                padding: 0px;
+            }
+            // Formatting for profile image
+            .headshot {
+                border-radius: 50%;
+                width: auto;
+                height: 150px;
+                margin: auto;
+                margin: auto;
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+            @include media-query("lg") {
+                width: $card-width/4;
+            }
+        }
+
+        .experience {
+            padding-left: 15px;
+            display: inline-block;
+
+            // Center profile text for smaller devices
+            @include media-query("mobile-smaller") {
+                padding: 0px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+
+            // Partial import
+            background: $gold;
+            padding-top: 20px;
+            width: 70%;
+
+            // Center text for linkedin contact info
+            .center {
+                display: flex;
+                align-items: center;
+                height: 50px;
+            }
+
+            .profile-text {
+                margin: 0px;
+                text-align: center;
+                padding-left: 5px;
+            }
+        }
+    }
+}
