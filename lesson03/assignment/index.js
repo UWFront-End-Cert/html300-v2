@@ -106,7 +106,7 @@ content.map(function(item) {
           <p class="profile-text">
               </strong> ${item.linkedInUrl}
           </p>
-      </div>obi
+      </div>
   </div>
 </div> <br>`
 
