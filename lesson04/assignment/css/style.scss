@@ -3,6 +3,26 @@ $mtfuji-height: 800px;
 $mtfuji-width: 800px;
 $background-pink: #fcc9b9;
 
+//Title Animation
+h1 {
+  animation-duration: 5s;
+  animation-name: title-right;
+  animation-iteration-count: infinite;
+}
+
+@keyframes title-right{
+  from {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 70%;
+    width: 100%;
+    color: red;
+  }
+}
+
 // Iterates through (count + 1) child of div and sets
 // its respective p translate
 @mixin change-transform($count) {
