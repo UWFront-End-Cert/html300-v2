@@ -4,6 +4,7 @@ $mtfuji-width: 800px;
 $background-pink: #fcc9b9;
 
 //Title Animation
+//Moves Title from left to right
 h1 {
   animation-duration: 5s;
   animation-name: title-right;
