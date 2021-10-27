@@ -4,3 +4,204 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.main {
+  padding: 0px;
+}
+
+// Create grid
+.grid-container {
+  margin: 0 auto;
+  max-width: 2000px;
+  display: grid;
+  grid-template: 'header'
+  'nav sidebar'
+  'main-content'
+  'footer';
+}
+
+// Format header
+.header {
+  display: flex;
+  font-family: 'Arial', sans-serif;
+  font-size: 60px;
+  color: red;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+// Format nav bar
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFB7C5;
+
+
+  li {
+    display: inline-block;
+    padding: 0 15px;
+    margin: 0 auto;
+    font-size: 25px;
+  }
+
+  a {
+    color: #86ABA5;
+  }
+}
+
+// Format sidebar
+.sidebar {
+  padding: 25px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  @include media-query("tab") {
+    flex: 1;
+  }
+}
+
+// Format image text
+.japan-text {
+  margin: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+
+// Format images
+.japan {
+  height: 250px;
+  @include media-query("xl") {
+    height: 400px;
+  }
+  @include media-query("desk") {
+    height: 300px;
+  }
+  @include media-query("lg") {
+    height: 250px;
+  }
+}
+
+.select-japan-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Modify image to opaque and popup text link
+.select-japan-1:hover {
+  opacity: .5;
+  transition: 1s ease;
+  background-color: gainsboro;
+  .book-link {
+    color: black;
+    opacity: 1;
+    font-weight: bold;
+    font-size: 40px;
+    bottom: 60%;
+  }
+}
+
+.select-japan-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Modify image to opaque and popup text link
+.select-japan-2:hover {
+  opacity: .5;
+  transition: 1s ease;
+  background-color: gainsboro;
+  .book-link {
+    color: black;
+    opacity: 1;
+    font-weight: bolder;
+    font-size: 40px;
+    bottom: 60%;
+  }
+}
+
+// Booking link format
+.book-link {
+  color: black;
+  position: relative;
+  color: whitesmoke;
+}
+
+
+.flex-container2 {
+  display: flex;
+  flex-direction: column;
+  @include media-query("xl") {
+    flex-direction: row;
+  }
+  margin: 0px 40px 0px 40px;
+  gap: 20px;
+  justify-content: center;
+}
+
+//Format Main Content 
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+  background-color: whitesmoke;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.image-titles {
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+
+// Format footer
+.footer {
+  display: flex;
+  background-color: #FFB7C5;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-weight: bold;
+    padding: 0px;
+    margin: 0 0 0 0;
+  }
+
+}
+
+// Format footer content
+.nav-footer {
+  margin: 0px;
+
+  ul {
+    margin: 0px;
+  }
+  li {
+    display: inline-block;
+    padding: 0 15px;
+    margin: 0px;
+    font-size: 25px;
+  }
+
+  a {
+    color: #86ABA5;
+  }
+
+}
+
+.footer-text {
+  font-size: 40px;
+  font-family: 'Arial', sans-serif;
+}
