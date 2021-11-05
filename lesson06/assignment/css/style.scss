@@ -4,3 +4,26 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Format header
+.header {
+  display: flex;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 60px;
+  justify-content: center;
+  align-items: center;
+  @include media-query("infograph") {
+    font-size: 25px;
+    .fa-tractor {
+      display: inline-block;
+      font-size: 20px;
+    }
+  }
+}
+
+.box-1 {
+  border-radius: 20px;
+}
+
+.box-2 {
+  border-radius: 20px;
+}
