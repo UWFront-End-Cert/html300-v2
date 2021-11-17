@@ -1,0 +1,23 @@
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+// Format header
+.header {
+  display: flex;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+//Format navbar
+.navbar {
+  background-color: white;
+}
+
+.navbar a {
+  background-color: red;
+}
