@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Assignment 1 - Part 2 Example</title>
+  <title>Assignment 1 Part 2</title>
   <script src="scripts.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -12,13 +13,43 @@
 <body>
   <main>
     <h1>Using ES6+ Methods in DOM Interactions</h1>
-    <form id="example-form">
-      <label>Enter your favorite number:
-        <input type="text" class="input">
+
+    <h2>Summation Form</h2>
+    <form id="total">
+      <label>Add a number to the array and see its total:
+        <input type="number" class="num">
       </label>
-      <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+      <input type="submit" value="Add!">
+      <p class="output"></p>
     </form>
+
+    <h2>Remainder Form</h2>
+    <form id="mod">
+      <label>Check the remainders of each value based on your input:
+        <input type="number" class="num">
+      </label>
+      <input type="submit" value="Remainder!">
+      <p class="output"></p>
+    </form>
+
+    <h2>Greater Than Form</h2>
+    <form id="every">
+      <label>Are all of the values greater than your input?
+        <input type="number" class="num">
+      </label>
+      <input type="submit" value="Greater Than!">
+      <p class="output"></p>
+    </form>
+
+    <h2>Greater Than Form Part 2</h2>
+    <form id="filter">
+      <label>Find the values greater than your input:
+        <input type="number" class="num">
+      </label>
+      <input type="submit" value="Greater Than!">
+      <p class="output"></p>
+    </form>
+
   </main>
 </body>
 
