@@ -9,11 +9,11 @@
 
         // Grab the alias and the condition from their respective locations in
         // the list.
-        $alias:     nth($breakpoint, 1);
+        $alias: nth($breakpoint, 1);
         $condition: nth($breakpoint, 2);
 
         // If the media query we’ve specified has an alias and a condition...
-        @if $mq == $alias and $condition {
+        @if $mq==$alias and $condition {
 
             // ...tell the mixin that we’ve found it...
             $breakpoint-found: true;
@@ -28,25 +28,34 @@
     }
 
     // If the user specifies a non-exitent alias, send them a warning.
-    @if $breakpoint-found == false{
+    @if $breakpoint-found==false {
         @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
     }
 
 }
 
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+}
+
 // Add breakpoints
-$breakpoints: (
-    "xl"            "screen and (min-width: 1300px)",
-    "desk"          "screen and (min-width: 1024px)",
-    "lg"            "screen and (min-width: 920px)",
-    "tab"           "screen and (min-width: 768px)",
-    "mobile"        "screen and (max-width: 767px)",
-    "infograph"     "screen and (min-width: 540px)",
-    "med"           "screen and (min-width: 40em)",
-    "sm"            "screen and (min-width: 30em)",
-    "small"         "screen and (min-width: 20em)",
-    "tiny"          "screen and (max-width: 320px)",
-    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)",
-    "ie"            "all and(-ms-high-contrast: none), (-ms-high-contrast: active)",
-    "ipad"          "screen and (min-device-width : 768px) and (max-device-width : 1024px)"
+$breakpoints: ("xl""screen and (min-width: 1300px)",
+    "desk""screen and (min-width: 1024px)",
+    "lg""screen and (min-width: 920px)",
+    "tab""screen and (min-width: 768px)",
+    "mobile""screen and (max-width: 767px)",
+    "infograph""screen and (min-width: 540px)",
+    "med""screen and (min-width: 40em)",
+    "sm""screen and (min-width: 30em)",
+    "small""screen and (min-width: 20em)",
+    "tiny""screen and (max-width: 320px)",
+    "retina""(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)",
+    "ie""all and(-ms-high-contrast: none), (-ms-high-contrast: active)",
+    "ipad""screen and (min-device-width : 768px) and (max-device-width : 1024px)"
 ) !default;
