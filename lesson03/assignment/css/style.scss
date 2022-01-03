@@ -4,3 +4,71 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// New Custom Partials
+@import 'settings.colors';
+@import 'settings.fonts';
+
+// Main Card CSS - organized by flexbox
+.card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 50px solid $gray;
+    border-radius: 10px;
+    color: $dark-gray;
+    font-family: $font-fam;
+    padding: 3rem;
+    margin: 5rem;
+
+    // Headshot CSS
+    &_headshot {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        width: 33%;
+
+        img {
+            border-radius: 50%;
+            max-width: 50%;
+        }
+
+        h3 {
+            font-size: fontSize(20px);
+        }
+
+        h4 {
+            font-size: fontSize(16px);
+            font-weight: normal;
+            font-style: italic;
+        }
+    }
+
+    //Info Section CSS
+    &_experience {
+        width: 66%;
+        background-color: $light-gray;
+        padding: 2rem;
+
+        p {
+            font-size: fontSize(14px);
+        }
+
+        &_info {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+
+            .title {
+                margin-right: 0.5rem;
+                font-weight: bold;
+            }
+
+            img {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
