@@ -1,0 +1,17 @@
+//Responsive Text Sizing based on initial px value
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+}
+
+
+// Set Image Size to a box
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
