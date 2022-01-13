@@ -1,33 +1,79 @@
-// Code that requires the DOM be loaded should not be run until the DOM is loaded
-document. addEventListener("DOMContentLoaded", function(){
+// LOTTERY NUMBER PICKER
+// Turn the array into a string
+let lottoArr = [23, 14, 59]
+const lottoNumber = lottoArr.join('-')
+console.log(lottoNumber)
 
-  // Find the example form, and handle its submit event
-  const exampleForm = document.querySelector('#example-form')
+const lottoForm = document.querySelector('#lotto')
 
-  exampleForm.addEventListener('submit', function(event){
-    // Prevent the form from trying to submit to a server
-    event.preventDefault()
+// Add event listener for when user hits submit 
+lottoForm.addEventListener('submit',function(event){
+  event.preventDefault()
 
-    // An array that we can transform based on user input
-    let data = [0, 1, 2, 3, 5, 8]
+  //Handle user input for 'Lotto'
+  const lottoInput = document.querySelector('#lotto .input').value
+  const userNumber = parseInt(lottoInput)
+  console.log(userNumber)
 
-    const inputField = document.querySelector('#example-form .input')
-    const userInput = inputField.value
-    const userNumber = parseInt(userInput)
-
-    // If the user's input was a number, push it into the array and continue
-    if(!isNaN(userNumber)){
-      data.push(userNumber)
-
-      // Use reduce to sum all the numbers in the data array
-      const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
-
-      // Output the total to the page- no need to convert the numeric sum back to a string, HTML will just print the number as a string
-      document.querySelector('#example-form .output').innerHTML = sum
-    }
-
-    // Clear the form field so the user can try again
-    inputField.value = ''
-  })
-
+  //Handle output for 'Lotto'
+  if(!isNaN(userNumber)){
+    //Add user's number to the beginning of lottoNumber string 
+    const lottoText = document.createTextNode(`Your lottery number is ${userNumber}-${lottoNumber}.`)
+    let p = document.createElement('p')
+    p.appendChild(lottoText)
+    this.appendChild(p)
+  }
 })
+
+
+// HOW MANY BURRITOS?
+// Add event listener for when user hits submit 
+const burritoForm = document.querySelector('#burritos')
+
+burritoForm.addEventListener('submit', function(event){
+  event.preventDefault()
+  
+  // Handle input
+  const userInput = document.querySelector('#burritos .input').value
+  const userNumber = parseInt(userInput)
+  console.log(userNumber)
+  
+  if(!isNaN(userNumber)){
+    // Handle output
+    const text = document.createTextNode(`${userNumber + 26} burritos?! Take a bow, you're a beast!`)
+    const p = document.createElement('p')
+    p.appendChild(text)
+    this.appendChild(p)
+    this.classList.add('submitted')
+  }
+})
+
+// WHICH NUMBER IS LARGER
+    function largestNumber()
+      {
+// Find which number is larger with getElementById
+        var num1, num2;
+        num1 = Number(document.getElementById("first-number").value);
+        num2 = Number(document.getElementById("second-number").value);
+
+        if(num1>num2)
+        {
+          window.alert(num1+" is the larger number!");
+        }
+        else if(num2>num1)
+        {
+          window.alert(num2+" is the larger number!");
+        }
+        else if(num2>num1 && num2>num1)
+        {
+          window.alert(num2+" is the larger number!");
+        }
+      }
+      
+// FAHRENHEIT CONVERSION
+// Take the user input and subtract 32 and divide by 1.8
+function tempConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("celsius-output").innerHTML = (valNum-32) / 1.8;
+}
+ 
