@@ -1,0 +1,99 @@
+//Import Assets
+@import 'settings.colors';
+@import 'settings.fonts';
+@import 'settings.responsive';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $light-grey;
+    color: $dark-grey;
+
+}
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    color: $white;
+    background-color: $dark-grey;
+
+    .doge {
+        background-image: url("../images/king-doge.png");
+        background-size: cover;
+        position: relative;
+        @include size(100px);
+        transition: all 3s ease-in-out;
+
+    }
+
+    h2 {
+        font-family: $headers;
+        font-size: fontSize(25px);
+        transition: all .5s ease-in-out;
+    }
+
+    //When navbar is hovered animate the heading and image
+    &:hover .doge {
+        transform: translate(100vw, 0) rotate(3060deg);
+    }
+
+    &:hover h2 {
+        transform: translate(0, 50px);
+    }
+}
+
+main {
+    margin: 2rem;
+
+    h1 {
+        font-family: $headers;
+        font-size: fontSize(35px);
+    }
+
+    h4 {
+        font-family: $headers;
+        font-size: fontSize(15px);
+        margin: 1rem 0;
+    }
+}
+
+.meme {
+    width: 33%;
+    background-color: $white;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+
+
+    >* {
+        margin: .25rem 0;
+    }
+
+    h3 {
+        font-family: $headers;
+        font-size: fontSize(20px);
+    }
+
+    img {
+        max-width: 100%;
+        align-self: center;
+
+    }
+
+    p {
+        font-family: $body;
+    }
+
+    &:hover {
+        box-shadow: 0 0 10px $dark-grey;
+        transform: scale(1.1, 1.1);
+    }
+}
