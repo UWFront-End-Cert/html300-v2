@@ -4,3 +4,94 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// Setup up CSS Grid
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "aside main main"
+        "footer footer footer";
+    grid-template-columns: repeat(3, 1fr);
+    //Customize row heights identical to spec
+    grid-template-rows: 2fr 1fr 10fr 2fr;
+
+    //Make grid fit entire webpage
+    width: 100vw;
+    height: 100vh;
+
+    //Set identical fonts and coloring for all Labels
+    color: white;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+header {
+    grid-area: header;
+    background-color: $red;
+
+    //Use Flexbox to Center Label
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav {
+    grid-area: nav;
+    background-color: $green;
+
+    //Use Flexbox to Center Label
+
+    ul {
+        width: 100%;
+        height: 100%;
+        // display: inline;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    //Remove list decorations
+    li {
+        display: inline;
+        text-decoration: none;
+    }
+}
+
+//Use Flexbox to Center Label
+aside {
+    grid-area: aside;
+    background-color: $purple;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+//Use Flexbox to Center Label
+main {
+    grid-area: main;
+    background-color: $orange;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+//Use Flexbox to Center Label
+footer {
+    grid-area: footer;
+    background-color: $blue;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
