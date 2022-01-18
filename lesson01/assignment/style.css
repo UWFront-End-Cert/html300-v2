@@ -1,3 +1,13 @@
-main {
-  padding: 2rem
+body {
+  font-family: Calibri, Helvetica, sans-serif;
+}
+
+button {
+  margin-top: 1rem;
+}
+
+.question-container {
+  border: 1px solid orange;
+  margin: 1rem;
+  padding: 0rem 1rem 1rem 1rem; 
 }

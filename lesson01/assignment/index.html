@@ -1,25 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Assignment 1 - Part 2 Example</title>
-  <script src="scripts.js"></script>
-  <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
-  <main>
-    <h1>Using ES6+ Methods in DOM Interactions</h1>
-    <form id="example-form">
-      <label>Enter your favorite number:
-        <input type="text" class="input">
-      </label>
-      <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
-    </form>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 01</title>
+  </head>
+
+  <body>
+    <h1>ES6+ JavaScript Functionality</h1>
+
+    <!-- Lottery Number Picker -->
+    <div class="question-container">
+      <h2>Lottery Number Picker</h2>
+      <form id="lotto">
+        <label>Please enter a number 01-99
+          <input size="4" type="text" class="input">
+        </label>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <!-- How Many Burritos -->
+    <div class="question-container">
+      <h2>How Many Burritos Will You Eat This Year?</h2>
+      <p>Enter the number of burritos that you THINK you'll eat this year and we'll tell you how many you'll ACTUALLY eat.</p>
+      <form id="burritos">
+        <label>How many burritos do you think you'll eat this year?
+          <input size="4" type="text" class="input">
+        </label>
+        <input type="submit" value="Calculate">
+      </form>
+    </div>
+
+    <!-- Which Number is Larger? -->
+    <div class="question-container">
+      <h2>Which is the Bigger Number?</h2>
+      <p>Enter two numbers and we'll tell you which one is bigger</p>
+      <form>
+        <label>Enter your first number <input size="3" type="text" id="first-number"></label><br>
+        <label>Enter your second number <input size="3" type="text" id="second-number"></label><br>
+      </form>
+      <button onclick="largestNumber()">Submit</button>
+    </div>
+
+    <!-- Genious -->
+    <div class="question-container">
+      <h2>Convert Fahrenheit to Celsius Instantly!</h2>
+      <p>Enter your degrees in Fahrenheit and see it instantly converted to Celsius.</p>
+      <form>
+        <label>Fahrenheit</label>
+          <input id="inputFahrenheit" type="text" oninput="tempConverter(this.value)" onchange="tempConverter(this.value)">
+      </form>
+      <p>Celsius: <span id="celsius-output"></span></p>
+    </div>
+  </body>
 
 </html>
