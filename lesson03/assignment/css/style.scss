@@ -1,6 +1,112 @@
-// Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
+
+.main-container {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+  font-family: $card-containerfont;
+  & .card-container {
+    display: grid;
+
+
+    place-items: center;
+    color: $text-grey;
+    background-color: #fff8;
+    border: 50px solid $dark-grey;
+    border-radius: 5px;
+    max-width: 65%;
+    min-width: 30%;
+    @include media-query(mobile) {
+      border-width: 20px;
+    }
+  }
+}
+.port-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 3rem;
+  max-width: 90%;
+  min-width: 30%;
+  @include media-query(mobile) {
+    flex-flow: column nowrap;
+    max-width: 35vw;
+}
+/*Image, name, job title*/
+.port1 {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  flex-shrink: 2;
+  align-items: center;
+  justify-content: start;
+}
+.portrait {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 50%;
+}
+.title {
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.2rem;
+}
+
+.title-card {
+  text-align: center;
+  margin: 0;
+}
+
+.name {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.2rem;
+}
+
+/*Info-section (company, experience, school, major, email)*/
+.info-section {
+  display: flex;
+  flex-grow: 2;
+  flex-shrink: 1;
+  background-color: $port1;
+  width: 100%;
+  overflow: hidden;
+}
+
+li {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.info {
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+.profile-list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0rem;
+  width: 100%;
+  & .item {
+    font-size: 1.2rem;
+    padding-bottom: 0.4rem;
+  }
+}
+.linkedin {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
