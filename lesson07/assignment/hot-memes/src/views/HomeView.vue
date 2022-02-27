@@ -1,20 +1,5 @@
 <template>
   <div class="container py-4">
-    <!-- Navigation Bar with Light Blue Pills -->
-    <header class="pb-3 mb-4 border-bottom">
-      <nav class="nav nav-pills bg-light">
-        <a
-          class="nav-link active bg-info text-white"
-          aria-current="page"
-          href="index.html"
-          >Home</a
-        >
-        <a class="nav-link text-info" href="hot.html">Hot Memes</a>
-        <a class="nav-link text-info" href="about.html">About</a>
-        <a class="nav-link text-info" href="archive.html">Archive</a>
-      </nav>
-    </header>
-
     <!-- Create Jumbotron -->
     <div class="p-5 mb-4 bg-light rounded-3">
       <div class="container-fluid py-5">

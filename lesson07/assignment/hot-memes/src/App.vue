@@ -1,20 +1,12 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/hot">Hot</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/archive">Archive</router-link>
-  </nav>
-
-  <b-nav-item
-    active-class="active"
-    class="nav-link"
-    v-for="routes in links"
-    :key="routes.id"
-    :to="routes.path"
-  >
-    {{ routes.name }}
-  </b-nav-item>
+  <div class="container py-4">
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/hot">Hot</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/archive">Archive</router-link>
+    </nav>
+  </div>
 
   <router-view />
 </template>
@@ -28,17 +20,13 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
-
 nav a {
   font-weight: bold;
   color: #2c3e50;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #0d6efd;
 }
 
 @import "~bootstrap/dist/css/bootstrap.css";
