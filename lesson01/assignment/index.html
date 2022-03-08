@@ -12,13 +12,72 @@
 <body>
   <main>
     <h1>Using ES6+ Methods in DOM Interactions</h1>
+
+    <p style="color: green; font-weight: bold;">Data array is: <span id="original-array"></span></p>
+    <p>------------------------------------------------</p>
+
     <form id="example-form">
+      <p>Example Demo: Use Reduce to sum up array elements, inlcuding the number you enter</p>
       <label>Enter your favorite number:
         <input type="text" class="input">
       </label>
       <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+      <p>You entered: <span id="example-input" class="input-display"></span>
+      <p>New data array is: <span id="example-newarray"></span></p>
+      <p>
+        Result:  <span id="example-output" class="result"></span>
+      </p>
     </form>
+
+    <p>------------------------------------------------</p>
+
+    <form id="form1">
+      <p>ES6 Function 1: Use Map to increase array elements by the number you enter</p>
+      <label>Enter your favorite number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Map!">
+      <p>You entered: <span id="form1-input" class="input-display"></span></p>
+      <p>Result:  <span id="form1-newarray" class="result"></span></p>
+    </form>
+
+    <p>------------------------------------------------</p>
+
+    <form id="form2">
+      <p>ES6 Function 2: Use Find to find the 1st array element that is bigger than the number you enter</p>
+      <label>Enter your favorite number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Find!">
+      <p>You entered: <span id="form2-input" class="input-display"></span></p>
+      <p>Result:  <span id="form2-output" class="result"></span></p>
+    </form>
+
+    <p>------------------------------------------------</p>
+
+    <form id="form3">
+      <p>ES6 Function 3: Use Filter to find array element(s) bigger than the number you enter</p>
+      <label>Enter your favorite number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Filter!">
+      <p>You entered: <span id="form3-input" class="input-display"></span></p>
+      <p>Result:  <span id="form3-newarray" class="result"></span></p>
+    </form>
+
+    <p>------------------------------------------------</p>
+
+    <form id="form4">
+      <p>ES6 Function 4: Use Every to check all array elements are smaller than the number you enter</p>
+      <label>Enter your favorite number:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Every!">
+      <p>You entered: <span id="form4-input" class="input-display"></span></p>
+      <p>Result:  <span id="form4-output" class="result"></span></p>
+    </form>
+
+
   </main>
 </body>
 
