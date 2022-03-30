@@ -18,17 +18,19 @@ $black: #000;
 
 }
 
+//added some margin for the menu
 .menu {
   margin-top: 2rem;
 }
 
+// basic setup for menu
 .menu > a {
   @include navigation();
   font-family: $font-fam;
   width: 100%;
 }
 
-
+// prepare links in menu for animaion
 .links > a {
   @include navigation();
   position: relative;
@@ -50,7 +52,7 @@ $black: #000;
   transition: width 1s, background-color 1s;
 }
 
-
+// this transition will extend the line underneath the "menu" and change its color
 .menu:hover .line {
   width: 29%;
   background-color: $gray;
