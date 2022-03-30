@@ -1,0 +1,88 @@
+@import 'mixins';
+
+// I got my inspiration from this youtube video: https://www.youtube.com/watch?v=e9ol1i4xkYI
+// I wanted the menu to "fly in" like an airplane and hope this animation fulfills it
+
+$font-fam: Arial, Helvetica, Sans-serif;
+$gray: #aaa;
+$black: #000;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.menu {
+  margin-top: 2rem;
+  transition: transform 1s;
+}
+
+.menu > a {
+  @include navigation();
+  font-family: $font-fam;
+  width: 100%;
+}
+
+
+.links > a {
+  @include navigation();
+  position: relative;
+  font-family: $font-fam;
+  padding-right: 0.5em;
+  opacity: 0;
+  pointer-events: none;
+  right: 10em;
+  transition: right 0.5s 0.3s, opacity 0.5s 0.3s, color 0.3s;
+}
+
+// add a transition that'll make the menu appear from left to right
+.line {
+  width: 0;
+  position: relative;
+  margin-left: 1rem;
+  margin-bottom: 0.5em;
+  height: 0.2rem;
+  background-color: $gray;
+  transition: width 1s, background-color 1s;
+}
+
+
+.menu:hover .line {
+  width: 29%;
+  background-color: $gray;
+}
+
+// make the menu pop out from the left one by one.
+.menu:hover .links > a {
+  pointer-events: auto;
+  cursor: pointer;
+  right: 0;
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      animation-name: menu1;
+      animation-duration: 300ms;
+      animation-delay: (300ms * $i) - 300;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    @keyframes menu1{
+      0% {
+        right: 10em;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//hovering over the links changes the color to black
+.menu:hover .links > a:hover {
+  color: $black;
+}
