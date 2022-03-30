@@ -20,7 +20,6 @@ $black: #000;
 
 .menu {
   margin-top: 2rem;
-  transition: transform 1s;
 }
 
 .menu > a {
@@ -37,7 +36,6 @@ $black: #000;
   padding-right: 0.5em;
   opacity: 0;
   pointer-events: none;
-  right: 10em;
   transition: right 0.5s 0.3s, opacity 0.5s 0.3s, color 0.3s;
 }
 
@@ -62,7 +60,6 @@ $black: #000;
 .menu:hover .links > a {
   pointer-events: auto;
   cursor: pointer;
-  right: 0;
   @for $i from 1 through 4 {
     &:nth-child(#{$i}) {
       animation-name: menu1;
@@ -76,6 +73,7 @@ $black: #000;
         right: 10em;
       }
       100% {
+        right: 0;
         opacity: 1;
       }
     }
