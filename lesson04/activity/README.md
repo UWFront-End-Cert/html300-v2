@@ -1,7 +1,7 @@
 # Lesson 04 - Transform/Transition Activity
 
 ### Required setup if not already installed (it should be)
-- Install [node](https://nodejs.org/en/)
+- Install [Node v12](https://nodejs.org/en/blog/release/v12.22.10/)
 
 ### To get started:
 -   Navigate to the root folder of this assignment within terminal `lesson04/activity/`

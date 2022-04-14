@@ -3,7 +3,7 @@
 From now on, all assignments will be building pieces that will be included in the final assignment. Create using the content (text, images) that you want in the final site.
 
 ### Required setup if not already installed (it should be)
-- Install [node](https://nodejs.org/en/)
+- Install [Node v12](https://nodejs.org/en/blog/release/v12.22.10/)
 
 ### Research
 Find (at least) __one__ example of transition-based animation that you want to include into your final project.  Remember this final project will be part of your portfolio, you want to use it to impress future employers. Implement that transition you found using SCSS, Mixins, and Variables. When working on the final project, you can move over the code written here.

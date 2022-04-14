@@ -1,7 +1,7 @@
 # Lesson 02 - Sass/Gulp/npm - Activity
 
 ### Required setup
-- Install [node](https://nodejs.org/en/)
+- Install [Node v12](https://nodejs.org/en/blog/release/v12.22.10/)
 - Install [Adobe XD](https://www.adobe.com/products/xd.html) (free)
 
 ### To get started:
