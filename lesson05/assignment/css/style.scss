@@ -4,3 +4,89 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+$font-family: Helvetica, Arial, sans-serif;
+
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+
+// trying out grid template areas
+// create columns for sidebar and main content
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  text-align: center;
+  color: $white;
+  grid-template-areas:
+  'header header'
+  'nav nav'
+  'sidebar content'
+  'sidebar content'
+  'footer footer'
+}
+
+// put header at top
+.header {
+  background-color: $red;
+  grid-area: header;
+  padding: 2em 0;
+}
+
+// set flexbox for navigation
+.nav {
+  background-color: $green;
+  grid-area: nav;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__item {
+    text-decoration: none;
+    padding: 1em;
+  }
+
+  &__item:visited {
+    color: $white;
+  }
+}
+
+// sidebar on left, "sidebar" area
+.sidebar {
+  background-color: $purple;
+  grid-area: sidebar;
+  padding: 13em 0;
+}
+
+// content on right, "content" area
+.content {
+  background-color: $orange;
+  grid-area: content;
+  padding: 13em 0;
+}
+
+// keep footer the same size as the header
+.footer {
+  background-color: $blue;
+  grid-area: footer;
+  padding: 2em 0;
+}
+
+
+// adding in responsive css for mobile, want the nav links to be on one line
+@media (min-width: 320px) and (max-width: 540px) {
+  * {
+      font-size: 0.75rem;
+  }
+}
+
+// adding in css for tablets, keeping nav links to one line
+@media (min-width: 540px) and (max-width: 768px) {
+  * {
+      font-size: 1rem;
+  }
+}
