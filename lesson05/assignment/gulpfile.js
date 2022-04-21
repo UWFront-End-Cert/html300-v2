@@ -3,66 +3,52 @@ const {
     dest,
     parallel,
     series,
-    watch
+    watch,
+    task
 } = require('gulp')
-const sass = require('gulp-sass')
-const autoprefix = require('gulp-autoprefixer')
-const plumber = require('gulp-plumber')
-const cleanCSS = require('gulp-clean-css')
-const browsersync = require('browser-sync')
+const browserSync = require('browser-sync');
+const server = browserSync.create();
+const sass = require('gulp-sass')(require('sass'));
 
-// Directories
-var paths = {
-    scss: './css/',
-    data: './data/',
-    js: './js/'
+// Directories to watch.
+// If watch & reload isn't working as expected, check that files you want watched can be found in these paths.
+const paths = {
+    scss: {src: './css/*.scss', dest: './css'},
+    data: {src: './data/', dest: './data/'},
+    js: {src: './*.js', dest: '.'},
+    html: {src: './*.html', dest: '.'}
 };
 
-// Handle changes to .scss files
-function css() {
-    return src('css/*.scss')
-        .pipe(plumber({
-            handleError: function(err) {
-                console.log(err);
-                this.emit('end');
-            }
-        }))
+
+// Compile SCSS into CSS
+task('sass', function() {
+    return src(paths.scss.src)
         .pipe(sass({
             includePaths: [paths.scss],
             outputStyle: 'compressed'
         }).on('error', function(err) {
             console.log(err.message);
-            // sass.logError
             this.emit('end');
         }))
-        .pipe(
-            autoprefix(['> .5%'])
-        )
-        .pipe(cleanCSS({
-            compatibility: 'ie8'
-        }))
-        .pipe(dest('css/'))
-};
-
-// On changes to scss or js files, reload the page in browser
-function watchFiles() {
-    watch(paths.scss + '**/*.scss', parallel(css))
-        .on('change', browsersync.reload);
-    watch(paths.js + '*.js')
-        .on('change', browsersync.reload);
-}
+        .pipe(dest(paths.scss.dest))
+        .pipe(browserSync.stream());
+});
 
 // BrowserSync configuration
-function browserSync() {
-    browsersync({
-        server: {
-            baseDir: './'
-        },
-        notify: false,
-        browser: "google chrome"
+task('browserSync', function() {
+    browserSync.init({
+        server: './',
+        notify: false
     });
-}
+})
 
-const watching = parallel(watchFiles, browserSync);
+// Watch for changes in scss, html, and js files, reloading page in browser when change is found.
+task('watchFiles', function() {
+    watch(paths.scss.src, parallel('sass')).on('change', browserSync.reload);
+    watch(paths.html.src).on('change', browserSync.reload);
+    watch(paths.js.src).on('change', browserSync.reload);
+});
 
-exports.default = watching;
+const watching = parallel('watchFiles', 'browserSync')
+
+exports.default = watching
