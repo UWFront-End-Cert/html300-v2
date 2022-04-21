@@ -1,7 +1,7 @@
 # Assignment 02 - Sass/Gulp/npm
 
 ### Required setup
-- Install version 13 of [node](https://nodejs.org/en/) (this should be the latest version)
+- Install version 14 or higher of [node](https://nodejs.org/en/) (this is enforced by the "engines" in packages.json)
 
 ### To get started:
 -	In your forked repo, create a new branch off of master called 'lesson-02' or similar
