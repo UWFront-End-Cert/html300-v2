@@ -1,5 +1,8 @@
 # Activity 06 - Bootstrap 4 Forms
 
+### Required setup if not already installed (it should be)
+- Install version 14 or higher of [node](https://nodejs.org/en/) (this is enforced by the "engines" in packages.json)
+
 We will be working with Bootstrap 4 to create a submittable form.
 
 ### Bootstrap References

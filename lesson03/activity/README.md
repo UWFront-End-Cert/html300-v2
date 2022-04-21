@@ -1,7 +1,7 @@
 # Lesson 03 - Constructor - Activity
 
 ### Required setup if not already installed (it should be)
-- Install [node](https://nodejs.org/en/)
+- Install version 14 or higher of [node](https://nodejs.org/en/) (this is enforced by the "engines" in packages.json)
 
 ### To get started:
 -   Navigate to the root folder of this assignment within terminal `lesson03/activity/`

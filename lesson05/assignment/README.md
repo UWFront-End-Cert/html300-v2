@@ -1,5 +1,8 @@
 # Assignment 05 - CSS Grid & Flexbox
 
+### Required setup if not already installed (it should be)
+- Install version 14 or higher of [node](https://nodejs.org/en/) (this is enforced by the "engines" in packages.json)
+
 Build a web page that you'd like to include in your final project that has a layout based off the provided mockup. Use CSS grid for the page layout, and flexbox where appropriate within the content areas. This page may be edited later before being added in to the final site, if this isn't a layout you'd like to keep, but for now create it using content (text, images) that you want in the final site.
 
 [Design Spec Link](https://xd.adobe.com/spec/8117a5c5-ebde-471d-7eb0-c67b3578aeba-f726/) (doesn't require download/install of XD). Inside the lesson05/assignment/ref directory is a mockup of the layout in several different file types for quick reference.

@@ -1,5 +1,8 @@
 # Assignment 03 - Constructors and Data
 
+### Required setup if not already installed (it should be)
+- Install version 14 or higher of [node](https://nodejs.org/en/) (this is enforced by the "engines" in packages.json)
+
 ### To get started:
 -	In your forked repo, create a new branch off of master called `lesson-03` or similar
 -   Navigate to the root folder of this assignment within terminal in your fork, `lesson03/assignment`

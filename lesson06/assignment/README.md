@@ -1,5 +1,8 @@
 # Assignment 06 - Bootstrap 4
 
+### Required setup if not already installed (it should be)
+- Install version 14 or higher of [node](https://nodejs.org/en/) (this is enforced by the "engines" in packages.json)
+
 We will be working with Bootstrap 4 to create a series of pages using Bootstrap components and features. You will create four pages that will contain:
 - A navbar that navigates across the four pages
 - Use of tooltips or popovers somewhere on one of the pages
