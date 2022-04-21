@@ -1,7 +1,7 @@
 # component-activity
 
-### Required setup if not already installed (it should be)
-- Install version 14 or higher of [node](https://nodejs.org/en/) (this is enforced by the "engines" in packages.json)
+### BUG!
+This only works with Node v12 currently.
 
 > A Vue.js project
 
