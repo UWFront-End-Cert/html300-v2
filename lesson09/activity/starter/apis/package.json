@@ -26,5 +26,9 @@
     "eslint-plugin-vue": "^4.0.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0"
-  }
+  },
+    "engines": {
+        "npm": ">=7.0.0",
+        "node": ">=14.0.0"
+    }
 }

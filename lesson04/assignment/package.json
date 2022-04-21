@@ -16,5 +16,9 @@
         "gulp-plumber": "1.2.0",
         "gulp-sass": "^4.1.0",
         "gulp-util": "3.0.8"
+    },
+    "engines": {
+        "npm": ">=7.0.0",
+        "node": ">=14.0.0"
     }
 }
