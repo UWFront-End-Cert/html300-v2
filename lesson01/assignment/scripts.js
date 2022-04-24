@@ -90,8 +90,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const userInput = inputField.value
     const userNumber = parseInt(userInput)
 
+    // If the user's input was a number, push it into the array and continue
+
     if (!isNaN(userNumber)) {
       numbers.push(userNumber)
+
+      // Only numbers that are greater than 35 in an arrow are going to be shown
 
       let numbers2 = numbers.filter(function(value) {
         return value > 35;
@@ -121,8 +125,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const userInput = inputField.value
     const userNumber = parseInt(userInput)
 
+    // If the user's input was a number, push it into the array and continue
     if (!isNaN(userNumber)) {
       numbers.push(userNumber)
+
+      //Value of my array is multiplied by 2 and a randon number entered is multiplied by 2 as well
 
       numbers.forEach(function(value, key) {
         numbers[key] = value * 2;
@@ -150,14 +157,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const userInput = inputField.value
     const userNumber = parseInt(userInput)
 
+    // If the user's input was a number, push it into the array and continue
     if (!isNaN(userNumber)) {
       numbers.push(userNumber)
+
+    //If the number is even - true; if the number is odd - false
       const isEven = (value) => value % 2 === 0;
       if (numbers.some(isEven)) {
         document.querySelector('#example-form-4 .output').innerHTML = "True"
-      }
-
-      else {
+      } else {
         document.querySelector('#example-form-4 .output').innerHTML = "False"
       }
     }
