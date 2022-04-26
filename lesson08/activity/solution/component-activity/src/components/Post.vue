@@ -4,6 +4,7 @@
     <h3>Category: {{ category }}</h3>
     <p>{{ excerpt }}</p>
     <p>Likes: {{ likes }}</p>
+    <button @click="likes++">Like</button>
   </div>
 </template>
 

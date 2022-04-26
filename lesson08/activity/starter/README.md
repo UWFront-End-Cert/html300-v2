@@ -31,5 +31,4 @@ These instructions were written for Vue CLI v5.x and Vue v3.x. If you're using d
 -	 Have a parent component (App.vue) with data in the form of an array of blog post objects (copy over the data from the data.js file in this directory)
 -	 Create a `<post>` component (in its own file) with props for `title`, `excerpt`, `likes`, and `category`. (hint: Make sure to import the component to `App.vue`)
 -	 Display all the blog posts as `<post>` components on the home page, passing and displaying props correctly (hint: You'll need to use `v-for` and `v-bind`)
--	 Give the `<post>` component a button and tie it to a click directive, increasing the post's `likes` value by one on click
--	 Using data set on the parent, pass down the props to template out the data
+-	 Give the `<post>` component a button with a click handler. On click of button, the post's `likes` value should increase by 1. (hint: It's expected that this value change won't persist on page refresh)
