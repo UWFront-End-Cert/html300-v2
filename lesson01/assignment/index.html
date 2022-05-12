@@ -5,19 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Assignment 1 - Part 2 Example</title>
-  <script src="scripts.js"></script>
+  <script defer src="scripts.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <main>
     <h1>Using ES6+ Methods in DOM Interactions</h1>
-    <form id="example-form">
-      <label>Enter your favorite number:
-        <input type="text" class="input">
-      </label>
-      <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+
+    <h2>Example 1</h2>
+    <form id="form-1">
+
+        <p>So I have this array of numbers: 3, 4, 5, 6, 7, and 8.</p>
+
+        <label>Enter a factor to muliply by:
+          <input type="text" class="input">
+        </label>
+        <input type="submit" value="See Demo!">
+        <p>The product of the array will look like this: <span id="output-1"></span></p>
+    </form>
+
+    <h2>Example 2 - Check Shopping List</h2>
+    <p>Look, my wife sent me a shopping list.</p>
+    <ul>
+        <li>eggs</li>
+        <li>butter</li>
+        <li>milk</li>
+        <li>chocolates</li>
+        <li>pickles</li>
+        <li>beans</li>
+        <li>artichokes</li>
+        <li>tomatoes</li>
+    </ul>
+    <form id="form-2">
+        <label>Write an item to see if it's on the list.
+            <input type="text" class="input">
+        </label>
+        <input type="submit" value="submit">
+        <p>Outcome: <span id="output-2"></span></p>
+    </form>
+    
+    <h2>Example 3 - Factorial</h2>
+
+    <p>Gonna take a factorial of the number you put in below. If you put in 15, then I will calculate 15! - which is 15 * 14 * 13 * 12 * ... * 2 * 1.</p>
+
+    <p>Gonna put the top value as 20, so numbers won't go crazy.</p>
+
+    <form id="form-3">
+        <label>Enter a number between 1 and 20.
+            <input type="text" class="input">
+        </label>
+        <input type="submit" value="submit">
+        <p>Outcome: <span id="output-3"></span></p>
+    </form>
+
+    <h2>Example 4 - </h2>
+    <form id="form-4">
+        <label>Enter a number between 1 and 20.
+            <input type="text" class="input">
+        </label>
+        <input type="submit" value="submit">
+        <p></p>
     </form>
   </main>
 </body>
