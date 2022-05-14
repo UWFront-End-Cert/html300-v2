@@ -1,36 +1,8 @@
-// // Code that requires the DOM be loaded should not be run until the DOM is loaded
-// document. addEventListener("DOMContentLoaded", function(){
-
-//   // Find the example form, and handle its submit event
-//   const exampleForm = document.querySelector('#example-form')
-
-//   exampleForm.addEventListener('submit', function(event){
-//     // Prevent the form from trying to submit to a server
-//     event.preventDefault()
-
-//     // An array that we can transform based on user input
-//     let data = [0, 1, 2, 3, 5, 8]
-
-//     const inputField = document.querySelector('#example-form .input')
-//     const userInput = inputField.value
-//     const userNumber = parseInt(userInput)
-
-//     // If the user's input was a number, push it into the array and continue
-//     if(!isNaN(userNumber)){
-//       data.push(userNumber)
-
-//       // Use reduce to sum all the numbers in the data array
-//       const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
-
-//       // Output the total to the page- no need to convert the numeric sum back to a string, HTML will just print the number as a string
-//       document.querySelector('#example-form .output').innerHTML = sum
-//     }
-
-//     // Clear the form field so the user can try again
-//     inputField.value = ''
-//   })
-
-// })
+// Using the 4 unique methods:
+// Form 1, forEach, line 17
+// Form 2, includes, line 34
+// Form 3, reduce, line 63
+// Form 4, filter, line 90
 
 const firstExample = document.getElementById('form-1');
 firstExample.addEventListener('submit', e => {
@@ -42,9 +14,9 @@ firstExample.addEventListener('submit', e => {
 
     let outputText = '';
 
-    numbers.forEach(element => {
-        let result = parseInt(userInput.value) * element;
-        outputText += result + ' ';
+    numbers.forEach(element => {                            // for each element in 'numbers' array
+        let result = parseInt(userInput.value) * element;   // converts string into int, multiplies it
+        outputText += result + ' ';                         // puts the product into a string.
     });
 
     firstOutput.textContent = '[ ' + outputText + '].';
@@ -59,12 +31,12 @@ secondExample.addEventListener('submit', e => {
     const userInput = document.querySelector('#form-2 .input');
     const secondOutput = document.getElementById('output-2');
 
-    const result = itemList.includes(userInput.value);
-
+    const result = itemList.includes(userInput.value);  // returns boolean, checks if itemList has
+                                                        // item defined in userInput
     if(result === true){
         secondOutput.textContent = `Yes, we found ${userInput.value} in my wife's list.`;
     } else {
-        secondOutput.textContent = `No, we did not find ${userInput.value} in my wife's list.`;
+        secondOutput.textContent = `No, we did not find '${userInput.value}' in my wife's list.`;
     }
 })
 
@@ -73,22 +45,52 @@ thirdExample.addEventListener('submit', e => {
     e.preventDefault();
 
     let numberArray = [];
-    let factorialResult = 0;
-    let indexStart = 1;
 
+    // Assign html elements to JS variables
     const userInput = document.querySelector('#form-3 .input');
     const thirdOutput = document.getElementById('output-3');
 
+    // Assign userInput to JS variable
     const factorial = parseInt(userInput.value);
 
-    if (factorial > 20 || factorial < 1){ 
-        thirdOutput.textContent = 'Out of range, please put in values between 1 and 20'
+    // Create array from factorial input
+    if (factorial < 1 || factorial > 20 ){ 
+        thirdOutput.textContent = 'Out of range, please put in values between 1 and 20';
         return; 
-    } else { for( let i = factorial; i >= 1; i-- ) { numberArray.push(i); console.log(i)} }
+    } else { for( let i = factorial; i >= 1; i-- ) { numberArray.push(i)}};
 
-    numberArray.reduce(
-        (indexStart, currentValue) => indexStart * currentValue, factorialResult
-    )
+    // Calculate factorial using reduce
+    let factorialResult = numberArray.reduce(
+        (previousValue, currentValue) => previousValue * currentValue, 1);
+    
+    // Output result and add commas to it; that's what the toLocaleString is for.   
+    thirdOutput.textContent = `${userInput.value}! is ${factorialResult.toLocaleString('us-en')}.`
+    })
 
-    thirdOutput.textContent = `${userInput.value}! is ${factorialResult}.`
+const fourthExample = document.getElementById('form-4');
+fourthExample.addEventListener('submit', e => {
+    e.preventDefault();
+
+    // Assign html element to JS variables
+    const userInput = document.querySelector('#form-4 .input');
+    const fourthOutput = document.getElementById('output-4');
+
+    // Create array from 1 to 100, because I'm lazy to hard code it.
+    let numberArray = [];
+    for( let i = 1; i <= 100; i++ ) { numberArray.push(i) }
+
+    // Assign userInput as int to JS variable
+    const divNumber = parseInt(userInput.value);
+
+    // Ensure divNumber is within range
+    if (divNumber < 1 || divNumber > 100) {
+        fourthOutput.textContent = `${divNumber} is out of range.`; return null;
+    } else {
+        // get filtered array of numbers between 1 and 100 divisible by divNumber
+        let result =  numberArray.filter(number => (number % divNumber === 0));
+        let resultString = '';
+        result.forEach(item => resultString += item + ' ');
+        fourthOutput.textContent = `These are the numbers that are divisible by ${divNumber}: ${resultString}`;
+    }
+
 })
