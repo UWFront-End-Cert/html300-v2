@@ -10,16 +10,56 @@
 </head>
 
 <body>
-  <main>
-    <h1>Using ES6+ Methods in DOM Interactions</h1>
-    <form id="example-form">
-      <label>Enter your favorite number:
-        <input type="text" class="input">
-      </label>
-      <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
-    </form>
-  </main>
+  <h1>Array Methods in the Browser</h1>
+  <form id="first-form">
+      <label>Type the first thing that come accross to your mind:</label>
+          <p>"Remember your word must contain at least 5 characters"</p>
+      <input type="text" class="entry">
+      <input type="submit" value="Click here! And see what happens">
+          <p>This is what you wrote<span></span></p>
+      <button id="slc1">Click</button>
+          <p id="slc"></p>
+  </form>
+
+  <form id="second-form">
+      <label>Seasons</label>
+          <button id="show-season">Click</button>
+          <p id="print-season">Lorem ipsum dolor sit.</p>     
+  </form>
+
+  <form id="third-form">
+      <label>Months</label>
+          <p id="month-array">This is messy</p>
+          <p>February, May, August, October, January, June, September, December, March, July, November, April</p>
+      <input type="submit" value="Fix this!">
+          <p id="print-month"></p>
+  </form>
+
+  <form id="fourth-form">
+      <h2>Fruits</h2>
+      <ul>
+          <li>Apples</li>
+          <li>Oranges</li>
+          <li>Kale</li>
+          <li>Berries</li>
+      </ul>
+      <label>Which of these items is not a fruit?</label>
+          <button id="print-fruit">Show</button>
+              <p id="result"></p>
+  </form>
+
+  <div class="remove-color">
+      <button id="myFunction3">Try It!</button>
+          <div id="myDiv" class="bg-red">Change the background color</div>
+  </div>
+
+  <form id="fith-form">
+      <label>What's the average of 100?</label>
+      <input type="submit" value="GO" id="go">
+      <p id="solution"></p>
+  </form>
+  
+  <script src="scripts.js"></script>
 </body>
 
 </html>
