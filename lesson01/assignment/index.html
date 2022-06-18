@@ -1,25 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Assignment 1 - Part 2 Example</title>
-  <script src="scripts.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
 </head>
 
 <body>
   <main>
-    <h1>Using ES6+ Methods in DOM Interactions</h1>
-    <form id="example-form">
-      <label>Enter your favorite number:
-        <input type="text" class="input">
-      </label>
-      <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
-    </form>
+    <div>
+      <h1>Using ES6+ Methods in DOM Interactions</h1>
+      <h2>This is the example form!</h2>
+      <form id="example-form">
+        <label>Enter your favorite number:
+          <input type="text" class="input">
+        </label>
+        <input type="submit" value="See Demo!">
+        <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+      </form>
+    </div>
+
+    <div>
+      <h2>This section uses the forEach method to list the Star Wars movies in order! Check it out!</h2>
+      <form id="forEach-form">
+        <p id="starWars">Attack of the Clones, The Last Jedi, The Phantom Menace, Return of the Jedi, A New Hope,
+          Revenge of the Sith, The Rise of Skywalker, The Empire Strikes Back, The Force Awakens.</p>
+        <input type="submit" value="List those Star Wars Movies!">
+      </form>
+    </div>
+
+    <div>
+      <h2>We could always use the sort method instead to sort things out properly! That's what this section is going to
+        do!</h2>
+      <form id="sort-form">
+        <p id="listNames"> How about this list of baby names? [Emma, Kennedy, Parker, Grace, Yaretzi, Olivia, Ryan,
+          Willow, Quinn, Zachary, Henry, Isabella, Xavier, Ava, Liam, Sophia, Theodore, Benjamin, James, Mia, Finn,
+          Charlotte, Unique, Noah, Vincent, Daniel]. It seems like a lot and it's not even in order!</p>
+        <input type="submit" value="Let's sort this out!">
+      </form>
+    </div>
+
+    <div>
+      <h2>This section lets you create a whole new array by multiplying the given elements by whatever number you enter!
+        Give it a try!</h2>
+      <p>Array: [12, 523, 2, 90, 1234567]</p>
+      <form id="map-form">
+        <label>Enter a number:
+          <input type="text" id="mapInput" class="input">
+        </label>
+        <input type="submit" value="Multiply!">
+        <p id="mapOutput">The new numbers that are created will appear here!</p>
+      </form>
+    </div>
+
+    <div>
+      <h2>This section uses the sort method to determine what historical events your were born before!</h2>
+      <form id="filter-form">
+        <label>Go ahead and enter your birthyear below:<br>
+          <input type="text" id="filterInput" class="input">
+        </label>
+        <input type="submit" value="Learn some History!">
+        <h4>Historic Years You Were Alive For:</h4>
+        <span id="historicEvents"></span>
+        <h4>List of Historic Events: (Check which ones match!)</h4>
+        <ul>
+          <li>1903 - Wright Brother's First Flight</li>
+          <li>1954 - Launch of the First Nuclear Submarine</li>
+          <li>1969 -Armstrong sets foot on the moon!</li>
+          <li>2004 - Facebook is founded!</li>
+          <li>2007 - Apple unveils the iPhone</li>
+          <li>2014 - MH370 Vanishes without a trace</li>
+        </ul>
+      </form>
+    </div>
   </main>
+  <script src="script.js"></script>
 </body>
 
 </html>

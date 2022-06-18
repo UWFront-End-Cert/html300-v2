@@ -1,3 +1,17 @@
+* {
+  font-family: Orbitron;
+}
+
 main {
-  padding: 2rem
+  padding: 2rem;
+  background-color: black;
+}
+
+div {
+  padding: 20px;
+  border: dotted;
+  border-color: teal;
+  overflow-wrap: break-word;
+  margin: 20px;
+  background-color:white;
 }
