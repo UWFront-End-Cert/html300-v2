@@ -4,3 +4,88 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// 2 SCSS variables being used.
+$max-height: 300px;
+$three-quarters-percent: 75%;
+
+main {
+    // 1 out of 2 partials
+    // --- changed _components.content.scss
+    // --- to give a different look to the title
+    // --- to make it centered.
+    p {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.business-card {
+    margin: auto;
+    border: 40px $dark-gray solid;
+    border-radius: 5px;
+
+    height: 450px;
+    max-width: 60%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    
+    // 2 out of 2 partials
+    color: $writing-gray; // pulled from setting.variables
+}
+
+.major-info {
+    margin: 25px;
+    height: $max-height;
+
+    text-align: center;
+
+    // 1 out of 2 nesting
+    img {
+        border-radius: 100%;
+        height: $three-quarters-percent;
+    }
+
+    h1 {
+        margin-bottom: .25rem;
+        color: $writing-gray;
+        font-weight: bold;
+    }
+
+    h2 {
+        margin-top: .25rem;
+        font-style: italic;
+        font-weight: 400;
+    }
+}
+
+.details {
+    margin: 25px;
+    height: $max-height;
+
+    // 2 out of 2 nesting
+
+    ul {
+        padding: 0;
+        padding-right: 60px;
+        margin-left: 40px;
+        background-color: $light-gray;
+
+
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    li {
+        margin: .5em;
+        list-style-type: none;
+
+        font-size: 1.25em;
+
+        img {
+            height: 1em;
+            vertical-align: text-top;
+        }
+    }
+}

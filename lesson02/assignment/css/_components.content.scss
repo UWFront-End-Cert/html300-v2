@@ -9,9 +9,12 @@ html {
 }
 
 .main {
+    margin: auto;
     padding: 2rem;
 }
 
 h1 {
-    color: $red;  
+    color: $red;
+    text-align: center;
 }
+
