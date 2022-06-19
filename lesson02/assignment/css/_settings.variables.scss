@@ -1,5 +1,11 @@
 // Colors
-$gray: #f6f5f6;
+
+//Edited gray scale.
+$gray: #d3d3d3;
+//Lightening gray color variable
+$lighter-color: lighten($gray, 13%);
+//Darkening gray color variable
+$darker-color: darken($gray, 50%);
 $white: #ffffff;
 $black: #000000;
 $green: #7acb00;

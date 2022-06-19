@@ -1,6 +1,111 @@
 // Import partials here
-@import 'base.normalize';
 @import 'settings.variables';
-@import 'settings.responsive';
+@import 'base.normalize';
 @import 'components.content';
+//Employing partial for gray variable
 
+body {
+  margin: 2vw;
+  border-width: 4vw;
+  border-style: solid;
+  border-color: $gray;
+}
+//Employing partial for lighter gray tone
+//Creating variable for font size
+$detailsFontSize: 2vw;
+
+.details {
+  background-color: $lighter-color;
+  color: $darker-color;
+  font-size: $detailsFontSize;
+}
+//Round image border
+
+.headshot {
+  border-radius: 50%;
+}
+//Created variable for name font
+
+.name-text {
+  color: $darker-color;
+}
+//Created variable for job title {
+
+.job-title {
+  color: $darker-color;
+}
+//Mobile first Responsive Design
+//iPhone 12
+@media screen and (max-width: 390px) {
+  .headshot {
+    width: 30%;
+    margin-top: 4vw;
+    margin-left: 4vw;
+  }
+
+  .name-text {
+    font-size: 4vw;
+    margin-left: 4vw;
+  }
+
+  .job-title {
+    font-size: 2.5vw;
+    margin-left: 4vw;
+    margin-top: -1em;
+  }
+
+  .details {
+    margin: -20.5em 4vw 5vw 17em;
+    padding: 5vw 0 7vw 6vw;
+    //Nested elements
+    img {
+      width: 6%;
+    }
+
+    .link {
+      margin-top: -3vw;
+      margin-left: 6vw;
+    }
+  }
+}
+//iPad
+@media screen and (min-width: 768px) {
+  .headshot {
+    width: 32%;
+    margin-top: 4vw;
+    margin-left: 4vw;
+  }
+
+  .name-text {
+    font-size: 4vw;
+    margin-left: 4vw;
+  }
+
+  .job-title {
+    font-size: 3vw;
+    line-height: 0;
+    margin-left: 3vw;
+    margin-top: -1vw;
+  }
+
+  .details {
+    margin: -21em 4vw 5vw 17em;
+    padding: 5vw 0 8vw 6vw;
+    //Nested element
+    .link {
+      margin-left: 6vw;
+      margin-top: -2vw;
+
+    }
+  }
+}
+//Desktop (Macbook Pro)
+@media screen and (min-width: 2880px) {
+  .link {
+    margin-left: 5vw;
+  }
+
+  img {
+    width: 4%;
+  }
+}
