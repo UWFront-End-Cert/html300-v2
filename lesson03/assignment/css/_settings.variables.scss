@@ -1,12 +1,14 @@
-// Colors
-$gray: #f6f5f6;
-$white: #ffffff;
-$black: #000000;
-$green: #7acb00;
-$pink: #ff0097;
-$red: #F1352B;
-$orange: #ff6600;
-$yellow: #ffb617;
-$robins: #01c1d6;
-$purple: #6e27c5;
-$blue: #150f96;
+// Colors used for text or borders
+$grey: #747474;
+$light-grey: #d3d3d3;
+/* Not used anymore
+$color_2: #000;
+$color_3: inherit;
+*/
+
+//Typography and font styling
+$font-family: Arial,Helvetica,sans-serif;
+
+//Colors used for backgrounds
+$background-color_1: transparent;
+$background-color_2: #f6f5f6;
