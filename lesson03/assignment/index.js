@@ -1,4 +1,5 @@
-
+//Creating variable to parse JSON data file to js
+const peopleJSON = `
 [
   {
     "name": "Paolo Maldini",
@@ -52,4 +53,24 @@
        "HTML", "CSS", "JavaScript", "React", "Vue", "Redux"
     ]
   }
- ]
+]`
+//parsing variable
+const people = JSON.parse(peopleJSON)
+//capturing template hook class
+const container = document.querySelector('.template-hook')
+//creating ES6 method to build list of JSON data components
+people.forEach(function(el) {
+  let list = document.createElement('ul')
+  list.innerHTML = `
+  <li>${el.name}</li>
+  <li>${el.jobTitle}</li>
+  <li>${el.company}</li>
+  <li>${el.experience}</li>
+  <li>${el.school}</li>
+  <li>${el.major}</li>
+  <li>${el.email}</li>
+  <li>${el.linkedInUrl}</li>
+  `
+  //adding list to HTML template hook container
+  container.append(list)
+})
