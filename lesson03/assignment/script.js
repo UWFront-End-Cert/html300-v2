@@ -17,7 +17,7 @@ const employeeJSON = [{
   }];
 //Creates a container that finds the id "container" in the HTML document
 const box = document.querySelector('#container')
-//
+//Function that lets us work with each element of employeeJSON. This function will be used to insert html code into the index.html file 
 employeeJSON.forEach(function(el)
 {
     let employeeCard = document.createElement('div')
@@ -37,6 +37,7 @@ employeeJSON.forEach(function(el)
         <p class="linkedin"><img src="./img/linkedin.svg">${el.linkedinURL}</p>
       </div>
     `
+    //Append objects/string objects to the html file.
     box.append(employeeCard);
 });
 
