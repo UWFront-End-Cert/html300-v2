@@ -6,7 +6,7 @@ $padding-px: 16px;
 $site-background: colors.$gray-100;
 $light-font: colors.$gray-10;
 
-/* Unnecessary mixin
+/* Unnecessary SASS mixin
 */
 @mixin flex-setup {
     margin: 0;
@@ -61,10 +61,6 @@ body {
     li:focus {
         background-color: aqua;
         animation-duration: 500ms;
-    }
-
-    .horizontal-bounce {
-        
     }
 
     .horizontal-bounce:hover {
