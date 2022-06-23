@@ -1,0 +1,128 @@
+body {
+    background-color: #0B0C10;
+}
+
+h1 {
+    text-align: center;
+    color:#66FCF1;
+}
+
+.nav-bar {
+    position: relative;
+    display: block;
+    background-color: #0B0C10;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.nav-bar a {
+    position: relative;
+    width: 33%;
+    color: #66FCF1;
+    font-size: 0.7rem;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.nav-bar a img {
+    position: relative;
+    transition: transform 0.7s ease-in-out;
+}
+
+.nav-bar a:hover img {
+    left: -20px;
+    transform: rotate(360deg);
+}
+
+.nav-bar a img:hover {
+    transform: rotate(360deg);
+}
+
+.nav-bar b {
+    position: relative;
+    bottom: 50px;
+    transition: 0.3s ease bottom;
+    font-size: large;
+}
+
+.nav-bar a:hover b {
+    bottom: 9px;
+}
+
+.nav-bar span {
+    position: absolute;
+    width: 33%;
+    background-color: #C5C6C7;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 10px;
+    z-index: 1;
+    transform: 0.3s ease left;
+}
+
+.nav-bar:hover span {
+    background: #C5C6C7;
+}
+
+.nav-bar a:nth-child(1):hover ~ span {
+    left: 10px;
+}
+
+.nav-bar a:nth-child(2):hover ~ span {
+    left: 33%;
+}
+
+.nav-bar a:nth-child(3):hover ~ span {
+    left: 64%;
+}
+
+footer {
+    color: #66FCF1;
+    width: 100%;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav ul a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-nav ul li {
+    padding: 15px 50px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.footer-nav ul li::before {
+    content:"";
+    position: absolute;
+    height: 4px;
+    width: 100px;
+    background: #66FCF1;
+    bottom: 0;
+    transform: translateX(110px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(.55,0,.1,1);
+}
+
+.footer-nav ul li:hover::before {
+    transform: translateX(0px);
+    opacity:1;
+    width: 20px;
+}

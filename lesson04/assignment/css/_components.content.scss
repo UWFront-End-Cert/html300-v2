@@ -1,0 +1,161 @@
+//ALWAYS USE THIS WHEN USING ::BEFORE OR ::AFTER
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+//This mixin will be for responsive design and media queries
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+body {
+	background-color: $background-color_1;
+}
+h1 {
+	text-align: center;
+	color: $color_1;
+}
+//Nav Bar for the top of the screen. Animated to highlight on hover.
+.nav-bar {
+	position: relative;
+	display: block;
+	background-color: $background-color_1;
+	padding: 10px;
+	border-radius: 10px;
+	overflow: hidden;
+	a {
+		position: relative;
+		width: 33%;
+		color: $color_1;
+		font-size: 0.7rem;
+		text-align: center;
+		display: inline-block;
+		padding: 10px;
+		box-sizing: border-box;
+		text-decoration: none;
+		z-index: 100;
+		overflow: hidden;
+		img {
+			position: relative;
+			transition: transform 0.7s ease-in-out;
+			&:hover {
+				transform: rotate(360deg);
+			}
+		}
+		&:hover {
+            //Image inside the nav bar should rotate completely around. Also moves the image to the left slighty and makes way for text.
+            //IDEA: Make the image rotate the other way when you stop hovering over it.
+			img {
+				left: -20px;
+				transform: rotate(360deg);
+			}
+			b {
+				bottom: 9px;
+			}
+		}
+        //The nth-child styling will cause the highlighted span portion to move whenever that link is moused over.
+		&:nth-child(1) {
+			&:hover {
+				~ {
+					span {
+						left: 10px;
+					}
+				}
+			}
+		}
+		&:nth-child(2) {
+			&:hover {
+				~ {
+					span {
+						left: 33%;
+					}
+				}
+			}
+		}
+		&:nth-child(3) {
+			&:hover {
+				~ {
+					span {
+						left: 64%;
+					}
+				}
+			}
+		}
+	}
+	b {
+		position: relative;
+		bottom: 50px;
+		transition: 0.3s ease bottom;
+		font-size: large;
+	}
+	span {
+		position: absolute;
+		width: 33%;
+		top: 10px;
+		bottom: 10px;
+		left: 10px;
+		border-radius: 10px;
+		z-index: 1;
+		transform: 0.3s ease left;
+	}
+	&:hover {
+		span {
+			background: $background-color_2;
+		}
+	}
+}
+
+
+footer {
+	color: $color_1;
+	width: 100%;
+	padding: 50px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+//Footer navigation links should be less fancy. Simple animation will do.
+.footer-nav {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		a {
+			text-decoration: none;
+			color: $color_2;
+		}
+        //Hover animation that causes a line to enter below the hovered link.
+		li {
+			padding: 15px 50px;
+			position: relative;
+			overflow: hidden;
+			&::before {
+				@include pseudo;
+				height: 4px;
+				width: 100px;
+				background: #66FCF1;
+				bottom: 0;
+				transform: translateX(110px);
+				opacity: 0;
+				transition: all 0.3s cubic-bezier(.55,0,.1,1);
+			}
+			&:hover {
+				&::before {
+                    @include pseudo;
+					transform: translateX(0px);
+					opacity: 1;
+					width: 20px;
+				}
+			}
+		}
+	}
+}
