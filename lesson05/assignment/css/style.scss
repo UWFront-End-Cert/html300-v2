@@ -4,3 +4,108 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Eliminate magic numbers
+$max-width: 960px;
+$padding-size: 16px;
+$gray-90: #161616;
+$gray-10: #f4f4f4;
+$red-60: #da1e28;
+$green-60: #198038;
+$purple-60: #8a3ffc;
+$orange-50: #eb6200;
+$blue-70: #0043ce;
+
+@mixin add-padding() {
+    margin: 8px;
+    padding: $padding-size;
+}
+
+body {
+    background-color: $gray-90;
+    color: $gray-10;
+}
+
+/* .parent-container
+** ├─ .mast-head
+** ├─ .top-nav
+** ├─ .side-bar
+** ├─ .main
+** └─ .footer
+**
+** Styling with CSS Grid
+*/
+.parent-container {
+    width: $max-width;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+    grid-template-areas:
+        "mast-head mast-head mast-head mast-head"
+        "top-nav top-nav top-nav top-nav"
+        "side-bar main main main"
+        "footer footer footer footer"
+}
+
+/* .mast-head
+*/
+.mast-head {
+    @include add-padding();
+    grid-area: mast-head;
+    background-color: $red-60;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+/* .top-nav
+** Styling with CSS Flexbox
+*/
+.top-nav {
+    @include add-padding();
+    grid-area: top-nav;
+    background-color: $green-60;
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li {
+        list-style: none;
+    }
+}
+
+/* .side-bar
+*/
+.side-bar {
+    @include add-padding();
+    grid-area: side-bar;
+    background-color: $purple-60;
+}
+
+
+/* .main
+*/
+.main {
+    @include add-padding();
+    grid-area: main;
+    background-color: $orange-50;
+    color: $gray-90;
+
+    h1 {
+        @include add-padding();
+    }
+}
+
+/* .footer
+*/
+.footer {
+    @include add-padding();
+    grid-area: footer;
+    background-color: $blue-70;
+    color: $gray-10;
+
+    text-align: center;
+}
