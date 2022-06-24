@@ -1,13 +1,225 @@
-html {
-    box-sizing: border-box;
+//ALWAYS USE THIS WHEN USING ::BEFORE OR ::AFTER
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+//This mixin will be for responsive design and media queries
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
 }
 
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
+//Flexbox styling mixin - depending on what is entered it changes the flex-direction
+@mixin flexcolumn($direction){
+    @if $direction == column {
+        display: flex;
+        flex-direction: column;
+    } @else {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
-.main {
-    padding: 2rem;
+body {
+	background-color: $background-color_1;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	height: 100%;
+}
+header {
+	@include flex-direction(column);
+	grid-row-start: 1;
+	grid-column-start: 1;
+	grid-row-end: 2;
+	grid-column-end: 4;
+}
+h1 {
+	text-align: center;
+	color: $color_1;
+}
+h2 {
+	text-align: center;
+	color: $color_1;
+}
+h3 {
+	text-align: center;
+	color: $color_1;
+}
+p {
+	color: $color_2;
+}
+//Nav Bar for the top of the screen. Animated to highlight on hover.
+.nav-bar {
+	position: relative;
+	display: flex;
+	background-color: $background-color_1;
+	padding: 10px;
+	border-radius: 10px;
+	overflow: hidden;
+	grid-row-start: 2;
+	grid-column-start: 1;
+	grid-row-end: 3;
+	grid-column-end: 4;
+	a {
+		position: relative;
+		width: 33%;
+		color: $color_1;
+		font-size: 0.7rem;
+		text-align: center;
+		display: inline-block;
+		padding: 10px;
+		box-sizing: border-box;
+		text-decoration: none;
+		z-index: 100;
+		overflow: hidden;
+		img {
+			position: relative;
+			transition: transform 0.7s ease-in-out;
+			&:hover {
+				transform: rotate(360deg);
+			}
+		}
+        //Image inside the nav bar should rotate completely around. Also moves the image to the left slighty and makes way for text.
+            //IDEA: Make the image rotate the other way when you stop hovering over it.
+		&:hover {
+			img {
+				left: -20px;
+				transform: rotate(360deg);
+			}
+			b {
+				bottom: 9px;
+			}
+		}
+        //The nth-child styling will cause the highlighted span portion to move whenever that link is moused over.
+		&:nth-child(1) {
+			&:hover {
+				~ {
+					span {
+						left: 10px;
+					}
+				}
+			}
+		}
+		&:nth-child(2) {
+			&:hover {
+				~ {
+					span {
+						left: 33%;
+					}
+				}
+			}
+		}
+		&:nth-child(3) {
+			&:hover {
+				~ {
+					span {
+						left: 64%;
+					}
+				}
+			}
+		}
+	}
+	b {
+		position: relative;
+		bottom: 50px;
+		transition: 0.3s ease bottom;
+		font-size: large;
+	}
+	span {
+		position: absolute;
+		width: 33%;
+		background-color: $background-color_2;
+		top: 10px;
+		bottom: 10px;
+		left: 10px;
+		border-radius: 10px;
+		z-index: 1;
+		transform: 0.3s ease left;
+	}
+	&:hover {
+		span {
+			background: #C5C6C7;
+		}
+	}
+}
+//Footer navigation links should be less fancy. Simple animation will do.
+footer {
+    @include flex-direction(column);
+	color: $color_1;
+	width: 100%;
+	padding: 50px;
+	border-radius: 10px;
+	grid-row-start: 3;
+	grid-column-start: 1;
+	grid-row-end: 4;
+	grid-column-end: 4;
+    justify-content: center;
+}
+.footer-nav {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		a {
+			text-decoration: none;
+			color: $color_3;
+		}
+            //Hover animation that causes a line to enter below the hovered link.
+		li {
+			padding: 15px 50px;
+			position: relative;
+			overflow: hidden;
+			&::before {
+				@include pseudo;
+				height: 4px;
+				width: 100px;
+				background: #66FCF1;
+				bottom: 0;
+				transform: translateX(110px);
+				opacity: 0;
+				transition: all 0.3s cubic-bezier(.55,0,.1,1);
+			}
+			&:hover {
+				&::before {
+                    @include pseudo;
+					transform: translateX(0px);
+					opacity: 1;
+					width: 20px;
+				}
+			}
+		}
+	}
+}
+.main-content {
+    @include flex-direction(column);
+	grid-row-start: 2;
+	grid-column-start: 2;
+	grid-row-end: 3;
+	grid-column-end: 4;
+	color: $color_2;
+    margin: 1px;
+	padding: 4px;
+	border-width: 4px;
+	border-style: solid;
+	border-image: linear-gradient(45deg, rgba(69,162,158,1) 0%, rgba(11,12,16,1) 50%, rgba(11,12,16,1) 100%) 1;
+}
+.side-content {
+    @include flex-direction(column);
+	grid-row-start: 2;
+	grid-column-start: 1;
+	grid-row-end: 3;
+	grid-column-end: 2;
+	padding: 1px;
+	border-width: 4px;
+	border-style: solid;
+	border-image: linear-gradient(225deg, rgba(69,162,158,1) 0%, rgba(11,12,16,1) 50%, rgba(11,12,16,1) 100%) 1;
 }

@@ -1,1 +1,30 @@
-// Colors
+//Colors for text/links
+$color_1: #66FCF1;
+$color_2: #C5C6C7;
+$color_3: inherit;
+//background colors and highlights
+$background-color_1: #0B0C10;
+$background-color_2: #C5C6C7;
+
+//Use this variable for media queries mixin
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+
+
+
+
+/* Color Scheme
+Highlighted Text/Important Text: #66FCF1
+Main Background Color: #0B0C10
+Highlights and Basic Text: #C5C6C7
+Highlights and Background Color: #1F2833
+Highlights and Sub Text: #45A29E
+*/
