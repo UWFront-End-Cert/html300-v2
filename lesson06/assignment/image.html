@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bootstrap Assignment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-sm bg-info navbar-dark sticky-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse justify-content-start" id="navbarNavAltMarkup">
+    <!-- Originally had tooltips for the navbar, looked cumbersome so was removed -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="image.html">Images</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="accordion.html">Accordion</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="grid.html">Grid</a>
+    </li>
+  </ul>
+  </div>
+</nav>
+
+  <section class="section-images container">
+    <h2 class="pt-5 display-4 text-muted">What Certain Excercises Do!</h2>
+
+    <!-- Album  -->
+    <!-- ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80 add this after the & in the image link to crop the images -->
+    <div class="album">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1483721310020-03333e577078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              class="img-fluid" alt="image placeholder" data-toggle="tooltip" data-placement="top"
+              title="Make sure that your gear is all set before a run!">
+            <div class="card-body">
+              <h4>Cardio</h4>
+              <p class="card-text">Cardio helps increase the strength of your heart and lungs. Cardio can help you improve your endurance during workouts as well.</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1616803689943-5601631c7fec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              class="img-fluid" alt="image placeholder" data-toggle="tooltip" data-placement="bottom"
+              title="Push ups are fantastic body weight workouts">
+            <div class="card-body">
+              <h4>Calisthenics</h4>
+              <p class="card-text">The major advantage of calisthenics or any bodyweight type of routine for that matter, is that you will need minimal or no gym equipment to do it. You can do it at home, in the park or pretty much anywhere else as long as you have at least a pull-up bar.</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              class="img-fluid" alt="image placeholder" data-toggle="tooltip" data-placement="top"
+              title="Stretching with a view is a great and relaxing exercise">
+            <div class="card-body">
+              <h4>Yoga</h4>
+              <p class="card-text">Yoga can increase your flexibility, improve your balance, and decrease your cholesterol.</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              class="img-fluid" alt="image placeholder" data-toggle="tooltip" data-placement="bottom"
+              title="Using a machine is safe and can get you started on good form">
+            <div class="card-body">
+              <h4>Machine Weights</h4>
+              <p class="card-text">Machines may offer more control and safety. They can also isolate a specific muscle you're trying to work better.</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              class="img-fluid" alt="image placeholder" data-toggle="tooltip" data-placement="top"
+              title="Free weights allow for work with range of motion">
+            <div class="card-body">
+              <h4>Free Weights</h4>
+              <p class="card-text">Free weights require your stabilizer muscles to work harder than they would on machines. They allow for more creativity and range of motion.</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!-- Row End  -->
+    </div>
+    <!-- Albul End  -->
+  </section>
+  <!-- Section End  -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
