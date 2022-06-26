@@ -1,0 +1,30 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+body {
+  margin: 0;
+}
+
+// Jumbotron & Background Img 
+.jumbotron {
+  margin-bottom: 0 !important;
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1588528402605-1f9d0eb7a6d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1440&q=80');
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+
+  // Main heading 
+  h1 {
+    font-weight: 700;
+  }
+}
+
+// Tooltip bg color override
+.tooltip-inner {
+  background-color: $yellow !important;
+}
+
+.tooltip.bs-tooltip-right .arrow:before {
+  border-right-color: $yellow !important;
+}
