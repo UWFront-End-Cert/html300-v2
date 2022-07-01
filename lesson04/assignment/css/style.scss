@@ -1,0 +1,58 @@
+//variable for header font
+$headerfontsize: 10vw;
+//variable for body font style
+$bodyfontstyle: 'Montserrat', sans-serif;
+//variable for body font size
+$bodyfontsize: 6vw;
+//sending header to bottom of page as sticky element
+@mixin nav-formatting {
+  font-size: 2vw;
+  color: #a9a9a9;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+a {
+  @include nav-formatting;
+}
+header {
+  font-size: $headerfontsize;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: $bodyfontstyle;
+  font-weight: lighter;
+}
+//Source code for transition effect. Text will ease in.
+//https://www.apple.com/services/
+h1 {
+  text-align: center;
+  font-family: $bodyfontstyle;
+  font-weight: lighter;
+  font-size: $bodyfontsize;
+  -webkit-animation: fadein 5s;
+}
+//key frame for transition fadein property
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+h2 {
+  text-align: center;
+  font-family: $bodyfontstyle;
+  font-weight: lighter;
+  font-size: $bodyfontsize;
+  -webkit-animation: fadein 7s;
+}
+//transition for image to fade in
+ img {
+   -webkit-animation: fadein 6s;
+   margin-left: 22vw;
+   margin-top: 5vw;
+ }
+ .about-img {
+   -webkit-animation: fadein 6s;
+   margin: 12vw;
+ }

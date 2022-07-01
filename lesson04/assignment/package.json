@@ -9,12 +9,15 @@
     "author": "UW Front End Cert Program",
     "license": "ISC",
     "devDependencies": {
-        "browser-sync": "^2.26.13",
-        "gulp": "^4.0.2",
+        "browser-sync": "^2.26.14",
+        "gulp": "4.0.2",
         "gulp-autoprefixer": "6.1.0",
         "gulp-clean-css": "^4.3.0",
         "gulp-plumber": "1.2.0",
-        "gulp-sass": "^4.1.0",
+        "gulp-sass": "^5.1.0",
         "gulp-util": "3.0.8"
+    },
+    "dependencies": {
+        "sass": "^1.52.3"
     }
 }
