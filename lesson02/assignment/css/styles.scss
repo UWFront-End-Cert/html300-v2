@@ -15,46 +15,10 @@
     }
     & div.name-position {
       font-size: 80%;
-    }
-  }
-  .info {
-    clear: both;
-    padding: 1rem;
-    font-size: 80%;
-    & p {
-      margin: 0.5rem;
-    }
-    & img {
-      width: 8%;
-    }
   }
 }
 
-@include media-query(tab) {
 
-  .identity {
-    grid-column: 1 / span 1;
-    margin-bottom: 1rem;
-    & img {
-      border-radius: 50%;
-      width: 100%;
-    }
-    & div.name-position {
-      clear: both;
-      width: 80%;
-      margin: 1rem auto;
-    }
-    & h3 {
-      font-size: 140%;
-    }
-  }
-  .info {
-    grid-column: 2 / span 1;
-    margin-left: 1.5rem;
-    padding: 2rem;
-    justify-content: space-between;
-  }
-}
 
 h1, h3, p, a {
   color: $charcoal;
