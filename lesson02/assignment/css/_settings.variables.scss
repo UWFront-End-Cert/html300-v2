@@ -1,4 +1,6 @@
 // Colors
+$base-color: #f6f5f6;
+$lighten-color: lighten($base-color, 20%);
 $gray: #f6f5f6;
 $white: #ffffff;
 $black: #000000;
@@ -10,3 +12,5 @@ $yellow: #ffb617;
 $robins: #01c1d6;
 $purple: #6e27c5;
 $blue: #150f96;
+
+$font-fam: arial, helvetica, sans-serif;
