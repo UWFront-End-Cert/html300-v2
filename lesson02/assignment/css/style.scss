@@ -3,4 +3,20 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+@import 'decimal';
 
+$margin: 1.6%;
+
+@for $cols from 2 through 2 {
+  $span: $cols;
+  @while $span > 0 {
+    @if ($span == $cols) {
+      .span_#{$span}_of_#{$cols} { width: 100%; }
+		} @else {
+			.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 -
+($margin * ($cols - 1))) / $cols) * $span) + (($span - 1) * $margin) , 2, 'floor');
+}
+    }
+    $span: $span - 1;
+  }
+}
