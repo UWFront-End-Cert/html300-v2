@@ -5,10 +5,10 @@ const {
     series,
     watch
 } = require('gulp')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'));
 const autoprefix = require('gulp-autoprefixer')
 const plumber = require('gulp-plumber')
-const cleanCSS = require('gulp-clean-css')
+const cleanCss = require('gulp-clean-css')
 const browsersync = require('browser-sync')
 
 // Directories
@@ -38,7 +38,7 @@ function css() {
         .pipe(
             autoprefix(['> .5%'])
         )
-        .pipe(cleanCSS({
+        .pipe(cleanCss({
             compatibility: 'ie8'
         }))
         .pipe(dest('css/'))
