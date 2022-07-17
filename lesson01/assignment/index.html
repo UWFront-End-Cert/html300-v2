@@ -1,11 +1,27 @@
+<!-- Lesson 1 Assignment
+     - Create at least four pairs of input boxes and submit buttons.
+     - Use ES6+ array and object methods to manipulate data input.
+     - Output results with explanation.
+     - Use at least 4 ES6+ methods.
+     - Validation not needed - assume only numbers will be entered in input box.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" content-type="text/html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>Assignment 1 - Part 2 Example</title>
   <script src="scripts.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#clicked").click(function(event) {
+        console.log($("#getText"));
+        alert($("#getText").val());
+      });
+    });
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,12 +29,37 @@
   <main>
     <h1>Using ES6+ Methods in DOM Interactions</h1>
     <form id="example-form">
-      <label>Enter your favorite number:
-        <input type="text" class="input">
+      <label for="favoritenumber">Enter your favorite number:
+        <input type="text" class="input" id="favoritenumber">
       </label>
-      <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+      <input type="submit" value="NUMBER">
+        <p>The total of my array elements summed with your favorite number is: <span class="NUMBER"></span></p>
     </form>
+    <form id="cats">
+      <label for="numberofcats">How many cats do you have?
+        <input type="text" class="input" id="numberofcats">
+      </label>
+      <input type="submit" value="MEOW...">
+        <p>The total of my array elements summed with how many cats you have is: <span class="NUMBER"></span></p>
+    </form>
+    <form id="dogs">
+      <label for="numberofdogs">How many dogs do you have?
+        <input type="text" class="input" id="numberofdogs">
+      </label>
+      <input type="submit" value="WOOF!">
+        <p>The total of my array elements summed with your favorite number is: <span class="NUMBER"></span></p>
+    </form>
+    <form id="pets">
+      <label for="totalnumofpets">How many pets have you had?
+        <input type="text" class="input" id="totalnumofpets">
+      </label>
+      <input type="submit" value="PETS">
+        <p>The total of my array elements summed with your favorite number is: <span class="NUMBER"></span></p>
+    </form>
+    <label for="testforjquery">Test for jQuery:
+    <input type="text" id="getText" >
+    <button id="clicked">Click Here</button>
+    </label>
   </main>
 </body>
 
