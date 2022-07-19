@@ -12,15 +12,6 @@ $background: #f4f4f4; /* card-details background-color */
 
 $font-fam: "arial, helvetica, sans-serif";
 
-
-/*
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 100%;
-}
-*/
 .card {
     display: flex;
     flex-direction: row;
@@ -90,14 +81,13 @@ $font-fam: "arial, helvetica, sans-serif";
     width: 30em;
     margin-top: 2.8125em;
     margin-bottom: 2.8125em;
-}
-&__copy  {
+  &__copy  {
     color: $h1-p;
     padding-top: 0;
     padding-bottom: 1.25em;
     margin: 0;
+  }
 }
-
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
