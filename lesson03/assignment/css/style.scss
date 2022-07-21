@@ -1,6 +1,109 @@
 // Import partials here
-@import 'base.normalize';
 @import 'settings.variables';
+@import 'base.normalize';
 @import 'settings.responsive';
 @import 'components.content';
 
+$gray: #f6f5f6;
+$white: #ffffff;
+$h1-p: #666666; /* h1 - card-image, p - card-details */
+$p: #888888; /* p */
+$background: #f4f4f4; /* card-details background-color */
+
+$font-fam: "arial, helvetica, sans-serif";
+
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    max-width: 62.5em;
+    margin: 1.5625em;
+    border: 3.125em solid #cfd0d0;
+    border-radius: .35em;
+    background-color: $white;
+    padding-inline-start: 0;
+}
+
+.card-image {
+    display: block;
+    flex-shrink: 0;
+    max-width: 15em;
+    height: auto;
+    margin: 2.8125em;
+  &__img {
+    border-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    align: center;
+    border: 0;
+      border-top-color: initial;
+      border-top-style: initial;
+      border-top-width: 0px;
+      border-right-color: initial;
+      border-right-style: initial;
+      border-right-width: 0px;
+      border-bottom-color: initial;
+      border-bottom-style: initial;
+      border-bottom-width: 0px;
+      border-left-color: initial;
+      border-left-style: initial;
+      border-left-width: 0px;
+      border-image-source: initial;
+      border-image-slice: initial;
+      border-image-width: initial;
+      border-image-outset: initial;
+      border-image-repeat: initial;
+    max-width: 13.75em;
+    height: auto;
+  }
+  &__title {
+    color: var($h1-p);
+    margin-bottom: 0;
+    text-align: center;
+  }
+  &__copy {
+    color: $p;
+    font-size: 1.4em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+}
+
+.card-details {
+    padding-left: 1.875em;
+    padding-top: 1.875em;
+    background-color: $background;
+    width: 30em;
+    margin-top: 2.8125em;
+    margin-bottom: 2.8125em;
+  &__copy  {
+    color: $h1-p;
+    padding-top: 0;
+    padding-bottom: 1.25em;
+    margin: 0;
+  }
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+/*@media only screen and (max-width: 480px) {*/
+@media (max-width: 350px) {
+  .container {
+    float: none;
+    width: 50%;
+    border: 0;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
