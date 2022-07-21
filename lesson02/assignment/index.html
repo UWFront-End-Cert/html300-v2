@@ -8,8 +8,34 @@
         <title>Assignment 02</title>
     </head>
     <body>
-        <main class="main">
-            <h1>title</h1>
+        <main>
+          <!-- Build a "card" in index.html to match the provided mockup
+            (in lesson02/assignment/ref). Code it in HTML and style it with
+            SCSS. Make sure your implementation is responsive. Make changes to
+            the design as necessary for it to look good on small screens.
+            Requirements for SCSS:
+
+            -use at least 2 partials imported into the style.scss file
+            (update existing partial files or create new ones)
+            -use at least 2 variables and 2 instances of nesting
+            -use nesting at least twice
+            -for an extra challenge, use color functions and mixins.
+          -->
+          <div class="card">
+              <div class="card-image">
+                  <img src="img/headshot.jpg" class="card-image__img" alt="Photo of a dog">
+                  <h1 class="card-image__title">Paolo Maldini</h1>
+                  <p class="card-image__copy"><em>Front End Developer</em></p>
+              </div>
+              <div class="card-details">
+                  <p class="card-details__copy"><strong>Company: </strong>Web Weavers</p>
+                  <p class="card-details__copy"><strong>Experience: </strong>3 years</p>
+                  <p class="card-details__copy"><strong>School: </strong>University of Washington</p>
+                  <p class="card-details__copy"><strong>Major: </strong>Marketing</p>
+                  <p class="card-details__copy"><strong>Email: </strong>paolo@example.com</p>
+                  <p class="card-details__copy"><img src="img/linkedin.svg" style="vertical-align: middle" alt="paolo.linkedinprofile.com"> paolo.linkedinprofile.com</p>
+              </div>
+          </div>
         </main>
     </body>
 </html>
