@@ -1,6 +1,34 @@
-// Import partials here
-@import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
-@import 'components.content';
 
+//variable for header font size
+$bodyfontsize: 12vw;
+//variable for body font style
+$bodyfontstyle: 'Montserrat', sans-serif;
+
+
+h1 {
+  font-size: $bodyfontsize;
+  text-align: center;
+  font-family: $bodyfontstyle;
+  font-weight: lighter;
+  -webkit-animation: fadein 5s;
+}
+//key frame for transition fadein property
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+h2 {
+  font-size: $bodyfontsize;
+  text-align: center;
+  font-family: $bodyfontstyle;
+  font-weight: lighter;
+  -webkit-animation: fadein 7s;
+}
+//transition for image to fade in
+ img {
+   -webkit-animation: fadein 5s;
+ }
+ a {
+   font-size: 7vw;
+    white-space: nowrap;
+ }
