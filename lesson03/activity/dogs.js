@@ -19,8 +19,7 @@ class Dog {
     // Decrement bark
     this.barklevel--;
     // Log out the dog's info
-    console.log(`This dog's name is ${this.name}, age is ${this.age}, current energy
-    ${this.energylevel} and current bark level is ${this.barklevel}.`);
+    console.log(`This dog's name is ${this.name}, age is ${this.age}, current energy ${this.energylevel} and current bark level is ${this.barklevel}.`);
   }
 }
   // Create Marty
