@@ -9,9 +9,11 @@ html {
 }
 
 .main {
+    clear: both;
     padding: 2rem;
+    max-width: 62.5em;
 }
 
 h1 {
-    color: $red;  
+    color: $gray;
 }
