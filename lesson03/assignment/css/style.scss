@@ -12,7 +12,7 @@ $background: #f4f4f4; /* card-details background-color */
 
 $font-fam: "arial, helvetica, sans-serif";
 
-.card {
+.card, ul.card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -25,7 +25,7 @@ $font-fam: "arial, helvetica, sans-serif";
     padding-inline-start: 0;
 }
 
-.card-image {
+.card-image, li.card-image {
     display: block;
     flex-shrink: 0;
     max-width: 15em;
@@ -68,13 +68,13 @@ $font-fam: "arial, helvetica, sans-serif";
     color: $p;
     font-size: 1.4em;
     text-align: center;
-    padding: 0;
+    padding: .5em;
     margin: 0;
     border: 0;
   }
 }
 
-.card-details {
+.card-details, li.card-details {
     padding-left: 1.875em;
     padding-top: 1.875em;
     background-color: $background;
@@ -89,10 +89,12 @@ $font-fam: "arial, helvetica, sans-serif";
   }
 }
 
+
+
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 /*@media only screen and (max-width: 480px) {*/
-@media (max-width: 350px) {
+@media (max-width: 480px) {
   .container {
     float: none;
     width: 50%;
@@ -103,7 +105,7 @@ $font-fam: "arial, helvetica, sans-serif";
     font-size: 24px;
   }
 
-  p {
-    font-size: 12px;
+  .card {
+    border: 0;
   }
 }
