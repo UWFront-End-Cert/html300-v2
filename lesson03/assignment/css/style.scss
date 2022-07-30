@@ -96,10 +96,11 @@ $font-fam: "arial, helvetica, sans-serif";
   .card {
     float: none;
     width: 50%;
-    border: 0;
+    border-color: none;
   }
 
   h1 {
     font-size: 20px;
   }
+
 }
