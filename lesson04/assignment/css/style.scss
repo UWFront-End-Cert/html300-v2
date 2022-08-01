@@ -1,0 +1,14 @@
+// Transition + transitions
+  // https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_transform
+div {
+  width:300px;
+  height: 300px;
+  background: orange;
+  transition: width 3s, height 3s, transform 3s
+}
+
+div:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
+}

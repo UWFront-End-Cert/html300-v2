@@ -4,11 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <title>Assignment 04</title>
+  <link rel="stylesheet" href="./css/style.css">
+    <script src="index.js"></script>
+    <script type="text/javascript">
+    <!--
+    var urls = new Array('images/header_bg_1.jpg','images/header_bg_2.jpg','images/header_bg_3.jpg');
+    var imgs = new Array(url.length);
+    loadImages();
+    function loadImages()
+      if (document.images) {
+        for(var i=0, i<imgs.length; i++) {
+          var img = new Image();
+          Img.src = urls[i];
+          Imgs[i] = img;
+        }
+      }
+    }
+    function getRandomImage() {
+      /**/
+      var rn = Math.floor(Math.random()*imgs.length);
+      if (imgs[rn]) {
+        /**/
+        document.body.style.backgroundImage="url("+imgs[rn].src + ")";
+      }
+    }
+
+    //->
+  </script>
+
 </head>
-<body>
+<body onload="getRandomImage();">
   <main class="main">
+    <h1>Transition + Transform example</h1>
+    <p> Hover over the div element below to see the box rotate 180 degrees.</p>
+
+    <div></div>
 
   </main>
 </body>
