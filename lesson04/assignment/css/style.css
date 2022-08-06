@@ -1,21 +1,326 @@
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;box-sizing:border-box}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0;color:#F1352B}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}table{border-collapse:collapse;border-spacing:0}*,:after,:before{box-sizing:inherit}.main{padding:2rem}
 
 /* Transition + transitions
   // https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_transform
 */
+/* Colors
+#ff8c00 // darkorange
+#fffff0 // ivory
+#dcdcdc // gainsboro light gray
+#696969 // dimgray
+#191970 // midnightblue
+#f0f8ff // aliceblue
+#000000 // black
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/*
 body {
-  background: #fcfcfc url(images/header_bg_1.jpg) no-repeat center top;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
   margin: 0;
   padding: 0;
   text-align: center;
+  line-height: 1.4;
 }
+*/
+/*
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 1rem;
+  font-family: "Open Sans", Verdana, sans-serif; >
+}
+*/
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 1rem;
+  font-family: "Open Sans", Verdana, sans-serif; >
+  background-color: #cdc9c1; >
+  background-image: radial-gradient (circle farthest-side at center top, hsl(0, 0%, 100%) 0%, #cdc9c1 100%); >
+  color: #362507;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  max-width: 100%;
+  margin: 5;
+}
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.67%;
 
-#container {
-  width: 790px;
-  margin: 0 auto;
+}
+.header-left {
+  flex: 1 0 33%;
   text-align: left;
 }
+.header-right {
+  flex: 2 0 67%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+h1 {
+  font-size: 2em;
+  padding-top: 1rem;
+}
+/* Header background section */
+svg {
+  width: 960px;
+  height: auto;
+}
+.img-overlay-wrap img {
+  position: absolute;
+  max-width: 100%;
+  height:auto;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  align: center;
+  z-index: -1;
+}
+.img-overlay-wrap svg {
+  position: absolute;
+  verticle-align: center;
+}
+.front {
+  position: absolute;
+}
+/* End Header background section */
 
+/* Master navigation */
+.btn {
+  background-color: #696969;
+  padding: .25rem .75rem;
+  border-radius: .75rem;
+  font-size: 1rem;
+  color: #dcdcdc;
+  text-transform: uppercase;
+}
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 3.5em;
+  width: 100%;
+  background-color: inherit;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+nav li {
+  padding-left: 1rem;
+}
+a {
+  flex: 2;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+a:hover,
+a:focus {
+  color: #696969;
+  background-color: #dcdcdc;
+}
+/* End master navigation */
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  font-family:serif;
+}
+/* End Header section */
+main {
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  align-content:flex-start;
+  flex-grow: 1;
+  max-width: 960px;
+  background-color: #fffff0;
+  padding-bottom: 3.5em;
+}
+/* Introduction with box transitions and transform */
+.intro {
+  display: flex;
+  align-items: center;
+  margin: 0 0;
+  width: 100%;
+  border: 3px solid #ff8c00;
+  color: #696969;
+  font-size: 1.25rem;
+  background-color: #fffff0;
+  background-image: radial-gradient(
+    ellipse closest-corner at center, #f0f8ff 10%, #ff8c00 100%);
+}
+.intro-text {
+  flex: 2 0 67%;
+  padding: 2rem 0 2rem 2rem;
+}
+.intro-text p {
+  margin: 1.5rem 0;
+}
+.intro-image {
+  flex: 1 0 33%;
+  padding-right: 2rem;
+  text-align:center;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+  font-style: italic;
+}
+h2, h3 {
+  font-family: "Verdana", Georgia, serif;
+}
+/* End of Introduction with box transitions and transform */
+
+/* Recent Work Section - Portfolio */
+.portfolio {
+  margin-bottom: 1rem;
+}
+.portfolio-text p div {
+  margin: .5rem 0 1.5rem;
+  font-size: 1.25rem;
+}
+.portfolio-images {
+  display: flex;
+  justify-content: space-between;
+}
+.portfolio-image {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.image-overlay {
+  position: absolute;
+  left:0;
+  top: 0;
+  width: 200px;
+  height: 156px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+.image-overlay:hover {
+  opacity: 1;
+}
+/* End recent work section - Portfolio */
+
+/* About Me section */
+.about {
+  margin-bottom: 1rem;
+}
+.about-text p {
+  margin: .5rem 0 1.5rem;
+  font-size: 1.25rem;
+}
+/* End About Me Section */
+
+/* Contact Me Section */
+.contact {
+  margin-bottom: 1rem;
+}
+.contact-text p {
+  margin: .5rem 0 1.5rem;
+  font-size: 1.25rem;
+}
+.contact-social-links a {
+  margin-right: 1.5em;
+}
+/* End Contact Me Section */
+
+/*
+article {
+  float: left;
+  width: 66.67%;
+  flex-grow: 2;
+  flex-shrink: 0;
+  flex-basis:300px;
+  padding: 1.25%;
+  background-color: #fffff0; /* Ivory
+}
+h2 {
+  font-size: 1.5em;
+}
+article p {
+  margin-bottom: 1em;
+}
+aside {
+  float: left;
+  width: 33.33%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 150px;
+  padding: 1.67%;
+  background-color: #191970;
+}
+h3 {
+  font-size:1.3em;
+}
+aside div {
+  padding-bottom: .5em;
+}
+aside a {
+  color: indigo;
+}
+*/
+
+/* Footer Section */
+footer {
+  background-color: #fffff0;
+  padding: 10px;
+  text-align: center;
+  color: black;
+
+}
+/*
+.footer-links {
+  flex: 1 0 50%;
+  text-align: center;
+  font-size: 1.25em;
+}
+.footer-links a {
+  color: #362507;
+  margin-left: 1em;
+}
+/* End Footer Section */
+
+.self-clear::after {
+  content: "";
+  display: block;
+  clear: both
+}
 .maincolumn {
   position:relative;
   float:left;
@@ -26,15 +331,58 @@ body {
   float:right;
   width:177px;
 }
-div {
-  width:300px;
-  height: 300px;
-  background: orange;
+/* division transition and transform */
+ #box {
+  border-color: indigo;
+  border-style: solid;
+  border-width: 2em, 2em, 2em, 2em;
+  margin: .5em;
+  display: block;
+  width:304px;
+  height: 154px;
+  background-color: darkorange;
   transition: width 3s, height 3s, transform 3s
 }
-
-div:hover {
-  width: 300px;
-  height: 300px;
+#box:hover {
+  width: 304px;
+  height: 154px;
   transform: rotate(180deg);
+}
+/* end division transition and transform */
+
+/* About.html CSS */
+/* Zen image clip */
+.about {
+  background-color: #000000;
+}
+.zen img {
+  max-width: 100%;
+  clip: rect(200px, 50px, 50px, 0px);
+  z-index: 99;
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 24px;
+  }
+  main {
+    background-color: #ffffff;
+  }
+}
+@media (min-width: 1024px) {
+  aside {
+    display: inline-block;
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 620px) {
+  /* For mobile phones */
+  .menu, .main, .right {
+    width: 100%;
+  }
 }
