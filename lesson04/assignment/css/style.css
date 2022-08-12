@@ -63,10 +63,13 @@ body {
 }
 section {
   display: -webkit-flex;
-  display: flex;
+  display: flow-root;
 }
 /* Header */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,23 +77,14 @@ header {
   padding: 1.67%;
 
 }
-.header-left {
-  flex: 1 0 33%;
-  text-align: left;
-}
-.header-right {
-  flex: 2 0 67%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
+
 h1 {
   font-size: 2em;
   padding-top: 1rem;
 }
 /* Header background section */
-svg {
-  width: 960px;
+header svg {
+  width:100%;
   height: auto;
 }
 .img-overlay-wrap img {
@@ -107,9 +101,7 @@ svg {
   position: absolute;
   verticle-align: center;
 }
-.front {
-  position: absolute;
-}
+
 /* End Header background section */
 
 /* Master navigation */
@@ -170,16 +162,14 @@ main {
 }
 /* Introduction with box transitions and transform */
 .intro {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin: 0 0;
   width: 100%;
-  border: 3px solid #ff8c00;
   color: #696969;
   font-size: 1.25rem;
-  background-color: #fffff0;
   background-image: radial-gradient(
-    ellipse closest-corner at center, #f0f8ff 10%, #ff8c00 100%);
+  ellipse closest-corner at center, #f0f8ff 10%, #ff8c00 100%);
 }
 .intro-text {
   flex: 2 0 67%;
@@ -342,6 +332,7 @@ footer {
   height: 154px;
   background-color: darkorange;
   transition: width 3s, height 3s, transform 3s
+  display: flow-root;
 }
 #box:hover {
   width: 304px;

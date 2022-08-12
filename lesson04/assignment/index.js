@@ -1,5 +1,6 @@
 // transition and transform - rotate image box
-var urls = new Array('images/header_bg_1.jpg','images/header_bg_2.jpg','images/header_bg_3.jpg');
+// var urls = new Array('images/header_bg_1.jpg','images/header_bg_2.jpg','images/header_bg_3.jpg');
+var urls = new Array('imgs/AdobeStock_282029769.jpeg','imgs/AdobeStock_439128959.jpeg');
 var imgs = new Array(url.length);
 loadImages();
 function loadImages()

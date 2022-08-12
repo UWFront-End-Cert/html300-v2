@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 04 Grid Layout</title>
+  <link rel="stylesheet" href="./css/style3.css">
+</head>
+<body>
+<div class="grid-container">
+  <header>
+    <div class="item2">
+        <nav>
+          <ul>
+            <li><a href="#portfolio" class="btn">Portfolio</a></li>
+            <li><a href="#about" class="btn">About</a></li>
+            <li><a href="#contact" class="btn">Contact</a></li>
+          </ul>
+        </nav>
+    </div>
+      <div class="header">
+      <section class="img-overlay-wrap">
+        <svg>
+          <img  src="imgs/AdobeStock_232304681.svg" alt="Enjoy everyday quote">
+        </svg>
+        <img  src="imgs/AdobeStock_276966704.jpeg" alt="Beautiful dunes beach at sunset, North Sea, Germany By eyetronic" width="1460.5" height="300">
+      </section>
+    </div>
+  </header>
+  <div class="left">
+    <div id="div1">linear</div><br>
+    <div id="div2">ease</div><br>
+    <div id="div3">ease-in-out></div><br>
+  </div>
+  <div class="middle">
+    <section class="intro" onload="getRandomImage();">
+        <div class="intro-text">
+          <h1>Transition + Transform example</h1>
+          <p> Hover over the div element below to see the box rotate 180 degrees.</p>
+        </div>
+        <div class="intro-image">
+          <img id="box" src="imgs/AdobeStock_282029769.jpeg" alt="Mountains in Washington By Galyna Andrushko" width="300" height="150">
+          <img id="box" src="imgs/AdobeStock_439128959.jpeg" alt="" width="300" height="150">
+          <div id="box">T3</div>
+          <div id="box">T4</div>
+          <div id="box">T5</div>
+        </div>
+    </section>
+  </div>
+  <div class="right" style="background-color:#ccc;">Column</div>
+
+  <div class="footer">
+    <p>footer</p>
+    <a href="#">Home</a>
+    <a href="#">FAQ</a>
+    <a href="#">Site Map</a>
+    <a href="#">Privacy</a>
+  </div>
+</div>
+
+</body>
+<script src="index.js"></script>
+</html>

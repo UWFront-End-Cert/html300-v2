@@ -4,22 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Assignment 04</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <title>Assignment 04 Grid Layout</title>
+  <link rel="stylesheet" href="./css/style2.css">
 </head>
 <body>
-<section class="container">
+  <section class="grid-container">
+    <section class="item1">Header
+      <img src="/imgs/AdobeStock_276966704.jpeg" alt="">
+    </section>
+    <section class="item2">Menu</section>
+    <section class="item3">Main</section>
+    <section class="item4">Aside</section>
+    <section class="item5">Article</section>
+    <section class="item6">Footer</section>
+  </section>
 <header>
-  <section class="header-left">
-    <img src="/imgs/portfolio-logo.tif" alt="Logo">
-  </section>
-  <section class="img-overlay-wrap">
-    <svg>
-      <img  src="imgs/AdobeStock_232304681.svg" alt="Enjoy everyday quote">
-      <!-- <rect x="0" y="0"  fill=""></rect> -->
-    </svg>
-    <img  src="imgs/AdobeStock_276966704.jpeg" alt="Beautiful dunes beach at sunset, North Sea, Germany By eyetronic" width="1460.5" height="570.5">
-  </section>
   <section class="header-right">
     <nav>
       <ul>
@@ -30,15 +29,20 @@
     </nav>
     <h1>Janene Smith</h1>
   </section>
+  <section class="img-overlay-wrap">
+    <svg>
+      <img  src="imgs/AdobeStock_232304681.svg" alt="Enjoy everyday quote">
+    </svg>
+    <img  src="imgs/AdobeStock_276966704.jpeg" alt="Beautiful dunes beach at sunset, North Sea, Germany By eyetronic" width="1460.5" height="300">
+  </section>
+
 </header>
 <main>
   <section class="intro" onload="getRandomImage();">
       <section class="intro-text">
-        <h2>Portfolio</h2>
-        <div>
-          <h3>Transition + Transform example</h3>
-          <p> Hover over the div element below to see the box rotate 180 degrees.</p>
-        </div>
+        <h1>Portfolio</h1>
+        <h1>Transition + Transform example</h1>
+        <p> Hover over the div element below to see the box rotate 180 degrees.</p>
       </section>
       <section class="intro-image">
           <img id="box" src="imgs/AdobeStock_282029769.jpeg" alt="Mountains in Washington By Galyna Andrushko" width="300" height="150">
@@ -49,8 +53,7 @@
       </section>
   </section>
 
-  <section class="portfolio" id="portfolio">
-    <div class="portfolio-text">
+  <div class="portfolio-text">
       <h2>Some Recent Work</h2>
       <p>Here are some of my recent restoration projects. The
         images you see below are the “before” versions of each book. To
@@ -59,29 +62,18 @@
       </p>
     </div>
     <div class="portfolio-images">
-      <div class="portfolio-images">
-          <img src="/imgs/AdobeStock_439128959.jpeg" alt="">
-          <img class="image-overlay" src="/imgs/AdobeStock_439128959.jpeg" alt="">
-      </div>
-      <div class="portfolio-images">
-          <img src="/imgs/AdobeStock_386369613.jpeg" alt="">
-          <img class="image-overlay" src="/imgs/AdobeStock_386369613.jpeg" alt="">
-      </div>
-      <div class="portfolio-images">
-          <img src="/imgs/AdobeStock_329891242.jpeg" alt="">
-          <img class="image-overlay" src="/imgs/AdobeStock_329891242.jpeg" alt="">
-      </div>
-      <div class="portfolio-images">
-          <img src="/imgs/AdobeStock_283861581.jpeg" alt="">
-          <img class="image-overlay" src="/imgs/AdobeStock_283861581.jpeg" alt="">
-      </div>
+      <ul>
+          <li><img class="image-overlay" src="/imgs/AdobeStock_439128959.jpeg" alt=""></li>
+          <li><img class="image-overlay" src="/imgs/AdobeStock_386369613.jpeg" alt=""></li>
+          <li><img class="image-overlay" src="/imgs/AdobeStock_329891242.jpeg" alt=""></li>
+          <li><img class="image-overlay" src="/imgs/AdobeStock_283861581.jpeg" alt=""></li>
+      </ul>
     </div>
-  </section>
+
 
   <section class="about" id="about">
-    <div class="about-text">
-        <h2>About Me</h2>
-        <p><b>Paul McFedries</b> is a book conservator, bookbinder,
+    <h2>About Me</h2>
+    <p class="ellipse"><b>Paul McFedries</b> is a book conservator, bookbinder,
 and an expert in the history and conservation of Gothic and Art
 Deco bookbindings. He is a graduate of the Canadian Bookbinding
 and Book Arts Guild, and apprenticed with some of the top North
@@ -92,7 +84,6 @@ of the Historical Art Deco Bookbinding Society. Working with both
 institutional and private clients, he has restored hundreds of
 books over the years.
         </p>
-    </div>
   </section>
 
   <section class="contact" id="contact">
@@ -110,16 +101,16 @@ linkedin-round.tif" alt="LinkedIn icon"></a>
 github-round.tif" alt="GitHub icon"></a>
     </div>
   </section>
-  </section>
+
 </main>
 
 <footer>
-  <p>Home | FAQ | Site Map | Privacy</p>
-    <a href="#">Home</a>
-    <a href="#">FAQ</a>
-    <a href="#">Site Map</a>
-    <a href="#">Privacy</a>
-
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">FAQ</a></li>
+    <li><a href="#">Site Map</a></li>
+    <li><a href="#">Privacy</a></li>
+  </ul>
 </footer>
 </body>
 <script src="index.js"></script>
