@@ -1,0 +1,22 @@
+// Colors
+$gray: #f6f5f6;
+$white: #ffffff;
+$h1-p: #666666; /* h1 - card-image, p - card-details */
+$p: #888888; /* p */
+$background: #f4f4f4; /* card-details background-color */
+
+$font-fam: "arial, helvetica, sans-serif";
+
+// Colors
+$darkorange: #ff8c00;
+$ivory: #fffff0;
+$gainsboroLightGray: #dcdcdc;
+$dimgray: #696969;
+$midnightblue: #191970;
+$aliceblue: #f0f8ff;
+$black: #000000;
+$white: #ffffff;
+
+$font-fam: "arial, helvetica, sans-serif";
+
+$a:focus: #696969

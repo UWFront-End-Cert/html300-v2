@@ -1,7 +1,3 @@
-
-/* Transition + transitions
-  // https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_transform
-*/
 /* Colors
 #ff8c00 // darkorange
 #fffff0 // ivory
@@ -13,367 +9,370 @@
 */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 100%;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-/*
-body {
-  display: flex;
-  flex-direction:column;
-  align-items:center;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  line-height: 1.4;
-}
-*/
-/*
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: 100vh;
-  margin-top: 1rem;
-  font-family: "Open Sans", Verdana, sans-serif; >
-}
-*/
-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  min-height: 100vh;
-  margin-top: 1rem;
-  font-family: "Open Sans", Verdana, sans-serif; >
-  background-color: #cdc9c1; >
-  background-image: radial-gradient (circle farthest-side at center top, hsl(0, 0%, 100%) 0%, #cdc9c1 100%); >
-  color: #362507;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content:flex-start;
-  max-width: 100%;
-  margin: 5;
-}
-section {
-  display: -webkit-flex;
-  display: flow-root;
-}
-/* Header */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 1.67%;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-  font-size: 2em;
-  padding-top: 1rem;
-}
-/* Header background section */
-header svg {
-  width:100%;
-  height: auto;
-}
-.img-overlay-wrap img {
-  position: absolute;
-  max-width: 100%;
-  height:auto;
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  align: center;
-  z-index: -1;
-}
-.img-overlay-wrap svg {
-  position: absolute;
-  verticle-align: center;
+body {
+
+    width: 850px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-size: 1.2em; */
+    line-height: 1.4;
 }
 
-/* End Header background section */
+.overlapping-header {
+    padding: 0.5em;
+    margin-top: 1em;
+    margin-left: 1.5em;
+    width: 8em;
+    position: relative;
+    z-index: 1;
+    color: yellow;
+    background-color: #333;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.quotations {
+    margin-top: -1em;
+    padding: 1.5em 1.5em 0.5em 1.5em;
+    color: #eee;
+    background-color: #999;
+}
+
+blockquote {
+    margin-bottom: 1em;
+}
+
+.containerA {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 450px 1fr 450px 1fr 200px;
+    grid-template-areas:
+        'header header header header nav'
+        'main   main   main   main   main'
+        'sidebar sidebar sidebar sidebar sidebar'
+        'article article article article article'
+        'footer footer footer footer footer';
+}
+.item1 {
+    padding: 0;
+    color: black;
+    font-size: 1.5em;
+    text-align: left;
+}
+.item2 {
+    grid-area: header;
+    text-align: left;
+    padding-left: 1.5em;
+    padding-top: .5em;
+}
+    /* Header */
+    /* Header image */
+    h2 h3 {
+
+    }
+    img {
+      display: block;
+      width: 100%;
+      height:50%;
+      object-fit:cover;
+    }
+    /* Header background section */
+    header svg {
+      width:100%;
+      height: 100vh;
+    }
+    .img-overlay-wrap img {
+      position: absolute;
+      max-width: 100%;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      align: center;
+      z-index: -1;
+    }
+    .img-overlay-wrap svg {
+      position: absolute;
+      verticle-align: center;
+    }
+    /* End Header background section */
 
 /* Master navigation */
-.btn {
-  background-color: #696969;
-  padding: .25rem .75rem;
-  border-radius: .75rem;
-  font-size: 1rem;
-  color: #dcdcdc;
-  text-transform: uppercase;
+.itemN {
+    grid-area: nav;
+    list-style-type: none;
 }
-nav {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  height: 3.5em;
-  width: 100%;
-  background-color: inherit;
+    /* Web Design Playground: wdpg.io/projects/portfolio-page/04 */
+    h1.itemN {
+      padding-top: .1em;
+    }
+    .btn {
+      background-color: #696969;
+      padding: .25rem .75rem;
+      border-radius: .75rem;
+      font-size: .5em;
+      color: #dcdcdc;
+      text-transform: uppercase;
+    }
+    nav {
+      z-index: 10;
+      position: sticky;
+      height: 3.5em;
+      width: 100%;
+    }
+    nav ul {
+      display: flex;
+      list-style-type: none;
+    }
+    nav li {
+      padding-right: 1rem;
+      padding-top: .5rem;
+
+    }
+    a {
+      text-decoration: none;
+      transition: all 0.5s ease-out;
+    }
+    a:hover,
+    a:focus {
+      color: #696969;
+      background-color: #dcdcdc;
+    }
+    /* End master navigation */
+/* End Header */
+
+/* Start of Main Content */
+.item3 {
+    grid-area: main;
 }
-nav ul {
+/* Introduction with box transitions and transform */
+.intro {
   display: flex;
-  list-style-type: none;
-}
-nav li {
-  padding-left: 1rem;
-}
-a {
-  flex: 2;
-  text-decoration: none;
-  transition: all 0.5s ease-out;
-}
-a:hover,
-a:focus {
+  justify-content:space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   color: #696969;
-  background-color: #dcdcdc;
+  font-size: 1.25rem;
+  background-image: radial-gradient(
+  ellipse closest-corner at center, #fffff0 25%, #ff8c00 100%);
 }
-/* End master navigation */
+.intro-text {
+  display: block;
+  padding: 2rem 0 2rem 2rem;
+  text-align: center;
+}
+.intro-text p {
+  margin: 1.5em 0;
+}
+.intro-image {
+  display: flex;
+  flex-shrink: 2;
+  padding: 0 1rem 0 1rem;
+  text-align:center;
+}
 h1 {
   font-size: 3em;
   font-weight: bold;
   font-family:serif;
 }
-/* End Header section */
-main {
-  display: flex;
-  justify-content:center;
-  flex-wrap: wrap;
-  align-content:flex-start;
-  flex-grow: 1;
-  max-width: 960px;
-  background-color: #fffff0;
-  padding-bottom: 3.5em;
-}
-/* Introduction with box transitions and transform */
-.intro {
-  display: inline-flex;
-  align-items: center;
-  margin: 0 0;
-  width: 100%;
-  color: #696969;
-  font-size: 1.25rem;
-  background-image: radial-gradient(
-  ellipse closest-corner at center, #f0f8ff 10%, #ff8c00 100%);
-}
-.intro-text {
-  flex: 2 0 67%;
-  padding: 2rem 0 2rem 2rem;
-}
-.intro-text p {
-  margin: 1.5rem 0;
-}
-.intro-image {
-  flex: 1 0 33%;
-  padding-right: 2rem;
-  text-align:center;
-}
-h2 {
-  font-size: 2.5rem;
-}
-h3 {
-  font-size: 2rem;
-  font-style: italic;
-}
-h2, h3 {
-  font-family: "Verdana", Georgia, serif;
-}
+
 /* End of Introduction with box transitions and transform */
-
-/* Recent Work Section - Portfolio */
-.portfolio {
-  margin-bottom: 1rem;
-}
-.portfolio-text p div {
-  margin: .5rem 0 1.5rem;
-  font-size: 1.25rem;
-}
-.portfolio-images {
-  display: flex;
-  justify-content: space-between;
-}
-.portfolio-image {
-  position: relative;
-  cursor: pointer;
-  margin-bottom: 1rem;
-}
-.image-overlay {
-  position: absolute;
-  left:0;
-  top: 0;
-  width: 200px;
-  height: 156px;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 1.5s ease;
-}
-.image-overlay:hover {
-  opacity: 1;
-}
-/* End recent work section - Portfolio */
-
-/* About Me section */
-.about {
-  margin-bottom: 1rem;
-}
-.about-text p {
-  margin: .5rem 0 1.5rem;
-  font-size: 1.25rem;
-}
-/* End About Me Section */
-
-/* Contact Me Section */
-.contact {
-  margin-bottom: 1rem;
-}
-.contact-text p {
-  margin: .5rem 0 1.5rem;
-  font-size: 1.25rem;
-}
-.contact-social-links a {
-  margin-right: 1.5em;
-}
-/* End Contact Me Section */
-
-/*
-article {
-  float: left;
-  width: 66.67%;
-  flex-grow: 2;
-  flex-shrink: 0;
-  flex-basis:300px;
-  padding: 1.25%;
-  background-color: #fffff0; /* Ivory
-}
-h2 {
-  font-size: 1.5em;
-}
-article p {
-  margin-bottom: 1em;
-}
-aside {
-  float: left;
-  width: 33.33%;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 150px;
-  padding: 1.67%;
-  background-color: #191970;
-}
-h3 {
-  font-size:1.3em;
-}
-aside div {
-  padding-bottom: .5em;
-}
-aside a {
-  color: indigo;
-}
-*/
-
-/* Footer Section */
-footer {
-  background-color: #fffff0;
-  padding: 10px;
-  text-align: center;
-  color: black;
-
-}
-/*
-.footer-links {
-  flex: 1 0 50%;
-  text-align: center;
-  font-size: 1.25em;
-}
-.footer-links a {
-  color: #362507;
-  margin-left: 1em;
-}
-/* End Footer Section */
-
-.self-clear::after {
-  content: "";
-  display: block;
-  clear: both
-}
-.maincolumn {
-  position:relative;
-  float:left;
-  width:604px;
-  overflow:hidden;
-}
-.rightside {
-  float:right;
-  width:177px;
-}
 /* division transition and transform */
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_transform */
  #box {
   border-color: indigo;
   border-style: solid;
   border-width: 2em, 2em, 2em, 2em;
   margin: .5em;
-  display: block;
+  display: flex;
   width:304px;
   height: 154px;
   background-color: darkorange;
-  transition: width 3s, height 3s, transform 3s
-  display: flow-root;
+  transition: width 3s, height 3s, transform 1s
+  /*display: flow-root; */
 }
 #box:hover {
   width: 304px;
   height: 154px;
   transform: rotate(180deg);
 }
-/* end division transition and transform */
+/* End division transition and transform */
+/* End Main Content */
 
-/* About.html CSS */
-/* Zen image clip */
-.about {
-  background-color: #000000;
+/* Start of aside content */
+.item4 {
+    background-color: aliceblue;
+    grid-area: sidebar;
 }
-.zen img {
-  max-width: 100%;
-  clip: rect(200px, 50px, 50px, 0px);
-  z-index: 99;
+div.aside {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 100%;
+  transition: width 3s, height 3s, transform 1s;
+}
+.aside #div1 #div2 #div3 {
+  width: 100%;
+  transition: width: 2s;
+}
+#div1 {transition-timing-function: linear; }
+#div2 {transition-timing-function: ease;}
+#div3 {transition-timing-function: ease-in-out;}
+
+div:hover.left {
+  width: 10em;
+}
+#div1 {
+ border-color: blue;
+ border-style: solid;
+ border-width: 3em, 3em, 3em, 3em;
+ margin: 0;
+ display: flex;
+ width:500px;
+ height: 386px;
+ background-color: aliceblue;
+ align-self: center;
+ font-family: serif;
+ font-size: .5em;
+ /*display: flow-root; */
+}
+#div1:hover {
+ width: 150px;
+ height: 100px;
+
+}
+#div2 {
+ border-color: orange;
+ border-style: solid;
+ border-width: 2em, 2em, 2em, 2em;
+ margin: 0;
+ display: flex;
+ justify-content:space-around;
+ width:500px;
+ height: 386px;
+ background-color: aliceblue;
+ transition: width 3s, height 3s, transform 1s
+ /*display: flow-root; */
+}
+#div2:hover {
+ width: 150px;
+ height: 150px;
+
+}
+#div3 {
+ border-color: orange;
+ border-style: solid;
+ border-width: 2em, 2em, 2em, 2em;
+ margin: .5em;
+ display: flex;
+ width:100px;
+ height: 100px;
+ background-color: aliceblue;
+ transition: width 3s, height 3s, transform 1s
+ /*display: flow-root; */
+}
+#div3:hover {
+ width: 150px;
+ height: 150px;
+
 }
 
-@media (max-width: 450px) {
-  h1 {
-    font-size: 24px;
-  }
-  main {
-    background-color: #ffffff;
-  }
+
+
+/* Start of Article Content */
+.item5 {
+    grid-area: article;
+    padding-left: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 2.5em;
+    background-color: black;
+    color: white;
+    overflow:visible;
 }
-@media (min-width: 1024px) {
-  aside {
-    display: inline-block;
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 225px;
+    transition: width 3s, height 3s, transform 1s;
   }
-}
-@media (max-width: 550px) {
-  .container {
-    float: none;
+
+  div.gallery:hover {
+    border: 1px solid #777;
+    transform: scale(1.5,1.5);
+  }
+
+  div.gallery img {
     width: 100%;
+    height: 200px;
   }
+
+  div.desc {
+    padding: 0;
+    text-align: center;
+  }
+
+/* img.gallery source: https://picsum.photos/images */
+img.gallery {
+  "id":"1011",
+  "author":"Roberto Nickson",
+  "width":5472,
+  "height":3648,
+  "url":"https://unsplash.com/photos/7BjmDICVloE",
+  "download_url":"https://picsum.photos/id/1011/5472/3648.jpg"
 }
-@media only screen and (max-width: 620px) {
-  /* For mobile phones */
-  .menu, .main, .right {
-    width: 100%;
-  }
+img.gallery {
+  "id":"1015",
+  "author":"Alexey Topolyanskiy",
+  "width":6000,
+  "height":4000,
+  "url":"https://unsplash.com/photos/-oWyJoSqBRM.jpg",
+  "download_url":"https://picsum.photos/id/1015/6000/4000.jpg"
+}
+img.gallery {
+  "id":"1016",
+  "author":"Philippe Wuyts",
+  "width":3844,
+  "height":2563,
+  "url":"https://unsplash.com/photos/_h7aBovKia4.jpg",
+  "download_url":"https://picsum.photos/id/1016/3844/2563.jpg"
+}
+img.gallery {
+  "id":"1018",
+  "author":"Andrew Ridley",
+  "width":3914,
+  "height":2935,
+  "url":"https://unsplash.com/photos/Kt5hRENuotI.jpg",
+  "download_url":"https://picsum.photos/id/1018/3914/2935.jpg"
+}
+img.gallery {
+  "id":"1019",
+  "author":"Patrick Fore",
+  "width":5472,
+  "height":3648,
+  "url":"https://unsplash.com/photos/V6s1cmE39XM.jpg",
+  "download_url":"https://picsum.photos/id/1019/5472/3648.jpg"
+}
+img.gallery {
+  "id":"1022",
+  "author":"Vashishtha Jogi",
+  "width":6000,
+  "height":3376,
+  "url":"https://unsplash.com/photos/bClr95glx6k.jpg",
+  "download_url":"https://picsum.photos/id/1022/6000/3376.jpg"
+}
+
+
+
+
+.item6 {
+    background-color: darkgray;
+    grid-area: footer
 }

@@ -1,126 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Assignment 04</title>
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-<section class="container">
-<header>
-  <section class="header-left">
-    <img src="/imgs/portfolio-logo.tif" alt="Logo">
-  </section>
-  <section class="img-overlay-wrap">
-    <svg>
-      <img  src="imgs/AdobeStock_232304681.svg" alt="Enjoy everyday quote">
-      <!-- <rect x="0" y="0"  fill=""></rect> -->
-    </svg>
-    <img  src="imgs/AdobeStock_276966704.jpeg" alt="Beautiful dunes beach at sunset, North Sea, Germany By eyetronic" width="1460.5" height="570.5">
-  </section>
-  <section class="header-right">
-    <nav>
-      <ul>
-        <li><a href="#portfolio" class="btn">Portfolio</a></li>
-        <li><a href="#about" class="btn">About</a></li>
-        <li><a href="#contact" class="btn">Contact</a></li>
-      </ul>
-    </nav>
-    <h1>Janene Smith</h1>
-  </section>
-</header>
-<main>
-  <section class="intro" onload="getRandomImage();">
-      <section class="intro-text">
-        <h2>Portfolio</h2>
-        <div>
-          <h3>Transition + Transform example</h3>
-          <p> Hover over the div element below to see the box rotate 180 degrees.</p>
-        </div>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Adopt-a-dog Homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/test0.css">
+
+  </head>
+  <body>
+<!--
+<div class="quotations">
+    <blockquote>
+    “All of the margin properties can be assigned negative values. When this is done, an adjacent margin can be effectively ‘canceled out’ to any degree. Given a large enough negative margin applied to a large enough element, the affected adjacent element can even be <em>overlapped</em>.” —World Wide Web Consortium
+    </blockquote>
+    <blockquote>
+    “Out of all the CSS concepts designers have ever used, an award probably needs to be given to the use of Negative Margins as being the most least talked about method of positioning. It’s like an online taboo—everyone’s doing it, yet no one wants to talk about it.” —John Imbong
+    </blockquote>
+    <blockquote>
+    “Despite its ‘hackish’ reputation, negative margins are allowed by the specification. If applied with care and deep understanding, they produce valid code.” —Marta Sztybor
+    </blockquote>
+</div>
+-->
+<div class="containerA">
+    <div class="item1 item2">
+      <h2>Janene Smith</h2>
+      <h3>Portfolio</h3>
+      <section class="img-overlay-wrap">
+        <svg>
+          <img  src="imgs/AdobeStock_232304681.svg" alt="Enjoy everyday quote">
+        </svg>
+        <img  src="imgs/AdobeStock_276966704.jpeg" alt="Beautiful dunes beach at sunset, North Sea, Germany By eyetronic" width="1460.5" height="300">
       </section>
-      <section class="intro-image">
-          <img id="box" src="imgs/AdobeStock_282029769.jpeg" alt="Mountains in Washington By Galyna Andrushko" width="300" height="150">
-          <img id="box" src="imgs/AdobeStock_439128959.jpeg" alt="" width="300" height="150">
-        <div id="box">T3</div>
-        <div id="box">T4</div>
-        <div id="box">T5</div>
+    </div>
+    <div class="item1 itemN">
+      <nav class="itemN">
+        <ul class="itemN">
+          <li class="itemN"><a href="#portfolio" class="btn">Portfolio</a></li>
+          <li class="itemN"><a href="#about" class="btn">About</a></li>
+          <li class="itemN"><a href="#contact" class="btn">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="item1 item3">
+      <section class="intro" onload="getRandomImage();">
+          <div class="intro-text">
+            <h1>Transition + Transform example</h1>
+            <p> Hover over the div element below to see the box rotate 180 degrees.</p>
+          </div>
+          <div class="intro-image">
+            <img id="box" src="imgs/AdobeStock_282029769.jpeg" alt="Mountains in Washington By Galyna Andrushko" width="300" height="150">
+            <img id="box" src="imgs/AdobeStock_283861581.jpeg" alt="" width="300" height="150">
+            <img id="box" src="imgs/AdobeStock_439128959.jpeg" alt="" width="300" height="150">
+
+          </div>
       </section>
-  </section>
-
-  <section class="portfolio" id="portfolio">
-    <div class="portfolio-text">
-      <h2>Some Recent Work</h2>
-      <p>Here are some of my recent restoration projects. The
-        images you see below are the “before” versions of each book. To
-        see an “after” version, move your mouse over an image (or tap
-        it).
-      </p>
     </div>
-    <div class="portfolio-images">
-      <div class="portfolio-images">
-          <img src="/imgs/AdobeStock_439128959.jpeg" alt="">
-          <img class="image-overlay" src="/imgs/AdobeStock_439128959.jpeg" alt="">
-      </div>
-      <div class="portfolio-images">
-          <img src="/imgs/AdobeStock_386369613.jpeg" alt="">
-          <img class="image-overlay" src="/imgs/AdobeStock_386369613.jpeg" alt="">
-      </div>
-      <div class="portfolio-images">
-          <img src="/imgs/AdobeStock_329891242.jpeg" alt="">
-          <img class="image-overlay" src="/imgs/AdobeStock_329891242.jpeg" alt="">
-      </div>
-      <div class="portfolio-images">
-          <img src="/imgs/AdobeStock_283861581.jpeg" alt="">
-          <img class="image-overlay" src="/imgs/AdobeStock_283861581.jpeg" alt="">
+    <div class="item1 item4">
+      <div class="aside">
+        <div class="aside" id="div1">Linear</div>
+        <div class="aside" id="div1">Ease</div>
+        <div class="aside" id="div1">Ease-in-Out></div>
+
       </div>
     </div>
-  </section>
 
-  <section class="about" id="about">
-    <div class="about-text">
-        <h2>About Me</h2>
-        <p><b>Paul McFedries</b> is a book conservator, bookbinder,
-and an expert in the history and conservation of Gothic and Art
-Deco bookbindings. He is a graduate of the Canadian Bookbinding
-and Book Arts Guild, and apprenticed with some of the top North
-American and European book restorers, including Don Palmer, Rose
-Eldridge, and Betsy Taylor-Newlove. Paul was formerly president of
-the Gothic Book Workers Guild and is currently executive director
-of the Historical Art Deco Bookbinding Society. Working with both
-institutional and private clients, he has restored hundreds of
-books over the years.
-        </p>
+    <div class="item1 item5">
+      <div class="gallery">
+        <a target="_blank" href="imgs/AdobeStock_43992919.jpeg">
+          <img src="imgs/AdobeStock_43992919.jpeg" alt="" width="600" height="400">
+        </a>
+        <div class="desc">Mindful</div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://picsum.photos/id/1015/6000/4000.jpg">
+          <img src="https://picsum.photos/id/1015/6000/4000.jpg" alt="Zen path of stones." width="8365" height="3500">
+        </a>
+        <div class="desc">Explore</div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://picsum.photos/id/1011/5472/3648.jpg">
+          <img src="https://picsum.photos/id/1011/5472/3648.jpg" alt="" width="600" height="400">
+        </a>
+        <div class="desc">Grow</div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://picsum.photos/id/1016/3844/2563.jpg">
+          <img src="https://picsum.photos/id/1016/3844/2563.jpg" alt="" width="600" height="400">
+        </a>
+        <div class="desc">Inspire</div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://picsum.photos/id/1018/3914/2935.jpg">
+          <img src="https://picsum.photos/id/1018/3914/2935.jpg" alt="" width="600" height="400">
+        </a>
+        <div class="desc">Imagine</div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://picsum.photos/id/1022/6000/3376.jpg">
+          <img src="https://picsum.photos/id/1022/6000/3376.jpg" alt="" width="600" height="400">
+        </a>
+        <div class="desc">Energy</div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://picsum.photos/id/1019/5472/3648.jpg">
+          <img src="https://picsum.photos/id/1019/5472/3648.jpg" alt="" width="600" height="400">
+        </a>
+        <div class="desc">Restoration</div>
+      </div>
     </div>
-  </section>
 
-  <section class="contact" id="contact">
-    <div class="contact-text">
-      <h2>Contact Me</h2>
-      <p>If you want to know more about my work, or if you want to
-      discuss a project, please get in touch:</p>
-      <p>Alternatively, click an icon below to reach out using
-      your favorite social network:</p>
-    </div>
-    <div class="contact-social-links">
-      <a href="#" class="contact-social-link"><img src="/images/
-linkedin-round.tif" alt="LinkedIn icon"></a>
-      <a href="#" class="contact-social-link"><img src="/images/
-github-round.tif" alt="GitHub icon"></a>
-    </div>
-  </section>
-  </section>
-</main>
+    <div class="item1 item6">Footer</div>
+</div>
 
-<footer>
-  <p>Home | FAQ | Site Map | Privacy</p>
-    <a href="#">Home</a>
-    <a href="#">FAQ</a>
-    <a href="#">Site Map</a>
-    <a href="#">Privacy</a>
-
-</footer>
 </body>
-<script src="index.js"></script>
 </html>
