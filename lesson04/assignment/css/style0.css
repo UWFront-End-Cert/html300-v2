@@ -21,7 +21,7 @@ body {
     /* font-size: 1.2em; */
     line-height: 1.4;
 }
-
+/*
 .overlapping-header {
     padding: 0.5em;
     margin-top: 1em;
@@ -45,6 +45,7 @@ body {
 blockquote {
     margin-bottom: 1em;
 }
+*/
 
 .containerA {
     height: 100vh;
@@ -112,11 +113,11 @@ blockquote {
       padding-top: .1em;
     }
     .btn {
-      background-color: #696969;
+      background-color: dimgray;
       padding: .25rem .75rem;
       border-radius: .75rem;
       font-size: .5em;
-      color: #dcdcdc;
+      color: lightgray;
       text-transform: uppercase;
     }
     nav {
@@ -140,8 +141,8 @@ blockquote {
     }
     a:hover,
     a:focus {
-      color: #696969;
-      background-color: #dcdcdc;
+      color: dimgray;
+      background-color: lightgray;
     }
     /* End master navigation */
 /* End Header */
@@ -158,7 +159,7 @@ blockquote {
   margin: 0;
   padding: 0;
   width: 100%;
-  color: #696969;
+  color: dimgray;
   font-size: 1.25rem;
   background-image: radial-gradient(
   ellipse closest-corner at center, #fffff0 25%, #ff8c00 100%);
@@ -187,7 +188,7 @@ h1 {
 /* division transition and transform */
 /* https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_transform */
  #box {
-  border-color: indigo;
+  border-color: midnightblue;
   border-style: solid;
   border-width: 2em, 2em, 2em, 2em;
   margin: .5em;
@@ -211,79 +212,62 @@ h1 {
     background-color: aliceblue;
     grid-area: sidebar;
 }
+
 div.aside {
-  margin: 5px;
-  border: 1px solid #ccc;
+  margin: 10px;
+  border: .5em solid midnightblue;
   float: left;
   width: 100%;
   transition: width 3s, height 3s, transform 1s;
 }
+
 .aside #div1 #div2 #div3 {
   width: 100%;
-  transition: width: 2s;
+  margin: 5px;
+  display: flex;
 }
-#div1 {transition-timing-function: linear; }
-#div2 {transition-timing-function: ease;}
-#div3 {transition-timing-function: ease-in-out;}
+
+p.aside {
+  font-family: san-sans-serif;
+  font-size: 2em;
+  text-align: center;
+
+}
 
 div:hover.left {
   width: 10em;
 }
+
 #div1 {
- border-color: blue;
- border-style: solid;
- border-width: 3em, 3em, 3em, 3em;
- margin: 0;
- display: flex;
- width:500px;
- height: 386px;
- background-color: aliceblue;
- align-self: center;
- font-family: serif;
- font-size: .5em;
- /*display: flow-root; */
+  width:500px;
+  height: 386px;
+  transition-timing-function:linear;
+  /* display: flow-root; */
 }
 #div1:hover {
- width: 150px;
- height: 100px;
-
+  width: 150px;
+  height: 100px;
 }
 #div2 {
- border-color: orange;
- border-style: solid;
- border-width: 2em, 2em, 2em, 2em;
- margin: 0;
- display: flex;
- justify-content:space-around;
- width:500px;
- height: 386px;
- background-color: aliceblue;
- transition: width 3s, height 3s, transform 1s
- /*display: flow-root; */
+  width:500px;
+  height: 386px;
+  transition-timing-function:ease;
+  /* display: flow-root; */
 }
 #div2:hover {
- width: 150px;
- height: 150px;
-
+  width: 150px;
+  height: 100px;
 }
 #div3 {
- border-color: orange;
- border-style: solid;
- border-width: 2em, 2em, 2em, 2em;
- margin: .5em;
- display: flex;
- width:100px;
- height: 100px;
- background-color: aliceblue;
- transition: width 3s, height 3s, transform 1s
- /*display: flow-root; */
+  width:500px;
+  height: 386px;
+  transition-timing-function:ease-in-out;
+  /* display: flow-root; */
 }
 #div3:hover {
- width: 150px;
- height: 150px;
-
+  width: 150px;
+  height: 100px;
 }
-
 
 
 /* Start of Article Content */
@@ -305,7 +289,8 @@ div:hover.left {
   }
 
   div.gallery:hover {
-    border: 1px solid #777;
+    border: 1px solid darkorange;
+    color: darkorange;
     transform: scale(1.5,1.5);
   }
 
