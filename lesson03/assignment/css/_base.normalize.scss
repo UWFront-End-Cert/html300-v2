@@ -17,7 +17,7 @@ html {
  */
 
 body {
-  margin: 0;
+  margin: 2em;
 }
 
 /* HTML5 display definitions
@@ -421,4 +421,9 @@ table {
 td,
 th {
   padding: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
 }

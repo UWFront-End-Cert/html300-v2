@@ -8,10 +8,16 @@ html {
     box-sizing: inherit;
 }
 
+body {
+  margin: 2em;
+}
+
 .main {
-    padding: 2rem;
+    clear: both;
+    padding: 2em;
+    max-width: 62.5em;
 }
 
 h1 {
-    color: $red;  
+    color: $h1-p;
 }
