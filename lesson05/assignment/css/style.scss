@@ -6,7 +6,7 @@
 
 body {
     font-family: $font-fam;
-    font-size: $fontsize;
+    font-size: 100%;
     color: $textcolor;
     line-height: 1.4;
 }
@@ -23,11 +23,13 @@ body {
 }
 
 .item1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding:  1em;
     color: $white;
     font-family: $font-fam;
     font-size: $fontsize;
-    text-align: center;
 }
 
 .main-header {
@@ -50,12 +52,11 @@ nav {
     li {
       display: inline-block;
       justify-content: space-between;
-      align-self: center;
+      align-items: center;
       padding-right: 128px;
-      flex-wrap: wrap;
+
     }
     a {
-      display: block;
       text-decoration: none;
       color: $white;
     }
