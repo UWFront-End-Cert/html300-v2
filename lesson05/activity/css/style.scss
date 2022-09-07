@@ -4,3 +4,78 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1920px;
+  height: 1080px;
+  top: 0px;
+  left: 0px;
+  background-color: $white;
+  font-family: $font-fam;
+}
+.flex-container  {
+  display: flex;
+  align-items: center;
+  flex-wrap: none;
+}
+
+header {
+  display: flex;
+  width: 1920px;
+  height: 147px;
+  flex-grow: 0;
+  margin-top: 150px;
+  background-color: $teal;
+  border: 1px solid $gray;
+  opacity: 1;
+
+}
+button {
+  background-color: $teal;
+  color: $white;
+  border: none;
+  margin: 0;
+}
+.logo h1{
+  flex-grow: 1;
+  margin: 0;
+  //padding-left: 1.5em;
+  padding: .5em 1.5em .5em 1.5em;
+}
+nav {
+  padding: .5em;
+  padding-top: 1em;
+  flex-grow: 2;
+
+
+}
+  ul {
+    display: flex;
+    justify-content:center;
+    list-style-type: none;
+    color: $white;
+    padding-left: .5em;
+    text-decoration: underline;
+    text-decoration-color: $white;
+    font-weight: bold;
+    font-size: 24px
+  }
+  li  {
+    padding-right: 1.5em;
+
+
+
+  }
+.login button {
+  display: flex;
+  top: 205px;
+  left: 1708px;
+  justify-content: center;
+  margin-right: 5em;
+  flex-grow: 1;
+}
