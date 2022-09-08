@@ -1,6 +1,37 @@
+// style.scss
 // Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
+
+
+// Default variables
+// Variable overrides
+$body-bg: #000000;
+$body-color: #111111;
+
+// Bootstrap and its default variables - this imports all of bootstrap variables
+// @import "../node_modules/bootstrap/scss/bootstrap";
+  // Variable overrides within the same Sass file can come before or after the default variables. However, when overriding across Sass files, your overrides must come before you import Bootstrap’s Sass files. (https://getbootstrap.com/docs/4.3/getting-started/theming/#sass)
+  // Put Bootstrap imports at the end of the Sass file.
+
+// Required Bootstrap 4.3 parts
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Optional Bootstrap 4.3 parts
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/code";
+@import "../node_modules/bootstrap/scss/grid";
+
+// QUESTION - how do you customize or access the Bootstrap's scss/_variables.scss file?
+
+@media (min-width: 768px) {
+  .custom-element {
+    color: var(--primary);
+  }
+}
