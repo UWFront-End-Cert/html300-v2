@@ -1,11 +1,15 @@
 // style.scss
+
 // Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
-
+// Overrides box-sizing: border-box;
+// .selector-for-some-widget {
+//   box-sizing: content-box;
+// }
 
 // Default variables
 // Variable overrides
