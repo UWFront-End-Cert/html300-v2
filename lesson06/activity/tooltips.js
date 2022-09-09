@@ -13,14 +13,19 @@
 //   if ($('.btn.secondary').button('toggle').addClass('')  )
 // })
 
-  $('#clickMe').on('click',function() {
-      $('#submitBtn').removeAttr('disabled');
-      alert('Clicked ME Worked')
-  });
-
 
 // show.bs.tooltip: fires immediately when show instance method is called.
 // shown.bs.tooltip: fired when tooltip has been made visible to the user (will wait for CSS transitions to complete.)
 // hide.bs.tooltip: fired when hide instance method has been called.
 // hidden.bs.tooltip: fired when tooltip has finished being hidden from the user (user will wait for CSS transitions to complete).
 // inserted.bs.tooltip: fired after show.bs.tooltip event when tooltip template has been added to DOM.
+
+// Jquery
+// $('#clickMe').on('click', function(){
+//   $('#submit').removeAttr('disabled')
+// })
+
+// Vanilla JS
+document.querySelector('#clickMe').addEventListener('click', function (event) {
+	document.querySelector('#submit').removeAttribute('disabled')
+});
