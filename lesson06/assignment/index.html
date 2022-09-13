@@ -15,8 +15,8 @@
     <title>Assignment 06 - Bootstrap 4 - Landing Page</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Croom WWII Album</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <a class="navbar-brand" href="#">G.Croom</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,35 +27,73 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Gallery</a>
+            <a class="nav-link" href="./images.html">Gallery</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              References
+              About
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">History</a>
               <a class="dropdown-item" href="#">Rememberance</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Links</a>
+              <a class="dropdown-item" href="#">Art</a>
             </div>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
     </nav>
     <main class="main">
       <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <h1 class="display-4">History and Family</h1>
+        <p class="lead">My Great Uncle Gerald N. Croom was a Military Police officer during the second World War. It was an honor when he gave me his WWII album and I hope to honor him by helping it live on. Remembering Gerald (Jerry to friends) and those that fought so fearlessly for the World.</p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p>Stationed in Deauville, France</p>
         <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+          <a class="btn btn-info btn-lg" href="https://en.indeauville.fr/la-place-morny" role="button">Place Morny, Deauville, France</a>
+          <a class="btn btn-info btn-lg" href="https://www.dday-overlord.com/en/battle-of-normandy/allied-operations/cobra" role="button">D-Day Operation Cobra</a>
         </p>
+      </div>
+      <div>
+        <div>
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width=100% height=250px xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Responsive image">
+            <title>Placeholder</title>
+            <rect width=100% height=100% fill= #7093A1></rect>
+            <text x=50% y=50% fill=#dee2e6 dy=.3em>Responsive image</text>
+          </svg> -->
+          <div>
+            <img class="img fluid" src="./imgs/AdobeStock_353186138.jpeg" width=100% height=350px  alt="Normandy's Beach" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Normandy's Beach">
+              <title>Normandy's Beach</title>
+              <rect width=100% height=100% ></rect>
+              <!-- <text x=50% y=50% fill=#dee2e6 dy=.6em>Responsive image</text> -->
+            </img>
+          </div>
+
+          <img class="img-fluid img-thumbnail" src="./imgs/Croom-Deauville-France-1-Sept-1945-th.jpg"  width=40% preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Gerald Croom, Deauville, France, September 1, 1945" alt="Responsive image">
+          <img src="" alt="" dir="ltr" draggable="false" style="" title="Gerald Croom, Deauville, France, September 1, 1945">
+        </div>
+          <!-- https://litipsum.com/  The Adventures of Sherlock Holmes-->
+          <p class="">"Really! Does it not strike you as a little singular that this McCarthy, who appears to have had little of his own, and to have been under such obligations to Turner, should still talk of marrying his son to Turner's daughter, who is, presumably, heiress to the estate, and that in such a very cocksure manner, as if it were merely a case of a proposal and all else would follow? It is the more strange, since we know that Turner himself was averse to the idea. The daughter told us as much. Do you not deduce something from that?"</p>
+
+          <p>"We have got to the deductions and the inferences," said Lestrade, winking at me. "I find it hard enough to tackle facts, Holmes, without flying away after theories and fancies."</p>
+
+          <p>"You are right," said Holmes demurely; "you do find it very hard to tackle the facts."</p>
+
+          <p>"Anyhow, I have grasped one fact which you seem to find it difficult to get hold of," replied Lestrade with some warmth.</p>
+
+          <p>"And that is--"</p>
+
+          <p>"That McCarthy senior met his death from McCarthy junior and that all theories to the contrary are the merest moonshine."</p>
+
+          <p>"Well, moonshine is a brighter thing than fog," said Holmes, laughing. "But I am very much mistaken if this is not Hatherley Farm upon the left."</p>
+
+          <p>"Yes, that is it." It was a widespread, comfortable-looking building, two-storied, slate-roofed, with great yellow blotches of lichen upon the grey walls. The drawn blinds and the smokeless chimneys, however, gave it a stricken look, as though the weight of this horror still lay heavy upon it. We called at the door, when the maid, at Holmes' request, showed us the boots which her master wore at the time of his death, and also a pair of the son's, though not the pair which he had then had. Having measured these very carefully from seven or eight different points, Holmes desired to be led to the court-yard, from which we all followed the winding track which led to Boscombe Pool.</p>
+
+          <p>Sherlock Holmes was transformed when he was hot upon such a scent as this. Men who had only known the quiet thinker and logician of Baker Street would have failed to recognise him. His face flushed and darkened. His brows were drawn into two hard black lines, while his eyes shone out from beneath them with a steely glitter. His face was bent downward, his shoulders bowed, his lips compressed, and the veins stood out like whipcord in his long, sinewy neck. His nostrils seemed to dilate with a purely animal lust for the chase, and his mind was so absolutely concentrated upon the matter before him that a question or remark fell unheeded upon his ears, or, at the most, only provoked a quick, impatient snarl in reply. Swiftly and silently he made his way along the track which ran through the meadows, and so by way of the woods to the Boscombe Pool. It was damp, marshy ground, as is all that district, and there were marks of many feet, both upon the path and amid the short grass which bounded it on either side. Sometimes Holmes would hurry on, sometimes stop dead, and once he made quite a little detour into the meadow. Lestrade and I walked behind him, the detective indifferent and contemptuous, while I watched my friend with the interest which sprang from the conviction that every one of his actions was directed towards a definite end.</p>
       </div>
     </main>
 

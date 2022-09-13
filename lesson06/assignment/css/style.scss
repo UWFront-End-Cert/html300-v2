@@ -6,15 +6,177 @@
 @import 'settings.responsive';
 @import 'components.content';
 
-// Overrides box-sizing: border-box;
-// .selector-for-some-widget {
-//   box-sizing: content-box;
-// }
+*, ::after, ::before {
+  box-sizing: border-box;
+}
 
-// Default variables
-// Variable overrides
+Overrides box-sizing: border-box;
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+
+// My variable overrides
 $body-bg: #000000;
 $body-color: #111111;
+
+$theme-colors: (
+  "primary": #0074d9,
+  "danger": #ff4136
+);
+
+$theme-colors: (
+  "custom-gray": #d5d4d3; // background color
+  "custom-lightblue": #ebf9fe; // text color and accent
+  "custom-medblue": #beced5; // background color and text color, title color
+  "custom-plum": #312c49; // dark background and accent
+  "custom-black": #0f092d; // high contrast background
+  "custom-brightblue": #4cbeeb;
+  "custom-button-gray": #dae3e7;
+  "custom-lightgray": #ebebeb;
+  "custom-periwinkle": #bbb6d3;
+)
+// Monochromatic Colors $periwinkle
+$theme-colors: (
+  "mp-bg": #ffffff; // white
+  "mp-body-color": #c3c3df; // light periwinkle
+  "mp-accent": #8080bc; // medium periwinkle
+  "mp-accent2": #4a4a8c; // dark periwinkle
+  "mp-dark-bg": #19192d; // darkest periwinkle
+)
+
+// Monochromatic Colors teal blues
+$theme-colors: (
+  "mb-bg": #e4f1f6; // lightest teal blue
+  "mb-body-color": #67afcb; // light teal blue
+  "mb-accent": #347b98; // medium teal blue
+  "mb-accent2": #1a3e4c; // dark teal blue
+  "mb-dark-bg": #092834; // darkest teal blue
+)
+body {
+    margin: 0;
+    font-family: $font-fam;
+    font-size: 100%;
+    color: $textcolor;
+    line-height: 1.4;
+    text-align: left;
+    background-color: #fff;
+}
+a {
+  color: var(--orange);
+}
+text {
+  display: block;
+  white-space: nowrap;
+}
+div {
+  display: block;
+}
+
+// Optional Bootstrap parts
+
+
+// Images page - Responsive Images
+
+.bd-placeholder-img-lg {
+  font-size: 3.5rem;
+}
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  user-select: none;
+}
+.img-fluid {
+  max-width: 100% \9;
+  height: auto;
+}
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+// thumbnail images
+.bd-example {
+  position: relative;
+  padding: 1rem;
+  margin: 1rem -15px 0;
+  border: solid #f8f9fa;
+  border-width: .2rem 0 0;
+}
+.bd-example::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.img-* {
+  
+}
+.img-thumbnail {
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  max-width: 100%;
+  height: auto;
+}
+div.text-center {
+  text-align: center!important;
+}
+rect {
+  width: 100%;
+  height: 100%;
+  fill: rgb(134, 142, 150);
+}
+:not(svg) {
+  transform-origin: 0px 0px;
+}
+.bd-example>img+img, .bd-example>svg+svg {
+  margin-left: .5rem;
+}
+.float-right {
+  float: right;
+}
+.rounded {
+  border-radius: .25rem
+}
+figure {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+// Grid area
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 149px 81px 649px 1fr 152px;
+  grid-template-areas:
+    'header header header header header'
+    'nav nav nav nav nav'
+    'sidebar main main main main'
+    'footer footer footer footer footer';
+}
+
+.item1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:  1em;
+    color: $white;
+    font-family: $font-fam;
+    font-size: $fontsize;
+}
+@media print {
+  .container {
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-element {
+    color: var(--primary);
+  }
+}
 
 // Bootstrap and its default variables - this imports all of bootstrap variables
 // @import "../node_modules/bootstrap/scss/bootstrap";
@@ -22,20 +184,16 @@ $body-color: #111111;
   // Put Bootstrap imports at the end of the Sass file.
 
 // Required Bootstrap 4.3 parts
+// Functions can manipulate colors, SVGs, calc, etc
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
+$theme-colors: map-remove($theme-colors, "info", "light", "dark");
+
 // Optional Bootstrap 4.3 parts
-@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/code";
 @import "../node_modules/bootstrap/scss/grid";
-
-// QUESTION - how do you customize or access the Bootstrap's scss/_variables.scss file?
-
-@media (min-width: 768px) {
-  .custom-element {
-    color: var(--primary);
-  }
-}
