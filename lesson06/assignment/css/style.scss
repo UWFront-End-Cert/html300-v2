@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-Overrides box-sizing: border-box;
+overrides box-sizing: border-box;
 .selector-for-some-widget {
   box-sizing: content-box;
 }
@@ -77,7 +77,9 @@ div {
 
 
 // Images page - Responsive Images
-
+.containerC {
+  
+}
 .bd-placeholder-img-lg {
   font-size: 3.5rem;
 }
@@ -108,7 +110,7 @@ svg {
   content: "";
 }
 .img-* {
-  
+
 }
 .img-thumbnail {
   padding: .25rem;
