@@ -18,6 +18,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.2.1",
+        "mdb-ui-kit": "^5.0.0",
         "yarn": "^1.22.19"
     }
 }
