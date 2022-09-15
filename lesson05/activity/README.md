@@ -1,5 +1,8 @@
 # Lesson 05 - Flexbox Activity
 
+### Required setup if not already installed (it should be)
+- Install version 14 or higher of [node](https://nodejs.org/en/) (this is enforced by the "engines" in packages.json)
+
 We will be building out a flexbox header component with navigation and logo/CTA buttons.
 
 ### To get started:
