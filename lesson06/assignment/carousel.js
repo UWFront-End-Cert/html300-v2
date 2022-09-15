@@ -1,1 +1,3 @@
-import { Carousel } from 'mdb-ui-kit';
+// import { Carousel } from 'mdb-ui-kit';
+
+$('.carousel').carousel()

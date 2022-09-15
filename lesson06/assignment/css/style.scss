@@ -10,14 +10,13 @@
   box-sizing: border-box;
 }
 
-overrides box-sizing: border-box;
+overrides { box-sizing: border-box; }
 .selector-for-some-widget {
   box-sizing: content-box;
 }
 
-
 // My variable overrides
-$body-bg: #000000;
+$body-bg: #ffffff;
 $body-color: #111111;
 
 $theme-colors: (
@@ -26,33 +25,34 @@ $theme-colors: (
 );
 
 $theme-colors: (
-  "custom-gray": #d5d4d3; // background color
-  "custom-lightblue": #ebf9fe; // text color and accent
-  "custom-medblue": #beced5; // background color and text color, title color
-  "custom-plum": #312c49; // dark background and accent
-  "custom-black": #0f092d; // high contrast background
-  "custom-brightblue": #4cbeeb;
-  "custom-button-gray": #dae3e7;
-  "custom-lightgray": #ebebeb;
-  "custom-periwinkle": #bbb6d3;
-)
+  "custom-gray": #d5d4d3, // background color
+  "custom-lightblue": #ebf9fe, // text color and accent
+  "custom-medblue": #beced5, // background color and text color, title color
+  "custom-plum": #312c49, // dark background and accent
+  "custom-black": #0f092d, // high contrast background
+  "custom-brightblue": #4cbeeb,
+  "custom-button-gray": #dae3e7,
+  "custom-lightgray": #ebebeb,
+  "custom-periwinkle": #bbb6d3
+);
 // Monochromatic Colors $periwinkle
 $theme-colors: (
-  "mp-bg": #ffffff; // white
-  "mp-body-color": #c3c3df; // light periwinkle
-  "mp-accent": #8080bc; // medium periwinkle
-  "mp-accent2": #4a4a8c; // dark periwinkle
-  "mp-dark-bg": #19192d; // darkest periwinkle
-)
+  "mp-bg": #ffffff, // white
+  "mp-body-color": #c3c3df, // light periwinkle
+  "mp-accent": #8080bc, // medium periwinkle
+  "mp-accent2": #4a4a8c, // dark periwinkle
+  "mp-dark-bg": #19192d // darkest periwinkle
+);
 
 // Monochromatic Colors teal blues
 $theme-colors: (
-  "mb-bg": #e4f1f6; // lightest teal blue
-  "mb-body-color": #67afcb; // light teal blue
-  "mb-accent": #347b98; // medium teal blue
-  "mb-accent2": #1a3e4c; // dark teal blue
-  "mb-dark-bg": #092834; // darkest teal blue
-)
+  "mb-bg": #e4f1f6, // lightest teal blue
+  "mb-body-color": #67afcb, // light teal blue
+  "mb-accent": #347b98, // medium teal blue
+  "mb-accent2": #1a3e4c, // dark teal blue
+  "mb-dark-bg": #092834 // darkest teal blue
+);
+
 body {
     margin: 0;
     font-family: $font-fam;
@@ -76,10 +76,22 @@ div {
 // Optional Bootstrap parts
 
 
-// Images page - Responsive Images
-.containerC {
-  
+// Normandy Images - Carousel Page - Responsive Images
+.container-1 {
+
 }
+.carousel-inner > .carousel-item > img {
+  width: auto;
+  //max-width: 100% \9;
+  //height: auto;
+}
+.carousel-caption {
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+// End Normandy Images - Carousel page
+
 .bd-placeholder-img-lg {
   font-size: 3.5rem;
 }
@@ -89,8 +101,11 @@ div {
   user-select: none;
 }
 .img-fluid {
-  max-width: 100% \9;
-  height: auto;
+    //max-width: 100% \9;
+    //height: auto;
+  // Carousel
+  width: auto;
+  max-height: 480px;
 }
 svg {
   overflow: hidden;
@@ -178,7 +193,14 @@ figure {
   .custom-element {
     color: var(--primary);
   }
+  .carousel-caption {
+     font-size-adjust: 0.5;
+     left: 50%;
+     top: 60%;
+     transform: translate(-50%, -50%);
+ }
 }
+
 
 // Bootstrap and its default variables - this imports all of bootstrap variables
 // @import "../node_modules/bootstrap/scss/bootstrap";
@@ -192,10 +214,3 @@ figure {
 @import "../node_modules/bootstrap/scss/mixins";
 
 $theme-colors: map-remove($theme-colors, "info", "light", "dark");
-
-// Optional Bootstrap 4.3 parts
-@import "../node_modules/bootstrap/scss/reboot";
-@import "../node_modules/bootstrap/scss/type";
-@import "../node_modules/bootstrap/scss/images";
-@import "../node_modules/bootstrap/scss/code";
-@import "../node_modules/bootstrap/scss/grid";
