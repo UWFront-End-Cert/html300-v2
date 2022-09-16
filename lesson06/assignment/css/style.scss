@@ -15,44 +15,6 @@ overrides { box-sizing: border-box; }
   box-sizing: content-box;
 }
 
-// My variable overrides
-$body-bg: #ffffff;
-$body-color: #111111;
-
-$theme-colors: (
-  "primary": #0074d9,
-  "danger": #ff4136
-);
-
-$theme-colors: (
-  "custom-gray": #d5d4d3, // background color
-  "custom-lightblue": #ebf9fe, // text color and accent
-  "custom-medblue": #beced5, // background color and text color, title color
-  "custom-plum": #312c49, // dark background and accent
-  "custom-black": #0f092d, // high contrast background
-  "custom-brightblue": #4cbeeb,
-  "custom-button-gray": #dae3e7,
-  "custom-lightgray": #ebebeb,
-  "custom-periwinkle": #bbb6d3
-);
-// Monochromatic Colors $periwinkle
-$theme-colors: (
-  "mp-bg": #ffffff, // white
-  "mp-body-color": #c3c3df, // light periwinkle
-  "mp-accent": #8080bc, // medium periwinkle
-  "mp-accent2": #4a4a8c, // dark periwinkle
-  "mp-dark-bg": #19192d // darkest periwinkle
-);
-
-// Monochromatic Colors teal blues
-$theme-colors: (
-  "mb-bg": #e4f1f6, // lightest teal blue
-  "mb-body-color": #67afcb, // light teal blue
-  "mb-accent": #347b98, // medium teal blue
-  "mb-accent2": #1a3e4c, // dark teal blue
-  "mb-dark-bg": #092834 // darkest teal blue
-);
-
 body {
     margin: 0;
     font-family: $font-fam;
@@ -63,7 +25,7 @@ body {
     background-color: #fff;
 }
 a {
-  color: var(--orange);
+  color: var(--teal);
 }
 text {
   display: block;
@@ -73,8 +35,44 @@ div {
   display: block;
 }
 
+// My variable overrides
 // Optional Bootstrap parts
+$body-bg: #ffffff;
+$body-color: #111111;
 
+/* index.html page overrides */
+// Jumbotron
+.jumbotron {
+  padding: 1rem;
+  margin: 0;
+};
+.jumbotron p.lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+// container
+.container-x.d-inline img {
+
+}
+.caption div {
+  overflow: hidden;
+  max-width: 480px;
+  align-items: flex-start;
+  text-align: center;
+}
+p.custom {
+  margin-bottom: .1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.display-2 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+.lead {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 
 // Normandy Images - Carousel Page - Responsive Images
 .container-1 {
