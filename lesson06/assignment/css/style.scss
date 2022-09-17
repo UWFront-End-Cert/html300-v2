@@ -31,10 +31,19 @@ text {
   display: block;
   white-space: nowrap;
 }
+.text-right {
+  padding-right: 1rem;
+}
 div {
   display: block;
 }
-
+.containerA {
+  margin-left: 2rem;
+}
+.container3 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 // My variable overrides
 // Optional Bootstrap parts
 $body-bg: #ffffff;
@@ -72,6 +81,21 @@ p.custom {
 .lead {
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+// Gallery Image Page thumbnail
+img.thumbnail {
+  float: left;
+  width: 478px;
+  height: 330px;
+  object-fit: cover;
+  // border: 1px solid #ddd;
+  // border-radius: 4px;
+  // padding: 5px;
+  // width: 478px;
+}
+img.thumbnail:hover {
+  box-shadow: 0 0 2px 1px;
 }
 
 // Normandy Images - Carousel Page - Responsive Images
@@ -112,8 +136,9 @@ svg {
 // thumbnail images
 .bd-example {
   position: relative;
-  padding: 1rem;
-  margin: 1rem -15px 0;
+  padding: 0rem;
+  margin: 0 1rem 0;
+  // margin: 1rem -15px 0;
   border: solid #f8f9fa;
   border-width: .2rem 0 0;
 }
