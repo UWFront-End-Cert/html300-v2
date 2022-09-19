@@ -31,15 +31,19 @@ text {
   display: block;
   white-space: nowrap;
 }
+
 .text-right {
   padding-right: 1rem;
 }
+
 div {
   display: block;
 }
 .containerA {
   margin-left: 2rem;
 }
+
+
 .container3 {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -127,7 +131,7 @@ img.thumbnail:hover {
     //height: auto;
   // Carousel
   width: auto;
-  max-height: 480px;
+  //max-height: 480px;
 }
 svg {
   overflow: hidden;
@@ -185,6 +189,21 @@ figure {
   margin-inline-start: 40px;
   margin-inline-end: 40px;
 }
+
+/* Grid container - history page */
+.container-g {
+  margin-left: 2rem;
+
+}
+.col {
+  max-width: 30%;
+  .card {
+    width: 100%;
+  }
+}
+
+
+
 // Grid area
 .container2 {
   display: grid;

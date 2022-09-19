@@ -13,10 +13,10 @@
     <!-- Sass CSS -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <title>Assignment 06 - Bootstrap 4 - Accordian Page</title>
+    <title>Assignment 06 - Bootstrap 4 - Accordian-History Page</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <a class="navbar-brand" href="#">G.Croom</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,8 +24,8 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./images.html">Gallery</a>
@@ -35,8 +35,8 @@
               About
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="./accordian.html">History <span class="sr-only">(current)</span></a>
-              <a class="dropdown-item" href="#">Rememberance</a>
+              <a class="dropdown-item active" href="./accordian.html">History <span class="sr-only">(current)</span></a>
+              <a class="dropdown-item" href="./grid.html">Rememberance</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="./carousel.html">Normandy Images</a>
             </div>
@@ -49,61 +49,68 @@
       </div>
     </nav>
     <main class="main">
-      <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </p>
-      </div>
-      <!-- Accordian Start -->
-      <div class="accordion" id="accordionExample">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Collapsible Group Item #1
-              </button>
-            </h2>
-          </div>
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div class="card-body">
-                Godfather ipsum dolor sit amet. Friends and money - oil and water. This one time, this one time I'll let you ask me about my affairs. If anything in this life is certain, if history has taught us anything, it is that you can kill anyone. It's a Sicilian message. It means Luca Brasi sleeps with the fishes.
-                <a href="http://www.omaha-beach.eu/"><strong>Omaha Beach June 6, 1944</strong>Omaha Beach Project</a>
+      <h1 class="ml-2 mb-1">World War II History found in the pages of an Album</h1>
+          <img class="img fluid" src="./imgs/AdobeStock_175334157.jpeg" width=100% height=250px  alt="Pointe du Hoc, Cricqueville-en-Bessin, Normandie, Calvados, France By Pascal Moulin" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Pointe du Hoc, Cricqueville-en-Bessin, Normandie, Calvados, France By Pascal Moulin">
+            <title>Pointe du Hoc, Cricqueville-en-Bessin, Normandie, Calvados, France By Pascal Moulin</title>
+            <rect width=100% height=100% ></rect>
+            <text class="bg-dark text-white text-right mb-3" x=50% y=50% dy=.10em>Pointe du Hoc, Cricqueville-en-Bessin, Normandie, Calvados, France by Pascal Moulin</text>
+          </img>
+
+
+
+
+            <!-- Accordian Start -->
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link text-dark text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      World War II Informational Links
+                    </button>
+                  </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                      <a class="text-info" href="http://www.omaha-beach.eu/">Omaha Beach Project June 6, 1944</a>
+                      <a href="https://www.arromanches-museum.com/presentation/" class="text-info text-decoration-none btn-block d-block left-align">Musee Du Debarquement D-Day Museum Arromanches</a>
+                      <a href="https://qmmuseum.lee.army.mil/WWII/index.html#General" class="text-info text-decoration-none button d-block left-align">Army Quartermaster Corps in World War II 1941-1945</a>
+                      <a href="https://www.nationalww2museum.org/" class="text-info text-decoration-none button d-block left-align">The National WWII Museum</a>
+                    </div>
+                </div>
               </div>
-          </div>
-          </div>
-          <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Collapsible Group Item #2
-              </button>
-            </h2>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-            <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link text-dark text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">WWII Newsprint in color
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <p>Newspaper clipping found in my uncles scrap album of paintings by Ogden Pleissner. <strong>Assumed titles: ENGLAND'S AIRFIELDS and FLOCKS OF FLYING FORTRESSES.</strong> Source unknown.
+                    </p>
+                    <img class="img-fluid mx-auto d-flex pr-2"  src="./imgs/Englands-Airfields-a.jpg" width=100% preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Newsprint Englands-Airfields" alt="Responsive image" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link text-dark text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      The Stars and Stripes Paris Edition, Monday, May 7, 1945
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <img class="img-fluid mx-auto d-flex pr-2"  src="./imgs/Front Page.jpg" width=100% preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Newsprint Englands-Airfields" alt="Responsive image" />
+                    <img class="img-fluid mx-auto d-flex pr-2 mt-2"  src="./imgs/Page 2.jpg" width=100% preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Newsprint Englands-Airfields" alt="Responsive image" />
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Collapsible Group Item #3
-              </button>
-            </h2>
-          </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-            <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-          </div>
-        </div>
-      </div>
+
     </main>
 
     <!-- Optional JavaScript -->
