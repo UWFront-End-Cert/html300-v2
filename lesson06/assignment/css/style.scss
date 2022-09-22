@@ -10,6 +10,8 @@
   box-sizing: border-box;
 }
 
+// My variable overrides
+
 overrides { box-sizing: border-box; }
 .selector-for-some-widget {
   box-sizing: content-box;
@@ -24,9 +26,11 @@ body {
     text-align: left;
     background-color: #fff;
 }
+
 a {
   color: var(--teal);
 }
+
 text {
   display: block;
   white-space: nowrap;
@@ -39,6 +43,7 @@ text {
 div {
   display: block;
 }
+
 .containerA {
   margin-left: 2rem;
 }
@@ -48,8 +53,7 @@ div {
   margin-left: 2rem;
   margin-right: 2rem;
 }
-// My variable overrides
-// Optional Bootstrap parts
+
 $body-bg: #ffffff;
 $body-color: #111111;
 
@@ -106,16 +110,36 @@ img.thumbnail:hover {
 .container-1 {
 
 }
+.parent {
+  position: relative;
+  z-index: 1;
+}
+
 .carousel-inner > .carousel-item > img {
   width: auto;
   //max-width: 100% \9;
   //height: auto;
 }
+
 .carousel-caption {
+    position: absolute;
+    color: #ffffff;
     left: 50%;
     top: 70%;
     transform: translate(-50%, -50%);
+    z-index: 1000;
 }
+
+.overlay {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(255,255,255,0) );
+}
+
 // End Normandy Images - Carousel page
 
 .bd-placeholder-img-lg {
@@ -236,9 +260,9 @@ figure {
     color: var(--primary);
   }
   .carousel-caption {
-     font-size-adjust: 0.5;
+     font-size-adjust: 1rem;
      left: 50%;
-     top: 60%;
+     top: 50%;
      transform: translate(-50%, -50%);
  }
 }
