@@ -215,8 +215,9 @@ figure {
 }
 
 /* Grid container - history page */
-.container-g {
-  margin-left: 2rem;
+.container-fluid {
+  display: grid;
+
 
 }
 .col {
@@ -224,6 +225,27 @@ figure {
   .card {
     width: 100%;
   }
+}
+.col-sm-4 {
+  background-color: bg-dark;
+  color: #ffffe6;
+  //padding-top: 1rem;
+
+}
+.col-sm-8 {
+  background-color: bg-light;
+  color: #0a0a0a;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+// .col-lg-9 img {
+//   padding: 1rem;
+//
+// }
+.col-xl {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 5;
 }
 
 
