@@ -217,8 +217,6 @@ figure {
 /* Grid container - history page */
 .container-fluid {
   display: grid;
-
-
 }
 .col {
   max-width: 30%;
@@ -246,6 +244,29 @@ figure {
   background-color: #000000;
   color: #ffffff;
   padding: 5;
+}
+.blockquote-custom {
+  position: relative;
+  font-size: 1.1rem;
+  font-family: fantasy;
+  max-width:600px;
+  z-index: 100;
+}
+// thumbnails in grid/rememberance Page
+img.img-thumbnail-g {
+  float: left;
+  width: 378px;
+  height: 330px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+img.img-thumbnail-g:hover {
+  box-shadow: 0 0 0 0;
+}
+.caption {
+  font-size: -50%;
 }
 
 
