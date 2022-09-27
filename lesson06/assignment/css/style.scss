@@ -1,6 +1,325 @@
+// style.scss
+
 // Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+// My variable overrides
+
+overrides { box-sizing: border-box; }
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-fam;
+    font-size: 100%;
+    color: $textcolor;
+    line-height: 1.4;
+    text-align: left;
+    background-color: #fff;
+}
+
+a {
+  color: var(--teal);
+}
+
+text {
+  display: block;
+  white-space: nowrap;
+}
+
+.text-right {
+  padding-right: 1rem;
+}
+
+div {
+  display: block;
+}
+
+.containerA {
+  margin-left: 2rem;
+}
+
+
+.container3 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+$body-bg: #ffffff;
+$body-color: #111111;
+
+/* index.html page overrides */
+// Jumbotron
+.jumbotron {
+  padding: 1rem;
+  margin: 0;
+};
+.jumbotron p.lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+// container
+.container-x.d-inline img {
+
+}
+.caption div {
+  overflow: hidden;
+  max-width: 480px;
+  align-items: flex-start;
+  text-align: center;
+}
+p.custom {
+  margin-bottom: .1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.display-2 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+.lead {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+// Gallery Image Page thumbnail
+img.thumbnail {
+  float: left;
+  width: 478px;
+  height: 330px;
+  object-fit: cover;
+  // border: 1px solid #ddd;
+  // border-radius: 4px;
+  // padding: 5px;
+  // width: 478px;
+}
+img.thumbnail:hover {
+  box-shadow: 0 0 2px 1px;
+}
+
+// Normandy Images - Carousel Page - Responsive Images
+.container-1 {
+
+}
+.parent {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-inner > .carousel-item > img {
+  width: auto;
+  //max-width: 100% \9;
+  //height: auto;
+}
+
+.carousel-caption {
+    position: absolute;
+    color: #ffffff;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.overlay {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(255,255,255,0) );
+}
+
+// End Normandy Images - Carousel page
+
+.bd-placeholder-img-lg {
+  font-size: 3.5rem;
+}
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  user-select: none;
+}
+.img-fluid {
+    //max-width: 100% \9;
+    //height: auto;
+  // Carousel
+  width: auto;
+  //max-height: 480px;
+}
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+// thumbnail images
+.bd-example {
+  position: relative;
+  padding: 0rem;
+  margin: 0 1rem 0;
+  // margin: 1rem -15px 0;
+  border: solid #f8f9fa;
+  border-width: .2rem 0 0;
+}
+.bd-example::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.img-* {
+
+}
+.img-thumbnail {
+  padding: .25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  max-width: 100%;
+  height: auto;
+}
+div.text-center {
+  text-align: center!important;
+}
+rect {
+  width: 100%;
+  height: 100%;
+  fill: rgb(134, 142, 150);
+}
+:not(svg) {
+  transform-origin: 0px 0px;
+}
+.bd-example>img+img, .bd-example>svg+svg {
+  margin-left: .5rem;
+}
+.float-right {
+  float: right;
+}
+.rounded {
+  border-radius: .25rem
+}
+figure {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+
+/* Grid container - history page */
+.container-fluid {
+  display: grid;
+}
+.col {
+  max-width: 30%;
+  .card {
+    width: 100%;
+  }
+}
+.col-sm-4 {
+  background-color: bg-dark;
+  color: #ffffe6;
+  //padding-top: 1rem;
+
+}
+.col-sm-8 {
+  background-color: bg-light;
+  color: #0a0a0a;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+// .col-lg-9 img {
+//   padding: 1rem;
+//
+// }
+.col-xl {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 5;
+}
+.blockquote-custom {
+  position: relative;
+  font-size: 1.1rem;
+  font-family: fantasy;
+  max-width:600px;
+  z-index: 100;
+}
+// thumbnails in grid/rememberance Page
+img.img-thumbnail-g {
+  float: left;
+  width: 378px;
+  height: 330px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+img.img-thumbnail-g:hover {
+  box-shadow: 0 0 0 0;
+}
+.caption {
+  font-size: -50%;
+}
+
+
+
+// Grid area
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 149px 81px 649px 1fr 152px;
+  grid-template-areas:
+    'header header header header header'
+    'nav nav nav nav nav'
+    'sidebar main main main main'
+    'footer footer footer footer footer';
+}
+
+.item1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:  1em;
+    color: $white;
+    font-family: $font-fam;
+    font-size: $fontsize;
+}
+@media print {
+  .container {
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-element {
+    color: var(--primary);
+  }
+  .carousel-caption {
+     font-size-adjust: 1rem;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+ }
+}
+
+
+// Bootstrap and its default variables - this imports all of bootstrap variables
+// @import "../node_modules/bootstrap/scss/bootstrap";
+  // Variable overrides within the same Sass file can come before or after the default variables. However, when overriding across Sass files, your overrides must come before you import Bootstrap’s Sass files. (https://getbootstrap.com/docs/4.3/getting-started/theming/#sass)
+  // Put Bootstrap imports at the end of the Sass file.
+
+// Required Bootstrap 4.3 parts
+// Functions can manipulate colors, SVGs, calc, etc
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$theme-colors: map-remove($theme-colors, "info", "light", "dark");

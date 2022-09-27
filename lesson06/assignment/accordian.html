@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Sass CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Assignment 06 - Bootstrap 4 - Accordian-History Page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="#">G.Croom</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./images.html">Gallery</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item active" href="./accordian.html">History <span class="sr-only">(current)</span></a>
+              <a class="dropdown-item" href="./grid.html">Rememberance</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="./carousel.html">Normandy Images</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <main class="main">
+      <h1 class="ml-2 mb-1">World War II History found in the pages of an Album</h1>
+          <img class="img fluid" src="./imgs/AdobeStock_175334157.jpeg" width=100% height=250px  alt="Pointe du Hoc, Cricqueville-en-Bessin, Normandie, Calvados, France By Pascal Moulin" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Pointe du Hoc, Cricqueville-en-Bessin, Normandie, Calvados, France By Pascal Moulin">
+            <title>Pointe du Hoc, Cricqueville-en-Bessin, Normandie, Calvados, France By Pascal Moulin</title>
+            <rect width=100% height=100% ></rect>
+            <text class="bg-dark text-white text-right mb-3" x=50% y=50% dy=.10em>Pointe du Hoc, Cricqueville-en-Bessin, Normandie, Calvados, France by Pascal Moulin</text>
+          </img>
+
+
+
+
+            <!-- Accordian Start -->
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link text-dark text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      World War II Informational Links
+                    </button>
+                  </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                      <a class="text-info" href="http://www.omaha-beach.eu/">Omaha Beach Project June 6, 1944</a>
+                      <a href="https://www.arromanches-museum.com/presentation/" class="text-info text-decoration-none btn-block d-block left-align">Musee Du Debarquement D-Day Museum Arromanches</a>
+                      <a href="https://qmmuseum.lee.army.mil/WWII/index.html#General" class="text-info text-decoration-none button d-block left-align">Army Quartermaster Corps in World War II 1941-1945</a>
+                      <a href="https://www.nationalww2museum.org/" class="text-info text-decoration-none button d-block left-align">The National WWII Museum</a>
+                      <a href="https://www.eisenhowerlibrary.gov/research/online-documents/world-war-ii-d-day-invasion-normandy" class="text-info text-decoration-none button d-block left-align">World War II: D-Day, The Invasion of Normandy</a>
+                    </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link text-dark text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">WWII Newsprint in color
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <p>Newspaper clipping found in my uncles scrap album of paintings by Ogden Pleissner. <strong>Assumed titles: ENGLAND'S AIRFIELDS and FLOCKS OF FLYING FORTRESSES.</strong> Source unknown.
+                    </p>
+                    <img class="img-fluid mx-auto d-flex pr-2"  src="./imgs/Englands-Airfields-a.jpg" width=100% preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Newsprint Englands-Airfields" alt="Responsive image" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link text-dark text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      The Stars and Stripes Paris Edition, Monday, May 7, 1945
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <img class="img-fluid mx-auto d-flex pr-2"  src="./imgs/front-page.jpg" width=100% preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Newsprint Englands-Airfields" alt="Responsive image" />
+                    <img class="img-fluid mx-auto d-flex pr-2 mt-2"  src="./imgs/page-2.jpg" width=100% preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Newsprint Englands-Airfields" alt="Responsive image" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
