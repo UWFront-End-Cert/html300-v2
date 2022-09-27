@@ -1,0 +1,14 @@
+{
+  "name": "0.0.1",
+  "version": "0.0.1",
+  "description": "a package to test how npm works",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "diana gonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "random-joke-getter": "^2.0.3"
+  }
+}
