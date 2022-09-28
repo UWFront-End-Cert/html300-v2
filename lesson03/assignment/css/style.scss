@@ -4,3 +4,113 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// border radius
+@mixin border-radius($radius: .8rem) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// box shadow for outside and inset
+@mixin box-shadow($horiz : .1em , $vert : .1em , $blur : .7em , $color : $shadow-gray , $inset : false) {
+  @if $inset {
+    -webkit-box-shadow:inset $horiz $vert $blur $color;
+    -moz-box-shadow:inset $horiz $vert $blur $color;
+    box-shadow:inset $horiz $vert $blur $color;
+  } @else {
+    -webkit-box-shadow: $horiz $vert $blur $color;
+    -moz-box-shadow: $horiz $vert $blur $color;
+    box-shadow: $horiz $vert $blur $color;
+  }
+}
+
+.main {
+  @media screen and (max-width: 20em) {
+    padding: 1rem;
+  }
+}
+
+// employee card main container
+.employee-card {
+  max-width: 1020px;
+  @include border-radius;
+  @include box-shadow;
+  display: flex;
+  border: solid 3.2rem lighten( $base-gray, 40%);
+  margin-bottom: 3rem;
+  padding: 2rem;
+
+  @include media-query($breakpoint-mobile) {
+    flex-wrap: wrap;
+    border-width: 1.5rem;
+    padding: 1rem;
+  }
+}
+
+// employee image, name and title container
+.name-container {
+  text-align: center;
+  img {
+    border-radius: 50%;
+    @include box-shadow;
+    @include media-query($breakpoint-small) {
+      width: 85%;
+    }
+  }
+  h1 {
+    font-size: 1.8rem;
+    color: $base-gray;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 1.25rem;
+    font-weight: $occupation;
+    font-style: italic;
+    color: $base-gray;
+    margin-top: .5rem;
+  }
+}
+
+// employee profile details container
+.profile-detail {
+  background-color: lighten( $base-gray, 65%);
+  width: 40rem;
+  margin: .5rem .5rem .5rem 2rem;
+  padding: 1.5rem 2rem 2rem;
+  color: $base-gray;
+  @include box-shadow;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 2.5rem;
+  }
+  li {
+    font-weight: $occupation;
+    span {
+      font-weight: $heading;
+    }
+  }
+  .linkedin-logo {
+    vertical-align: middle;
+    width: 28px;
+  }
+  .code-lang {
+    background-color: $white;
+    @include box-shadow($inset: true);
+    margin-top: .8rem;
+    padding: .8rem .5rem .8rem 1rem;
+    ul {
+      line-height: 1.5rem;
+    }
+  }
+  @include media-query($breakpoint-mobile) {
+    font-size: .8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin: 1rem 0 0;
+      ul {
+        line-height: 2rem;
+      }
+  }
+}
