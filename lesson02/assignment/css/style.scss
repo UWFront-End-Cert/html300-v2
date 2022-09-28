@@ -4,3 +4,122 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// color library
+$base-gray: #5a5654;
+
+// font styles
+$heading: bold;
+$occupation: lighter;
+
+@mixin border-radius($radius: .8rem) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.main {
+  @media screen and (max-width: 414px) {
+    padding: 1rem;
+  }
+}
+
+// employee card main container
+.employee-card {
+  @include border-radius;
+  display: flex;
+  border: solid 3.2rem lighten( $base-gray, 40%);
+  padding: 2rem;
+
+  @media screen and (max-width: 800px) {
+      padding-left: 2rem;
+  }
+
+  @media screen and (max-width: 765px) {
+      flex-wrap: wrap;
+      padding-left: .5rem;
+  }
+
+  @media screen and (max-width: 414px) {
+    @include border-radius(.5rem);
+    border-width: 1.5rem;
+    padding: 1rem;
+  }
+
+  @media screen and (max-width: 360px) {
+    @include border-radius(.5rem);
+    border-width: 1.5rem;
+  }
+}
+
+
+// employee image & name container
+.name-container {
+  text-align: center;
+  img {
+    border-radius: 50%;
+    width: 225px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    color: $base-gray;
+  }
+  h2 {
+    font-size: 1.25rem;
+    font-weight: $occupation;
+    font-style: italic;
+    color: $base-gray;
+    line-height: .1rem;
+  }
+
+  @media screen and (max-width: 760px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 415px) {
+    img {
+      width: 200px;
+    }
+  }
+}
+
+
+// employee details container
+.profile-detail {
+  background-color: lighten( $base-gray, 60%);
+  width: 35rem;
+  margin: .5rem .5rem .5rem 2rem;
+  padding: 1.5rem 2rem 2rem;
+  text-decoration-color: $gray;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 2.5rem;
+  }
+  li {
+    font-weight: $occupation;
+    span {
+      font-weight: $heading;
+    }
+  }
+  .linkedin-logo {
+    vertical-align: middle;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: .9rem;
+  }
+
+  @media screen and (max-width: 415px) {
+    font-size: .8rem;
+    padding-left: 1.5rem;
+    padding-right: .5rem;
+    margin: 1rem 0 0;
+    ul {
+      line-height: 2.5rem;
+    }
+    .linkedin-logo {
+      width: 18px;
+    }
+  }
+}
