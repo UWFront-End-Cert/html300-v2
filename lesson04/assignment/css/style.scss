@@ -18,7 +18,7 @@ header {
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: #adf4fd;
   overflow: hidden;
 }
 
@@ -26,7 +26,7 @@ header {
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -41,17 +41,17 @@ header {
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: #d0fd9f;
+  color: black;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+ .topnav .icon {
   display: none;
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
+ @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -73,10 +73,13 @@ header {
     text-align: left;
   }
 }
+
+
+
 main {
   display: flex;
-
-  background-color: yellow;
+  flex-wrap: wrap;
+  background-color: green;
   max-width: 100%;
   margin: 0;
 }
@@ -84,7 +87,7 @@ main {
 .main-content {
   padding:0;
   background-color: orange;
-  max-width: 75%;
+  flex: 75%;
 }
 
 
@@ -96,11 +99,10 @@ main {
 .sidebar img {
   height: 50%;
 
-
 }
 
 .sidebar {
-  max-width: 25%;
+  flex: 25%;
 
 
 }
