@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
-import GalleryView from './pages/GalleryView.vue'
-import MyHome from './pages/MyHome.vue'
+import "bootstrap"
+import NormandyPage from './pages/NormandyPage'
+import RemembrancePage from './pages/RemembrancePage'
+import HistoryPage from './pages/HistoryPage.vue'
+import GalleryPage from './pages/GalleryPage.vue'
+import HomePage from './pages/HomePage.vue'
 
 
 // Add the Router Plugin
@@ -11,8 +15,11 @@ Vue.use(VueRouter)
 
 // Define the routes
 const routes = [
-  { path: '/gallery', name: 'GalleryView', component: GalleryView },
-  { path: '/', name: 'MyHome', component: MyHome }
+  { path: '/normandy', name: 'NormandyPage', component: NormandyPage },
+  { path: '/remembrance', name: 'RemembrancePage', component: RemembrancePage },
+  { path: '/history', name: 'HistoryPage', component: HistoryPage },
+  { path: '/gallery', name: 'GalleryPage', component: GalleryPage },
+  { path: '/', name: 'HomePage', component: HomePage }
 ]
 
 // Create the router instance and pass the 'routes' option

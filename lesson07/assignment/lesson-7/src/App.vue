@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./assets/logo.png" >
     <h1>You have landed on the right page</h1>
 
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/gallery">Gallery</router-link>
-  </nav>
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/gallery">Gallery</router-link> |
+      <router-link to="/history">History</router-link> |
+      <router-link to="/remembrance">Remembrance</router-link> |
+      <router-link to="/normandy">Normandy France</router-link>
+    </nav>
     <router-view></router-view>
+    <img alt="Normandy Beach" src="./assets/AdobeStock_353186138.jpeg" width=100% height=230px>
 
     <footer>
       Footer content goes here
