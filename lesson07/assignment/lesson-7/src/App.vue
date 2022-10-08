@@ -11,7 +11,13 @@
       <router-link to="/normandy">Normandy France</router-link>
     </nav>
     <router-view></router-view>
-    <img alt="Normandy Beach" src="./assets/AdobeStock_353186138.jpeg" width=100% height=230px>
+    <div>
+      <img alt="Normandy Beach" src="./assets/AdobeStock_353186138.jpeg" width=100% height=230px />
+    </div>
+    <div class="container-x d-inline">
+      <img alt="Gerald Croom" src="./assets/Croom-Deauville-France-1-Sept-1945-th.jpg" max-width=30% />
+      <p> </p>
+    </div>
 
     <footer>
       Footer content goes here
@@ -31,6 +37,7 @@ export default {
 </script>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -39,4 +46,6 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+
 </style>
