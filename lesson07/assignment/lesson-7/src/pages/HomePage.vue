@@ -67,38 +67,29 @@ export default {
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+// Style for v-if-v-else statement
 label {
   padding-right: 30px;
 }
 
-button {
-  border: none;
-  background: teal;
-  color: dark-gray;
-  padding: 0.5em 1em;
-  border-radius: 3px;
-}
 .thumbs {
   font-size: 16px;
   margin-top: 20px;
   text-align: center;
-
 }
- p {
+
+p {
   text-align: left;
   margin-left: 2rem;
 }
+
 h3 {
   margin: 40px 0 0;
   text-align: left;
-
 }
-// Style for v-if-v-else statement
 
-
-
+// Style for navigation
 ul {
   list-style-type: none;
   padding: 0;
@@ -110,36 +101,55 @@ li {
 a {
   color: #42b983;
 }
-/* HomePage.vue*/
-// Jumbotron
+
+// Style for Jumbotron on HomePage.vue
 .jumbotron {
   padding: 1rem;
   margin: 0;
 }
+
 .jumbotron p.lead {
   margin-left: auto;
   margin-right: auto;
 }
-.lead {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  text-align: left;
-}
-btn {
-  text-decoration: none;
-}
-.img-fluid {
-  width: auto;
-  height: 350px;
-}
+
 // container
 .container-x.d-inline img {
 
 }
+
 .caption div {
   overflow: hidden;
   max-width: 480px;
   align-items: flex-start;
   text-align: center;
 }
+
+p.custom {
+  margin-bottom: .1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.display-2 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+.lead {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  text-align: left;
+}
+
+btn {
+  text-decoration: none;
+}
+
+.img-fluid {
+  width: auto;
+  height: 350px;
+}
+
+
+
 </style>

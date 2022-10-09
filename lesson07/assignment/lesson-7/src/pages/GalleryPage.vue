@@ -1,6 +1,9 @@
+<!-- Assignment 7 - Gallery - Images Page -->
 <template>
   <div id="app">
     <h1>You have landed on the gallery page.</h1>
+    <h1>WWII Photo Gallery</h1>
+      <img alt="United States MP's on motorbikes in France 1945" src="./assets/G-Croom-WWII-006-th.jpg" width=100% />
   </div>
 </template>
 
