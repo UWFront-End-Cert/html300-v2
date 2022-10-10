@@ -13,72 +13,49 @@
 
 <body>
   <header>
-    <h1>Humanitarian Resources During Global Disasters and Crisis</h1>
-    <div><a href="newsletter.html" class="btn btn-involved">Get Involved!</a>
+    <h1>Genesis Relief</h1>
+    <h2>Providing Humanitarian Resources During Global Disasters and Crisis</h2>
+    <div class="involved">
+      <button class="get-invoved" onClick="window.location.href='./newsletter.html'">Get Involved!</button>
     </div>
   </header>
-
-
-  <nav>
-    <input type="checkbox">
-    <label>&equiv;</label>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a> </li>
-      <li><a href="updates.html">Updates</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="disasters.html">Disasters</a></li>
-      <li><a href="newsletter.html">Newsletter</a></li>
-    </ul>
-  </nav>
-
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="updates.html">Updates</a>
+    <a href="resources.html">Resources</a>
+    <a href="disasters.html">Disasters</a>
+    <a href="newsletter.html">Newsletter</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
 
   <main>
     <section class="main-content">
       <div class="slide-show">
-        <img class="mySlides" src="./images/article1.jpg" style="width: 100%" alt="group of volunteers in hardhats and construction vests">
+        <img class="mySlides" src="./images/article1.jpg" style="width: 100%; display: none;" alt="group of volunteers in hardhats and construction vests">
         <img class="mySlides" src="./images/article2.jpg" style="width:100%" alt="">
-        <img class="mySlides" src="./images/article3.jpg" style="width:100%" alt="">
         <img class="mySlides" src="./images/article4.jpg" style="width:100%" alt="">
       </div>
-      <h2>
-        <span>"We've</span>
-        <span> been</span>
-        <span>given a</span>
-        <span>warning</span>
-        <span>by science</span>
-        <span>and a </span>
-        <span>wake-up</span>
-        <span>call by</span>
-        <span>nature;</span>
-        <span>it is </span>
-        <span>up to</span>
-        <span>us</span>
-        <span>now</span>
-        <span>to</span>
-        <span>heed</span>
-        <span>them.”-</span>
-        <span>Bill</span>
-        <span>McKibben</span>
-      </h2>
     </section>
 
     <section class="sidebar">
       <article>
-        <h3>Article 1</h3>
-        <img src="./images/header.jpg" alt="">
+        <h2>Article 1</h2>
+        <img src="./images/article1.jpg" alt="">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed ncididunt ut labore et dolor.
         </p>
       </article>
       <article>
         <img src="./images/article2.jpg" alt="">
-        <h3>Article 2</h3>
+        <h2>Article 2</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed ncididunt ut labore et dolor.
         </p>
       </article>
       <article>
         <img src="./images/article3.jpg" alt="">
-        <h3>Article 3</h3>
+        <h2>Article 3</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed ncididunt ut labore et dolor.
         </p>
       </article>
@@ -86,7 +63,7 @@
     </section>
   </main>
   <footer>
-    <h4>MY FOOTER</h4>
+    <h3>MY FOOTER</h3>
   </footer>
   <script src="index.js"></script>
 </body>
