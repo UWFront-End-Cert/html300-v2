@@ -1,6 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+}
 // Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
+header {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 0;
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  height: 450px;
+  background-size: contain;
+}
+
+h1 {
+  font-size: 1em;
+  margin: 3%;
+}
+/* button*/
+@mixin button-bg($bg) {
+  background: $bg;
+
+  &:hover {
+    background: darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    background: darken($bg,25%);
+  }
+}
+
+.btn {
+  display: flex;
+  order: 6;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: 'Poiret One', bold;
+  font-size: 1.5em;
+}
+
+.btn-involved {
+  @include button-bg(#e74c3c);
+}
+/* horizontal navigation: define the navigation font and basic background */
+nav {
+  background-color: #7cb143;
+  color: gray;
+  height: 40px;
+}
+/* lists: remove the nested list margin, padding & bullets */
+nav li,
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* navigation height */
+nav ul {
+  height: 40px;
+}
+/* inline layout menu */
+nav li {
+  float: left;
+  display: inline;
+}
+/* the anchor */
+nav a {
+  display: block;
+  line-height: 40px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: black;
+}
+/* hover state menu */
+nav a:hover {
+  background-color: #ddd;
+}
+/* checkbox element: for mobile navigation button */
+nav input {
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  /* hide the checkbox */
+  filter:alpha(opacity=0);
+  /* hmmm... */
+  cursor: pointer;
+}
+/* for visual purpose */
+nav label {
+  display: none;
+  font-size: 17px;
+  width: 40px;
+  height: 40px;
+  /* center vertically and horizontally */
+  line-height: 40px;
+  text-align: center;
+}
+
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 100%;
+  margin: 0;
+}
+
+.main-content {
+  flex: 70%;
+  max-height: 300px;
+  padding-right: 5%;
+
+
+}
+
+.mySlides {
+  display: none;
+  padding-bottom: 5%;
+}
+
+h2 {
+  max-width: 100%;
+  text-align: center;
+  transform: scale(1.3);
+  animation: scale 5s forwards cubic-bezier(1, 1, 1, 1);
+  padding-left: 5%;
+  padding-top: 5%;
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(7) {
+  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(8) {
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(9) {
+  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(10) {
+  animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(11) {
+  animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(12) {
+  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(13) {
+  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(14) {
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(15) {
+  animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(16) {
+  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(17) {
+  animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(18) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.sidebar img {
+  height: 50%;
+}
+
+.sidebar {
+  flex: 25%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+footer {
+  background-color: #7cb143;
+  text-align: center;
+  color: black;
+  width: 100%;
+  padding: 1em;
+  height: 25%;
+  margin-top: 1em;
+
+}
+
+footer li {
+  display:inline;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+
+}
+/*Updates CSS Grid Page */
+.all-articles {
+  display:grid;
+   grid-template-columns: repeat( 4, minmax(250px, 1fr) );
+   width: 100%;
+   padding: 1em;
+}
+
+.all-articles article {
+  margin: 1em;
+}
+
+/* MOBILE NAVIGATION */
+@media (max-width:767px) {
+  nav {
+    /* we want to absolute positioning the menu, checkbox and label element to its parent, so this is needed */
+    position: relative;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: #adf4fd;
+    height: 0;
+    /* set the sub menu height to `0` */
+    visibility: hidden;
+    /* use `visibility:hidden` instead of `display:none`, so we can animate the sub menu height */
+    overflow: hidden;
+    /* use CSS transition to animate the sub menu height */
+    -webkit-transition: all 0.26s ease-in-out;
+    -moz-transition: all 0.26s ease-in-out;
+    -ms-transition: all 0.26s ease-in-out;
+    -o-transition: all 0.26s ease-in-out;
+    transition: all 0.26s ease-in-out;
+  }
+  /* set the menu as a block list item */
+  nav li {
+    display: block;
+    float: none;
+    width: auto;
+  }
+  /* now show the checkbox and label element in mobile device */
+  nav input,
+  nav label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    /* show the menu icon */
+  }
+
+  nav input {
+    z-index: 4;
+  }
+  /* always place the checkbox above the label element */
+  /* highlight the label element and show the menu if the checkbox is checked */
+  nav input:checked + label {
+    color: #ddd;
+  }
+
+  nav input:checked ~ ul {
+    height: 120px;
+    /* (menu item height multiplied by menu length) */
+    visibility: visible;
+  }
+/* SIDEBAR DISAPEARS */
+  .sidebar {
+    visibility: hidden;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 0;
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 0.5em;
+    visibility: hidden;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
+  /* MOBILE ALL ARTICLES */
+  .all-articles {
+    display:grid;
+    grid-template-columns: repeat( 2, minmax(250px, 1fr) );
+  }
+}
