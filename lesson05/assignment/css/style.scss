@@ -110,7 +110,6 @@ nav label {
   text-align: center;
 }
 
-
 main {
   display: flex;
   flex-wrap: wrap;
@@ -123,8 +122,6 @@ main {
   flex: 70%;
   max-height: 300px;
   padding-right: 5%;
-
-
 }
 
 .mySlides {
@@ -138,7 +135,7 @@ h2 {
   transform: scale(1.3);
   animation: scale 5s forwards cubic-bezier(1, 1, 1, 1);
   padding-left: 5%;
-  padding-top: 5%;
+  overflow: hidden;
 }
 @keyframes scale {
   100% {
@@ -245,7 +242,6 @@ article img {
   height: auto;
 }
 
-
 footer {
   background-color: #7cb143;
   text-align: center;
@@ -254,31 +250,28 @@ footer {
   padding: 1em;
   height: 25%;
   margin-top: 1em;
-
 }
 
 footer li {
-  display:inline;
+  display: inline;
 }
 
 footer a {
   text-decoration: none;
   color: black;
   font-weight: bold;
-
 }
 /*Updates CSS Grid Page */
 .all-articles {
-  display:grid;
-   grid-template-columns: repeat( 4, minmax(250px, 1fr) );
-   width: 100%;
-   padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  width: 100%;
+  padding: 1em;
 }
 
 .all-articles article {
   margin: 1em;
 }
-
 /* MOBILE NAVIGATION */
 @media (max-width:767px) {
   nav {
@@ -334,7 +327,7 @@ footer a {
     /* (menu item height multiplied by menu length) */
     visibility: visible;
   }
-/* SIDEBAR DISAPEARS */
+  /* SIDEBAR DISAPEARS */
   .sidebar {
     visibility: hidden;
     transition: visibility 0s 2s, opacity 2s linear;
@@ -358,7 +351,7 @@ footer a {
   }
   /* MOBILE ALL ARTICLES */
   .all-articles {
-    display:grid;
-    grid-template-columns: repeat( 2, minmax(250px, 1fr) );
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
   }
 }
