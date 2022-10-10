@@ -2,40 +2,49 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
   <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Home Page</title>
+
+  <title>Disasters</title>
 </head>
 
 <body>
   <header>
-    <h1>Genesis Relief</h1>
-    <h2>Providing Humanitarian Resources During Global Disasters and Crisis</h2>
-    <div class="involved">
-      <button class="get-invoved" onClick="window.location.href='./newsletter.html'">Get Involved!</button>
+    <h1>Humanitarian Resources During Global Disasters and Crisis</h1>
+    <div><a href="newsletter.html" class="btn btn-involved">Get Involved!</a>
     </div>
   </header>
-  <div class="topnav" id="myTopnav">
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="updates.html">Updates</a>
-    <a href="resources.html">Resources</a>
-    <a href="disasters.html">Disasters</a>
-    <a href="newsletter.html">Newsletter</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
 
-  <main class="grid">
-    <p>ADD GRID HERE SHOWCASING ARTICLES</p>
+
+  <nav>
+    <input type="checkbox">
+    <label>&equiv;</label>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a> </li>
+      <li><a href="updates.html">Updates</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="disasters.html">Disasters</a></li>
+      <li><a href="newsletter.html">Newsletter</a></li>
+    </ul>
+  </nav>
+
+
+  <main>
+    <h1>ADD API SHOWING Disasters</h1>
   </main>
   <footer>
-    <h3>MY FOOTER</h3>
+    <ul>
+      <li><a href="./index.html">Home / </a></li>
+      <li><a href=".resources.html">Resources / </a></li>
+      <li><a href="newsletter.html">Contact</a></li>
+    </ul>
+    <p>© 2022 Genesis Relief, LLC | Seattle, WA</p>
+    <p>Diana Gonzalez</p>
   </footer>
   <script src="index.js"></script>
 </body>
