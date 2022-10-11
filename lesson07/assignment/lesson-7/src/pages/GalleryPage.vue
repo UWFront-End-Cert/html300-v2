@@ -1,9 +1,16 @@
-<!-- Assignment 7 - Gallery - Images Page -->
 <template>
   <div id="app">
-    <h1>You have landed on the gallery page.</h1>
-    <h1>WWII Photo Gallery</h1>
-      <img alt="United States MP's on motorbikes in France 1945" src="./assets/G-Croom-WWII-006-th.jpg" width=100% />
+    <h1>You have landed on the Gallery of images page.</h1>
+    <p>
+      <!-- use the router-link component for navigation. -->
+      <!-- specify the link by passing the `to` prop. -->
+      <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
+      <router-link to="/">Home</router-link> |
+      <router-link to="/gallery">Gallery</router-link>
+    </p>
+    <!-- route outlet -->
+    <!-- component matched by the route will render here -->
+    <router-view></router-view>
   </div>
 </template>
 

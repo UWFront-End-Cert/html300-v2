@@ -18,22 +18,35 @@
       <img class="img-fluid img-thumbnail float-left m-4" alt="Gerald Croom" src="./assets/Croom-Deauville-France-1-Sept-1945-th.jpg" max-width=30% />
       <p> </p>
     </div>
-
+    <ProductList />
     <footer>
       Footer content goes here
     </footer>
 
   </div>
+
 </template>
 
-<script>
+<script lang="scss ts">
+import { defineComponent } from "vue";
+import ProductList from "./views/ProductList.vue";
 export default {
   data () {
     return {
 
     }
   }
-}
+};
+export default defineComponent({
+    name: "App",
+    components: { ProductList }
+    },
+    data () {,
+      return {
+
+      }
+    });
+
 </script>
 
 <style>
