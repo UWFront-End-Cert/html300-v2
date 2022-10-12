@@ -11,16 +11,46 @@
     <!-- route outlet -->
     <!-- component matched by the route will render here -->
     <router-view></router-view>
+    <vue-images :imgs="images">
+    </vue-images>
   </div>
 </template>
 
 <script>
+import vueImages from 'vue-images/dist/vue-images'
+
 export default {
-  name: 'GalleryPage',
-  props: {
-    msg: String
+  data () {
+    return {
+      images: [
+        {
+          imageUrl: 'http://i.imgur.com/2ZFcyk9.png',
+          caption: 'Photo by 1'
+        },
+        {
+          imageUrl: 'http://i.imgur.com/Otaxjzf.jpg',
+          caption: 'Photo by 2'
+        },
+        {
+          imageUrl: 'http://i.imgur.com/zaJgzqQ.jpg',
+          caption: 'Photo by 3'
+        },
+        {
+          imageUrl: 'http://7xiblh.com1.z0.glb.clouddn.com/progressive/3.jpg',
+          caption: 'Photo by 4'
+        }
+      ]
+  },
+  components: {
+    vueImages
   }
 }
+//export default {
+//  name: 'GalleryPage',
+//  props: {
+//    msg: String
+//  }
+//}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

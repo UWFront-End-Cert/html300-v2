@@ -11,6 +11,7 @@
       <router-link to="/normandy">Normandy France</router-link>
     </nav>
     <router-view></router-view>
+    <vue-images :imgs="images"></vue-images>
     <div>
       <img alt="Normandy Beach" src="./assets/AdobeStock_353186138.jpeg" width=100% height=230px />
     </div>
@@ -18,7 +19,7 @@
       <img class="img-fluid img-thumbnail float-left m-4" alt="Gerald Croom" src="./assets/Croom-Deauville-France-1-Sept-1945-th.jpg" max-width=30% />
       <p> </p>
     </div>
-    <ProductList />
+
     <footer>
       Footer content goes here
     </footer>
@@ -27,26 +28,14 @@
 
 </template>
 
-<script lang="scss ts">
-import { defineComponent } from "vue";
-import ProductList from "./views/ProductList.vue";
-export default {
-  data () {
-    return {
+<script>
+ export default {
+   data () {
+     return {
 
-    }
-  }
-};
-export default defineComponent({
-    name: "App",
-    components: { ProductList }
-    },
-    data () {,
-      return {
-
-      }
-    });
-
+     }
+   }
+ }
 </script>
 
 <style>
