@@ -8,12 +8,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import NormandyPage from './pages/NormandyPage'
 import RemembrancePage from './pages/RemembrancePage'
 import HistoryPage from './pages/HistoryPage.vue'
-// import GalleryPage from './pages/GalleryPage.vue'
+import GalleryPage from './pages/GalleryPage.vue'
 import HomePage from './pages/HomePage.vue'
 
 // Add the Router Plugin
 Vue.use(VueRouter)
-
 
 // Define the routes
 const routes = [
@@ -30,11 +29,29 @@ const router = new VueRouter({
    mode: 'history'
 })
 
+/* eslint-disable no-new */
 new Vue({
   router,
-  render: h => h(App)
+  render: h => h(App),
+  el: '#app',
+    data () {
+    return {
+      images: [
+        {
+          imageUrl: './components/G-Croom-WWII-010-th.jpg',
+          caption: 'Photo by 1'
+        },
+        {
+          imageUrl: './components/G-Croom-WWII-011-th.jpg',
+          caption: 'Photo by 2'
+        }
+      ]
+    }
+  },
+  components: {
+    vueImages: vueImages
+  }
 }).$mount('#app')
-
 
 // new Vue({
 //   el: '#app',

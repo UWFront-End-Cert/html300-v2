@@ -22,8 +22,8 @@
         <!-- Do I use the router-link component for navigation. -->
         <!-- specify the link by passing the `to` prop. -->
         <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
-        <a class="btn btn-info btn-lg" href="https://en.indeauville.fr/la-place-morny" role="button">Place Morny, Deauville, France</a> |
-        <a class="btn btn-info btn-lg" href="https://www.dday-overlord.com/en/battle-of-normandy/allied-operations/cobra" role="button">D-Day Operation Cobra</a>
+        <a class="btn btn-info btn-lg" href="https://en.indeauville.fr/la-place-morny" role="button">Place Morny, Deauville, France  </a>  | 
+          <a class="btn btn-info btn-lg" href="https://www.dday-overlord.com/en/battle-of-normandy/allied-operations/cobra" role="button">D-Day Operation Cobra</a>
       </p>
 
     </div>
