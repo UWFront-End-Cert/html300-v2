@@ -19,7 +19,7 @@ const routes = [
   { path: '/normandy', name: 'NormandyPage', component: NormandyPage },
   { path: '/remembrance', name: 'RemembrancePage', component: RemembrancePage },
   { path: '/history', name: 'HistoryPage', component: HistoryPage },
-//  { path: '/gallery', name: 'GalleryPage', component: GalleryPage },
+  { path: '/gallery', name: 'GalleryPage', component: GalleryPage },
   { path: '/', name: 'HomePage', component: HomePage }
 ]
 
@@ -38,11 +38,11 @@ new Vue({
     return {
       images: [
         {
-          imageUrl: './components/G-Croom-WWII-010-th.jpg',
+          id: './assets/G-Croom-WWII-010-th.jpg',
           caption: 'Photo by 1'
         },
         {
-          imageUrl: './components/G-Croom-WWII-011-th.jpg',
+          id: './assets/G-Croom-WWII-011-th.jpg',
           caption: 'Photo by 2'
         }
       ]
