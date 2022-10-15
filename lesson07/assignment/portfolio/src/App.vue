@@ -8,12 +8,6 @@
       <router-link to="/normandy">Normandy France</router-link>
     </nav>
     <router-view></router-view>
-    
-
-    <footer>
-      Footer content goes here
-    </footer>
-
   </div>
 </template>
 
@@ -53,4 +47,3 @@ svg {
   border-width: .2rem 0 0;
 }
 </style>
-

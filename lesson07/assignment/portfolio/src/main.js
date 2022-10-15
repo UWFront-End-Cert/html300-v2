@@ -11,11 +11,8 @@ import HistoryPage from './pages/HistoryPage.vue'
 import GalleryPage from './pages/GalleryPage.vue'
 import HomePage from './pages/HomePage.vue'
 
-
-
 // Add the Router Plugin
 Vue.use(VueRouter)
-
 
 // Define the routes
 const routes = [
