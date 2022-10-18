@@ -1,8 +1,7 @@
-/* eslint-disable */
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
-import vueImages from 'vue-images'
+// import vueImages from 'vue-images'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import NormandyPage from './pages/NormandyPage'
@@ -10,9 +9,12 @@ import RemembrancePage from './pages/RemembrancePage'
 import HistoryPage from './pages/HistoryPage.vue'
 import GalleryPage from './pages/GalleryPage.vue'
 import HomePage from './pages/HomePage.vue'
+/* eslint-disable */
 
 // Add the Router Plugin
 Vue.use(VueRouter)
+
+Vue.config.productionTip = false;
 
 // Define the routes
 const routes = [
@@ -24,10 +26,10 @@ const routes = [
 ]
 
 // Create the router instance and pass the 'routes' option
-const router = new VueRouter({
-   routes,
-   mode: 'history'
-})
+// const router = new VueRouter({
+//    routes: Routes,
+//    mode: 'app'
+// })
 
 new Vue({
   router,

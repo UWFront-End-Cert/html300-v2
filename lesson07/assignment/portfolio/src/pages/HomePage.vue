@@ -1,5 +1,5 @@
 <template>
-  <div id="app"> 
+  <div id="app">
     <!-- Jumbotron -->
     <div class="jumbotron">
       <h1 class="display-4">History and Family</h1>
@@ -17,6 +17,7 @@
     <div>
       <img alt="Normandy Beach" src="../assets/AdobeStock_353186138.jpeg" width=100% height=230px />
     </div>
+
     <!-- Main content  -->
     <div class="container-x d-inline">
       <img class="img-fluid img-thumbnail float-left m-4" alt="Gerald Croom" src="../assets/Croom-Deauville-France-1-Sept-1945-th.jpg" max-width=30% />
