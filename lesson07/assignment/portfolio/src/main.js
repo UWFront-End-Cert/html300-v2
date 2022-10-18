@@ -3,7 +3,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 // import vueImages from 'vue-images'
 import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
+//import 'bootstrap/dist/css/bootstrap.min.css'
 import NormandyPage from './pages/NormandyPage'
 import RemembrancePage from './pages/RemembrancePage'
 import HistoryPage from './pages/HistoryPage.vue'
@@ -13,8 +13,6 @@ import HomePage from './pages/HomePage.vue'
 
 // Add the Router Plugin
 Vue.use(VueRouter)
-
-Vue.config.productionTip = false;
 
 // Define the routes
 const routes = [
@@ -26,12 +24,14 @@ const routes = [
 ]
 
 // Create the router instance and pass the 'routes' option
-// const router = new VueRouter({
-//    routes: Routes,
-//    mode: 'app'
-// })
+const router = new VueRouter({
+   routes: Routes,
+   mode: 'app'
+})
 
 new Vue({
   router,
   render: h => h(App)
 }).$mount('#app')
+
+//Vue.config.productionTip = false;
