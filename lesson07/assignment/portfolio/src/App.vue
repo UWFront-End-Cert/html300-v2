@@ -3,17 +3,22 @@
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/gallery">Gallery</router-link> |
-      <router-link to="/history">History</router-link> |
-      <router-link to="/remembrance">Remembrance</router-link> |
-      <router-link to="/normandy">Normandy France</router-link>
+      <router-link to="/history">History</router-link>
     </nav>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import HistoryPage from './components/HistoryPage';
+import HomePage from './components/HomePage';
 
 export default {
+    name: 'App',
+    Components: {
+      HistoryPage,
+      HomePage,
+    },
   data() {
     return {
 
