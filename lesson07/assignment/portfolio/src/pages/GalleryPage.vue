@@ -4,6 +4,7 @@
       <img alt="Panorama Arromanches by Olivier Rault" src="../assets/AdobeStock_42498313.jpeg" width=100% height=230px />
     </div>
       <div class="image-wrapper">
+      /* Come back later and work on adding in the figure, image, and fig caption components */
         <img class="thumbnail" v-for="(image, id) in images" :key="id" :src="image.src" :alt="image.alt" />
       </div>
   </div>

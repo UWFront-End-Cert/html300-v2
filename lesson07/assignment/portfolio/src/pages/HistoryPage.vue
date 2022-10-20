@@ -1,4 +1,5 @@
 <template>
+    <!-- In the future come back and figure our adding links into accordion -->
   <div id="app">
     <div>
       <h1>World War II History found in the pages of an Album</h1>
@@ -10,7 +11,7 @@
           <div class="card-header" id="headingOne">
               <h2 class="mb-0">
                   <button class="btn btn-link text-dark text-decoration-none collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    {{ account.title }}
+                    {{ account.title }} <img src="../assets/arrow-down-mint.svg"/>
                   </button>
               </h2>
           </div>
