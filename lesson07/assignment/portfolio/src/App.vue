@@ -10,14 +10,10 @@
 </template>
 
 <script>
-import HistoryPage from './components/HistoryPage';
-import HomePage from './components/HomePage';
-
 export default {
     name: 'App',
     Components: {
-      HistoryPage,
-      HomePage,
+      
     },
   data() {
     return {

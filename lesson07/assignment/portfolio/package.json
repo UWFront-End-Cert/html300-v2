@@ -17,7 +17,8 @@
     "vue": "^2.7.12",
     "vue-class-component": "^7.2.3",
     "vue-images": "^1.1.0",
-    "vue-router": "^3.6.5"
+    "vue-router": "^3.6.5",
+    "vue-simple-accordion": "^0.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
