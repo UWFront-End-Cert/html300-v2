@@ -6,9 +6,10 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 - [Vue Docs](https://vuejs.org/v2/guide/)
 - [Vue DevTools - Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
 - [Vue DevTools - Firefox](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
+- Depending on which Bootstrap components you are using, you can choose to just use Bootstrap instead of Bootstrap Vue.  Bootstrap Vue components can be powerful and save you time if you need the functionality.  Choosing Bootstrap over Bootstrap Vue will prevent some extra refactoring that would be needed to get your code snippets from the assignment in lesson 06.
 - [Adding Bootstrap to Vue CLI](https://travishorn.com/adding-bootstrap-to-a-vue-cli-project-98c2a30e0ed0)
 - [Bootstrap Vue](https://bootstrap-vue.js.org/docs/)
-- Depending on which Bootstrap components you are using, you can choose to just use Bootstrap instead of Bootstrap Vue.  Bootstrap Vue components can be powerful and save you time if you need the functionality.  Choosing Bootstrap over Bootstrap Vue will prevent some extra refactoring that would be needed to get your code snippets from the assignment in lesson 06.
+
 
 ### To get started:
 - 	Fetch from the upstream master and merge with your local master as we start each lesson
