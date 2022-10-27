@@ -6,8 +6,10 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 - [Vue Docs](https://vuejs.org/v2/guide/)
 - [Vue DevTools - Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
 - [Vue DevTools - Firefox](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
+- Depending on which Bootstrap components you are using, you can choose to just use Bootstrap instead of Bootstrap Vue.  Bootstrap Vue components can be powerful and save you time if you need the functionality.  Choosing Bootstrap over Bootstrap Vue will prevent some extra refactoring that would be needed to get your code snippets from the assignment in lesson 06.
 - [Adding Bootstrap to Vue CLI](https://travishorn.com/adding-bootstrap-to-a-vue-cli-project-98c2a30e0ed0)
 - [Bootstrap Vue](https://bootstrap-vue.js.org/docs/)
+
 
 ### To get started:
 - 	Fetch from the upstream master and merge with your local master as we start each lesson
@@ -20,6 +22,7 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 
 -	Follow the instructions in the Vue CLI documentation: https://cli.vuejs.org/guide/creating-a-project.html. Pass the "--no-git" flag to the create command, to prevent it from initializing the new project as a git repository (necessary because the html300 directory is a repository already, and having nested repositories leads to major problems with git).
 	- Choose "default" preset, rather than choosing features manually.
+	- If the CLI prompts you to choose a Vue version, select Vue 2 and not Vue 3.
 	- If you're not sure whether to use npm or yarn, choose npm.
 
 ![Screenshot of creating using Vue CLI v4.4.6](vue-create.png)
