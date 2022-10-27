@@ -1,3 +1,12 @@
 main {
   padding: 2rem
 }
+
+#new-form input {
+  margin-right: 5px;
+}
+
+h2 span {
+  letter-spacing: 4px;
+  color: blueviolet;
+}
