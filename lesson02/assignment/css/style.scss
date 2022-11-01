@@ -3,4 +3,96 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+@import 'nesting.content';
+@import 'mixin.content.scss';
 
+main {
+@include flex-center;
+}
+
+.content-container {
+    border: 35px solid $border-gray;
+    border-radius: $container-radius;
+    width: 90%;
+}
+
+.content-box {
+    @include flex-center;
+    flex-wrap: wrap;
+    background-color: $white;
+    padding: 4%;
+    width: 100%;
+}
+
+.details-box {
+    padding: 2% 5%;
+    background-color: $light-gray;
+    width: 70%;
+    min-width: 450px;
+}
+
+p,
+a {
+    color: $text-gray;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+// colors bolds used for p and h2
+strong, h2 {
+    color: $bold-Gray;
+}
+
+.header-title p {
+    font-style: italic;
+}
+
+// media query for difference screen sizes and reponsive design
+@media screen and (max-width: 918px) {
+    .details-box {
+        width: 100%;
+        margin: 2%;
+    }
+}
+
+@media screen and (max-width: 832px) {
+    .header-box {
+        margin-bottom: 2%
+    }
+}
+
+@media screen and (max-width: 705px) {
+    .details-box {
+        min-width: 350px;
+    }
+}
+
+@media screen and (max-width: 593px) {
+    .details-box {
+        min-width: 230px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .linkedin-container {
+        flex-direction: column;
+    }
+
+    .header-box {
+        min-width: 120px;
+    }
+
+    .details-box {
+        min-width: 160px;
+    }
+
+    .content-container {
+        border-width: 20px;
+    }
+
+    p,
+    a {
+        font-size: 75%;
+    }
+}
