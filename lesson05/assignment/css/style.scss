@@ -4,3 +4,186 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0 10%;
+}
+
+header {
+    // border: 2px solid black;
+    text-align: center;
+    grid-area: header;
+    color: white;
+    background-color: #22d7fb;
+    img {
+        margin: 3% 0 2% 0;
+        width: 20%;
+        border-radius: 50%;
+    }
+}
+
+.nav-box {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10%;
+    color: white;
+    grid-area: nav;
+
+    ul {
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    a:hover {
+        color: rebeccapurple;
+    }
+}
+
+.sidebar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    grid-area: sidebar;
+    background-color: rgb(245, 240, 240);
+    height: 100%;
+    min-width: 230px;
+    padding-top: 15%;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main-content {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-area: box;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-area: footer;
+    background-color: #22d7fb;
+    color: white;
+    padding: 5%;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header'
+        'nav nav nav nav nav'
+        'sidebar box box box box'
+        'footer footer footer footer footer';
+}
+
+.time-box, .watch-box {
+    width: 50%;
+}
+.time-section, .market-watch {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2%;
+    img {
+        width: 100%;
+    }
+}
+
+.time-content, .watch-content {
+    width: 50%;
+    min-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%;
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        height: 100%;
+        text-align: center;
+        font-size: 1rem;
+        padding: 0 5%;
+        line-height: 1.5;
+    }
+}
+
+.market-watch {
+    flex-direction: row-reverse;
+    padding-top: 0;
+}
+
+@mixin flexVar($flexType: center) {
+    display: flex;
+    justify-content: $flexType;
+  }
+  
+  .team-header {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  // Nesting
+  .image-box {
+    @include flexVar;
+    align-items: center;
+    flex-direction: column;
+    width: 22%;
+    min-width: 150px;
+    // margin: 1%;
+    padding: 2%;
+  
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  
+    h2 {
+      margin-top: 10%;
+      font-size: 15px;
+    }
+  
+    p {
+      font-size: 10px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
+  .box {
+    @include flexVar;
+    flex-wrap: wrap;
+    margin: 0 6% 6% 6%;
+    transition: all 3s;
+    height: 20%;
+  }
+  
+  // Hover transition/transform scale
+  .box:hover {
+    transform: scale(1.2);
+  }
+
+  @media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+  }
