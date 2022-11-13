@@ -1,15 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 05 - CSS Grid</title>
-    </head>
-    <body>
-        <main class="main">
-          
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Assignment 05 - CSS Grid</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+            <img src="images/Your Home-1.png">
+            <div class="nav-container">
+                <div class="nav-box">
+                    <ul>
+                        <a href="#">HOME</a>
+                    </ul>
+                    <ul>
+                        <a href="#">BUY</a>
+                    </ul>
+                    <ul>
+                        <a href="#">SELL</a>
+                    </ul>
+                    <ul>
+                        <a href="#">ABOUT</a>
+                    </ul>
+                    <ul>
+                        <a href="#">CONTACT US</a>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="sidebar">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Name*" required><br>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Email*" required><br>
+                <label for="phone"></label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number*" required><br>
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+        <main class="main-content">
+            <section class="time-section">
+                <div class="time-box">
+                    <img src="images/pexels-agung-pandit-wiguna-1128318.jpg">
+                </div>
+                <div class="time-content">
+                    <h2>Get the most out or your time</h2>
+                    <p>Let our real estate team save you time and money, so you can focus on what ready matters. Our
+                        knowledgable staff is availabe to to do the heavy lifting</p>
+                </div>
+            </section>
+            <section class="market-watch">
+                <div class="watch-box">
+                    <img src="images/pexels-mikhail-nilov-6930902.jpg" alt="">
+                </div>
+                <div class="watch-content">
+                    <h2>Stay in tune with the market</h2>
+                    <p>Our proprietary market watch software provides up to date analysis of changing market conditions.
+                        Rest assured we are watching out for you.</p>
+                </div>
+            </section>
+            <section class="team-container">
+                <div class="team-header">
+                    <h1>Meet The Team</h1>
+                </div>
+                <div class="box">
+                    <!-- Box 1 -->
+                    <div class="image-box">
+                        <img src="images/pexels-andrea-piacquadio-3777943.jpeg" alt="Headshot image">
+                        <h2>Brian Anderson</h2>
+                        <p>Sales Associate</p>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="image-box">
+                        <img src="images/pexels-andrea-piacquadio-3786525.jpeg" alt="Headshot image">
+                        <h2>Jessica Long</h2>
+                        <p>Program Manager</p>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="image-box">
+                        <img src="images/pexels-andrea-piacquadio-3789888.jpeg" alt="Headshot image">
+                        <h2>Jacob Diaz</h2>
+                        <p>UI Developer</p>
+                    </div>
+                    <!-- Box 4 -->
+                    <div class="image-box">
+                        <img src="images/pexels-andrea-piacquadio-762020.jpeg" alt="Headshot image">
+                        <h2>Becca Wright</h2>
+                        <p>Creative Marketing</p>
+                    </div>
+                </div>
+            </section>
         </main>
-    </body>
+        <footer>
+            <h2>Your Home Real Estate</h2>
+            <p>&copy; copyright 2022. Your Home Real Estate</p>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+
 </html>
