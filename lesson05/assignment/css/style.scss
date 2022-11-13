@@ -1,8 +1,14 @@
+
 // Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+
+@mixin flexVar($flexType: center) {
+    display: flex;
+    justify-content: $flexType;
+}
 
 body {
     height: 100%;
@@ -15,11 +21,16 @@ header {
     text-align: center;
     grid-area: header;
     color: white;
-    background-color: #22d7fb;
+    background-image: url("/images/pexels-jessica-bryant-1370704.jpg");
+    background-size: 20%;
+    background-size: cover;
+    background-position: center;
+
     img {
         margin: 3% 0 2% 0;
         width: 20%;
         border-radius: 50%;
+        opacity: 0.9;
     }
 }
 
@@ -29,6 +40,7 @@ header {
     padding: 0 10%;
     color: white;
     grid-area: nav;
+    background-color: #22d7fb;
 
     ul {
         padding: 0;
@@ -39,6 +51,7 @@ header {
         color: white;
         font-weight: bold;
     }
+
     a:hover {
         color: rebeccapurple;
     }
@@ -46,15 +59,14 @@ header {
 
 .sidebar {
     display: flex;
-    align-items: center;
     flex-direction: column;
     text-align: center;
     grid-area: sidebar;
-    background-color: rgb(245, 240, 240);
+    background-color: rgb(247, 244, 244);
+    opacity: .6;
     height: 100%;
     min-width: 230px;
-    padding-top: 15%;
-
+    padding: 15% 8%;
 }
 
 form {
@@ -65,22 +77,19 @@ form {
 
 .main-content {
     display: flex;
-    // justify-content: center;
     align-items: center;
     flex-direction: column;
     grid-area: box;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
+    @include flexVar;
     align-items: center;
     flex-direction: column;
     grid-area: footer;
     background-color: #22d7fb;
     color: white;
     padding: 5%;
-
 }
 
 .grid-container {
@@ -92,20 +101,24 @@ footer {
         'footer footer footer footer footer';
 }
 
-.time-box, .watch-box {
+.time-box,
+.watch-box {
     width: 50%;
 }
-.time-section, .market-watch {
-    display: flex;
-    justify-content: center;
+
+.time-section,
+.market-watch {
+    @include flexVar;
     flex-wrap: wrap;
     padding: 2%;
+
     img {
         width: 100%;
     }
 }
 
-.time-content, .watch-content {
+.time-content,
+.watch-content {
     width: 50%;
     min-width: 320px;
     display: flex;
@@ -113,8 +126,10 @@ footer {
     align-items: center;
     flex-direction: column;
     padding: 2%;
+
     h2 {
         text-align: center;
+        color: rgb(105, 101, 101);
     }
 
     p {
@@ -123,6 +138,7 @@ footer {
         font-size: 1rem;
         padding: 0 5%;
         line-height: 1.5;
+        color: rgb(105, 101, 101);
     }
 }
 
@@ -131,19 +147,15 @@ footer {
     padding-top: 0;
 }
 
-@mixin flexVar($flexType: center) {
-    display: flex;
-    justify-content: $flexType;
-  }
-  
-  .team-header {
+.team-header {
     width: 100%;
     font-size: 16px;
     text-align: center;
-  }
-  
-  // Nesting
-  .image-box {
+    color: rgb(105, 101, 101);
+}
+
+// Nesting
+.image-box {
     @include flexVar;
     align-items: center;
     flex-direction: column;
@@ -151,39 +163,49 @@ footer {
     min-width: 150px;
     // margin: 1%;
     padding: 2%;
-  
+
     img {
-      width: 100%;
-      border-radius: 50%;
+        width: 100%;
+        border-radius: 50%;
     }
-  
+
     h2 {
-      margin-top: 10%;
-      font-size: 15px;
+        margin-top: 10%;
+        font-size: 15px;
+        color: rgb(105, 101, 101);
     }
-  
+
     p {
-      font-size: 10px;
-      margin: 0;
-      padding: 0;
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+        color: rgb(105, 101, 101);
     }
-  }
-  
-  .box {
+}
+
+.box {
     @include flexVar;
     flex-wrap: wrap;
     margin: 0 6% 6% 6%;
     transition: all 3s;
     height: 20%;
-  }
-  
-  // Hover transition/transform scale
-  .box:hover {
-    transform: scale(1.2);
-  }
+}
 
-  @media (max-width: 768px) {
+// Hover transition/transform scale
+.box:hover {
+    transform: scale(1.2);
+}
+
+//   Media query for tables
+@media (max-width: 768px) {
     body {
         padding: 0;
     }
-  }
+}
+
+//   Media query for phones
+@media (max-width: 480px) {
+    .sidebar {
+        display: none;
+    }
+}
