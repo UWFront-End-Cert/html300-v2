@@ -3,4 +3,10 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
 
