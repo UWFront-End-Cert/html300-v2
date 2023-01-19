@@ -2,5 +2,44 @@
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
+@import 'components.grid';
 @import 'components.content';
+
+
+// general style rules for unordered list and headlines
+h1 {
+    color: $dark-gray;
+    font-size: 1.5em;
+}
+
+h2 {
+    color: $gray;
+    font-size: 1em;
+    font-weight: 100;
+    font-style: italic;
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+    line-height: 2.5em;
+    font-size: .8em;
+    color: $gray;
+
+    span {
+        color: $dark-gray;
+        font-weight: 600;
+        font-size: 1.1em;
+    }
+}
+
+// change style for last li item
+li:last-child {
+    padding-top: 1.5em;
+
+    img {
+        vertical-align: middle;
+    }
+
+}
 

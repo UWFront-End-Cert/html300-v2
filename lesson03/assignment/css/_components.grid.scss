@@ -1,0 +1,46 @@
+//set up general grid and borders
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em;
+    border: 2em;
+    border-style: solid;
+    border-color: $border-gray;
+    margin: 1em;
+
+    @include media-query(mobile) {
+        width: auto;
+        padding: 1em;
+        border: 1em;
+    }
+    
+    // set up the name/image box and align the text and image
+    &__name {
+        width: 30%;
+        text-align: center;
+        line-height: .75em;
+        max-width: 40em;
+        min-width: 10em;
+        img {
+            border-radius: 50%;
+            width:90%;
+        }
+        @include media-query(mobile) {
+            width: auto;
+        }
+    }
+    
+    //set up the list box, change background
+    &__list {
+        background-color: $light-gray;
+        width: 65%;
+        padding: 2em;
+
+        @include media-query(mobile) {
+            width: 100%;
+        }
+    }
+}
+
