@@ -15,3 +15,35 @@ html {
 h1 {
     color: $red;
 }
+
+.card {
+  border: solid 50px $gray;
+  flex: auto;
+  padding: 2rem;
+  display: flex;
+  border-radius: 1%;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 10rem;
+}
+
+aside {
+  align-items: flex-end;
+  margin-left: 2rem;
+  padding: 2rem;
+}
+
+.info {
+  background-color: $lighten-gray;
+}
+
+p {
+  padding: .05rem;
+  color: $darken-gray;
+}
+
+.logo {
+  align-self: center;
+}
