@@ -1,3 +1,4 @@
+// import partials
 @import "settings.variables";
 @import "settings.responsive";
 @import "components.mixins";
@@ -19,6 +20,7 @@ body {
     margin: 0rem;
     font-weight:900;
     
+    // breakpoint for mobile
     @include media-query(mobile) {
        font-size: 4rem;
     }
@@ -31,7 +33,6 @@ body {
     font-size: 2rem;
     font-weight:900;
     position: absolute;
-  
   }
   
   h3 {
@@ -47,7 +48,6 @@ body {
     background-image: url("./img/bread-background.jpg");
     background-size: cover;
     position: relative;
-
   }
 
 //   styling for the menu
@@ -168,6 +168,7 @@ body {
         text-align: center;
         margin: 1rem 0rem 1rem 0rem;
 
+        // breakpoint for moblie
         @include media-query(mobile) {
             width: 80%;
         }
