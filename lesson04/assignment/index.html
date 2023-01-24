@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,92 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
-<body>
-  <main class="main">
 
+<body>
+  <!-- the header and navigation bar -->
+  <header>
+    <h1>BAKER'S HOME</h1>
+    <h2>helping you rise from your desk</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+
+  <main class="main">
+    
+    <!-- recipe card -->
+    <article class="card">
+      <a class="card__link" href="recipe.html">
+        <h3 class="card__title">Today's Recipe</h3>
+        <h4 class="card__subtitle">Seeded Rye Sourdough Boule</h4>
+        <img class="card__img" src="css/img/bread-2.jpeg" alt="bread goes here">
+     </a>
+    </article>
+    
+    <!-- baker's calculator -->
+    <article class="calc">
+      <h3 class="calc__title">Baker's Calculator</h3>
+
+      
+      <h6 class="calc__subtitle">Flour</h6>
+      <div class="calc__wrap">
+        <div class="calc__inner-wrap">
+          <input class="calc__input" type="text" name="flour" value="500" id="flour">
+          <span class="calc__grams">g</span>
+        </div>
+
+        <div class="calc__inner-wrap calc__percent">
+          <input class="calc__input" type="text" name="flour-p" value="100" id="flour-p">
+          <span class="calc__grams">%</span>
+        </div>
+      </div>
+
+      <h6 class="calc__subtitle">Water</h6>
+      <div class="calc__wrap">
+        <div class="calc__inner-wrap">
+          <input class="calc__input" type="text" name="water" value="375" id="water">
+          <span class="calc__grams">g</span>
+        </div>
+
+        <div class="calc__inner-wrap calc__percent">
+          <input class="calc__input" type="text" name="water-p" value="75" id="water-p">
+          <span class="calc__grams">%</span>
+        </div>
+      </div>
+
+      <h6 class="calc__subtitle">Salt</h6>
+      <div class="calc__wrap">
+        <div class="calc__inner-wrap">
+          <input class="calc__input" type="text" name="salt" value="10" id="salt">
+          <span class="calc__grams">g</span>
+        </div>
+
+        <div class="calc__inner-wrap calc__percent">
+          <input class="calc__input" type="text" name="salt-p" value="2" id="salt-p">
+          <span class="calc__grams">%</span>
+        </div>
+      </div>
+
+      <h6 class="calc__subtitle">Yeast</h6>
+      <div class="calc__wrap">
+        <div class="calc__inner-wrap">
+          <input class="calc__input" type="text" name="yeast" value="2.5" id="yeast">
+          <span class="calc__grams">g</span>
+        </div>
+
+        <div class="calc__inner-wrap calc__percent">
+          <input class="calc__input" type="text" name="yeast-p" value=".5" id="yeast-p">
+          <span class="calc__grams">%</span>
+        </div>
+      </div>
+      <div class="calc__button-container">
+        <button onclick="addField" type="button" name="button" class="calc__button">Add Ingredient</button>
+      </div>
+    </article>
   </main>
 </body>
+
 </html>

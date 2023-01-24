@@ -1,0 +1,182 @@
+@import "settings.variables";
+@import "settings.responsive";
+@import "components.mixins";
+@import "components.content";
+@import "base.normalize";
+
+
+// general styling for the body and headers
+body {
+    font-family: Georgia serif;
+    background-color: $background-beige;
+  }
+  
+  h1 {
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-size: 8rem;
+    color: $border-salmon;
+    width: 100%;
+    margin: 0rem;
+    font-weight:900;
+    
+    @include media-query(mobile) {
+       font-size: 4rem;
+    }
+  }
+  
+  h2 {
+    padding: 0rem 0rem 2rem 0rem;
+    font-family: 'Familjen Grotesk', sans-serif;
+    color: $white;
+    font-size: 2rem;
+    font-weight:900;
+    position: absolute;
+  
+  }
+  
+  h3 {
+    font-weight: 900;
+  }
+  
+  h6 {
+    font-weight: 510;
+  }
+
+  header {
+    min-height: 40rem;
+    background-image: url("./img/bread-background.jpg");
+    background-size: cover;
+    position: relative;
+
+  }
+
+//   styling for the menu
+  nav {
+    background-color: $border-salmon;
+    padding: .5rem 0rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    a {
+        color: $white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        &:first-of-type {
+            padding-left: 2rem;
+        }
+    }
+  }
+  
+  // style the recipe card
+  .card {
+    // general card style
+    width: 50%;
+    max-width: 40rem;
+    background-color: $border-salmon;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    box-shadow: #000000 0px 25px 50px -12px;
+    
+    &__link {
+        text-decoration: none;
+    }
+
+    &__img {
+        width: 90%;
+    }
+
+    &__title {
+        color: $white;
+        font-size: 1.5rem;
+    }
+
+    &__subtitle {
+        color: $black;
+    }
+
+    // call mixins for card animation and responsive
+    @include card-tilt;
+
+    @include media-query(mobile) {
+       width: 80%;
+    }
+
+  }
+  
+
+//   calculator styling
+.calc {
+    
+    margin: 4rem 2rem;
+    max-width: 40rem;
+    &__title {
+        font-size: 1.25rem;
+    }
+
+    &__subtitle {
+        font-size: 1rem;
+        margin-bottom: 0rem;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: .5rem 0rem;
+      }
+    
+    &__inner-wrap {
+        padding: .6rem .6rem .6rem .6rem;
+        background-color: $white;
+        border-radius: 10px;
+        width: 40%;
+        margin: 0rem .25rem;
+      }
+    
+    
+    &__input {
+        width: 70%;
+        text-align: right;
+        border: none;
+        font-family: Georgia, Times, serif;
+        font-size: 1rem;
+    }
+
+    &__grams {
+        color: $gray;
+      }
+
+    &__button-container {
+        display: flex;
+        justify-content: center;
+      }
+
+    &__button {
+        width: 40%;
+        height: 2rem;
+        background-color: $border-salmon;
+        font-weight: bold;
+        color: $white;
+        display: block;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        margin: 1rem 0rem 1rem 0rem;
+
+        @include media-query(mobile) {
+            width: 80%;
+        }
+      }
+
+}
+
+
+
+
+
+  
