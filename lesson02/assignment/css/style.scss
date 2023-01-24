@@ -4,3 +4,44 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.card {
+  border: solid 50px $gray;
+  flex: auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 1%;
+  &_left {
+    display: flex;
+    align-items: center;
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
+  padding: .05rem;
+  color: $darken-gray
+  margin-bottom: 0;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 12rem;
+}
+
+aside {
+  align-items: flex-end;
+  margin-left: 2rem;
+  padding: 2rem;
+  background-color: $lighten-gray;
+  flex-grow: 1;
+}
+
+p {
+  padding: .05rem;
+  color: $darken-gray;
+}
+
+.logo {
+  align-self: center;
+}
