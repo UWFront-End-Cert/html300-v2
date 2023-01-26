@@ -1,4 +1,3 @@
-// Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
@@ -11,16 +10,19 @@
   display: flex;
   flex-wrap: wrap;
   border-radius: 1%;
+  max-width: 900px;
   &_left {
     display: flex;
-    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-right: 2rem;
   }
 }
 
 h1 {
   font-size: 1.5rem;
   padding: .05rem;
-  color: $darken-gray
+  color: $darken-gray;
   margin-bottom: 0;
 }
 
@@ -31,7 +33,6 @@ h1 {
 
 aside {
   align-items: flex-end;
-  margin-left: 2rem;
   padding: 2rem;
   background-color: $lighten-gray;
   flex-grow: 1;
@@ -42,6 +43,7 @@ p {
   color: $darken-gray;
 }
 
-.logo {
-  align-self: center;
+.linkedIn {
+  display: flex;
+  gap: .5rem;
 }
