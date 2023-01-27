@@ -4,3 +4,59 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $teal;
+    padding: 2rem 1rem;
+    color: $white;
+    font: $font-fam;
+    opacity: 1;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+
+    &__wrap {
+        max-width: 1920px;
+    }
+
+    &__hed, 
+    &__login {
+        font-size: 2rem;
+        text-decoration: none;
+        margin: 0 auto 2rem;
+        width: 100%;
+        text-align: center;
+        @include media-query(tab){
+            margin: 0;
+            width: auto;
+        }
+    }
+    
+    &__login {
+        margin: 2rem auto 0;
+        @include media-query(tab) {
+            margin: 0;
+        }
+    }
+
+    &__link{
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+        text-align: center;
+    }
+    &__item {
+        text-decoration: underline;
+        letter-spacing: 0px;
+        color: $white;
+        opacity: 1;
+        display: inline-block;
+        font-size: 1rem;
+        margin-right: 2rem;
+        &:last-of-type {
+            margin:0;
+        }
+    }
+}
+

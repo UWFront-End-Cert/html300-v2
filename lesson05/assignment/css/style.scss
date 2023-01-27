@@ -1,6 +1,270 @@
-// Import partials here
-@import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
-@import 'components.content';
+// import partials
+@import "components.content";
+@import "settings.variables";
+@import "settings.responsive";
+@import "components.mixins";
+@import "base.normalize";
 
+// general styling for the body and headers
+body {
+  font-family: Georgia serif;
+  background-color: $background-beige;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Familjen Grotesk', sans-serif;
+  font-size: 8rem;
+  color: $border-salmon;
+  width: 100%;
+  margin: 0rem;
+  font-weight:900;
+  
+  // breakpoint for mobile
+  @include media-query(mobile) {
+     font-size: 4rem;
+  }
+}
+
+h2 {
+  padding: 0rem 0rem 2rem 0rem;
+  font-family: 'Familjen Grotesk', sans-serif;
+  color: $white;
+  font-size: 2rem;
+  font-weight:900;
+  position: absolute;
+}
+
+h3 {
+  font-weight: 900;
+}
+
+h6 {
+  font-weight: 510;
+}
+
+header {
+  min-height: 40rem;
+  background-image: url("./img/bread-background.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.hed-container {
+  padding: .75rem;
+}
+
+main {
+  margin: 2em;
+}
+
+//   styling for the menu
+nav {
+  background-color: $border-salmon;
+  padding: .5rem;
+  min-height: 3rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  a {
+      color: $white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      padding: .75rem;
+  }
+}
+
+// wrappers and css grid
+.grid {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  gap: 4rem;
+  margin: 2em;
+
+
+  &__timer {
+    grid-area: 1 / 1 / span 1 / span 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__card {
+    grid-area: 1 / 2 / span 1 / span 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__calc {
+    grid-area: 2 / 2 / span 2 / span 2;
+  }
+
+  // responsive breakpoint for mobile, switching from grid to flex
+  @include media-query(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: .5rem;
+    // row-gap: 4em;
+    &__timer {
+      width: 75%;
+    }
+  }
+}
+
+// timer styling
+.timer {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: $bkg-black;
+  color: $background-beige;
+  padding: 2rem;
+  border-radius: 95rem;
+  width: 100%;
+
+  &__header {
+    font-size: 1.5rem;
+  }
+  
+  &__numbers {
+    font-size: 3rem;
+    margin: 1rem 0rem;
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // call create-button mixin to build two buttons for the timer
+  &__a-button, 
+  &__s-button {
+    @include create-button;
+
+    width: 70%;
+
+    // responsive breakpoint
+    @include media-query(tiny) {
+      width: 100%;
+    }
+
+  }
+}
+
+// style the recipe card
+.card {
+  // general card style
+  display: flex;
+  max-width: 40rem;
+  background-color: $border-salmon;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: #000000 0px 25px 50px -12px;
+  
+  &__link {
+      text-decoration: none;
+  }
+
+  &__img {
+      width: 100%;
+  }
+
+  &__title {
+      color: $white;
+      font-size: 1.5rem;
+      margin-top: 0rem;
+      align-items: center;
+      justify-content: center;
+  }
+
+  &__subtitle {
+      color: $black;
+  }
+
+  // call mixins for card animation
+  @include card-tilt;
+
+}
+
+//   calculator styling
+.calc {
+  
+  max-width: 40rem;
+
+  &__title {
+      font-size: 1.25rem;
+      text-align: center;
+  }
+
+  &__subtitle {
+      font-size: 1rem;
+      margin-bottom: 0rem;
+  }
+
+  &__wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: .5rem 0rem;
+    }
+  
+  &__inner-wrap {
+      padding: .6rem .6rem .6rem .6rem;
+      background-color: $white;
+      border-radius: 10px;
+      width: 40%;
+      margin: 0rem .25rem;
+    }
+  
+  
+  &__input {
+      width: 70%;
+      text-align: right;
+      border: none;
+      font-family: Georgia, Times, serif;
+      font-size: 1rem;
+  }
+
+  &__grams {
+      color: $gray;
+    }
+
+  &__button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    @include create-button;
+  }
+
+}
+
+// footer styling
+.footer {
+
+  background-color: $bkg-black;
+  bottom: 0;
+  font-size: .75rem;
+  min-height: 4rem;
+  display: flex;
+  text-align: end;
+  flex-direction: column;
+  justify-content: center;
+  
+
+  &__text {
+    margin: 0;
+    color: $background-beige;
+    padding-right: 1rem;
+  }
+}
