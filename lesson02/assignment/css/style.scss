@@ -4,3 +4,81 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+/* text colors */
+$gray: #f6f5f6;
+$h3: #3e3d3d; 
+$h4: #736d6d; 
+
+/* inner background color */
+$background: #f4f4f4; 
+
+$font-fam: "arial, helvetica, sans-serif";
+
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    max-width: 62.5em;
+    margin: 1.5625em;
+    border: 3.125em solid #cfd0d0;
+    border-radius: .35em;
+    background-color: $white;
+    padding-inline-start: 0;
+}
+
+.card-image {
+    display: block;
+    max-width: 15em;
+    height: auto;
+    margin: 2.5em;
+  &__img {
+    border-radius: 50%;
+    align-content: center;
+    border: 0;
+    max-width: 12em;
+    height: auto;
+  }
+  &__title {
+    color: var($h3);
+    margin-bottom: 0;
+    text-align: center;
+  }
+  &__copy {
+    color: $p;
+    font-size: 1.4em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+}
+h1 {
+  font-size: 24px;
+  color: $h3;
+}
+.card-details {
+    padding-left: 1.875em;
+    padding-top: 1.875em;
+    background-color: $background;
+    width: 30em;
+    margin-top: 2.8125em;
+    margin-bottom: 2.8125em;
+  &__copy  {
+    color: $h3;
+    padding-top: 0;
+    padding-bottom: 1.25em;
+    margin: 0;
+  }
+}
+
+/* adjust layout of card for smaller screens */
+@media (max-width: 420px) {
+  .container {
+    float: none;
+    width: 50%;
+    border: 0;
+  }
+
+}
+
