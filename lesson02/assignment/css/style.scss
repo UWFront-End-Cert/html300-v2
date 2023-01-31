@@ -1,6 +1,49 @@
-// Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
+.card {
+  border: solid 50px $gray;
+  flex: auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 1%;
+  max-width: 900px;
+  &_left {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-right: 2rem;
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
+  padding: .05rem;
+  color: $darken-gray;
+  margin-bottom: 0;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 12rem;
+}
+
+aside {
+  align-items: flex-end;
+  padding: 2rem;
+  background-color: $lighten-gray;
+  flex-grow: 1;
+}
+
+p {
+  padding: .05rem;
+  color: $darken-gray;
+}
+
+.linkedIn {
+  display: flex;
+  gap: .5rem;
+}

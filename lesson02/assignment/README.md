@@ -14,6 +14,10 @@
 - Build the component using scss, and follow the requirements found in the assignment description
 - Make sure your implementation is responsive. Feel free to make changes to the design as necessary for it to look good on small screens.
 
+- use at least 2 partials imported into the style.scss file (update existing partial files or create new ones)
+- use at least 2 variables
+- use nesting at least twice
+
 ### To Submit:
 - Create a Pull Request for your assignment branch to your forked master
 - Submit the link to your pull request in your assignment submission box
