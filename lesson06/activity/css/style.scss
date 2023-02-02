@@ -4,3 +4,15 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.main {
+    background-image: linear-gradient(black, white);
+    color: white;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.black {
+    color: black;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap links -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <!-- custom style sheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Baker's Home</title>
+</head>
+
+<body>
+  <!-- the header and navigation bar -->
+  <header>
+    <div class="hed-container">
+      <h1>BAKER'S HOME</h1>
+      <h2>helping you rise from your desk</h2>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-light bg-lighter">
+      <div class="container">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNav" class="collapse navbar-collapse">
+          <a href="index.html" class="nav-item nav-link active">Home</a>
+          <a href="recipes.html" class="nav-item nav-link">Recipes</a>
+          <a href="faq.html" class="nav-item nav-link">FAQs</a>
+          <a href="community.html" class="nav-item nav-link">Community</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+    
+  <main class="main">
+
+    <!-- an FAQ accordion, in which each element answers an FAQ -->
+    <div class="accordion" id="accordionExample">
+
+        <div class="card-header" id="headingOne">
+          <h2>
+            <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <h4>Who's This Site For?</h4>
+            </button>
+          </h2>
+        </div>
+    
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Anybody can use it, but it's aimed specifically at people working from home on computers who want to bake bread as they work (you get to take brief breaks every half-hour or so).</p>
+
+            <p>There are about a million bread recipes out there, so instead of adding a few more we start with some stalwarts, adapted from Tartine's sourdough, Ken Forkish's Saturday White Bread, and Samin Noserat's foccaccia, etc. Then, with a bit of trial and error, you can adjust them to your tastes and home kitchen.</p>
+          </div>
+        </div>
+
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <h4>What's the best way to use this site?</h4>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Create an account. Try one of the recipes. Take notes in the baker's log. What went wrong? What worked well? Adjust and bake again. As you keep playing with the recipe, feel free to use the site's dough calculator (for tweaking hydration, etc). Keep iterating until you have a personal bread. Then start again with a different variation.</p>
+          </div>
+        </div>
+
+
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <h4>But Do I Need an Account?</h4>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            No, you can still use the baker's timer, calculator, and recipes without one.  
+          </div>
+        </div>
+
+    </div>
+    
+  </main>
+</body>
+</html>
