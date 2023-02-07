@@ -33,17 +33,18 @@ h1 {
   width: 12rem;
 }
 
-ul {
+aside {
   align-items: flex-end;
   padding: 2rem;
+  margin-top: 0;
   background-color: $lighten-gray;
   flex-grow: 1;
   list-style-type: none;
-  color: $darken-gray;
 }
 
-li {
-  padding: .5rem;
+p {
+  padding: .25rem;
+  color: $darken-gray;
 }
 
 .linkedIn {

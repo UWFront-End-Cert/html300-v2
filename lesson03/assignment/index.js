@@ -56,27 +56,36 @@ const profileJSON = `
 const profile = JSON.parse(profileJSON)
 //console.log(profile) - code is functioning
 
-const propContainer = document.querySelector('#intro')
 const cardContainer = document.querySelector('#info-container')
 
 let card = profile.forEach(function(el){
-  let proPic = document.createElement('p')
-  proPic.innerHTML = `
-  <p>${el.name}</p>
-  <p>${el.jobTitle}</p>
-  `
-  propContainer.append(proPic)
-
   let list = document.createElement('ul')
   list.innerHTML = `
-    <li>Company: ${el.company}</li>
-    <li>Experience: ${el.experience}</li>
-    <li>School: ${el.school}</li>
-    <li>Major: ${el.major}</li>
-    <li>Email: ${el.email}</li>
-    <li>LinkedIn: ${el.linkedInUrl}</li>
-    <li>Languages: ${el.codeLanguages}</li>
+  <div class="card">
+    <article class="card_left">
+      <img class="profile-pic" src="./img/headshot.jpg" alt="a cute dog wearing a black bowtie">
+      <h1><b>${el.name}</b></h1>
+      <p><i>${el.jobTitle}</i></p>
+    </article>
+    <aside class="info">
+      <p><b>Company:</b> ${el.company}</p>
+      <p><b>Experience:</b> ${el.experience}</p>
+      <p><b>School:</b> ${el.school}</p>
+      <p><b>Major:</b> ${el.major}</p>
+      <p><b>Email:</b> ${el.email}</p>
+      <div class="linkedIn"><img src="./img/linkedin.svg" alt="the Linkelogo"><p> ${el.linkedInUrl}</p></div>
+    </aside>
+  </div>
   `
   cardContainer.append(list)
-
 })
+
+// Code languages bonus element
+//let codeLanguages = '<ul>'
+//el.codeLanguages.forEach(function(el) {
+//  codeLanguages += `
+//  <li>${el}</li>
+//  `
+//});
+
+//codeLanguages += '</ul>'
