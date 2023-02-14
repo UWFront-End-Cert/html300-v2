@@ -10,7 +10,7 @@
             
             <div v-for="(pic, index) in pics" v-bind:key="pic.id" class="carousel-item" :class="{ active: index === 0}">
               <div class="d-flex justify-content-center">
-                  <img src="@/assets/bread-2.jpeg" class="d-block w-75" :alt="pic.text">
+                  <img :src="require('@/assets/' + pic.image)" class="d-block w-75" :alt="pic.text">
               </div>
             </div>
           </div>
@@ -39,15 +39,15 @@
       return {
         pics: [
           {
-            // image: img1,
+            image: "bread-2.jpeg",
             text: "a loaf of bread from above"
           },
           {
-            // image: "bread-3.jpeg",
+            image: "bread-3.jpeg",
             text: "the interior of a loaf of bread"
           },
           {
-            // image: "bread-4.jpeg",
+            image: "bread-4.jpeg",
             text: "a seeded loaf of bread"
           }
         ]

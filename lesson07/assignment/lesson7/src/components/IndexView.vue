@@ -21,7 +21,7 @@
             <a class="card__link" href="recipe.html">
               <h3 class="card__title">Today's Recipe</h3>
               <h4 class="card__subtitle">Seeded Rye Sourdough Boule</h4>
-              <img class="card__img" src="./css/img/bread-2.jpeg" alt="bread goes here">
+              <img class="card__img" src="@/assets/bread-2.jpeg" alt="bread goes here">
           </a>
           </article>
         </div>

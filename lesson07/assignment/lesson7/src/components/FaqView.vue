@@ -6,13 +6,13 @@
 
         <div class="card-header" >
           <h2 class="mb-0">
-            <button class="btn btn-block text-left collapsed" :class="{ collapsed: index > 0 }"  type="button" data-toggle="collapse" :data-target="'#collapse' + id" aria-expanded="false" aria-controls="collapse">
+            <button class="btn btn-block text-left collapsed"   type="button" data-toggle="collapse" :data-target="'#collapse' + index" aria-expanded="false" aria-controls="collapse">
               <h4>{{ item.question }}</h4>
             </button>
           </h2>
         </div>
     
-        <div id="collapse" class="collapse" :class="{ show: index === 0 }" aria-labelledby="heading" data-parent="#accordionExample">
+        <div :id="'#collapse' + index" class="collapse" :class="{ show: index === 0 }" aria-labelledby="heading" :data-parent="'#collapse' + index">
           <div class="card-body">
             {{ item.answer }}
           </div>
