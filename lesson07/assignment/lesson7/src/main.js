@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 import App from './App.vue'
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './components/css/style.scss';
+import './css/style.scss';
 import IndexView from '/Users/stefantmilne/Desktop/uw/html300/html300-v2/lesson07/assignment/lesson7/src/components/IndexView.vue';
 import RecipesView from '/Users/stefantmilne/Desktop/uw/html300/html300-v2/lesson07/assignment/lesson7/src/components/RecipesView.vue';
 import CommunityView from '/Users/stefantmilne/Desktop/uw/html300/html300-v2/lesson07/assignment/lesson7/src/components/CommunityView.vue';

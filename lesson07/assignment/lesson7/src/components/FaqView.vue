@@ -6,7 +6,7 @@
 
         <div class="card-header" >
           <h2 class="mb-0">
-            <button class="btn btn-block text-left collapsed" :class="{ collapsed: index > 0 }"  type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
+            <button class="btn btn-block text-left collapsed" :class="{ collapsed: index > 0 }"  type="button" data-toggle="collapse" :data-target="'#collapse' + id" aria-expanded="false" aria-controls="collapse">
               <h4>{{ item.question }}</h4>
             </button>
           </h2>
