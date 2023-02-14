@@ -67,10 +67,13 @@
     name: 'app',
     data () {
       return {
+        // set values for the timer (will expand on later)
         minutes: 30,
         seconds: 0,
         counter: 0,
         intervalId: null,
+        
+        // the calculator's default data, including a "show" quality for the "add ingredient" element I'll add later
         quantities: [
           {
             name: "Flour",
@@ -117,7 +120,8 @@
       
     },
     methods: {
-    startTimer() {
+      // a function to start the timer (will expand with ability to stop and change later)
+      startTimer() {
       if (!this.intervalId) {
         this.intervalId = setInterval(() => {
           if (this.seconds > 0) {
@@ -127,7 +131,7 @@
             this.seconds = 59
           } else {
             this.resetTimer()
-            alert("Time's up!")
+            alert("Fold your dough!")
             this.counter++;
           }
         }, 1000)
@@ -135,5 +139,4 @@
     }
   }
 }
-
 </script>

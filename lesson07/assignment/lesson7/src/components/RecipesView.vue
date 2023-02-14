@@ -14,15 +14,10 @@
             </a>
             </article>
           </div>
-
-
-          
         </div>
 
-        <!-- a bottom row with further recipes -->
+        <!-- a bottom row with more recipes -->
         <div class="row">
-          
-          <!-- an unchanging classic recipes card -->
           <div class="col-lg-8 col-12 p-3">
             <article class="recipes">
               <h3 class="recipes__title">Base Recipes</h3>
@@ -35,16 +30,17 @@
             </article>
           </div>
 
-          <!-- extra recipes card -->
+          <!-- extra recipes card opens when button is clicked -->
           <div class="col-lg-8 col-12 p-3">
             <article class="recipes" v-if="!show">
               <h3 class="recipes__title">More Recipes</h3>
               <ul>
-                <li class="recipes__item" v-for="recipe in xRecipes" v-bind:key="recipe.id">
+                <li class="recipes__item" v-for="recipe in xRecipes" :key="recipe.id">
                   <a :href="recipe.link" class="recipes__link"> >> {{recipe.name}}</a>
                 </li>
               </ul>
             </article>
+
             <!-- button that hides or shows more recipes -->
             <div class="recipes__button-wrap">
               <button class="recipes__button" @click="buttonText" ref="buttonToggle">See More</button>
@@ -63,6 +59,8 @@
     data () {
       return {
         show: true,
+
+        // data for base and extra recipes
         baseRecipes: [
           {
             name: "Base Sourdough",
@@ -98,6 +96,7 @@
       }
     },
     methods: {
+      // button to show/hide recipes and change the button text
       buttonText: function () {
         this.show = !this.show;
         this.$refs.buttonToggle.innerText = this.show?'See More':'Hide Recipes';

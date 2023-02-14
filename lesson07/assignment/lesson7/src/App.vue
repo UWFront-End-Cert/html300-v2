@@ -32,17 +32,6 @@
 
 </template>
 
-<script>
-  export default {
-    name: 'app',
-    data () {
-      return {
-       
-      }
-    }
-  }
-</script>
+<script></script>
 
-<style>
-
-</style>
+<style></style>

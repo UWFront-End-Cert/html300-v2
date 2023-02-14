@@ -12,7 +12,7 @@
           </h2>
         </div>
     
-        <div :id="'#collapse' + index" class="collapse" :class="{ show: index === 0 }" aria-labelledby="heading" :data-parent="'#collapse' + index">
+        <div :id="'collapse' + index" class="collapse" :class="{ show: index === 0 }" aria-labelledby="heading" :data-parent="'#collapse' + index">
           <div class="card-body">
             {{ item.answer }}
           </div>
@@ -27,6 +27,7 @@
     name: 'app',
     data () {
       return {
+        // data for the accordion
         faqs: [
           {
             question: "Who's this site for?", 
@@ -36,14 +37,11 @@
             question: "What's the best way to use this site?",  answer: "Create an account. Try one of the recipes. Take notes in the baker's log. What went wrong? What worked well? Adjust and bake again. As you keep playing with the recipe, feel free to use the site's dough calculator (for tweaking hydration, etc). Keep iterating until you have a personal bread. Then start again with a different variation."
           },
           {
-            question: "But Do I Need an Account?", 
+            question: "But do I need an account?", 
             answer: "No, you can still use the baker's timer, calculator, and recipes without one."
           } 
         ]
       }
-    },
-    methods: {
-      // insert method that allows me to toggle state based on which 
     }
   }
 </script>

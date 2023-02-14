@@ -3,7 +3,6 @@
   <div id="app">
     <main class="main">
       <!-- image carousel with three images and controls -->
-  
       <h3>Community Bread Gallery</h3>
       <div id="carouselControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
@@ -31,12 +30,11 @@
 </template>
 
 <script>
-  // var img1 = require('html300-v2/lesson07/assignment/lesson7/src/components/bread-2.jpeg');
-
     export default {
     name: 'app',
     data () {
       return {
+        // pictures with alt text
         pics: [
           {
             image: "bread-2.jpeg",
