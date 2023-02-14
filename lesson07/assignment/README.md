@@ -35,7 +35,7 @@ In the last assignment in lesson06, you created a responsive website with Bootst
 	-	npm command: run `npm install popper.js`
 	-	yarn command: run `yarn add popper.js`
 	- Follow the "Getting Started" guide for Bootstrap Vue to make the package available in your project. "Using Module Bundlers" is the applicable section: https://bootstrap-vue.org/docs#using-module-bundlers.
--	You now have access to scss and all of bootstrap/bootstrap-vue. Watch the screencast for more information on using bootstrap-vue components and bootstrap features in Vue, as well as turning the bootstrap nav into an app router
+-	You now have access to scss and all of bootstrap/bootstrap-vue. Watch the screencast for more information on using bootstrap-vue components and bootstrap features in Vue, as well as turning the bootstrap nav into an app np
 -	In the project's README.md, find instructions to compile and hot reload for development. This will start the development server.
 
 

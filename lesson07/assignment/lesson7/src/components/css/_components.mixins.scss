@@ -1,0 +1,29 @@
+  // create card-tilt mixin that transitions on hover
+  // initial code was based on an effect from here https://polypane.app/css-3d-transform-examples/
+  @mixin card-tilt {
+    // transition with transform on hover
+    transition: transform 1s ease 0s;
+  
+    &:hover {
+        transform: perspective(1500px) rotateX(10deg);
+    }
+  }
+
+  @mixin create-button {
+
+      width: 40%;
+      height: 2rem;
+      background-color: $border-salmon;
+      font-weight: bold;
+      color: $white;
+      display: block;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      margin: 1rem 0rem 1rem 0rem;
+
+      // breakpoint for moblie
+      @include media-query(mobile) {
+          width: 80%;
+      }
+    }
