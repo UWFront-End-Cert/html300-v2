@@ -4,3 +4,36 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.container {
+  display: grid;
+  background-color: $black;
+}
+
+.header {
+  display: flex;
+  background-color: $white;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  list-style-type: none;
+  flex-grow: 1;
+  background-color: $lightblue;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: $darkblue;
+}
+
+.sidebar {
+  background-color: $mint;
+}
+
+.footer {
+ background-color: $forest;
+}
