@@ -4,3 +4,32 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+*{
+  font-family: $font-fam;
+  color: $white;
+}
+
+h1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  border: .05rem solid $gray;
+  background: $teal;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: stretch;
+  text-decoration: underline;
+  font-weight: bold;
+  list-style-type: none;
+  padding: 0 5em;
+}
