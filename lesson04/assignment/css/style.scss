@@ -3,6 +3,7 @@
 //import partials
 @import 'variables';
 
+//change button from long oval to small circle
 @keyframes extend {
     0% {
         width: 600px;
@@ -28,6 +29,8 @@
         background: $mint;
         }
     }
+
+//change button color from white to mint
 @keyframes disappear {
     0% {
         opacity: 1;
@@ -37,6 +40,8 @@
         opacity: 0;
         }
     }
+
+//make checkmark appear
 @keyframes appear {
     0% {
         opacity: 0;
