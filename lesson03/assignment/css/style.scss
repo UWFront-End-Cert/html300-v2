@@ -4,3 +4,87 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// text colors 
+$gray: #f6f5f6;
+$h3: #4a4949; 
+$h4: #736d6d; 
+
+// inner background color
+$background: #f4f4f4; 
+
+//set font for all of card
+.main {
+  font: "arial, helvetica, sans-serif";
+} 
+
+//detail card shape
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0;
+    max-width: 40rem;
+    max-height: fit-content;
+    margin: 1.5em;
+    border: 3em solid #cfd0d0;
+    border-radius: .5em;
+    background-color: white;
+    
+}
+
+//detail left side of card
+.card-image {
+    display: block;
+    max-width: 15em;
+    height: auto;
+    margin: 2.5rem;
+    
+  &_img {
+    border-radius: 50%;
+    align-content: center;
+    border: 0;
+    max-width: 9em;
+    height: auto;
+  }
+  &_h1 {
+    color: $h3;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  &_h2 {
+    color: $h4;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: .8rem;
+  }
+  
+  
+}
+
+//detail right side of card
+.card-details {
+    padding-left: 2em;
+    padding-top: 2em;
+    background-color: $background;
+    width: 20rem;
+    margin: 2em;
+  &_rows  {
+    padding-top: 0;
+    padding-bottom: .25rem;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  &_h3 {
+    font-size: .8rem;
+    color: $h3;
+  }
+  &_h4 {
+    font-size: .5rem;
+    color: $h4;
+    margin-left: .5rem;
+    padding-top: .3rem;
+  }
+}
