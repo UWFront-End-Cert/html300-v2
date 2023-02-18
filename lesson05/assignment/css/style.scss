@@ -4,3 +4,138 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Define some variables for the colors and dimensions used in the layout
+$main-color: #007bff;
+$sidebar-color: #31a851;
+$sidebar-width: 200px;
+
+// Define styles for the body element
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #6fa9e3;
+}
+
+// Define styles for the main container element using grid
+.container {
+  display: grid;
+  grid-template-columns: $sidebar-width 1fr;
+  grid-template-rows: auto min-content 1fr;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "sidebar main"
+    "footer footer";
+  min-height: 100vh;
+}
+
+// Define styles for the header element
+header {
+  grid-area: header;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+    grid-area: nav;
+  background-color: rgb(136, 36, 36);
+  padding: 0 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__list {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      width: 100%;
+  }
+  &__item {
+      
+      display: flex;
+      align-items: center;
+
+    
+  }
+}
+
+// Define styles for the sidebar element using flexbox
+.sidebar {
+  grid-area: sidebar;
+  width: $sidebar-width;
+  background-color: $sidebar-color;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+// Define styles for the main content element using flexbox
+.main-content {
+  grid-area: main;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+    grid-area: footer;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Define styles for the heading element
+h1 {
+  color: $main-color;
+  margin-top: 0;
+}
+
+// Define styles for the paragraph element
+p {
+  line-height: 1.5;
+}
+
+// Define some styles for links
+a {
+  color: $main-color;
+  text-decoration: none;
+}
+
+// Define styles for a button element
+button {
+  background-color: $main-color;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+// Define a media query to make the layout responsive
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "sidebar"
+      "main"
+      "footer";
+  }
+  .sidebar {
+    width: 100%;
+    height: 100px;
+  }
+}
