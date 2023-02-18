@@ -41,6 +41,7 @@ header {
   justify-content: space-between;
 }
 
+//defines styles for the navigation element
 .nav {
     grid-area: nav;
   background-color: rgb(136, 36, 36);
@@ -85,6 +86,7 @@ header {
   flex-direction: column;
 }
 
+//defines styles for the footer using flexbox
 .footer {
     grid-area: footer;
   background-color: #fff;
