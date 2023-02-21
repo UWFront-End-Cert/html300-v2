@@ -4,36 +4,68 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+body {
+  background-color: $forest;
+  font-weight: bold;
+}
+
 .container {
   display: grid;
-  background-color: $black;
+  grid-template-columns: 20rem 1fr;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "sidebar articles articles"
+    "footer footer footer";
 }
 
 .header {
   display: flex;
-  background-color: $white;
+  justify-content: center;
+  background-color: $periwinkle;
+  padding: 4rem;
+  grid-area: header;
+}
+
+.nav {
+  padding: 1rem;
+  background-color: $lightblue;
+  grid-area: nav;
 }
 
 ul {
   display: flex;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: center;
   list-style-type: none;
-  flex-grow: 1;
-  background-color: $lightblue;
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: $darkblue;
 }
 
 .sidebar {
+  display: flex;
+  justify-content: center;
   background-color: $mint;
+  padding: 2rem;
+  grid-area: sidebar;
+}
+
+.articles {
+  min-height: 30rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $blue;
+  color: $white;
+  grid-area: articles;
+  & p {
+    margin: 2rem;
+  }
 }
 
 .footer {
- background-color: $forest;
+  display: flex;
+  justify-content: center;
+  background-color: $forest;
+  color: $white;
+  padding: 3rem;
+  grid-area: footer;
 }
