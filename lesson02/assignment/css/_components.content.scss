@@ -9,9 +9,22 @@ html {
 }
 
 .main {
-    padding: 2rem;
+    padding: 3rem;
 }
 
-h1 {
-    color: $red;
+ul {
+    list-style: none;
+}
+h2 {
+    margin: 0;
+}
+.profile-pic {
+
+    p {
+        margin: 0;
+    }
+}
+ul, li { 
+    margin: 0;
+    padding: 0;
 }

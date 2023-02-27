@@ -4,3 +4,64 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Below are two mixins that define stylings for flex options. 
+//This helps to minimize rewriting the same code over and over.
+@mixin flexRow {
+    display:flex;
+    flex-direction: row;
+}
+
+@mixin flexCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.card {
+    @include flexRow;
+    padding: 3em;
+    border: 25px solid $grey;
+    border-radius: 10px;
+    width: 55%;
+}
+
+.profile-pic {
+    @include flexCenter;
+    padding-top: 3rem;
+
+    img {
+        border-radius: 50%;
+        width: 10rem;
+    }
+    p {
+        color:  $grey;
+        font-style: italic;
+        padding-top: .5rem;  
+    }
+    h2 {
+        color: $grey;
+        padding-top: 1rem;
+    }
+
+
+}
+.info {
+    background-color: $light-grey;
+    color: $grey;
+    padding: 0 0 0 1rem;
+    width: 30rem;
+    margin: 0 0 0 2rem;
+
+    li {
+        padding: 1rem;
+    }
+
+    span {
+        font-weight: map-get($font-weights , bold );
+        color: $dark-grey;
+    }
+
+    
+}
+
