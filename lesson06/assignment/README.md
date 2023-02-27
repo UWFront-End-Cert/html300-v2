@@ -36,7 +36,7 @@ These pages can be copied over to your final project later, so create them using
 	- 	Use of tooltips or popovers somewhere on one of the pages
 	- 	Page 1: A landing page with some content
 	- 	Page 2: A page with images using Bootstrap 4 responsive/fluid images
-	- 	Page 3: A page with a layout that utilizes the Bootstrap 4 grid system, make sure page 			components use at least 3 bootstrap sizes (XS, SM, MD, LG, XL)
+	- 	Page 3: A page with a layout that utilizes the Bootstrap 4 grid system, make sure page components use at least 3 bootstrap sizes (XS, SM, MD, LG, XL)
 	- 	Page 4: A page that uses a Bootstrap 4 accordion component
 - 	**Bonus:**  Use a Jumbotron on the landing page.  
 - 	**Extra Bonus:**  Use a carousel slider.
