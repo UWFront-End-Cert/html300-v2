@@ -3,3 +3,20 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+
+li {
+  padding: .5rem 1.5rem;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+.nav-link {
+  padding: 0;
+}
+
+.border {
+  border: 3px solid $white;
+}
