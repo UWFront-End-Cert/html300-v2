@@ -3,12 +3,13 @@
         <h1>About Page</h1>
         <p>Test test test</p>
         <div class="accordion container" id="accordionExample">
+            <!--v-for loop here-->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                         aria-expanded="true" aria-controls="collapseOne">
                         Accordion Item #1
-                    </button>
+                    </button> <!--data-bs-target will be a variable in the loop to match with the id below-->
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
@@ -21,6 +22,7 @@
                     </div>
                 </div>
             </div>
+            <!--end v-for loop-->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -61,3 +63,18 @@
         </div>
     </div>
 </div></template>
+
+<script>
+    export default {
+        name: 'galleryPage', 
+        data() {
+            return {
+                images: [
+                    {src: 'img1.jpg', alt: 'a ball'},
+                    {src: 'img2.jpg', alt: 'a dog'},
+                    {src: 'img3.jpg', alt: 'a dog'}
+                ]
+            }
+        }
+    }
+</script>

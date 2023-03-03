@@ -3,6 +3,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import homePage from './pages/homePage'
 import aboutPage from './pages/aboutPage'
+import galleryPage from './pages/galleryPage'
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -13,7 +14,8 @@ Vue.config.productionTip = false
 
 const routes = [
   { path: '/', component: homePage },
-  { path: '/about', component: aboutPage }
+  { path: '/about', component: aboutPage },
+  { path: '/gallery', component: galleryPage }
 ]
 
 const router = new VueRouter({

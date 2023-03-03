@@ -15,7 +15,7 @@
                         <router-link to="/about" class="nav-link">About</router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <router-link to="/gallery" class="nav-link">Gallery</router-link>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
