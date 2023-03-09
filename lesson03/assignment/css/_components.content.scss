@@ -6,12 +6,35 @@ html {
 *:after,
 *:before {
     box-sizing: inherit;
-}
-
-.main {
-    padding: 2rem;
+    margin: auto;
 }
 
 h1 {
-    color: $red;  
+    text-align: center;
+}
+
+body {
+    padding: 20px 0 28px 0;
+}
+
+.main {
+    padding: 3rem;
+}
+
+ul {
+    list-style: none;
+}
+h2 {
+    margin: 0;
+}
+.profile-pic {
+
+    p {
+        margin: 0;
+    }
+}
+
+ul, li { 
+    margin: 0;
+    padding: 0;
 }
