@@ -9,7 +9,7 @@
 <script>
   import navBar from './components/navBar.vue';
 
-export default {
+  export default {
   name: 'App',
   components: {
     navBar
