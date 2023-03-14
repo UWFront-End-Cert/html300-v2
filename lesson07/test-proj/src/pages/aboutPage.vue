@@ -1,29 +1,19 @@
 <template>
     <div>
-        <h1>About Page</h1>
-        <p>Test test test</p>
-        <div class="accordion container" id="accordionExample">
+        <h1>About Us</h1>
             <!--v-for loop here-->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                        aria-expanded="true" aria-controls="collapseOne">
-                        Accordion Item #1
-                    </button> <!--data-bs-target will be a variable in the loop to match with the id below-->
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
-                        plugin adds the appropriate classes that we use to style each element. These classes control the
-                        overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
-                        this with custom CSS or overriding our default variables. It's also worth noting that just about any
-                        HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
+            <div v-for="item in items" :key="item.id">
+                <div @click.prevent="toggleExpand(item)">
+                    {{ item.title }}
+                </div>
+    
+                <div>
+                    <div class="card-content">{{ item.info }}</div>
                 </div>
             </div>
+    </div>
             <!--end v-for loop-->
-            <div class="accordion-item">
+            <!-- <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -59,21 +49,39 @@
                     just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
                     overflow.
                 </div>
-            </div>
-        </div>
-    </div>
-</div></template>
+            </div> -->
+</template>
 
 <script>
     export default {
-        name: 'galleryPage', 
+        name: 'aboutPage', 
         data() {
             return {
-                images: [
-                    {src: 'img1.jpg', alt: 'a ball'},
-                    {src: 'img2.jpg', alt: 'a dog'},
-                    {src: 'img3.jpg', alt: 'a dog'}
+                items: [
+                    {
+                        id: 1,
+                        title: "Who created WA Adventures?",
+                        info: "Emmett Schreiber",
+                        isExpand: false
+                    },
+                    {
+                        id: 2,
+                        title: "When was WA Adventures founded?",
+                        info: "2023",
+                        isExpand: false
+                    },
+                    {
+                        id: 3,
+                        title: "What is the point of WA Adventures?",
+                        info: "To encourage explorers and adventurers to see more of Washington state",
+                        isExpand: false
+                    }
                 ]
+            }
+        },
+        methods: {
+            toggleExpand(item) {
+                item.isExpand = !item.isExpand;
             }
         }
     }
