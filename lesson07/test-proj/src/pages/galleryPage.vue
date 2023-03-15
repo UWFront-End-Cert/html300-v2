@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main-content">
         <h1>Gallery</h1>
         <div class="img-wrapper">
             <img v-for="(image, index) in images" 
@@ -7,6 +7,7 @@
             :src="require(`@/assets/images/${image.src}`)" 
             :alt="image.alt" 
             class="img-fluid w-75 pb-3">
+            <!-- make the images responsive & equal size -->
         </div>
     </div>
 </template>
@@ -25,6 +26,3 @@
         }
     }
 </script>
-
-<style scoped lang="scss">
-</style>

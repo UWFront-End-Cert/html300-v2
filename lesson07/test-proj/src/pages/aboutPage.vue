@@ -1,55 +1,21 @@
 <template>
-    <div>
+    <div class="main-content">
         <h1>About Us</h1>
-            <!--v-for loop here-->
-            <div v-for="item in items" :key="item.id">
-                <div @click.prevent="toggleExpand(item)">
-                    {{ item.title }}
-                </div>
+        <!--v-for loop here-->
+        <div class="card" v-for="item in items" :key="item.id">
+            <div class="card-header" @click.prevent="toggleExpand(item)">
+                <span>{{ item.title }}</span>
+            </div>
     
-                <div>
-                    <div class="card-content">{{ item.info }}</div>
-                </div>
+            <div class="card-body"
+            :ref="'content' + item.id"
+            :style="[item.isExpand ? {height: item.computedHeight} : {}]">
+            <hr />
+            <div class="card-content">{{ item.content }}</div>
             </div>
+        </div>
+        <!--end v-for loop-->
     </div>
-            <!--end v-for loop-->
-            <!-- <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Accordion Item #2
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                        overflow.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Accordion Item #3
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div> -->
 </template>
 
 <script>
@@ -61,20 +27,23 @@
                     {
                         id: 1,
                         title: "Who created WA Adventures?",
-                        info: "Emmett Schreiber",
-                        isExpand: false
+                        content: "Emmett Schreiber",
+                        isExpand: false,
+                        computedHeight: 0,
                     },
                     {
                         id: 2,
                         title: "When was WA Adventures founded?",
-                        info: "2023",
-                        isExpand: false
+                        content: "2023",
+                        isExpand: false,
+                        computedHeight: 0,
                     },
                     {
                         id: 3,
                         title: "What is the point of WA Adventures?",
-                        info: "To encourage explorers and adventurers to see more of Washington state",
-                        isExpand: false
+                        content: "To encourage explorers and adventurers to see more of Washington state",
+                        isExpand: false,
+                        computedHeight: 0,
                     }
                 ]
             }
@@ -82,7 +51,67 @@
         methods: {
             toggleExpand(item) {
                 item.isExpand = !item.isExpand;
+            },
+            getComputedHeight() {
+                this.items.forEach(item => {
+                    var content = this.$refs["content" + item.id][0];
+        
+                    content.style.height = 'auto';
+                    content.style.position = 'absolute';
+                    content.style.visibility = 'hidden';
+                    content.style.display = 'block';
+
+                    var height = getComputedStyle(content).height;
+                    item.computedHeight = height;
+
+                    content.style.height = 0;
+                    content.style.position = null;
+                    content.style.visibility = null;
+                    content.style.display = null;
+                });
             }
-        }
-    }
+        },
+        mounted() {
+            this.getComputedHeight();
+        },
+    };
 </script>
+
+<style scoped>
+.card {
+    height: auto;
+    display: block;
+    position: relative;
+    margin: 1rem 20rem;
+    padding: 0;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.card-header,
+.card-content {
+    padding: 1rem 0;
+}
+
+.card-header {
+    cursor: pointer;
+}
+
+.card-header span {
+    font-weight: bold;
+}
+
+.card-body {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+hr {
+    margin: 0;
+    height: 1px;
+    display: block;
+    border-width: 0;
+    border-top: 1px solid #aaa;
+}
+</style>
