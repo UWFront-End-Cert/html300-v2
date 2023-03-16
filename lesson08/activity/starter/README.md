@@ -21,7 +21,7 @@ These instructions were written for Vue CLI v5.x and Vue v3.x. If you're using d
 	-	Follow the prompts for setup. Recommended configuration:
 		-	Manually select features
 		- Leave `Babel` selected, select `CSS Pre-processors`, unselect `Linter/Formatter`
-		- Choose version `3.x` of Vue
+		- Choose version `2.x` of Vue
 		- Choose `Sass/SCSS` for CSS pre-processor
 		- Choose `In dedicated config files` for placement of config for Babel
 		- Choose `N` for saving this as a preset for future projects
