@@ -1,0 +1,43 @@
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+// Mixin for centering different elements easily. I expect much of the site will be centered.
+@mixin flexCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    background-color: $cream;
+}
+
+.form-container {
+    @include flexCenter;
+}
+    
+button, #search {
+    border: solid 1px $blue-accent;
+    color: $blue-accent;
+    padding: 6px;
+    border-radius: 7px;
+    transition: transform ease 1s;
+}
+
+
+//Button hover animation rotates both buttons 360 degrees. I included an ease and changed the revolutions.
+button:hover {
+    transform: rotate(360deg);
+}
+
+// Source Code
+// div {
+//   transition: transform 1s;
+// }
+
+// div:hover {
+//   transform: rotate(1080deg);
+// }

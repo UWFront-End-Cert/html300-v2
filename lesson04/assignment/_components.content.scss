@@ -1,0 +1,23 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    padding: 20px 0 28px 0;
+}
+
+.main {
+    padding: 3rem;
+}
+

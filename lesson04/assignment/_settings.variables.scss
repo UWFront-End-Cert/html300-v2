@@ -1,0 +1,12 @@
+// One of my favorite film theaters is Metrograph in NYC, so I've borrowed their color scheme for my project (cream with navy blue accent) and stored them as variables.
+
+$cream:#fff3e3;
+$light-cream: lighten($cream, 50%);
+$dark-cream: darken($cream, 20%);
+$blue-accent:#2a317d;
+
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 900
+);
