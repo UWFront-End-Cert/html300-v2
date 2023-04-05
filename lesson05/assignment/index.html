@@ -1,15 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 05 - CSS Grid</title>
-    </head>
-    <body>
-        <main class="main">
-          
-        </main>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>What are we watching?</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+        <h1>What are we watching tonight?</h1>
+        <div class="form-container">
+          <form class="form">
+              <input id="search" type="text" class="input" placeholder="search..."/>
+              <button id="search">Search</button>
+              <button id="clear" class="clear-results">clear</button>
+          </form>
+
+        </div>
+        <div class="results-container">
+          <ul class= "results-list" id="list">
+
+          </ul>
+        </div>
+    </header>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Movie of the Night</a></li>
+        <li><a href="#">Silly Suggestions</a></li>
+        <li><a href="#">My Movie Picks</a></li>
+        <li><a href="#">Trending Titles</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <aside class="sidebar">
+      <h3>Recent Films</h3>
+      <ul>
+          <li><a href="#">Post One</a></li>
+          <li><a href="#">Post Two</a></li>
+          <li><a href="#">Post Three</a></li>
+        </ul>
+    </aside>
+    <main class="main">
+      <h2>Trending Tonight</h2>
+      <h3>Eyes Wide Shut (1999)</h3>
+      <img src="http://deep-focus.com/images/1280_EWS.jpg" alt="A close-up shot of Nicole Kidman pensively staring off frame while being kissed on the neck by Tom Cruise in the film Eyes Wide Shut">
+        <p class = "film-info"> <a href="https://en.wikipedia.org/wiki/Eyes_Wide_Shut">Eyes Wide Shut</a> is a 1999 erotic mystery psychological drama film directed, produced, and co-written by Stanley Kubrick. It is based on the 1926 novella Traumnovelle by Arthur Schnitzler, transferring the story's setting from early twentieth-century Vienna to 1990s New York City. The plot centers on a doctor who is shocked when his wife reveals that she had contemplated having an affair a year earlier. He then embarks on a night-long adventure, during which he infiltrates a masked orgy of an unnamed secret society.</p>
+
+    </main>
+    <footer>
+      <ul>
+        <li><a href="index.html">Movie of the Night</a></li>
+        <li><a href="#">Silly Suggestions</a></li>
+        <li><a href="#">My Movie Picks</a></li>
+        <li><a href="#">Trending Titles</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </footer>
+
+
+       
+
+  </div>
+  <script src="index.js"></script>
+</body>
 </html>

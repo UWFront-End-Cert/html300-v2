@@ -4,3 +4,147 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Mixin for centering different elements easily. I expect much of the site will be centered.
+@mixin flexCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    background-color: $cream;
+}
+
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 0.4fr 0.3fr 0.3fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 1rem;
+}
+
+header {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    
+
+    .form-container {
+        @include flexCenter;
+    }
+    // but the overall goal is to have people use this search engine to find as much information available about any given film they search.  
+    button, #search {
+        border: solid 1px $red-accent;
+        color: $red-accent;
+        padding: 6px;
+        border-radius: 7px;
+        transition: transform ease 1s;
+    }
+    
+    
+    //Button hover animation rotates both buttons 360 degrees. I included an ease and changed the revolutions.
+    button:hover {
+        transform: rotate(360deg);
+    }
+}
+
+//Here are mostly some random ideas for what else to include as additional webpages.
+nav {
+    grid-column: 1 / 4;
+    grid-row: 2 / 2;
+    color: $blue-accent;
+    text-transform: uppercase;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px $blue-accent;
+    
+    ul {
+        display: flex;
+
+        li {
+            padding: 0 1rem 0 1rem;
+        }
+    }
+
+}
+// I wonder if this could be where streaming information appears. Like if I reuse this page as a template for the resulting search, but this sidebar could have something else when you first land on the page. 
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 3 / 5;
+  height: 35rem;
+  width: 100%;
+  border: solid 2px;
+  border-color: $red-accent;
+  padding: 1rem;
+
+    ul {
+    list-style-type: none;
+    padding: 1rem;
+
+    }
+
+    li {
+    
+    }
+}
+
+// Here will be a rotating film that will be picked based on API database information
+.main {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    
+
+        img{
+        width: 40rem;
+        }
+        h2 {
+        color: $red-accent;
+        padding: .5rem 0 .5rem 0;
+        }
+
+        h3 {
+        padding: .5rem 0 .5rem 0;
+        }
+
+        .film-info {
+        padding: 0 1rem 0 0;
+        line-height: 1.8;
+        color: $blue-accent;
+        font-weight: $regular;
+            
+            a {
+            color: $red-accent;
+            font-style: italic;
+            }
+
+          
+        }
+
+        
+}
+
+footer {
+    grid-column: 1/4;
+    grid-row: 4/4;
+    background-color: $blue-accent;
+    color: $cream;
+    text-transform: uppercase;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        display: flex;
+
+        li {
+            padding: 0 1rem 0 1rem;
+        }
+    }
+
+}

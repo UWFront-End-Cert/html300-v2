@@ -6,8 +6,30 @@ html {
 *:after,
 *:before {
     box-sizing: inherit;
+    margin: auto;
 }
 
-.main {
-    padding: 2rem;
+h1 {
+    text-align: center;
+    color: $blue-accent;
+    text-transform: uppercase;
 }
+
+h2,h3 {
+    color: $blue-accent;
+    text-transform: uppercase;
+}
+
+
+.main {
+    padding: 1rem;
+}
+a {
+    color:inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+

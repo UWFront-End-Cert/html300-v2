@@ -4,3 +4,47 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+
+@mixin flexRow {
+    display:flex;
+    flex-direction: row;
+}
+
+header {
+    background-color: blue;
+    color: white;
+    display: flex;
+    width: 100%;
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: .5rem 30rem 1rem 30rem;
+        width: fit-content;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: .5rem 0 1rem 1rem;
+
+          a {
+            font-size: larger;
+            font-weight: bolder;
+            align-items: flex-end;
+        }
+    }
+
+    
+
+    a {
+        color: white;
+    }
+
+    
+
+}
+
+
