@@ -17,5 +17,8 @@
         "gulp": "4.0.2",
         "gulp-sass": "^5.1.0",
         "sass": "^1.50.1"
+    },
+    "dependencies": {
+        "@popperjs/core": "^2.11.7"
     }
 }
