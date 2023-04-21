@@ -12,13 +12,43 @@
 <body>
   <main>
     <h1>Using ES6+ Methods in DOM Interactions</h1>
-    <form id="example-form">
-      <label>Enter your favorite number:
-        <input type="text" class="input">
+
+    <form id="filter-form">
+      <h2>filter() method </h2>
+      <label>When using Data Array [0, 9, 11, 28, 32, 47], enter your favorite number:
+        <input type="text" class="filterinput">
       </label>
-      <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+      <input type="submit" value="Filter!">
+      <p>The filter() method creates a new array with all elements that pass the test implemented by the provided function. In this case, the sample function is 'y > 20', thus your input will either be shown or not shown with the results here: <span class="filteroutput"></span></p>
     </form>
+    
+    <form id="map-form">
+      <h2>map() method </h2>
+      <label>When using Data Array [0, 2, 4, 6, 8, 10], enter your favorite number:
+        <input type="text" class="mapinput">
+      </label>
+      <input type="submit" value="Map!">
+      <p>The map() method creates a new array populated with the results of calling a provided function on every element in the calling array. For this form, the sample function is 'x * userInput' resulting in every number in the array is multiplied by the number input: <span class="mapoutput"></span></p>
+    </form>
+
+    <form id="reduce-form">
+      <h2>reduce() method </h2>
+      <label>When using Data Array [0, 1, 3, 5, 7, 9], enter your favorite number:
+        <input type="text" class="reduceinput">
+      </label>
+      <input type="submit" value="Reduce!">
+      <p>The reduce() method applies a function simultaneously against two or more values of the array (from left-to-right) as to reduce it to a single value and thus becomes: <span class="reduceoutput"></span></p>
+    </form>
+
+    <form id="sort-form">
+      <h2>sort() method </h2>
+      <label>When using Data Array [9, 1, 8, 2, 7, 3, 6, 4, 5], enter your favorite number:
+        <input type="text" class="sortinput">
+      </label>
+      <input type="submit" value="Sort!">
+      <p>The sort() method sorts the elements of an array, whether it be in order by numerical or alphabetical or both: <span class="sortoutput"></span></p>
+    </form>
+    
   </main>
 </body>
 
