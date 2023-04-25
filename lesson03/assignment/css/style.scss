@@ -3,4 +3,82 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+@import 'settings.mediaqueries';
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.main {
+  border: 40px solid $darkgray;
+  display: grid;
+  width: 75%;
+  padding: 2rem;
+}
+
+.header{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    position: relative;
+    left: 75px;
+    &-image {
+        border-radius: 50%;
+        width: 55%;
+      
+      }
+}
+.info {
+  background-color: $gray;//gray
+  padding: 2rem;
+  display: inline-block;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  &-text {
+    color: $darkgray;
+  }
+  &-linkedin img {
+    float: left;
+}
+}
+
+@media only screen and ($maxwidth) {
+    .info {
+        position: relative;
+        top: 450px;
+        right: 200px;
+        color: $darkgray;//pink
+    }
+    .main {
+        border: 1px solid $white;
+    }
+    
+    .header {
+        position: relative;
+        left: 250px;
+    }
+    
+    .header-image {
+        width: 90%;
+    }
+}
+
+
+h1 {
+   color: $dimgray;
+}
+
+p {
+    font-size: $fontsize;
+}
+
+b {
+    color: $dimgray;
+    font-size: $titlefontsize;
+}
 
