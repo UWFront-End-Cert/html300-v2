@@ -7,7 +7,7 @@ const card = JSON.parse(cardJSON)
 card.forEach(function(el){
 
     let head = document.createElement('div');
-    head.className = ('header'); 
+    head.className = ('header');
     
 
 
