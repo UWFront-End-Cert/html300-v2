@@ -6,7 +6,7 @@
  *    without disabling user zoom.
  */
 
-html {
+ html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -134,8 +134,7 @@ dfn {
  */
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  margin-top: 0.67em;
 }
 
 /**
