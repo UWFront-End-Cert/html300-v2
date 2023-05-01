@@ -4,3 +4,125 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Styling the outside of the card
+.card {
+  border: 3.25rem solid #d3d3d3;
+  border-radius: 0.3125rem;
+  padding: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  width: 60.75rem;
+  height: auto;
+  // Make border smaller on small screens and adjust as screen gets smaller
+  @include media-query(mobile){
+    border: 1.5rem solid #d3d3d3;
+  }
+  @include media-query(xtra-small){
+    padding: 1rem;
+  }
+  @include media-query(teeny){
+    padding: 0.5rem;
+  }
+}
+
+// Styling the middle section
+.outer-profile {
+  float: left;
+  text-align: center;
+  & h1, h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+    color: darken($gray, 50%);
+  }
+  & h2 {
+    font-weight: 100;
+    font-style: italic;
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+    letter-spacing: 0.03125rem;
+  }
+  & .headshot {
+    height: 14.375rem;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    margin-bottom: 1rem;
+  }
+  // Switch to vertical layout and adjust as screen gets smaller
+  @include media-query(tab){
+    float: none;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+  & h1 {
+    margin-left: 0;
+  }
+  @include media-query(vert-phone){
+    margin-left: 15%;
+    height: auto;
+    width: 75%;
+  }
+  @include media-query(xtra-small){
+    .headshot {
+      height: 12rem;
+      width: auto;
+    }
+  }
+  @include media-query(teeny){
+    margin-left: auto;
+    & .headshot {
+      height: 9rem;
+      width: auto;
+    }
+    & h1, h2 {
+      margin-left: -30%;
+      text-align: center;
+    }
+  }
+  @include media-query(tiny){
+    .headshot {
+      margin-left: -17%;
+    }
+  }
+}
+
+// Styling the inner section
+.inner-profile {
+  background-color: $gray;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  width: 66%;
+  text-align: left;
+  margin-left: 17.25rem;
+  & p, h3 {
+    color: darken($gray, 55%);
+    margin: 0;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0.03125rem;
+  }
+  & p {
+    margin-top: 0.1875rem;
+  }
+  & #linkedin-text {
+    margin-top: 0.75rem;
+    color: $darker;
+  }
+  & .logo {
+    margin-top: 0.5rem;
+    margin-right: 0.25rem;
+  }
+  // Switch to vertical layout and adjust as screen gets smaller
+  @include media-query(tab){
+    margin-left: 0;
+    width: auto;
+  }
+  @include media-query(teeny){
+    line-break: anywhere;
+    padding: 0.5rem;
+    text-align: center;
+  }
+}

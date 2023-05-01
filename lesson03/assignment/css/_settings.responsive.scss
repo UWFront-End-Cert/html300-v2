@@ -27,7 +27,7 @@
 
     }
 
-    // If the user specifies a non-exitent alias, send them a warning.
+    // If the user specifies a non-existent alias, send them a warning.
     @if $breakpoint-found == false{
         @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
     }
@@ -39,9 +39,11 @@ $breakpoints: (
     "xl"            "screen and (min-width: 1300px)",
     "desk"          "screen and (min-width: 1024px)",
     "lg"            "screen and (min-width: 920px)",
-    "tab"           "screen and (min-width: 768px)",
+    "tab"           "screen and (max-width: 919px)",
     "mobile"        "screen and (max-width: 767px)",
-    "infograph"     "screen and (min-width: 540px)",
+    "vert-phone"    "screen and (max-width: 540px)",
+    "xtra-small"    "screen and (max-width: 500px)",
+    "teeny"         "screen and (max-width: 399px)"
     "med"           "screen and (min-width: 40em)",
     "sm"            "screen and (min-width: 30em)",
     "small"         "screen and (min-width: 20em)",
