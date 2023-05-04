@@ -1,0 +1,102 @@
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'settings.transitions';
+
+
+h3 {
+    font-size: 14px;
+    transition-property: font-size;
+    transition-duration: 4s;
+    transition-delay: 2s;
+  }
+  
+h3:hover {
+    font-size: 36px;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.responsive-image {
+    display: block;
+    width: 75%;
+    height: auto;
+    position: relative;
+    left: 350px;
+}
+.header-text h2{
+    padding: 0;
+    margin: 0;
+    color: $pink;
+    font-size: 3000px;
+}
+
+span:before{
+    content: '';
+    animation: animate infinite 8s;
+}
+
+@keyframes animate{
+    0%{
+        content: 'Passionate';
+    }
+    20%{
+        content: 'Experience';
+    }
+    40%{
+        content: 'Reliable';
+    }
+    60%{
+        content: 'Dedicated';
+    }
+    80%{
+        content: 'Unwavering';
+    }
+    100%{
+        content: 'Dependable';
+    }
+
+}
+
+.animate-charcter {
+text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    $blue 0%,
+    $purple 29%,
+    $red 67%,
+    $yellow 100%
+  );
+  background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+  color: $white;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 65px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.header-text {
+    width: 24.4%;
+    height: 700px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    align-content: center;
+    font-family: Palatino, URW Palladio L, serif;
+    font-size: $fontsize1;
+    padding-left: 35px;
+}
