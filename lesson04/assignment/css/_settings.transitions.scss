@@ -1,0 +1,8 @@
+@mixin background {
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+  }
+
+  
