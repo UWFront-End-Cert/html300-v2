@@ -2,7 +2,7 @@
 @import 'settings.responsive';
 @import 'settings.transitions';
 
-
+// this simple transition will affect the Home and About Us links on the homepage
 h3 {
     font-size: 14px;
     transition-property: font-size;
@@ -29,10 +29,10 @@ body {
 .header-text h2{
     padding: 0;
     margin: 0;
-    color: $pink;
-    font-size: 3000px;
+    font-size: 50px;
 }
 
+// This animation will create text below the Home and About Us links
 span:before{
     content: '';
     animation: animate infinite 8s;
@@ -60,6 +60,7 @@ span:before{
 
 }
 
+// This code will change the color of the main heading text
 .animate-charcter {
 text-transform: uppercase;
   background-image: linear-gradient(
@@ -69,10 +70,7 @@ text-transform: uppercase;
     $red 67%,
     $yellow 100%
   );
-  background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    background-clip: text;
+  @include background;
   color: $white;
   text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -97,6 +95,6 @@ text-transform: uppercase;
 
     align-content: center;
     font-family: Palatino, URW Palladio L, serif;
-    font-size: $fontsize1;
+    font-size: $fontsize;
     padding-left: 35px;
 }
