@@ -1,0 +1,166 @@
+// import scss
+@import 'mixin';
+@import 'settings.variables';
+
+
+// all
+* {
+    margin: 0;
+}
+
+
+// header changes
+header {
+    background-color: $yellow;
+    padding-top: 30px;
+    padding-left: 100px;
+    display: flex;
+    align-items: center;
+  
+    .logo {
+        width: 20%;
+    }
+  
+    // adds animation to the header; using the header keyframe musubiHeader 
+    .websiteName {
+        color: $black;
+        font-size: $font-title;
+        text-transform: uppercase;
+        padding-top: 30px;
+        padding-left: 10px;
+        animation-name: musubiHeader;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+}
+
+// header keyframe that handles the fade in animation via controlling the opacity
+// https://dev.to/inverseswirl/how-to-add-keyframes-animation-code-in-scss-46k8
+@keyframes musubiHeader {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+// any navagation bar updates
+nav {
+    background-color: $darkturquoise;
+    font-size: $font-medium;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    // uses transition and transform for nav links when mouse hovered over
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale
+    li {
+        color: $lightgray;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        list-style: none;
+        transition: transform .5s;
+    }
+  
+    li:hover {
+        transform: scale(1.5, 1.5);
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+// any main body udpates
+main {
+    min-height: 400px;
+    background-color: $lightgray;
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
+
+    h1 {
+        color: $darkturquoise;
+        padding-top: .5rem;
+        margin-left: 15%;
+        text-align: center;
+        border-bottom: 3px solid $darkturquoise;
+        width: 70%;
+
+    }
+
+    .intro {
+        text-align: center;
+        padding: 2rem 5rem;
+    }
+
+    h2 {
+        color: $darkturquoise;
+        text-align: center;
+        border-bottom: 3px solid $darkturquoise;
+        margin-left: 20%;
+        width: 60%;
+
+    }
+
+    h3 {
+        color: $darkturquoise;
+    }
+
+    //menu container info updates
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 80%;
+        padding-left: 10%;
+        padding-bottom: 2rem;
+
+        .menu-item {
+            width: 25%;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        // uses a transition duration of 1s as it transforms in scale 
+        .menu-image {
+            display: block;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+            border: 1px solid $black;
+            transition: transform 1s;
+        }
+
+        // uses transform to scale image larger when hovered over with mouse
+        // https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale
+        .menu-image:hover {
+            transform: scale(1.25, 1.25);
+          }
+
+        // using mixin / include to change the menu item info text for color and font size
+        .menu-info {
+          @include main-text;
+          text-align: center;
+        }
+
+    }
+}
