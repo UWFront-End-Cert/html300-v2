@@ -39,5 +39,10 @@ export default {
 </script>
 
 <style>
+#mycarousel {
+  width: 50%;
+  margin: 0 auto;
 
+
+}
 </style>
