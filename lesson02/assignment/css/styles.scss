@@ -1,0 +1,194 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:rgba(0,0,0,0)}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}html{box-sizing:border-box}*,*:after,*:before{box-sizing:inherit}.main{padding:2rem}h1{color:#f1352b}
+
+@import 'components.content';
+@import 'base.normalize';
+
+ //declaring variables
+
+$text-color-1: #5f6264;
+$text-color-2: #828586;
+$font: "arial, helvetica, sans-serif";
+
+//including mixins
+
+@mixin linkedin-text {
+   color: $text-color-2;
+   font-style: $font;
+    font-weight: 550;
+
+}
+
+//providing flexbox
+
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    margin: 40px;
+    border: 60px solid #BEC4C8;  
+    border-radius: 5px;    
+    .left{                              //nesting
+        display: flex;
+        flex-direction: column;
+        margin:40px;
+        .employee-image{
+            height:300px;
+            border-radius: 50%;
+        }
+        .name{
+            font-family: $font;
+            font-weight: bolder;
+            font-size: xx-large;
+            color: $text-color-1;  //variables
+            text-align: center;
+        }
+        span{
+            font-family: $font;
+            font-style: italic;
+            font-size: 75%;
+            color: $text-color-2;
+        }
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        margin:50px;
+        background-color: #e3e6e786;
+        padding: 20px 250px 20px 20px;
+        ul {
+            list-style-type: none;
+            color: $text-color-2;
+            font-family: $font;
+            font-size: large;
+            line-height: 40px;
+            span {
+                color: $text-color-1;
+                font-weight:900;
+                font-size:x-large
+            }
+
+        }
+        .linkedin {
+            margin: 0px 0px 0px 40px;
+            span {
+                @include linkedin-text;
+                position: relative;
+                top: -10px;
+            }
+        }
+    }
+}
+
+//responsive for small screens
+
+@media (max-width: 480px) {
+    .container {
+        height:230px;
+        width:100%;
+        margin: 5px;
+        border: 20px solid #BEC4C8; 
+        .left{                              //nesting
+            margin:5px;
+            .employee-image{
+                height:100px;
+                width: 100px;
+                border-radius: 50%;
+            }
+            .name{
+                font-family: $font;
+                font-weight: bolder;
+                font-size: large;
+                color: $text-color-1;  //variables
+                text-align: center;
+            }
+            span{
+                font-family: $font;
+                font-style: italic;
+                font-size: 75%;
+                color: $text-color-2;
+            }
+        }
+        .right{
+            margin:0px;
+            padding: 0.3px 1.5px 0.3px 0px;
+            ul {
+                font-size:small;
+                line-height: 20px;
+                padding: 5px;
+                span {
+                    color: $text-color-1;
+                    font-weight:600;
+                    font-size:small;
+                }
+    
+            }
+            .linkedin {
+                margin: 0px 0px 0px 5px;
+                span {
+                    @include linkedin-text;
+                    font-weight: 400;
+                    font-size: small;
+                    position: relative;
+                    top: -10px;
+                }
+            }
+        }
+    }
+}
+ 
+//responsive for tablet devices
+
+@media (min-width: 750px) and (max-width: 1150px){
+    .container {
+        height:230px;
+        width:50%;
+        margin: 50px;
+        border: 20px solid #BEC4C8; 
+        .left{                              //nesting
+            margin:5px;
+            .employee-image{
+                height:100px;
+                width: 100px;
+                border-radius: 50%;
+            }
+            .name{
+                font-family: $font;
+                font-weight: bolder;
+                font-size: large;
+                color: $text-color-1;  //variables
+                text-align: center;
+            }
+            span{
+                font-family: $font;
+                font-style: italic;
+                font-size: 75%;
+                color: $text-color-2;
+            }
+        }
+        .right{
+            margin:0px;
+            padding: 0.3px 1.5px 0.3px 0px;
+            ul {
+                font-size:small;
+                line-height: 20px;
+                padding: 5px;
+                span {
+                    color: $text-color-1;
+                    font-weight:600;
+                    font-size:small;
+                }
+    
+            }
+            .linkedin {
+                margin: 0px 0px 0px 5px;
+                span {
+                    @include linkedin-text;
+                    font-weight: 400;
+                    font-size: small;
+                    position: relative;
+                    top: -10px;
+                }
+            }
+        }
+    }
+}

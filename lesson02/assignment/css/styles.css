@@ -1,4 +1,220 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+a {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+
+.main {
+  padding: 2rem;
+}
+
+h1 {
+  color: #f1352b;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+.main {
+  padding: 2rem;
+}
+
+h1 {
+  color: red;
+}
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
@@ -377,20 +593,173 @@ th {
   padding: 0;
 }
 
-html {
-  box-sizing: border-box;
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+  margin: 40px;
+  border: 60px solid #BEC4C8;
+  border-radius: 5px;
+}
+.container .left {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+.container .left .employee-image {
+  height: 300px;
+  border-radius: 50%;
+}
+.container .left .name {
+  font-family: "arial, helvetica, sans-serif";
+  font-weight: bolder;
+  font-size: xx-large;
+  color: #5f6264;
+  text-align: center;
+}
+.container .left span {
+  font-family: "arial, helvetica, sans-serif";
+  font-style: italic;
+  font-size: 75%;
+  color: #828586;
+}
+.container .right {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  background-color: rgba(227, 230, 231, 0.5254901961);
+  padding: 20px 250px 20px 20px;
+}
+.container .right ul {
+  list-style-type: none;
+  color: #828586;
+  font-family: "arial, helvetica, sans-serif";
+  font-size: large;
+  line-height: 40px;
+}
+.container .right ul span {
+  color: #5f6264;
+  font-weight: 900;
+  font-size: x-large;
+}
+.container .right .linkedin {
+  margin: 0px 0px 0px 40px;
+}
+.container .right .linkedin span {
+  color: #828586;
+  font-style: "arial, helvetica, sans-serif";
+  font-weight: 550;
+  position: relative;
+  top: -10px;
 }
 
-*,
-*:after,
-*:before {
-  box-sizing: inherit;
+@media (max-width: 480px) {
+  .container {
+    height: 230px;
+    width: 100%;
+    margin: 5px;
+    border: 20px solid #BEC4C8;
+  }
+  .container .left {
+    margin: 5px;
+  }
+  .container .left .employee-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+  .container .left .name {
+    font-family: "arial, helvetica, sans-serif";
+    font-weight: bolder;
+    font-size: large;
+    color: #5f6264;
+    text-align: center;
+  }
+  .container .left span {
+    font-family: "arial, helvetica, sans-serif";
+    font-style: italic;
+    font-size: 75%;
+    color: #828586;
+  }
+  .container .right {
+    margin: 0px;
+    padding: 0.3px 1.5px 0.3px 0px;
+  }
+  .container .right ul {
+    font-size: small;
+    line-height: 20px;
+    padding: 5px;
+  }
+  .container .right ul span {
+    color: #5f6264;
+    font-weight: 600;
+    font-size: small;
+  }
+  .container .right .linkedin {
+    margin: 0px 0px 0px 5px;
+  }
+  .container .right .linkedin span {
+    color: #828586;
+    font-style: "arial, helvetica, sans-serif";
+    font-weight: 550;
+    font-weight: 400;
+    font-size: small;
+    position: relative;
+    top: -10px;
+  }
 }
-
-.main {
-  padding: 2rem;
-}
-
-h1 {
-  color: red;
-}/*# sourceMappingURL=style.css.map */
+@media (min-width: 750px) and (max-width: 1150px) {
+  .container {
+    height: 230px;
+    width: 50%;
+    margin: 50px;
+    border: 20px solid #BEC4C8;
+  }
+  .container .left {
+    margin: 5px;
+  }
+  .container .left .employee-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+  .container .left .name {
+    font-family: "arial, helvetica, sans-serif";
+    font-weight: bolder;
+    font-size: large;
+    color: #5f6264;
+    text-align: center;
+  }
+  .container .left span {
+    font-family: "arial, helvetica, sans-serif";
+    font-style: italic;
+    font-size: 75%;
+    color: #828586;
+  }
+  .container .right {
+    margin: 0px;
+    padding: 0.3px 1.5px 0.3px 0px;
+  }
+  .container .right ul {
+    font-size: small;
+    line-height: 20px;
+    padding: 5px;
+  }
+  .container .right ul span {
+    color: #5f6264;
+    font-weight: 600;
+    font-size: small;
+  }
+  .container .right .linkedin {
+    margin: 0px 0px 0px 5px;
+  }
+  .container .right .linkedin span {
+    color: #828586;
+    font-style: "arial, helvetica, sans-serif";
+    font-weight: 550;
+    font-weight: 400;
+    font-size: small;
+    position: relative;
+    top: -10px;
+  }
+}/*# sourceMappingURL=styles.css.map */
