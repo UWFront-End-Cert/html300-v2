@@ -1,0 +1,80 @@
+// Import partials here
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'base.normalize';
+@import 'components.content';
+
+// TODO: Refactor these styles to use Sass features
+.card {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #c7d5e9;
+  border-radius: 5px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+
+  .image {
+    margin-right: 20px;
+    flex: 0 0 auto;
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 80%;
+    }
+  }
+
+  .details {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    .details-box {
+      background-color: #f5e9e9;
+      padding: 80px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2px;
+
+      h2 {
+        font-size: 18px;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+
+      p {
+        margin: 0;
+        margin-bottom: 3px;
+        font-size: 14px;
+      }
+
+      .contact-info {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 480px) {
+    flex-wrap: nowrap;
+
+    .image {
+      flex: 0 0 auto;
+      margin-right: 20px;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .details {
+      flex: 1;
+    }
+  }
+}

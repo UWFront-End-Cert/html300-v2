@@ -1,3 +1,7 @@
+h1 {
+  color: #000000;
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -118,7 +122,7 @@ dfn {
  * contexts in Firefox 4+, Safari, and Chrome.
  */
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0.67em 0;
 }
 
@@ -389,4 +393,69 @@ html {
 
 .main {
   padding: 2rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #c7d5e9;
+  border-radius: 5px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+}
+.card .image {
+  margin-right: 20px;
+  flex: 0 0 auto;
+}
+.card .image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 80%;
+}
+.card .details {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.card .details .details-box {
+  background-color: #f5e9e9;
+  padding: 80px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2px;
+}
+.card .details .details-box h2 {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.card .details .details-box p {
+  margin: 0;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+.card .details .details-box .contact-info {
+  display: flex;
+  align-items: center;
+}
+.card .details .details-box .contact-info img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+@media (min-width: 480px) {
+  .card {
+    flex-wrap: nowrap;
+  }
+  .card .image {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .card .details {
+    flex: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

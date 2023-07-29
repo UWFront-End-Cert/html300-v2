@@ -1,6 +1,91 @@
 // Import partials here
-@import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+// Mixin for box shadow
+@mixin box-shadow($shadow) {
+    box-shadow: $shadow;
+  }
+  
+  // Mixin for border radius
+  @mixin border-radius($radius) {
+    border-radius: $radius;
+  }
+// TODO: Refactor these styles to use Sass features
+.card {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #c7d5e9;
+    background: #abdfb0;
+    background: -webkit-linear-gradient(to right, #a59594, #b2beaa);
+    background: linear-gradient(to right, #f4f6f7, #4fc97e);
+    @include border-radius(5px);
+    @include box-shadow(0 6px 8px rgba(0, 0, 0, 0.1));
+    display: flex;
+    flex-wrap: wrap;
 
+  .image {
+    margin-right: 20px;
+    flex: 0 0 auto;
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 80%;
+    }
+  }
+
+  .details {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    .details-box {
+        background-color:$details-box-bg-color;
+        background: linear-gradient(to right, #d6e9f3, #bd0a19);
+        padding: 80px;
+        @include border-radius(5px);
+        @include box-shadow(0 2px 5px rgba(19, 18, 18, 0.1));
+        
+      h2 {
+        font-size: 17px;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+
+      p {
+        margin: 0;
+        margin-bottom: 2px;
+        text-align:left;
+        font-size: 16px;
+      }
+
+      .contact-info {
+        display: flex;
+        align-items:start;
+        justify-content:left;
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 480px) {
+    flex-wrap: nowrap;
+
+    .image {
+      flex: 0 0 auto;
+      margin-right: 20px;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .details {
+      flex: 1;
+    }
+  }
+}
