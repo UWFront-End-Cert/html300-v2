@@ -1,0 +1,11 @@
+$background : '/images/car3.jpg';
+$width:100px;
+$height:100px;
+$background-color:red;
+
+@mixin font {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    color: red;
+}

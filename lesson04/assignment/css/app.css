@@ -1,0 +1,70 @@
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  color: red;
+  font-size: 2em;
+}
+
+.shapes {
+  position: relative;
+}
+
+.shapes__square {
+  width: 100px;
+  height: 100px;
+  margin: 100px auto;
+  background-color: red;
+  transition: all 0.7s linear;
+}
+
+.shapes__circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 100px auto;
+  border-radius: 50%;
+  background-color: red;
+  animation: run 4s linear 2s infinite alternate backwards;
+}
+
+.shapes__square:hover {
+  background-color: green;
+  transform: rotate(360deg);
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+@keyframes run {
+  0% {
+    background-color: blue;
+    right: 0px;
+    top: 0px;
+  }
+  20% {
+    background-color: orange;
+    right: 300px;
+    top: 0px;
+  }
+  40% {
+    background-color: limegreen;
+    left: -300px;
+    top: -300px;
+  }
+  60% {
+    background-color: purple;
+    top: -300px;
+    left: 300px;
+  }
+  80% {
+    background-color: peru;
+    left: 300px;
+    top: 0px;
+  }
+  100% {
+    background-color: blue;
+    left: 0px;
+    top: 0px;
+  }
+}
