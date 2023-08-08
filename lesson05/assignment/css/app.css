@@ -1,0 +1,234 @@
+:root {
+  --background-color: #7ACB00;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  background: #222;
+  font-weight: 400;
+  color: whitesmoke;
+}
+
+.container {
+  height: 90vh;
+  background-color: #756262;
+  background-image: url("images/car1.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+.header {
+  background-color: var(--background-color);
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  position: absolute;
+  top: 100%;
+  text-align: left;
+  left: 0;
+  background-color: var(--background-color);
+  display: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+li a {
+  color: whitesmoke;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: #222;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.nav-toggle-label img {
+  width: 30px;
+  height: 40px;
+}
+
+.nav-toggle:checked ~ nav {
+  display: block;
+}
+
+nav a {
+  opacity: 1;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background-color: white;
+  height: 1px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 10px;
+}
+
+.nav-toggle-label span::after {
+  top: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+  }
+  .logo {
+    grid-column: 2/3;
+  }
+  nav {
+    all: unset;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav a {
+    opacity: 1;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav li {
+    margin: 10px 10px;
+  }
+  nav a::before {
+    content: "";
+    height: 5px;
+    display: block;
+    background: black;
+    transform: scale(0, 1);
+    transition: transform 0.5s ease-in-out;
+  }
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+  .container {
+    position: relative;
+  }
+  .footer {
+    margin-bottom: 3px;
+  }
+  .show {
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+}
+.container {
+  position: relative;
+  min-height: 10px;
+  min-width: 10px;
+  overflow: auto;
+}
+
+.table {
+  left: 100px;
+  top: 120px;
+  border: 2px solid gray;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-auto-columns: minmax(10px, auto); */
+  border-radius: 10px;
+  margin-left: 1px;
+  margin-right: 10px;
+  justify-content: left;
+  /* padding: 1px auto;
+  align-content: space-evenly; */
+  position: absolute;
+  overflow: hidden;
+}
+
+.rowHeader div {
+  background-color: aliceblue;
+  color: black;
+}
+
+.rowHeader, .row {
+  display: contents;
+}
+
+.row > div, .rowHeader > div {
+  border-bottom: 1px solid gray;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.logo {
+  margin-left: 120px;
+  margin-top: 25px;
+}
+
+nav a::after {
+  display: none;
+}
+
+nav :not(:checked) ~ nav {
+  display: none;
+}
+
+.footer li {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+}
+
+body {
+  display: grid;
+}
