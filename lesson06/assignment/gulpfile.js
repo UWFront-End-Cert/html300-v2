@@ -13,10 +13,9 @@ const sass = require('gulp-sass')(require('sass'));
 // Directories to watch.
 // If watch & reload isn't working as expected, check that files you want watched can be found in these paths.
 const paths = {
-    scss: {src: './css/*.scss', dest: './css'},
-    data: {src: './data/', dest: './data/'},
-    js: {src: './*.js', dest: '.'},
-    html: {src: './*.html', dest: '.'}
+    scss: {src: 'css/*.scss', dest: './css'},
+    js: {src: 'js/*.js', dest: './js'},
+    html: {src: '*.html', dest: '.'}
 };
 
 
@@ -49,6 +48,6 @@ task('watchFiles', function() {
     watch(paths.js.src).on('change', browserSync.reload);
 });
 
-const watching = parallel('watchFiles', 'browserSync')
+const watching = parallel('sass','watchFiles', 'browserSync')
 
 exports.default = watching
