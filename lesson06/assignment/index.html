@@ -1,15 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 06 - Bootstrap 4</title>
-    </head>
-    <body>
-        <main class="main">
-          
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Assignment 06</title>
+  </head>
+
+  <body>
+    <!--Nav bar section-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <a class="navbar-brand" href="#">
+        <h2>CarCare</h2>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="nav-bar nav">
+          <li class="nav-item active">
+            <!-- Home link redirects to jumbotron defined in id #home below-->
+            <a class="nav-link" href="#home" data-toggle="tab">Home </a>
+          </li>
+          <li class="nav-item">
+            <!-- Make link redirects to Data Grid fetched from API defined in id #make below-->
+            <a class="nav-link" href="#make" data-toggle="tab">Make</a>
+          </li>
+          <li class="nav-item">
+            <!-- Model link redirects to accordion Grid defined in id #model below-->
+            <a class="nav-link" href="#model" data-toggle="tab">Model</a>
+          </li>
+          <li class="nav-item">
+            <!-- Arrival link redirects to carousal images section defined in id #arrivals below-->
+            <a class="nav-link" href="#arrivals" data-toggle="tab"
+              >New Arrivals</a
+            >
+          </li>
+          <li class="nav-item">
+            <!-- Engine Body link redirects to responsive image section defined in id #body below-->
+            <a class="nav-link" href="#body" data-toggle="tab">Engine Body</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+    <!-- LANDING PAGE-->
+    <div class="tab-content py-5 container-fluid">
+      <div class="tab-pane" id="home">
+        <main role="main" class="container">
+          <!-- jumbotron section with tooltip added -->
+          <div class="jumbotron">
+            <h1>Driving Vehicle APIs Forward</h1>
+            <p class="lead">
+              Are you planning on buying a new
+              <a
+                href="#"
+                data-toggle="tooltip"
+                title="Hooray You have chosen right place!"
+                >car</a
+              >?Well, we know that with so many options available out there, it
+              gets really difficult to find a good car which suits your need.
+              Hence, we have put together a complete list of new cars.
+              <a
+                href="#"
+                data-toggle="tooltip"
+                title="5 Star rated by many people!"
+                >Hyundai</a
+              >
+              Exter, Maruti Suzuki Fronx and Maruti Suzuki Invicto. The 7 most
+              popular upcoming cars are Buick, Ford,Subaru,Mitsubishi, GMC,Volvo
+              XC90 and Honda Elevate.
+            </p>
+            <a
+              class="btn btn-lg btn-primary"
+              href="../../components/navbar/"
+              role="button"
+              >View More &raquo;</a
+            >
+          </div>
         </main>
-    </body>
+      </div>
+      <!-- Data grid with different col size section -->
+      <div class="tab-pane" id="make">
+        <h3>Fetching User Data from API into Grid</h3>
+        <div class="container-fluid table">
+          <div class="row">
+            <!--XS size for mobile devices view-->
+            <div class="col-xs-2 colHead">ID</div>
+            <!--SM size for Tab devices view-->
+            <div class="col-sm-3 colHead">Year</div>
+            <div class="col-sm-2 colHead">Make</div>
+            <!--MD size for desktop devices view-->
+            <div class="col-md-3 colHead">Model</div>
+            <div class="col-md-3 colHead">Type</div>
+          </div>
+        </div>
+      </div>
+      <!--accordion section-->
+      <div class="tab-pane" id="model">
+        <h2>Available Services</h2>
+        <p>
+          In this section we have added a "plus" sign to each section. When the
+          user clicks on the button, the corresponding details will be loaded.
+        </p>
+        <button class="accordion">Search with Model</button>
+        <div class="panel">
+          <p>
+            This section shares the details about different types of car model
+            from various dealer.
+          </p>
+        </div>
+
+        <button class="accordion">Search with Make</button>
+        <div class="panel">
+          <p>
+            This section provides you the details about different makes of car
+            from various dealer.
+          </p>
+        </div>
+
+        <button class="accordion">Search with Year of Make and Types</button>
+        <div class="panel">
+          <p>
+            This section shares the details about different type of car engines
+            and types from various dealer.
+          </p>
+        </div>
+      </div>
+      <!--Image carousel section-->
+      <div class="tab-pane" id="arrivals">
+        <h2>New Arrivals</h2>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+
+          <!-- IMAGE PAGE  -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/car1.jpg" alt="Audi" width="1100" height="500" />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/car2.jpg"
+                alt="New Arrival"
+                width="1100"
+                height="500"
+              />
+            </div>
+            <div class="carousel-item">
+              <img src="img/car3.jpg" alt="Fantasy" width="1100" height="500" />
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+      <!-- Fluid image for respossive page-->
+      <div class="tab-pane" id="body">
+        <div class="container">
+          <h2>Engine Body</h2>
+          <p>
+            Engine body is made up of high quality metals which shows the color
+            more clear and impressed by some one easily
+          </p>
+          <img
+            class="img-fluid"
+            src="img/car.jpg"
+            alt="Chania"
+            width="460"
+            height="345"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- all javascripts file for application scope and bootstrap scripts-->
+    <script src="js/app.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- below snippest required to work with tool tip-->
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </body>
 </html>
