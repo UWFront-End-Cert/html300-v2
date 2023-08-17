@@ -1,33 +1,62 @@
-// Code that requires the DOM be loaded should not be run until the DOM is loaded
-document. addEventListener("DOMContentLoaded", function(){
 
-  // Find the example form, and handle its submit event
-  const exampleForm = document.querySelector('#example-form')
+// Start of the exercise adventure.
+const startExercises = () => {
+  alert("Welcome to the ES6+ exercises!");
+  doubleNumbers();  // Next: make numbers big
+}
 
-  exampleForm.addEventListener('submit', function(event){
-    // Prevent the form from trying to submit to a server
-    event.preventDefault()
+// Double numbers. Yup.
+const doubleNumbers = () => {
+  const input = prompt("Enter a few comma-separated numbers to double them:");
+  // Make 'em bigger
+  const doubled = input.split(',').map(num => Number(num) * 2);
+  alert(`Doubled: ${doubled.join(', ')}`);
+  filterNumbers();  // Onwards
+}
 
-    // An array that we can transform based on user input
-    let data = [0, 1, 2, 3, 5, 8]
+// Uhh, filters out the smaller numbers, I guess?
+const filterNumbers = () => {
+  const input = prompt("Enter a few comma-separated numbers. We'll show the ones greater than 10:");
+  // Magic
+  const filtered = input.split(',').map(Number).filter(num => num > 10);
+  alert(`Numbers > 10: ${filtered.join(', ')}`);
+  swapKeyValue();  // Keep going
+}
 
-    const inputField = document.querySelector('#example-form .input')
-    const userInput = inputField.value
-    const userNumber = parseInt(userInput)
+// Let's swap key-values. Dunno why, but hey.
+const swapKeyValue = () => {
+  const input = prompt("Enter a key-value pair like 'key:value'.");
+  // Do the swapping thing
+  const swapped = Object.fromEntries(Object.entries(Object.fromEntries(input.split(',').map(pair => pair.split(':')))).map(([key, value]) => [value, key]));
+  alert(`Swapped: ${JSON.stringify(swapped)}`);
+  calculateSum();  // And another one
+}
 
-    // If the user's input was a number, push it into the array and continue
-    if(!isNaN(userNumber)){
-      data.push(userNumber)
+// I mean, it sums things. Woo.
+const calculateSum = () => {
+  const input = prompt("Enter a few comma-separated numbers. We'll calculate the sum.");
+  const sum = input.split(',').map(Number).reduce((acc, num) => acc + num, 0);
+  alert(`Sum: ${sum}`);
+  spreadExample();  // Something with spreads next
+}
 
-      // Use reduce to sum all the numbers in the data array
-      const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
+// More number stuff, now with spread.
+const spreadExample = () => {
+  const input = prompt("Enter three comma-separated numbers. We'll add 5 and 10 to the set and display.");
+  const numbers = [...input.split(','), 5, 10];  // Spread 'em out
+  alert(`Numbers with added values: ${numbers.join(', ')}`);
+  destructureExample();  // Fancy word: destructure
+}
 
-      // Output the total to the page- no need to convert the numeric sum back to a string, HTML will just print the number as a string
-      document.querySelector('#example-form .output').innerHTML = sum
-    }
+// Destructure magic. Fancy.
+const destructureExample = () => {
+  const input = prompt("Enter a pair like 'key:value'.");
+  const [key, value] = input.split(':');
+  alert(`Key: ${key}, Value: ${value}`);
+  finishExercises();  // Finally!
+}
 
-    // Clear the form field so the user can try again
-    inputField.value = ''
-  })
-
-})
+// That's a wrap!
+const finishExercises = () => {
+  alert("You're never getting those moments of your life back, I hope you enjoyed them.");
+}
