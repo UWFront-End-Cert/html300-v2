@@ -1,1 +1,1 @@
-/*# sourceMappingURL=style.css.map */
+@keyframes header{from{background-color:#138dd3}to{background-color:#189e20}}.main .header-left{display:flex;flex-direction:row}.main .header-left .header-left-1{display:flex}.main .header-left .header-left-1 h1{color:#fff;font-style:"arial, helvetica, sans-serif";font-weight:300;animation:header 5s linear 2s infinite alternate;transition:transform 3000ms ease}.main .header-left .header-left-1 h1:hover{transform:rotateY(360deg)}.main .header-left .header-left-2{display:flex}
