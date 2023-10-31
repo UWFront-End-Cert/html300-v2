@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Assignment 06</title>
+    </head>
+    <body>
+        <header>
+          <div class="grid-container">
+                <div class="header-left">
+                    <div class="header-left-1">
+                      <h1>BOOK MY EVENT</h1>   
+                    </div>
+                    <div class="header-left-2">
+                      <form method="get">
+                        <input type="text" name="q" placeholder="search for events">
+                        <input type="submit" value="search">
+                      </form>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <label>Location<br>
+                        <select name="location">
+                            <option value="Seattle">Seattle</option>
+                            <option value="Bellevue">Bellevue</option>
+                            <option value="Tacoma">Tacoma</option>
+                        </select>
+                    </label>
+                </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Drama.html">Drama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comedyshows.html">Comedy shows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kids.html">Kids</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+            <section>
+                <div class="side-bar">
+                    <h3>Filters</h3>
+                    <nav>
+                        <ul>
+                          <li>Language
+                            <ul class="menu-1">
+                              <li class="menu-1__li">English</li>
+                              <li>Spanish</li>
+                              <li>French</li>
+                              <li>Japanese</li>
+                              <li>Korean</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </nav>
+                </div>
+            </section> 
+            <aside>
+
+                <!--accordion-->
+                
+                <div class="row1">
+                    <div class="item-1">
+                        <img class="img-fluid img-thumbnail" src="images/10.jpg" alt="event one">
+                        <p class="event-name">Halloween<br>Seattle</p>
+                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo1">Halloween</button>
+                            <div id="demo1" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                    </div>
+                    <div class="item-1">
+                        <img class="img-fluid img-thumbnail" src="images/3.jpg" alt="event one"> 
+                        <p class="event-name">Party Night<br>Bellevue</p>
+                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo2">Halloween</button>
+                            <div id="demo2" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="item-1">
+                        <img class="img-fluid img-thumbnail" src="images/8.jpg" alt="event one">
+                        <p class="event-name">Alice in Wonderland<br>Tacoma</p>
+                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo3">Halloween</button>
+                            <div id="demo3" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                    </div>
+                    <div class="item-1">
+                        <img class="img-fluid img-thumbnail" src="images/7.jpg" alt="event one">
+                        <p class="event-name">Pokemon<br>Seattle</p>
+                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo4">Halloween</button>
+                            <div id="demo4" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="item-1">
+                        <img class="img-fluid img-thumbnail" src="images/11.jpg" alt="event one">
+                        <p class="event-name">Bass Monsters<br>Tacoma</p>
+                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo5">Halloween</button>
+                            <div id="demo5" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                    </div>
+                    <div class="item-1">
+                        <img class="img-fluid img-thumbnail" src="images/5.jpg" alt="event one">
+                        <p class="event-name">Salsa at Alki beach<br>Seattle</p>
+                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo6">Halloween</button>
+                            <div id="demo6" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        </body>
+        <footer>
+            <p class="footer-text"><strong>Book My Event</strong> <br>Seattle, Bellevue and Tacoma <br>111 Pike place market, Seattle, WA <br><small>All rights reserved</small></p>
+        </footer>
+    </div>
+</header>
+</html>
