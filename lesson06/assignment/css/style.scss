@@ -56,7 +56,7 @@ $font: "arial, helvetica, sans-serif";
     font-size: 30px;
 }
 
-.main {
+header {
     // .header {
         // display: grid;
 
@@ -89,7 +89,6 @@ $font: "arial, helvetica, sans-serif";
             grid-row: 1 / 1;
 
         }
-    // }
         
     .nav-item {
         grid-area: nav-bar;
@@ -106,10 +105,13 @@ $font: "arial, helvetica, sans-serif";
         }
     }
 
-    .side-bar {
+    section {
         grid-area: side-bar;
         grid-column: 1 / 3;
         grid-row: 3 / 3;
+        h3 {
+            text-align: center;
+        }
         nav {
             padding: 50px;
             text-align: center;
@@ -173,7 +175,7 @@ $font: "arial, helvetica, sans-serif";
         }
     }
 
-    .main-content {
+    aside {
         grid-area : main-content;
         grid-column: 3 / 6;
         grid-row: 3 / 3;
@@ -200,11 +202,14 @@ $font: "arial, helvetica, sans-serif";
 
             .item-1 {
                 margin: 10px;
+                .collapse {
+                    text-align:justify;
+                }
             }
         }
     }
 
-    .footer {
+    footer {
         grid-area: footer;
         background-color: #666;
         padding: 50px;
@@ -212,6 +217,7 @@ $font: "arial, helvetica, sans-serif";
         .footer-text {
             text-align: center;
             color: aliceblue;
+            font-size: 30px;
         }
     }
 
