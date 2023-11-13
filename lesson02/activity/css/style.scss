@@ -1,0 +1,38 @@
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+// TODO: Refactor these styles to use Sass features
+
+.static-block {
+  border-top: 3px solid #6e27c5;
+}
+.static-block__title {
+  margin: 4rem 0 0;
+  font-size: 1.5rem;
+  font-family: arial, helvetica, sans-serif;
+  font-weight: 400;
+  color: #6e27c5;
+}
+
+.static-block__copy {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: arial, helvetica, sans-serif;
+  color: #150f96;
+}
+.static-block__img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  border-bottom: 5px solid #150f96;
+}
+.static-block__content {
+  border-bottom: 5px solid #f6f5f6;
+  margin: 2rem auto;
+}
+.static-block:last-of-type .static-block__content {
+  border: none;
+}
