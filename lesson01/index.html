@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Your SBA District Office</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="script.js"></script>
+</head>
+<body>
+    <h1>Find Your SBA District Office</h1>
+    <form id="sbaDistrictForm">
+        <label for="state">Enter your State:</label>
+        <input type="text" id="state" required>
+        <button type="submit">Find District Office</button>
+    </form>
+    <div id="result" style="display: none;">
+        <h2>Result:</h2>
+        <p><strong>SBA District Office URL:</strong> <a id="sbaDistrictLink" href="#" target="_blank"></a></p>
+    </div>
+    <h1>Find Your Score Office</h1>
+    <p>Enter your nearest city to find the nearest SCORE location:</p>
+    <form id="cityForm">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button type="submit">Search</button>
+    </form>
+
+    <div id="results"></div>   
+    <h1>USDA State Selector</h1>
+    <form id="usdaForm">
+        <label for="stateInput">Enter Your State:</label>
+        <input type="text" id="stateInput" name="state" placeholder="e.g., Washington">
+        <input type="button" value="Go" onclick="redirectToUSDAWebsite()">
+    </form>
+    <div id="usdaWebsiteLink"></div>
+
+    <h1>Sign Up for Our Newsletter</h1>
+    <form id="emailSignUpForm">
+        <label for="email">Enter your Email Address:</label>
+        <input type="email" id="email" required>
+        <button type="submit">Sign Up</button>
+    </form>
+    <div id="signupConfirmation" style="display: none;">
+        <p><strong>You are now signed up!</strong></p>
+    </div>
+
+</body>
+</html>
