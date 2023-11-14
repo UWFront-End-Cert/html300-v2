@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function(){
   exampleForm.addEventListener('submit', function(event){
     event.preventDefault()
 
-
-    let data = [2, 1, 7, 3, 5, 1]
+    console.log('testing')
+    let data = [2, 1, 7, 9, 5, 1]
 
     const inputField = document.querySelector('#example-form2 .input')
     const userInput = inputField.value
