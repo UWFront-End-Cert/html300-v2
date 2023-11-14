@@ -52,3 +52,57 @@ document.addEventListener("DOMContentLoaded", function(){
   })
 
 })
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const exampleForm = document.querySelector('#example-form3')
+
+  exampleForm.addEventListener('submit', function(event){
+    event.preventDefault()
+
+
+    let data = [0, 1, 2, 3, 5, 8]
+
+    const inputField = document.querySelector('#example-form3 .input')
+    const userInput = inputField.value
+    const userNumber = parseInt(userInput)
+
+    if(!isNaN(userNumber)){
+      data.push(userNumber)
+
+      const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
+
+      document.querySelector('#example-form3 .output').innerHTML = sum
+    }
+
+    inputField.value = ''
+  })
+
+})
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const exampleForm = document.querySelector('#example-form4')
+
+  exampleForm.addEventListener('submit', function(event){
+    event.preventDefault()
+
+
+    let data = [0, 1, 2, 3, 5, 8]
+
+    const inputField = document.querySelector('#example-form4 .input')
+    const userInput = inputField.value
+    const userNumber = parseInt(userInput)
+
+    if(!isNaN(userNumber)){
+      data.push(userNumber)
+
+      const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
+
+      document.querySelector('#example-form4 .output').innerHTML = sum
+    }
+
+    inputField.value = ''
+  })
+
+})
