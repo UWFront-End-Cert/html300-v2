@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function(){
     event.preventDefault()
 
 
-    let data = [0, 1, 2, 3, 5, 8]
+    let data = [9, 8, 7, 6, 5, 4]
 
     const inputField = document.querySelector('#example-form3 .input')
     const userInput = inputField.value
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function(){
     event.preventDefault()
 
 
-    let data = [0, 1, 2, 3, 5, 8]
+    let data = [0, 1, 2, 3, 2, 1, 0]
 
     const inputField = document.querySelector('#example-form4 .input')
     const userInput = inputField.value
