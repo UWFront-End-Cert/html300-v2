@@ -18,14 +18,6 @@ document.addEventListener("DOMContentLoaded", function(){
     const userInput = inputField.value;
     const userNumber = parseInt(userInput);
 
-    if(!isNaN(userNumber)){
-      data.push(userNumber);
-
-      const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
-
-      document.querySelector('#example-form .output').innerHTML = sum
-    }
-
     inputField.value = ''
   })
 
@@ -74,6 +66,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     let data = [9, 8, 7, 6, 5, 4]
+    
+    let over5 = array.find(function(value){
+      return value > 5;
+    });
+
+    console.log(over5);
 
     const inputField = document.querySelector('#example-form3 .input')
     const userInput = inputField.value
