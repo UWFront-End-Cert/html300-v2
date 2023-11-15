@@ -36,9 +36,11 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log('testing');
     let data = [2, 1, 7, 9, 5, 1];
     let sum = 0;
-    sum2 = array.reduce(function(sum, value)){
+    sum = data.reduce(function(sum, value){
       return sum + value;
-    })
+    });
+
+    console.log(sum);
 
     const inputField = document.querySelector('#example-form2 .input');
     const userInput = inputField.value;
