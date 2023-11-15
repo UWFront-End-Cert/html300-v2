@@ -82,3 +82,10 @@ span {
     font-style: italic;
     line-height: normal;
 }
+
+#flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1vw;
+}

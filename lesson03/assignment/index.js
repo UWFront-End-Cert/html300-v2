@@ -27,7 +27,7 @@
 			<p><span>Major: </span>${el.major}</p>
 			<p><span>Email: </span>${el.email}</p>
 			<p><span id="langs">Code Languages: </span>${el.languages}</p>
-			<p><img id='linkedin-img' src="img/linkedin.svg" alt="linkedin logo">${el.linkedin}</p>
+			<p id='flex'><img src="img/linkedin.svg" alt="linkedin logo">${el.linkedin}</p>
 		</div>
 	</div>`
 
