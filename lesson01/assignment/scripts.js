@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     let data = [0, 1, 2, 3, 5, 8];
+    let over4 = data.some(function(value){
+      return value > 4;
+    });
+
+    console.log(over4);
 
     const inputField = document.querySelector('#example-form .input');
     const userInput = inputField.value;
@@ -36,10 +41,11 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log('testing');
     let data = [2, 1, 7, 9, 5, 1];
     let sum = 0;
+    // the code below adds all numbers together
     sum = data.reduce(function(sum, value){
       return sum + value;
     });
-
+// console.log summarizes and displays the result in the console
     console.log(sum);
 
     const inputField = document.querySelector('#example-form2 .input');
