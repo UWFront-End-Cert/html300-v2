@@ -1,59 +1,140 @@
-// // Structure
+// Global
 
-nav {
-    padding: 10vw;
-    text-align: center;
-  
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: inline-block;
-      background: #ddd;
-      border-radius: 5px;  
-      
-      li {
-        width: 150px;
-        height: 65px;
-        line-height: 65px;
-        position: relative;
-        text-transform: uppercase;
-        font-size: 14px;
-        color: rgba(0, 0, 0, 0.7);
-        cursor: pointer;
-  
-            .menu-1 {
-                li {
-                    display: none;
-                    background: #403232;
-                    color: rgba(255, 255, 255, 0.7);
-                }
-            }
-        }
-    }
+// color variables
+$color_1: var(--color);
+$color_2: #fff;
+$color_3: #363833;
+$color_4: transparent;
+$color_5: #1e2127;
+$color_6: #e4cb58;
+$color_7: rgb(179, 173, 173);
+$font-family_1: 'Poppins', sans-serif;
+$font-family_2: 'Lobster', sans-serif;
+$border-color_1: var(--hover);
+
+// sets box sizing globally
+* {
+	box-sizing: border-box;
 }
-  
-li:hover > .menu-1 > li {
-    display: block;
-    opacity: 0;
-    // animation: menu1 300ms;
-    @for $i from 1 through 5 {
-      &:nth-child(#{$i}) {
-        animation-name: menu1;
-        animation-duration: 300ms;
-        animation-delay: (300ms * $i) - 300;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-      }
-      @keyframes menu1 {
-        0% {
-          opacity: 0;
-          transform: rotateY(-90deg) translateY(30px);
-        }
-        100% {
-          opacity: 1;
-          transform: rotateY(0deg) translateY(0px);
-        }
-      }
-    }
-}  
+
+// styles body bg
+body {
+	background: #17181c;
+}
+
+// creates global values for buttons
+button {
+	background: transparent;
+	border: 2px solid;
+	border-radius: 2vw;
+	font: 300 .75vw 'Fira Sans', sans-serif;
+	line-height: .25;
+	margin: 0.5em;
+	padding: 1em 2em;
+	color: $color_1;
+	transition: 0.25s;
+  // sets button hover and focus attr.
+	&:hover {
+		border-color: $border-color_1;
+		color: $color_2;
+	}
+	&:focus {
+		border-color: $border-color_1;
+		color: $color_2;
+	}
+}
+
+// aligns the menu in the center
+@mixin hor-center {
+	display: flex;
+	justify-content: center;
+}
+
+.menu-center {
+  @include hor-center
+}
+
+// provides root colors
+:root {
+	--gold: #ffb338;
+	--light-shadow: #77571d;
+	--dark-shadow: #3e2904;
+}
+
+// class style for secondary pages
+.wrapper {
+	background: radial-gradient(rgb(30, 89, 126), rgb(24, 49, 59));
+	display: grid;
+	grid-template-areas: 'overlap';
+	place-content: center;
+	text-transform: uppercase;
+	height: 9vw;
+  // continuance of wrapper for the div element
+	>div {
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: $color_3;
+		font-family: $font-family_1;
+		font-weight: 900;
+		font-size: 6vw;
+		grid-area: overlap;
+		letter-spacing: 1px;
+		-webkit-text-stroke: 4px transparent;
+	}
+}
+
+// 1st part of secondary pages letters in the header
+div.bg {
+	background-image: repeating-linear-gradient( 105deg, var(--gold) 0% , var(--dark-shadow) 5%, var(--gold) 12%);
+	color: $color_4;
+	filter: drop-shadow(5px 15px 15px black);
+	transform: scaleY(1.05);
+	transform-origin: top;
+}
+
+// 2nd part of secondary pages letters in the header
+div.fg {
+	background-image: repeating-linear-gradient( 5deg, var(--gold) 0% , var(--light-shadow) 23%, var(--gold) 31%);
+	color: $color_5;
+	transform: scale(1);
+}
+
+// styling for header on index page
+#page-header {
+	font-family: $font-family_2;
+	color: $color_6;
+	text-shadow: 7px 7px 9px black, 0 0 25px rgb(255, 204, 0), 0 0 5px rgb(139, 107, 0);
+	font-size: 8vw;
+	text-align: center;
+}
+
+// additional sytling for sub header on index page
+#sub-header {
+	font-family: $font-family_2;
+	color: $color_7;
+	text-shadow: 1px 1px 2px aqua;
+	font-size: 2.8vw;
+	text-align: center;
+	line-height: 0;
+	padding-bottom: 3.5vw;
+}
+
+// creates a raise effect for the menu buttons
+.raise {
+  // styling class for hover/focus
+	&:hover {
+		box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+		transform: translateY(-0.25em);
+	}
+	&:focus {
+		box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+		transform: translateY(-0.25em);
+	}
+	--color: rgb(161, 196, 243);
+	--hover: #e5ff60;
+}
+
+// sets secondary page header height
+.prod-header {
+	height: 9vw;
+}
