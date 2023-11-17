@@ -43,7 +43,26 @@ button {
 }
 
 .menu-center {
-  @include hor-center
+  @include hor-center;
+}
+
+footer {
+    background: $footer-color;
+    height: 15vw;
+}
+
+nav, nav span {
+    @include hor-center;
+}
+
+nav div {
+    padding-left: .25vw;
+    padding-right: .25vw;
+
+}
+
+.footer-nav {
+    
 }
 
 // provides root colors
