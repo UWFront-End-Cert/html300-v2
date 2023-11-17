@@ -1,6 +1,132 @@
-// Import partials here
+// Imported partials
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
+// sets box sizing globally
+* {
+	box-sizing: border-box;
+}
+
+// styles body bg
+body {
+	background: #17181c;
+}
+
+// creates global values for buttons
+button {
+	background: transparent;
+	border: 2px solid;
+	border-radius: 2vw;
+	font: 300 .75vw 'Fira Sans', sans-serif;
+	line-height: .25;
+	margin: 0.5em;
+	padding: 1em 2em;
+	color: $color_1;
+	transition: 0.25s;
+  // sets button hover and focus attr.
+	&:hover {
+		border-color: $border-color_1;
+		color: $color_2;
+	}
+	&:focus {
+		border-color: $border-color_1;
+		color: $color_2;
+	}
+}
+
+// aligns the menu in the center
+@mixin hor-center {
+	display: flex;
+	justify-content: center;
+}
+
+.menu-center {
+  @include hor-center
+}
+
+// provides root colors
+:root {
+	--gold: #ffb338;
+	--light-shadow: #77571d;
+	--dark-shadow: #3e2904;
+}
+
+// class style for secondary pages
+.wrapper {
+	background: radial-gradient(rgb(30, 89, 126), rgb(24, 49, 59));
+	display: grid;
+	grid-template-areas: 'overlap';
+	place-content: center;
+	text-transform: uppercase;
+	height: 9vw;
+  // continuance of wrapper for the div element
+	>div {
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: $color_3;
+		font-family: $font-family_1;
+		font-weight: 900;
+		font-size: 6vw;
+		grid-area: overlap;
+		letter-spacing: 1px;
+		-webkit-text-stroke: 4px transparent;
+	}
+}
+
+// 1st part of secondary pages letters in the header
+div.bg {
+	background-image: repeating-linear-gradient( 105deg, var(--gold) 0% , var(--dark-shadow) 5%, var(--gold) 12%);
+	color: $color_4;
+	filter: drop-shadow(5px 15px 15px black);
+	transform: scaleY(1.05);
+	transform-origin: top;
+}
+
+// 2nd part of secondary pages letters in the header
+div.fg {
+	background-image: repeating-linear-gradient( 5deg, var(--gold) 0% , var(--light-shadow) 23%, var(--gold) 31%);
+	color: $color_5;
+	transform: scale(1);
+}
+
+// styling for header on index page
+#page-header {
+	font-family: $font-family_2;
+	color: $color_6;
+	text-shadow: 7px 7px 9px black, 0 0 25px rgb(255, 204, 0), 0 0 5px rgb(139, 107, 0);
+	font-size: 8vw;
+	text-align: center;
+}
+
+// additional sytling for sub header on index page
+#sub-header {
+	font-family: $font-family_2;
+	color: $color_7;
+	text-shadow: 1px 1px 2px aqua;
+	font-size: 2.8vw;
+	text-align: center;
+	line-height: 0;
+	padding-bottom: 3.5vw;
+}
+
+// creates a raise effect for the menu buttons
+.raise {
+  // styling class for hover/focus
+	&:hover {
+		box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+		transform: translateY(-0.25em);
+	}
+	&:focus {
+		box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+		transform: translateY(-0.25em);
+	}
+	--color: rgb(161, 196, 243);
+	--hover: #e5ff60;
+}
+
+// sets secondary page header height
+.prod-header {
+	height: 9vw;
+}
