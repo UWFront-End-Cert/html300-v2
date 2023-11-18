@@ -2,67 +2,95 @@
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
-@import 'components.content';
+@import 'global.content';
 
-// sets box sizing globally
-* {
-	box-sizing: border-box;
-}
 
-// styles body bg
-body {
-	background: #17181c;
-}
 
-// creates global values for buttons
-button {
-	background: transparent;
-	border: 2px solid;
-	border-radius: 2vw;
-	font: 300 .75vw 'Fira Sans', sans-serif;
-	line-height: .25;
-	margin: 0.5em;
-	padding: 1em 2em;
-	color: $color_1;
-	transition: 0.25s;
-  // sets button hover and focus attr.
-	&:hover {
-		border-color: $border-color_1;
-		color: $color_2;
-	}
-	&:focus {
-		border-color: $border-color_1;
-		color: $color_2;
-	}
-}
-
-// aligns the menu in the center
-@mixin hor-center {
+#sidebar {
+	background: $sub-header-color;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
 }
 
+#sidebar img {
+	width: 4vw;
+	height: 6.5vw;
+}
+
+#main-content {
+	background: $secondary-bg;
+	color: $footer-p;
+}
+
+#main-content h1 {
+	@include hor-center;
+	color: $footer-p;
+}
+
+#main-content h2, p {
+	color: $footer-p;
+	padding: 0 2vw;
+}
+
+#mc-1 {
+	@include flex;
+	flex-direction: row;
+}
+
+#mc-2 {
+	@include grid;
+	flex-flow: column wrap;
+	grid-template-columns: 15vw 30vw 30vw;
+}
+// creates a raise effect for the menu buttons
+.raise {
+	// styling class for hover/focus
+	  &:hover {
+		  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+		  transform: translateY(-0.25em);
+	  }
+	  &:focus {
+		  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+		  transform: translateY(-0.25em);
+	  }
+	  --color: rgb(44, 44, 44);
+	  --hover: #00ffff;
+}
+
+// class to center the top nav menu
 .menu-center {
   @include hor-center;
+  background: $nav-bar;
 }
 
+
+// styles the footer element
 footer {
-    background: $footer-color;
+    background: $footer-bg;
     height: 15vw;
+    color: $footer-p
 }
 
-nav, nav span {
+// centers elements
+nav, nav span, footer p {
     @include hor-center;
 }
 
-nav div {
-    padding-left: .25vw;
-    padding-right: .25vw;
-
+// styles nav links
+ a, a:link,  a:visited {
+    text-decoration: none;
+    color: $footer-p;
+    font-size: 1vw;
 }
 
-.footer-nav {
-    
+// styles nav div
+nav div {
+    padding-left: .5vw;
+    padding-right: .5vw;
+
 }
 
 // provides root colors
@@ -119,30 +147,21 @@ div.fg {
 	text-align: center;
 }
 
+// sets background for the index page header
+#index-header {
+    background-image: url('../img/luxury-black-silk.jpg');
+    background-size: cover;
+}
+
 // additional sytling for sub header on index page
 #sub-header {
 	font-family: $font-family_2;
-	color: $color_7;
-	text-shadow: 1px 1px 2px aqua;
+	color: $sub-header-color;
+	text-shadow: 1px 1px 2px $aqua-shadow;
 	font-size: 2.8vw;
 	text-align: center;
 	line-height: 0;
 	padding-bottom: 3.5vw;
-}
-
-// creates a raise effect for the menu buttons
-.raise {
-  // styling class for hover/focus
-	&:hover {
-		box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-		transform: translateY(-0.25em);
-	}
-	&:focus {
-		box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-		transform: translateY(-0.25em);
-	}
-	--color: rgb(161, 196, 243);
-	--hover: #e5ff60;
 }
 
 // sets secondary page header height

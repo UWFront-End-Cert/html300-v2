@@ -1,0 +1,49 @@
+//GLOBAL 
+
+// sets box sizing globally
+html {
+    box-sizing: border-box;
+}
+
+// applies inherit box sizing before and after for all
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+// styles article
+article {
+	display: grid;
+	grid-template-columns: 25vw 1fr;
+	grid-template-rows: auto;
+}
+
+// styles body bg
+body {
+	background: #17181c;
+}
+
+// creates global values for buttons
+button {
+	background: transparent;
+	border: 2px solid;
+	border-radius: 2vw;
+	font: 300 .75vw 'Fira Sans', sans-serif;
+	line-height: .25;
+	margin: 0.5em;
+	padding: 1em 2em;
+	color: $color_1;
+	transition: 0.25s;
+  // sets button hover and focus attr.
+	&:hover {
+		border-color: $border-color_1;
+		color: $footer-bg;
+		background: $button-bg;
+	}
+	&:focus {
+		border-color: $border-color_1;
+		color: $footer-bg;
+		background: $button-bg;
+	}
+}
