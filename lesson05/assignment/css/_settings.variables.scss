@@ -1,1 +1,37 @@
-// Colors
+// site variables 
+
+// colors
+$color_1: var(--color);
+$color_2: #3c5f57;
+$color_3: #363833;
+$color_4: transparent;
+$color_5: #1e2127;
+$color_6: #e4cb58;
+$sub-header-color: rgb(179, 173, 173);
+$border-color_1: var(--hover);
+$footer-bg: black;
+$footer-p: white;
+$nav-bar: #88ACA3;
+$aqua-shadow: #00ffff;
+$button-bg: rgb(131, 136, 131);
+$secondary-bg: radial-gradient(rgb(30, 89, 126), rgb(30, 39, 43));
+
+// fonts
+$font-family_1: 'Poppins', sans-serif;
+$font-family_2: 'Lobster', sans-serif;
+
+// @mixins
+
+// aligns the menu in the center
+@mixin hor-center {
+	display: flex;
+	justify-content: center;
+}
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin grid {
+    display: grid;
+}
