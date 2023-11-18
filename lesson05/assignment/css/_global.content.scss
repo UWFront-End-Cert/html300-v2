@@ -47,3 +47,38 @@ button {
 		background: $button-bg;
 	}
 }
+
+// styles the footer element
+footer {
+    background: $footer-bg;
+	padding: 3vw 0;
+    color: $footer-p;
+	font-size: calc(.5rem + .75vw);
+}
+
+// centers elements
+nav, nav span, footer p {
+    @include hor-center;
+}
+
+// styles nav links
+ a, a:link,  a:visited {
+    text-decoration: none;
+    color: $footer-p;
+    font-size: calc(.5rem + .75vw);
+}
+
+// styles nav div
+nav div {
+    padding-left: .5vw;
+    padding-right: .5vw;
+	font-size: calc(.5rem + .75vw);
+}
+
+iframe {
+	@include hor-center;
+	border: 0;
+	width: 20vw;
+	height: 10vw;
+	box-shadow: 5px 5px 7px blue;
+}

@@ -38,12 +38,16 @@
 #mc-1 {
 	@include flex;
 	flex-direction: row;
+	text-align: justify;
+	font-size: calc(.5rem + .75vw);
 }
 
 #mc-2 {
 	@include grid;
+	text-align: justify;
 	flex-flow: column wrap;
 	grid-template-columns: 15vw 30vw 30vw;
+	font-size: calc(.5rem + .75vw);
 }
 // creates a raise effect for the menu buttons
 .raise {
@@ -64,33 +68,6 @@
 .menu-center {
   @include hor-center;
   background: $nav-bar;
-}
-
-
-// styles the footer element
-footer {
-    background: $footer-bg;
-    height: 15vw;
-    color: $footer-p
-}
-
-// centers elements
-nav, nav span, footer p {
-    @include hor-center;
-}
-
-// styles nav links
- a, a:link,  a:visited {
-    text-decoration: none;
-    color: $footer-p;
-    font-size: 1vw;
-}
-
-// styles nav div
-nav div {
-    padding-left: .5vw;
-    padding-right: .5vw;
-
 }
 
 // provides root colors
@@ -167,4 +144,8 @@ div.fg {
 // sets secondary page header height
 .prod-header {
 	height: 9vw;
+}
+
+#sb-map {
+	text-align: center;
 }
