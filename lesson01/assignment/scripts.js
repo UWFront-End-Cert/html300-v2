@@ -65,11 +65,14 @@ document.addEventListener("DOMContentLoaded", function(){
     event.preventDefault()
 
 
-    let data = [9, 8, 7, 6, 5, 4]
-    
-    let over5 = array.find(function(value){
-      return value > 5;
-    });
+    let data = [9, 8, 7, 6, 5, 4];
+    let over5 = false;
+    for(let i = 0; i < data.length; i++){
+      if(data[i] > 5){
+        over5 = true;
+        break;
+      }
+    }
 
     console.log(over5);
 
