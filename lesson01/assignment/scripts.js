@@ -18,6 +18,14 @@ document.addEventListener("DOMContentLoaded", function(){
     const userInput = inputField.value;
     const userNumber = parseInt(userInput);
 
+    if(!isNaN(userNumber)){
+      data.push(userNumber)
+
+      const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
+
+      document.querySelector('#example-form3 .output').innerHTML = sum
+    }
+
     inputField.value = ''
   })
 
