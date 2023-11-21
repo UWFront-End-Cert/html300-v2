@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     let data = [0, 1, 2, 3, 2, 1, 0]
+    
 
     const inputField = document.querySelector('#example-form4 .input')
     const userInput = inputField.value
