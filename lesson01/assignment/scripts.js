@@ -5,25 +5,24 @@ document.addEventListener("DOMContentLoaded", function(){
 
   exampleForm.addEventListener('submit', function(event){
     event.preventDefault()
-
+  // get user input
     const inputField = document.querySelector('#example-form .input');
     const userInput = inputField.value;
     const userNumber = parseInt(userInput);
 
+    // this initializes the array, sets array values
     let data = [0, 1, 2, 3, 5, 8];
-    data.push(userNumber)
-    let over4 = data.some(function(value){
-      return value > 4;
-    });
-
-    console.log(data);
+    // data.push(userNumber)
+    // checks to see if valuesa re greater than 8
+    
 
     if(!isNaN(userNumber)){
-      data.push(userNumber)
-
-      const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
-
-      document.querySelector('#example-form .output').innerHTML = sum
+      data.push(userNumber);
+      let over8 = data.some(function(value){
+        return value > 8;
+      });
+  // output to screen
+      document.querySelector('#example-form .output').innerHTML = over8;
     }
 
     inputField.value = ''
@@ -37,26 +36,21 @@ document.addEventListener("DOMContentLoaded", function(){
 
   exampleForm.addEventListener('submit', function(event){
     event.preventDefault();
-
-    console.log('testing');
+    // initialize data
     let data = [2, 1, 7, 9, 5, 1];
     let sum = 0;
-    // the code below adds all numbers together
-    sum = data.reduce(function(sum, value){
-      return sum + value;
-    });
-// console.log summarizes and displays the result in the console
-    console.log(sum);
-
+ 
     const inputField = document.querySelector('#example-form2 .input');
     const userInput = inputField.value;
     const userNumber = parseInt(userInput);
+    // the code below adds all numbers together
 
     if(!isNaN(userNumber)){
       data.push(userNumber);
-
-      const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
-
+      sum = data.reduce(function(sum, value){
+        return sum + value;
+      }); 
+      // output answer to the screen
       document.querySelector('#example-form2 .output').innerHTML = sum
     }
 
@@ -73,27 +67,20 @@ document.addEventListener("DOMContentLoaded", function(){
     event.preventDefault()
 
 
-    let data = [9, 8, 7, 6, 5, 4];
-    let over5 = false;
-    for(let i = 0; i < data.length; i++){
-      if(data[i] > 5){
-        over5 = true;
-        break;
-      }
-    }
+    const data = [9, 8, 7, 6, 5, 4];
 
-    console.log(over5);
+    // console.log(over5);
 
     const inputField = document.querySelector('#example-form3 .input')
     const userInput = inputField.value
     const userNumber = parseInt(userInput)
 
     if(!isNaN(userNumber)){
-      data.push(userNumber)
+      // data.push(userNumber)
+    let isInArray = data.includes(userNumber)
+      // const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
 
-      const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
-
-      document.querySelector('#example-form3 .output').innerHTML = sum
+      document.querySelector('#example-form3 .output').innerHTML = isInArray;
     }
 
     inputField.value = ''
@@ -108,20 +95,21 @@ document.addEventListener("DOMContentLoaded", function(){
   exampleForm.addEventListener('submit', function(event){
     event.preventDefault()
 
-
+    // the array
     let data = [0, 1, 2, 3, 2, 1, 0]
 
 
     const inputField = document.querySelector('#example-form4 .input')
     const userInput = inputField.value
     const userNumber = parseInt(userInput)
-
+    // this assures that only numbers are valued
     if(!isNaN(userNumber)){
-      data.push(userNumber)
+      // configuring new array size
+      let arraylength = data.length
+      let end = arraylength - userNumber
+      let newArray = data.slice(0, end)
 
-      const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
-
-      document.querySelector('#example-form4 .output').innerHTML = sum
+      document.querySelector('#example-form4 .output').innerHTML = newArray;
     }
 
     inputField.value = ''
