@@ -6,24 +6,24 @@ document.addEventListener("DOMContentLoaded", function(){
   exampleForm.addEventListener('submit', function(event){
     event.preventDefault()
 
+    const inputField = document.querySelector('#example-form .input');
+    const userInput = inputField.value;
+    const userNumber = parseInt(userInput);
 
     let data = [0, 1, 2, 3, 5, 8];
+    data.push(userNumber)
     let over4 = data.some(function(value){
       return value > 4;
     });
 
-    console.log(over4);
-
-    const inputField = document.querySelector('#example-form .input');
-    const userInput = inputField.value;
-    const userNumber = parseInt(userInput);
+    console.log(data);
 
     if(!isNaN(userNumber)){
       data.push(userNumber)
 
       const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
 
-      document.querySelector('#example-form3 .output').innerHTML = sum
+      document.querySelector('#example-form .output').innerHTML = sum
     }
 
     inputField.value = ''
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     let data = [0, 1, 2, 3, 2, 1, 0]
-    
+
 
     const inputField = document.querySelector('#example-form4 .input')
     const userInput = inputField.value
