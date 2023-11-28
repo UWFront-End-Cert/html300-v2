@@ -15,6 +15,10 @@ $background-color: rgb(116, 114, 114);
     background-color: (116, 114, 114);
 }
 
+body {
+    border-color: rgb(156, 156, 156);
+}
+
 .card {
     display: flex;
     flex-direction: row;
