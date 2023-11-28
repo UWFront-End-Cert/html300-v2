@@ -4,3 +4,33 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+$base-color: yellow;
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: $base-color;
+}
+
+.left {
+    @include flex-column;
+}
+
+.right {
+    @include flex-column;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
