@@ -33,12 +33,14 @@ body {
 
 .left {
     @include flex-column;
-    @include font-weight;
 }
 
 .right {
     @include flex-column;
     background-color: $background-color;
+}
+
+.title {
     @include font-weight;
 }
 
