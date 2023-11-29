@@ -17,7 +17,7 @@ $background-color: rgb(116, 114, 114);
 
 
 &:font-weight { 
-    font-weight: bold;
+    @include bold;
 }
 
 body {
@@ -33,11 +33,13 @@ body {
 
 .left {
     @include flex-column;
+    @include font-weight;
 }
 
 .right {
     @include flex-column;
     background-color: $background-color;
+    @include font-weight;
 }
 
 .item {
