@@ -10,7 +10,7 @@ $base-color: rgb(255, 255, 255);
     flex-direction: column;
 }
 
-$background-color: rgb(116, 114, 114);
+$background-color: $light-gray;
 @mixin background-color {
     background-color: (116, 114, 114);
 }
@@ -22,7 +22,7 @@ $background-color: rgb(116, 114, 114);
 
 
 body {
-    border-color: rgb(156, 156, 156);
+    border-color: $light-gray;
     border-width: 2rem;
 }
 
