@@ -15,9 +15,18 @@ $background-color: $light-gray;
     background-color: (116, 114, 114);
 }
 
+$border-color: $light-gray;
+@mixin border-color {
+    border-color: (116, 114, 114);
+}
+
 
 @mixin font-weight {
     font-weight: bold;
+}
+
+@mixin text-align {
+    text-align: center;
 }
 
 
@@ -33,6 +42,11 @@ body {
 
 .name {
     font-weight: bold;
+    @include text-align;
+}
+
+.subheading {
+    @include text-align;
 }
 
 .card {
