@@ -16,9 +16,14 @@ $background-color: $light-gray;
 }
 
 
-&:font-weight { 
-    @include bold;
+@mixin font-weight {
+    font-weight: bold;
 }
+
+
+// &:font-weight { 
+//     @include bold;
+// }
 
 
 body {
@@ -46,9 +51,9 @@ body {
     background-color: $background-color;
 }
 
-.title {
-    @include font-weight;
-}
+// .title {
+//     @include font-weight;
+// }
 
 .item {
     display: flex;
