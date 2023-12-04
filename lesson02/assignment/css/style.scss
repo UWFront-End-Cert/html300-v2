@@ -75,3 +75,8 @@ body {
     border-radius: 50%;
 }
 
+@media screen and (min-width: 600px) and (orientation: landscape) {
+    .long-box {
+            width: 500px;
+    }
+}
