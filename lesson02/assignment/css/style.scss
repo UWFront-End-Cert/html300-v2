@@ -80,3 +80,9 @@ body {
             width: 500px;
     }
 }
+
+@media screen and (min-width: 600px) and (orientation: portrait) {
+    .long-box {
+            width: 500px;
+    }
+}
