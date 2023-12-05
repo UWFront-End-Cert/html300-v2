@@ -58,6 +58,10 @@ body {
     padding: 2rem;
 }
 
+.title {
+    font-weight: bold;
+}
+
 .left {
     @include flex-column;
 }
