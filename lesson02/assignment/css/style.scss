@@ -4,7 +4,7 @@
 @import 'settings.responsive';
 @import 'components.content';
 
-$base-color: rgb(255, 255, 255);
+$base-color: #ffffff;
 @mixin flex-column {
     display: flex;
     flex-direction: column;
@@ -33,6 +33,8 @@ $border-color: $light-gray;
 body {
     border-color: $light-gray;
     border-width: 2rem;
+    border-style: solid;
+    padding: 3rem;
 }
 
 * {
@@ -53,6 +55,7 @@ body {
     flex-direction: row;
     gap: 1rem;
     background-color: $base-color;
+    padding: 2rem;
 }
 
 .left {
@@ -69,9 +72,10 @@ body {
     flex-direction: row;
     align-items: center;
     gap: .5rem;
+    padding: 1.5rem;
 }
 
-.img {
+img {
     border-radius: 50%;
 }
 
