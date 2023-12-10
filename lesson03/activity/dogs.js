@@ -20,7 +20,7 @@ class Dog {
 pat() {
     this.energylevel++
     this.barkLevel--;
-    console.log(`This dog's name is ${this.name}, age is 5{this.age}, current energy ${this.energylevel} and current bark level is ${this.barklevel}.`);
+    console.log(`This dog's name is ${this.name}, age is ${this.age}, current energy ${this.energylevel} and current bark level is ${this.barklevel}.`);
     }
 }
 
