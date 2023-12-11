@@ -4,3 +4,94 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+$base-color: #ffffff;
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+$background-color: $light-gray;
+@mixin background-color {
+    background-color: (116, 114, 114);
+}
+
+$border-color: $light-gray;
+@mixin border-color {
+    border-color: (116, 114, 114);
+}
+
+
+@mixin font-weight {
+    font-weight: bold;
+}
+
+@mixin text-align {
+    text-align: center;
+}
+
+
+body {
+    border-color: $light-gray;
+    border-width: 2rem;
+    border-style: solid;
+    padding: 3rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.name {
+    font-weight: bold;
+    @include text-align;
+}
+
+.subheading {
+    @include text-align;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: $base-color;
+    padding: 2rem;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.left {
+    @include flex-column;
+}
+
+.right {
+    @include flex-column;
+    background-color: $background-color;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+    padding: 1.5rem;
+}
+
+img {
+    border-radius: 50%;
+    padding-right: 2rem;
+}
+
+@media screen and (min-width: 600px) and (orientation: landscape) {
+    .long-box {
+            width: 500px;
+    }
+}
+
+@media screen and (min-width: 600px) and (orientation: portrait) {
+    .long-box {
+            width: 500px;
+    }
+}

@@ -4,7 +4,13 @@ const carsJSON = '[{"make":"Ford","model":"Mustang","year":2010,"color":"black"}
 
 const cars = JSON.parse(carsJSON)
 
+cars.forEach(function(el) {
+  let list = document.createElement('ul')
+  list.innerHTML = el.make
 
+  const container = document.querySelector('#list-container')
+  container.append(list)
+})
 
 let carsHTML = cars.map(function(el) {
     let car =`<article class="car">
