@@ -1,9 +1,8 @@
 // Partials
-@import 'variables';
-@import 'typography';
-@import 'responsive';
-@import 'globals';
-@import 'content';
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
 
 body {
     background-color: black;
