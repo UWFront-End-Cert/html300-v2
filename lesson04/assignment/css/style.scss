@@ -4,14 +4,71 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+@mixin text-color {
+    color: whitesmoke;
+}
+
+@mixin p {
+    text-align: center;
+}
+
+@mixin flex {
+    display: flex;
+}
+
 body {
     background-color: black;
 }
 
-h1 {
-    color: whitesmoke;
+.main {
+    justify-content: center;
+    @include flex;
+    position: absolute;
 }
 
-p {
-    color: whitesmoke;
+h1 {
+    @include text-color;
+    @include flex;
+    justify-content: center;
+}
+
+img {
+    transition: .8s ease-in-out all;
+    width: 500px;
+    height: auto;
+}
+
+.image:hover img {
+    opacity: .2;
+}
+
+.image:hover text {
+    opacity: 1;
+}
+
+.movie {
+    position: relative;
+    display: inline-block;
+}
+
+.wrapper {
+    position: relative;
+}
+
+p.text {
+    @include text-color;
+    @include p;
+    font-weight: 500;
+    font-size: 3rem;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    width: 50%;
+}
+
+p.text {
+    @include text-color;
+    @include p;
+    text-align: center;
+    transition: .8s ease-in-out all;
 }
