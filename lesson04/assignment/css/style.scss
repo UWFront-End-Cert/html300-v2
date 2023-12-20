@@ -57,7 +57,7 @@ img {
     position: relative;
 }
 
-p.text {
+text {
     @include text-color;
     @include p;
     font-weight: 500;
@@ -68,7 +68,7 @@ p.text {
     width: 50%;
 }
 
-p.text {
+text {
     @include text-color;
     @include p;
     text-align: center;
