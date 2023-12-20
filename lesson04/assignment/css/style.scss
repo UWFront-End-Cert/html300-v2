@@ -39,6 +39,7 @@ h1 {
     font-weight: 500;
     font-size: 3rem;
     position: absolute;
+    display: table;
     opacity: 0;
     margin: 0;
     width: 50%;
@@ -54,6 +55,7 @@ h1 {
 img {
     transition: .8s ease-in-out all;
     width: 500px;
+    opacity: 1;
     height: auto;
     padding: 2rem;
 }
