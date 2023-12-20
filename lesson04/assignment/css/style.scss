@@ -21,9 +21,10 @@ body {
 }
 
 .main {
-    justify-content: center;
     @include flex;
+    justify-content: center;
     position: absolute;
+    padding: 2rem;
 }
 
 h1 {
@@ -36,6 +37,7 @@ img {
     transition: .8s ease-in-out all;
     width: 500px;
     height: auto;
+    padding: 2rem;
 }
 
 .image:hover img {
