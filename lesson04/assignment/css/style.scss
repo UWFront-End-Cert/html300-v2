@@ -33,6 +33,24 @@ h1 {
     justify-content: center;
 }
 
+.text {
+    @include text-color;
+    @include p;
+    font-weight: 500;
+    font-size: 3rem;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    width: 50%;
+}
+
+.text {
+    @include text-color;
+    @include p;
+    text-align: center;
+    transition: .8s ease-in-out all;
+}
+
 img {
     transition: .8s ease-in-out all;
     width: 500px;
@@ -55,22 +73,4 @@ img {
 
 .wrapper {
     position: relative;
-}
-
-text {
-    @include text-color;
-    @include p;
-    font-weight: 500;
-    font-size: 3rem;
-    position: absolute;
-    opacity: 0;
-    margin: 0;
-    width: 50%;
-}
-
-text {
-    @include text-color;
-    @include p;
-    text-align: center;
-    transition: .8s ease-in-out all;
 }
