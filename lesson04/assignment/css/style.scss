@@ -4,6 +4,7 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Makes all text white
 @mixin text-color {
     color: whitesmoke;
 }
@@ -16,6 +17,7 @@
     display: flex;
 }
 
+// Makes background black
 body {
     background-color: black;
 }
@@ -27,16 +29,19 @@ body {
     padding: 2rem;
 }
 
+// Adds mixins and justifies alignment of content
 h1 {
     @include text-color;
     @include flex;
     justify-content: center;
 }
 
+// Establishes attributes of the wrapper
 .wrapper {
     position: relative;
 }
 
+// Sets atttributes for the text alone
 .text {
     @include text-color;
     @include p;
@@ -49,14 +54,16 @@ h1 {
     width: 50%;
 }
 
+// Sets parameters for text including transition
 .text {
     @include text-color;
     @include p;
     text-align: center;
     transition: .8s ease-in-out all;
-    width: 50%
+    width: 50%;
 }
 
+// Sets parameters for the images, including transition
 img {
     transition: .8s ease-in-out all;
     width: 500px;
@@ -65,14 +72,16 @@ img {
     padding: 2rem;
 }
 
+// these two control opacity during the hover
 .image:hover img {
     opacity: .2;
 }
 
-.image:hover text {
+.image:hover + .text {
     opacity: 1;
 }
 
+// 
 .movie {
     position: relative;
     display: inline-block;
