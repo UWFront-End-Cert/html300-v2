@@ -33,6 +33,10 @@ h1 {
     justify-content: center;
 }
 
+.wrapper {
+    position: relative;
+}
+
 .text {
     @include text-color;
     @include p;
@@ -73,6 +77,3 @@ img {
     display: inline-block;
 }
 
-.wrapper {
-    position: relative;
-}
