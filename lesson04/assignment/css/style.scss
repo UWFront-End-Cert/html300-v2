@@ -6,7 +6,7 @@
 
 // Makes all text white
 @mixin text-color {
-    color: whitesmoke;
+    color: $whitesmoke;
 }
 
 @mixin p {
@@ -19,7 +19,7 @@
 
 // Makes background black
 body {
-    background-color: black;
+    background-color: $black;
 }
 
 .main {
