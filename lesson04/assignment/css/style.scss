@@ -63,6 +63,18 @@ h1 {
     width: 50%;
 }
 
+.trigger {
+    .text{
+    transition: transform 800ms ease;
+    transition-timing-function: ease-in;
+    }
+}
+
+.trigger:hover .text{
+    transform: translate(3rem, 0rem);
+    transition-timing-function: ease-in;
+}
+
 // Sets parameters for the images, including transition
 img {
     transition: .8s ease-in-out all;
