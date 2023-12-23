@@ -51,17 +51,13 @@ h1 {
     display: table;
     opacity: 0;
     margin: 0;
+    margin-top: -2rem;
     width: 50%;
+    text-align: center;
+    transition: .8s ease-in-out all;
 }
 
 // Sets parameters for text including transition
-.text {
-    @include text-color;
-    @include p;
-    text-align: center;
-    transition: .8s ease-in-out all;
-    width: 50%;
-}
 
 .trigger {
     .text{
@@ -89,11 +85,12 @@ img {
     opacity: .2;
 }
 
+// Creates movement animation and makes text appear opaque
 .image:hover + .text {
     opacity: 1;
+    transform: translateY(2rem);
 }
 
-// 
 .movie {
     position: relative;
     display: inline-block;
