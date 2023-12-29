@@ -31,7 +31,12 @@ h1 {
 
 .center-wrap {
     display: grid;
-    grid-template-rows: 1fr, 2fr;
+    grid-template-columns: 1fr, 2fr;
+    grid-template-rows: 1fr;
+    grid-row: 1 / span 3;
+    align-items: center;
+    justify-content: ; 
+    margin: auto;
 }
 
 .sidebar {
@@ -45,10 +50,11 @@ h1 {
 }
 
 .main {
-    margin: 0;
+    margin: auto;
 }
 
 footer {
     @include display-center;
+    @include white-text;
     background-color: blue;
 }
