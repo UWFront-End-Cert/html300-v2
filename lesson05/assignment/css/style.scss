@@ -4,3 +4,51 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+@mixin display-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin white-text {
+    color: white;
+}
+
+h1 {
+    // This code centers the header and establishes the axis the content follows
+    @include display-center;
+    @include white-text;
+    background-color: red;
+}
+
+.nav__list {
+    // Same as h1 code, adds column gap
+    @include display-center;
+    grid-column-gap: 6rem;
+    @include white-text;
+    background-color: rgb(15, 179, 15);
+}
+
+.center-wrap {
+    display: grid;
+    grid-template-rows: 1fr, 2fr;
+}
+
+.sidebar {
+    display: grid;
+    background-color: purple;
+}
+
+.main-content {
+    display: grid;
+    background-color: orangered;
+}
+
+.main {
+    margin: 0;
+}
+
+footer {
+    @include display-center;
+    background-color: blue;
+}
