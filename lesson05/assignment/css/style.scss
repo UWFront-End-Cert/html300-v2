@@ -19,33 +19,51 @@ h1 {
     @include display-center;
     @include white-text;
     background-color: red;
+    padding: 3rem;
 }
 
 .nav__list {
     // Same as h1 code, adds column gap
     @include display-center;
     grid-column-gap: 6rem;
+    flex-wrap: wrap;
     @include white-text;
     background-color: rgb(15, 179, 15);
+    font-size: 30px;
+    padding: 2.5rem;
 }
 
 .center-wrap {
+    // This code lays out the sdiebar and main-content sections
     display: grid;
-    grid-template-columns: 1fr, 2fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
-    grid-row: 1 / span 3;
+    grid-template-areas: 
+        "sidebar main main"
+        "sidebar main main"
+        "sidebar main main"
+    ;
     align-items: center;
-    justify-content: ; 
+    justify-content: center;
     margin: auto;
+    @include white-text;
 }
 
 .sidebar {
-    display: grid;
+    // formats and styles content in sidebar
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    font-size: 20px;
     background-color: purple;
 }
 
 .main-content {
-    display: grid;
+    // ditto to sidebar
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    font-size: 20px;
     background-color: orangered;
 }
 
@@ -54,7 +72,10 @@ h1 {
 }
 
 footer {
+    // Organizes and styles the footer
     @include display-center;
     @include white-text;
+    padding: 3rem;
+    font-size: 20px;
     background-color: blue;
 }
