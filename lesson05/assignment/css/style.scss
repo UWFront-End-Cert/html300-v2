@@ -4,6 +4,7 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// mixins declared
 @mixin display-center {
     display: flex;
     flex-direction: row;
