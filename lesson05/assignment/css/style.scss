@@ -15,6 +15,10 @@
     color: white;
 }
 
+header {
+    height: 20%;
+}
+
 h1 {
     // This code centers the header and establishes the axis the content follows
     @include display-center;
@@ -56,6 +60,7 @@ h1 {
     justify-content: center;
     padding: 3rem;
     font-size: 20px;
+    
     background-color: purple;
 }
 
@@ -70,6 +75,7 @@ h1 {
 
 .main {
     margin: auto;
+    max-width: 100%;
 }
 
 footer {
@@ -79,4 +85,5 @@ footer {
     padding: 3rem;
     font-size: 20px;
     background-color: blue;
+    height: 20%;
 }
