@@ -400,10 +400,13 @@ header {
   width: 100%;
   background-color: #333;
   color: #fff;
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+  padding-top: 2%;
 }
 
 nav {
@@ -412,9 +415,13 @@ nav {
   justify-content: space-around;
   align-items: center;
   background-color: #444;
-  padding: 15px;
   box-sizing: border-box;
-  top: 80px; /* Adjusted to push nav below the fixed header */
+  z-index: 900;
+  position: fixed;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+  padding-top: 2%;
 }
 
 nav a {
@@ -450,6 +457,10 @@ section h2 {
   height: 100vh;
 }
 .container {
-  padding-right: 0%;
-  padding-left: 0%; 
+  padding-right: 5%;
+  padding-left: 5%; 
+}
+.footer{
+  padding-right:5%;
+  padding-left: 5%;
 }
