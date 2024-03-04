@@ -4,7 +4,7 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
- html {
+html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -259,7 +259,6 @@ html input[type=button],
 input[type=reset],
 input[type=submit] {
   -webkit-appearance: button; /* 2 */
-  appearance: button; /* Add the standard property 'appearance' */
   cursor: pointer; /* 3 */
 }
 
@@ -317,7 +316,6 @@ input[type=number]::-webkit-outer-spin-button {
  */
 input[type=search] {
   -webkit-appearance: textfield; /* 1 */
-  appearance: textfield; /* Add the standard property 'appearance' */
   box-sizing: content-box; /* 2 */
 }
 
@@ -379,9 +377,9 @@ th {
   padding: 0;
 }
 
-body, html {
-   height: 80%;
- }
+html {
+  box-sizing: border-box;
+}
 
 *,
 *:after,
@@ -389,78 +387,110 @@ body, html {
   box-sizing: inherit;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr 3fr; 
-  margin-top: 140px; 
-  justify-content: center;
+.main {
+  padding: 2rem;
 }
 
-header {
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  padding-right: 5%;
-  padding-left: 5%;
-  padding-bottom: 2%;
-  padding-top: 2%;
+.static-block {
+  border-top: 3px solid #6e27c5;
 }
 
-nav {
-  width: 100%;
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #444;
-  box-sizing: border-box;
-  z-index: 900;
-  position: fixed;
-  padding-right: 5%;
-  padding-left: 5%;
-  padding-bottom: 2%;
-  padding-top: 2%;
+.static-block__title {
+  margin: 4rem 0 0;
+  font-size: 1.5rem;
+  font-family: arial, helvetica, sans-serif;
+  font-weight: 400;
+  color: #6e27c5;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 20px; 
+.static-block__copy {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: arial, helvetica, sans-serif;
+  color: #150f96;
 }
 
-main, aside {
-  flex: 7;
-  display: flex;
-  justify-content: center; 
+.static-block__img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  border-bottom: 5px solid #150f96;
 }
 
-aside {
-  flex: 2; /* 1/3 of page width*/
-  background-color: #eee;
-  box-sizing: border-box;
-  justify-content: space-around;
-  align-items: center;
+.static-block__content {
+  border-bottom: 5px solid #f6f5f6;
+  margin: 2rem auto;
 }
 
-section {
-  flex: 5; /* 2/3 of page width*/
-  box-sizing: border-box;
-  justify-content: space-around;
-  align-items: center;
- }
+.static-block:last-of-type .static-block__content {
+  border: none;
+}/*# sourceMappingURL=style.css.map */
+@import "style.scss";
 
-section h2 {
-  justify-content: center; /*attempt to align this header*/
-  text-align: center;
-  height: 100vh;
+.outerbox {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-color: grey;
 }
-.container {
-  padding-right: 5%;
-  padding-left: 5%; 
+
+.business-card {
+    display: flex;
+    width: 45%;
+    height: 150px;
+    max-width: 400px;
+    border: 30px solid lightgray; /* Light grey */
+    overflow: hidden;
+    padding: 2%;
 }
-.footer{
-  padding-right:5%;
-  padding-left: 5%;
+
+.business-card img {
+    width: 100px; /* Adjust the image size as needed */
+    height: 100px;
+    border-radius: 50%; /* Round Image */
+    padding: 1%;
 }
+
+.text-container {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: lightgrey;
+    width: 50%;
+    text-align: left;
+}
+.outerbox {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-color: grey;
+}
+
+.business-card {
+    display: flex;
+    width: 45%;
+    height: 150px;
+    max-width: 400px;
+    border: 30px solid lightgray; /* Light grey */
+    overflow: hidden;
+    padding: 2%;
+}
+
+.business-card img {
+    width: 100px; /* Adjust the image size as needed */
+    height: 100px;
+    border-radius: 50%; /* Round Image */
+    padding: 1%;
+}
+
+.text-container {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: lightgrey;
+    width: 50%;
+    text-align: left;
+}
+ 
