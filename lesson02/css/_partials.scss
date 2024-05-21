@@ -1,0 +1,19 @@
+// Your partial styles go here
+.outerbox {
+    background-color: $primary-color;
+    color: white;
+    padding: 20px;
+    border-color: $grey;
+    border-width: 10px;
+    
+    // Nesting for card title
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    // Nesting for card description
+    p {
+        font-size: 16px;
+    }
+}

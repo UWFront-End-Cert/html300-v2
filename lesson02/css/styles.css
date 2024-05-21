@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    border-color: white;
+  }
+.business-card{
+    display:flex;
+    justify-content: right;
+    border-color: grey;
+    border-width: 1%;
+}

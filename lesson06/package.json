@@ -1,0 +1,27 @@
+{
+  "name": "lesson06",
+  "version": "1.0.0",
+  "description": "Lesson06",
+  "main": "index.js",
+  "scripts": {
+    "test": "Testing"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jilleegoat/html300-v2.git"
+  },
+  "keywords": [
+    "Lesson06"
+  ],
+  "author": "Jill E",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jilleegoat/html300-v2/issues"
+  },
+  "homepage": "https://github.com/jilleegoat/html300-v2#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.2",
+    "install": "^0.13.0",
+    "npm": "^10.4.0"
+  }
+}
