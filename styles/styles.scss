@@ -1,0 +1,80 @@
+// Import partials
+@import 'partials/_variables';
+@import 'partials/_mixins';
+
+// Card styling
+.card {
+  background-color: #f3f4f8;
+  border: 1px solid #ffffff;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  .card-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    .card-left {
+      width: 30%;
+      position: relative;
+      .profile-img {
+        width: 80px;
+        height: 80px;
+        background-color: #1A1A1A; // Placeholder color for the profile image background
+        border-radius: 50%;
+        margin-bottom: 10px;
+        //could not find image for card
+      }
+      .name {
+        font-weight: bold;
+      }
+      .title {
+        color: #555;
+      }
+    }
+    
+    .card-right {
+      width: 65%;
+      border: 1px solid #f5f5f5;
+      padding: 10px;
+      
+      .info-box {
+        margin-bottom: 10px;
+        .info-label {
+          font-weight: bold;
+          color: #555;
+          display: inline-block;
+          width: 100px;
+        }
+        .info-value {
+          display: inline-block;
+          margin-left: 10px;
+        }
+        a {
+          color: #004066;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments 
+@media (max-width: 768px) {
+  .card .card-inner {
+    flex-direction: column;
+    .card-left, .card-right {
+      width: 100%;
+    }
+    .card-right {
+      border-top: 1px solid #f5f5f5;
+      padding-top: 10px;
+    }
+  }
+}
