@@ -1,6 +1,69 @@
-// Import partials here
+//Partials
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
+//Mixins
+@mixin flex-row {
+    display:flex;
+    flex-direction: row;
+}
+
+@mixin flex-left {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+//Card container
+.card {
+    @include flex-row;
+    padding: 2rem;
+    border: 1.5rem solid $grey;
+    width: 40%;
+}
+
+//profile pic container
+.profile-pic {
+    @include flex-center;
+    padding: 2rem;
+
+    img {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 80%;
+    }
+    p {
+        color:  $grey;
+        font-style: italic;
+        font-weight: map-get($font-weights , big );;
+    }
+    h1 {
+        color: $grey;
+        padding-top: 1rem;
+    }
+}
+
+//Profile info container
+.profile-info {
+    background-color: $light-grey;
+    width: 75%;
+    @include flex-left;
+
+    li {
+        padding: 1rem;
+    }
+
+    span {
+        font-weight: map-get($font-weights , big );
+        color: $dark-grey;
+    }
+
+}
