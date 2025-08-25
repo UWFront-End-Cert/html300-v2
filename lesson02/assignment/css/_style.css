@@ -1,0 +1,84 @@
+:root {
+  --light-grey: #f6f5f6; /* inner profile detail box */
+  --dark-grey: #d3d3d3; /* margins */
+  --very-dark-grey: #676767; /* For header text */
+}
+
+/* -TOP- */
+body {
+  color: var(--very-dark-grey);
+  margin: 0;
+}
+
+main {
+  /* TODO: Replace with actual values */
+  /* width: 90px; */
+  /* height: 90px; */
+  background-color: white;
+  padding: 2rem;
+}
+
+.rolodex-card {
+  display: flex;
+  background-color: white;
+  padding: 3rem;
+  padding-left: 1rem;
+  border-color: var(--dark-grey);
+  border-width: 4rem;
+  border-style: solid;
+  border-radius: 0.5rem;
+}
+
+/* IDENTITY */
+
+.headshot {
+  border-radius: 125px;
+}
+.profile.identity {
+  margin: 1rem;
+}
+.profile.identity > * {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2 {
+  margin: 0;
+  margin-top: 1rem;
+}
+h3 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* DETAILS */
+
+.profile.details {
+  background-color: var(--light-grey);
+  /* width: 50rem; */
+  padding: 2rem;
+  width: 100%;
+}
+.field {
+  font-weight: bold;
+}
+.field::after {
+  content: ": ";
+}
+.social-link {
+  display: flex;
+}
+.social-link > a {
+  text-decoration: none;
+  /* display: inline; */
+  vertical-align: middle;
+  /* height: 50px; */
+}
+
+@media(max-width: 920px) {
+  .rolodex-card {
+    flex-direction: column;
+    padding-right: 5rem;
+  }
+}
